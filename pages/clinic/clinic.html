@@ -1,0 +1,322 @@
+<style>
+     :root {
+        --color-orange-title: #ff9c16;
+        --color-background-lightblue: #00bcde;
+        --color-background-blue: #0a3383;
+        --color-background-white-gray: #E4E9F2;
+        --color-text-gray: #9E9E9E;
+        --color-text-gray-dark: #757575;
+        --color-background-dimgray: #696969;
+    }
+    
+    body {
+        background: var(--color-background-white-gray);
+    }
+    
+    #header-news {
+        height: 200px;
+        height: 62px;
+        background-color: var(--color-background-blue);
+    }
+    
+    #header-paginas {
+        width: 100%;
+        height: 62px;
+        background-color: var(--color-background-blue);
+        margin-bottom: 16px;
+    }
+    /* pagina/inicial Serviços HUB */
+    
+    #links-header a {
+        font-size: 0.9rem;
+        line-height: 18px;
+        text-decoration: none;
+        color: #9E9E9E;
+    }
+    
+    #links-header span {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 24px;
+        font-weight: bold;
+        color: var(--color-background-blue);
+        margin-bottom: 24px;
+    }
+    /* BANNER */
+    
+    .banner {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .text-bold {
+        font-weight: bold;
+    }
+    
+    @media (min-width: 768px) {
+        .container {
+            font-size: 62.5%!important;
+        }
+    }
+    
+    @media (max-width: 1080px) {
+        #links-header {
+            margin-left: 3.5%;
+        }
+    }
+    
+    .banner-title {
+        display: block;
+        margin: 2rem 1rem 2rem 1rem;
+    }
+    
+    .banner-title span {
+        display: block;
+        font-size: 0.9rem;
+        line-height: 24px;
+    }
+    /* CARDS SERVICES */
+    
+    .card-services {
+        margin: auto;
+        box-shadow: 0px 6px 38px -3px rgba(0, 0, 0, 0.27);
+        max-width: 450px;
+    }
+    
+    .card-services-link {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        cursor: default;
+        float: left;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+    
+    .card-services-link img {
+        /* margin-top: 3rem; */
+        width: 100%;
+        height: 270px;
+    }
+    
+    .card-services-content {
+        width: 100%;
+        height: 100%;
+        margin-top: -40px;
+        min-height: 290px;
+        display: flex;
+        background-color: white;
+        border-radius: 0px 40px 0px 0px;
+        margin-bottom: 3rem;
+    }
+    
+    .card-services-text {
+        margin: auto;
+        height: 100%;
+        width: 90%;
+        display: block;
+        font-size: 16px;
+        line-height: normal;
+    }
+    
+    .card-services-text p {
+        font-size: 1.0rem line-height: 18px;
+        color: #909090;
+        height: 50%;
+    }
+    /* .card-services-text .service-title {
+    color: #183D8E;
+    font-weight: bold;
+       
+} */
+    
+    .card-services-text .service-title {
+        color: #183D8E;
+        font-weight: bold;
+        margin-top: -10px;
+    }
+    
+    .card-services-text p:first-child {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .card-services-text p:last-child {
+        margin-bottom: 3rem;
+    }
+    
+    .card-container {
+        margin-bottom: 5rem;
+        column-count: 1!important;
+    }
+    /* TELA 768 ACIMA */
+    
+    @media (min-width: 768px) {
+        .card-services {
+            max-width: 90%;
+        }
+        .card-services-content {
+            height: 360px;
+        }
+    }
+    /* TELA 1024 ACIMA */
+    
+    @media (min-width: 1024px) {
+        .container {
+            display: block;
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        .card-services {
+            max-width: 345px;
+        }
+        .card-services-link img {
+            border-radius: 10px 10px 0px 0px;
+        }
+        .card-services-content {
+            width: 100%;
+            height: 360px;
+            margin-top: -40px;
+            min-height: 290px;
+            display: flex;
+            background-color: white;
+            border-radius: 0px 40px 0px 0px;
+        }
+        .display-left {
+            margin-right: 15px;
+        }
+        .display-right {
+            margin-left: 15px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div id="links-header">
+            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+            <a href="https://www.panvel.com/panvel/panvelClinic.do">\ Clinic</a>
+            <span>Panvel Clinic</span>
+        </div>
+
+        <picture>
+            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/clinic_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/clinic_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_servicosclinicos.jpg" class="banner" alt="Panvel Clinic" title="Panvel Clinic">
+        </picture>
+
+        <div class="banner-title">
+            <span>A <b>PANVEL</b>, PENSANDO NA SUA SAÚDE, OFERECE UMA SÉRIE DE <b>PROCEDIMENTOS</b> 
+			FARMACÊUTICOS EM <b>AMBIENTES INDIVIDUALIZADOS</b> PARA VOCÊ FICAR SEMPRE BEM.
+            </span>
+        </div>
+
+        <div class="pure-g">
+            <div class="card-container">
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+                    <div class="card-services display-left">
+                        <a class="card-services-link">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/2.jpg" alt="">
+                            <div class="card-services-content">
+                                <div class="card-services-text">
+                                    <p>
+                                        <span class="service-title">PROCEDIMENTO<br>
+                                        VERIFICAÇÃO DA GLICEMIA CAPILAR</span><br><br> Avaliação da glicemia capilar de clientes com ou sem algum problema de saúde ou sintomas relacionados a partir de uma amostra
+                                        de sangue da pontinha do dedo.
+                                    </p>
+                                    <p>
+                                        <b>Por quê?</b> Para acompanhar clientes em tratamento ou orientar possíveis diabéticos a procurar avaliação médica.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+                    <div class="card-services">
+                        <a class="card-services-link">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/3.jpg" alt="">
+                            <div class="card-services-content">
+                                <div class="card-services-text">
+                                    <p>
+                                        <span class="service-title">PROCEDIMENTO<br>
+                                        VERIFICAÇÃO DA TEMPERATURA CORPORAL</span><br><br> Avaliação se o cliente, com queixa ou suspeita, está com febre.
+                                    </p>
+                                    <p>
+                                        <b>Por quê?</b> Para comodidade de clientes com sintomas e orientar a busca por atendimento médico.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+                    <div class="card-services display-right">
+                        <a class="card-services-link">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/4.png" alt="">
+                            <div class="card-services-content">
+                                <div class="card-services-text">
+                                    <p>
+                                        <span class="service-title">PROCEDIMENTO<br>
+                                        VERIFICAÇÃO DE PRESSÃO</span><br><br> Avaliação da pressão arterial de clientes com ou sem algum problema de saúde ou sintomas relacionados.
+                                    </p>
+                                    <p>
+                                        <b>Por quê?</b> Para acompanhar clientes em tratamento ou orientar possíveis hipertensos a procurar avaliação médica.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+                    <div class="card-services display-left">
+                        <a class="card-services-link">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/1.jpg" alt="">
+                            <div class="card-services-content">
+                                <div class="card-services-text">
+                                    <p>
+                                        <span class="service-title">PROCEDIMENTO<br>
+                                        APLICAÇÃO DE MEDICAMENTOS INJETÁVEIS</span><br><br> Aplicação de medicamentos via intramuscular e subcutânea em clientes com receita médica válida. Este serviço inclui a verificação
+                                        de pressão antes da aplicação.
+                                        <b>Confira os medicamentos aplicados.</b>
+                                    </p>
+
+                                    <p>
+                                        <b>Por quê?</b> Para oferecer uma solução completa e segura ao usuário de medicamentos injetáveis.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+                    <div class="card-services">
+                        <a class="card-services-link">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/6.jpg" alt="">
+                            <div class="card-services-content">
+                                <div class="card-services-text">
+                                    <p>
+                                        <span class="service-title">PROCEDIMENTO<br>
+                                        COLOCAÇÃO DE BRINCO</span><br><br> Perfuração de lóbulo auricular em adultos e crianças, exceto piercing. Valor do brinco não está incluído no serviço, escolha e inclua seu
+                                        brinco no pedido.
+                                    </p>
+                                    <p>
+                                        <b>Por quê?</b> Para conforto e bem estar dos clientes.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

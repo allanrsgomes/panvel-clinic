@@ -1,0 +1,596 @@
+<style>
+ul li {
+    font-size: 16px;
+}
+.container {
+    max-width: 768px;
+    margin: auto;
+    border: 3px solid #4C638D;
+    border-top: 0px;
+    border-bottom: 0px;
+	padding: 0;
+}
+
+#new-links-header {
+    margin: auto;
+    padding-top: 2rem;
+    max-width: 800px;
+    padding-left: 1.2rem;
+}
+
+#new-links-header a{
+    font-size: 0.9rem;
+    line-height: 18px;
+    text-decoration: none;
+    color: #4C638D;
+}
+
+#new-links-header span{
+    display: block;
+    font-size: 1.3rem;
+    line-height: 24px;
+    font-weight: bold;
+    color: #4C638D;
+    margin-bottom: 24px;
+}
+
+.semana-amamenta {
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    height: 280px;
+    margin: auto;
+	margin-bottom: -30px;
+    background-color: #99B5CC
+}
+.semana-amamenta img{
+    margin: auto;
+    width: 100%;
+    display: flex;
+}
+
+.semana-amamenta span {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.titulo p {
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+    color: #FFFFFF;
+    line-height: 25px;  
+    
+}
+
+.titulo {    
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 50px;
+    
+}
+
+p .nome {
+    font-style: italic;
+    font-weight: bold;
+    color: #4C638D;
+    font-size: 15px;
+}
+
+.diminui-amamenta {
+    
+    text-align: left;   
+    width: 230px;
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: 18px;
+    color: #4C638D;
+    font-style: italic; 
+    justify-content: flex-start;
+}
+
+.container-amamenta {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.container-amamenta2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.img-bebe {    
+    width: auto;
+    margin-top: 50px;
+}
+
+.img-yoga {
+    width: auto;
+    margin-top: 60px;
+    /* margin-left: 205px; */
+    /* display: flex;
+    justify-content: right; */
+}
+
+/* .img-yoga img{
+    margin: auto;
+    width: 100%;
+    display: flex;
+} */
+
+.img-dicas {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.diminui-amamenta2 {
+    text-align: left;    
+    max-width: 230px; 
+    margin-top: 10px;
+    font-size: 18px;
+    margin-left: 100px;
+}
+
+.beneficios-amamenta {
+    max-width: 768px;
+    width: 100%;
+    /* height: 1500px; */
+    background-color: #CFDAE1;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.beneficios-span {
+    color: #4C638D;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;    
+    
+}
+
+.beneficios-amamenta .diminui {
+    font-weight: normal;
+    
+}
+
+.mae {
+    font-size: 26px;
+    color: #4C638D;
+    font-style: italic;  
+    font-weight: bold;    
+    padding-top: 60px;
+}
+
+.container ul {
+    color: #4C638D;
+    font-style: italic;    
+    font-size: 16px;
+    line-height: 30px;
+}
+
+
+
+.mitos-verdades {
+    width: 100%;
+    max-width: 768px;
+    height: 150px;
+    background-color: #99B5CC;
+    text-align: center;
+    margin: auto;
+}
+
+.mitos-verdades span {
+    position: relative;
+    font-size: 28px; 
+    color: white;
+    top: calc(50% - 12px);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.mito {
+    width: 100%;
+    max-width: 768px;
+    height: 200px;
+    margin: auto;
+    background-color: #EFEFEF;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.mito p {
+    width: 75%;
+    margin: auto;
+    font-size: 16px;
+    font-style: italic;
+    color: #4C638D;
+    margin-bottom: 30px;
+}
+
+.mito img {
+    margin-bottom: 30px;
+}
+
+.verdade {
+    width: 100%;
+    max-width: 768px;
+    height: 200px;
+    margin: auto;
+    background-color: #FAFAFA;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.verdade p {
+    width: 75%;
+    margin: auto;
+    font-size: 16px;
+    font-style: italic;
+    color: #4C638D;
+    margin-bottom: 30px;
+}
+
+.verdade img {
+    margin-bottom: 30px;
+}
+
+.tituloMV {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.fonte-txt {
+    width: 100%;
+    max-width: 768px;
+    height: 80px;
+    text-align: center;
+    background-color: #FAFAFA;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.fonte-txt p {
+    width: 70%;
+    margin: auto;
+    font-size: 14px;
+    font-style: italic;
+    color: #4C638D;
+}
+
+.bem-panvel {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    background-color: #CFDAE1;
+    text-align: center;
+    margin: auto;
+}
+
+.txt-facilidade {
+    width: 100%;
+    height: 200px;
+    background-color: #99B5CC;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.txt-facilidade p {
+    width: 60%;
+    margin: auto;
+    font-size: 28px;
+    font-style: italic;
+    line-height: 40px;
+    color: white;
+}
+
+p .facil {
+    font-style: italic;
+    font-weight: bold;
+    color: #4C638D;
+}
+
+
+.bem-panvel img {
+    margin-top: 35px;
+}
+
+
+
+
+/* RESPONSIVIDADE */
+
+/* @media (min-width: 320px) and (max-width: 512px) {
+    .container {
+        width: 100%;
+        margin: auto;        
+    }
+
+    .titulo {    
+        width: 20%;
+        margin-left: 30px;
+        margin-top: 50px;
+        
+    }  
+    
+    .img-dicas {
+        border: 2px dotted red;
+    }
+
+
+    
+} */
+
+@media (max-width: 425px) {
+    .img-dicas img{
+        width: 100%;
+    }
+
+    .img-yoga {
+        order: -1;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    .diminui-amamenta {
+        order: 1;
+    }
+    .container-amamenta {
+        flex-direction: column;
+    }
+
+    .container-amamenta2 {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .img-bebe {
+        margin-top: 0px;
+        /* width: 98%; */
+        /* width: 185px; */
+    }    
+    
+      
+}
+
+@media (max-width: 768px) {
+    .img-bebe img {
+        float:left;
+        margin-top: 0;
+        /* width: 98%; */
+        /* width: 185px; */
+    }
+
+    .img-yoga img {
+        float:right;
+        /* width: 90%; */
+        /* width: 135px; */
+    }
+
+     
+    .diminui-amamenta {
+        margin: auto;
+    }
+
+    .diminui-amamenta2 {
+        margin-left: 40px;
+        margin: auto;
+        font-size: 10px;
+    }
+
+    .mito p {
+        width: 85%;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .verdade p {
+        width: 85%;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .txt-facilidade p {
+        width: 85%;
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    ul {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    ul li {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .titulo {    
+        width: 50%;
+        margin-left: 0px;
+        margin-top: 20px;  
+        margin-right: 2px; 
+    }
+    
+    
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+   .img-dicas img {
+        width: 80%;
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <div id="new-links-header">
+            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+            <a href="https://www.panvel.com/panvel/panvelClinic.do">\ Clinic</a>
+            <span>Semana da Amamentação</span>
+        </div>
+            
+        
+        <div class="semana-amamenta">
+            <div>
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/Mamae.png" alt="mae e filho">
+            </div>
+            <div class="titulo">
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/SemanaM.png" alt="">
+                <p>
+                    Trouxemos a especialista <span class="nome">Rosane Baldissera</span>
+                    para explicar um pouco sobre amamentação,
+                    abaixo algumas dicas importantes.
+                </p>
+            </div>
+        </div>
+
+        <div class="beneficios-amamenta">
+            <p class="mae">
+                Benefícios da amamentação<br> para a mamãe e o bebê
+            </p>
+
+            <div class="container-amamenta">
+
+                <div class="img-bebe">
+                    <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/Carrinho.png" alt="para o bebê">
+                </div>
+
+                <div class="diminui-amamenta">                                       
+                    <span class="beneficios-span">Diminui as chances de:<br><br></span>
+                    <ul class="diminui"> 
+
+                        <li>
+                            Diarreia e enjoo
+                        </li>
+                        <li>
+                            Gastroenterites
+                        </li>
+                        <li>
+                            Resfriados e gripes
+                        </li>
+                        <li>
+                            Infecções no ouvido e tórax
+                        </li>
+                        <li>
+                            Desenvolver diabetes juvenil
+                        </li>
+                        <li>
+                            Obesidade na adolescência
+                            e idade adulta
+                        </li>
+                    </ul>    
+                    <br>       
+                    <span class="beneficios-span">E ainda melhora:</span><br>
+                        O desenvolvimento cerebral
+                        e ajuda a regular o ciclo do sono.
+                    
+                </div>
+            </div>
+
+            <div class="container-amamenta2">
+                <div class="diminui-amamenta2">                                       
+                    <ul class="diminui">
+                        <li>
+                            Menos chances de depressão
+                            pós-parto;
+                        </li>
+                        <li>
+                            Maior liberação de ocitocina;
+                        </li>
+                        <li>
+                            Menor risco de câncer de mama
+                            e ovário;
+                        </li>
+                        <li>
+                            Menos chances de artrite reumatoide;
+                        </li>
+                        <li>
+                            Perda de peso mais rápida
+                            no pós-parto;
+                        </li>
+                        <li>
+                            Menor índice de fraturas no quadril
+                            por osteoporose.
+                        </li>
+                    </ul>                   
+                </div>
+
+                <div class="img-yoga">
+                    <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/Yoga.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="img-dicas">
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/DicasMama.png" alt="dicas">
+            </div>
+        </div>
+
+        <div class="mitos-verdades">
+            <span>Mitos & Verdades</span>
+        </div>
+        <div class="mito">
+            <p class="tituloMV">"Algumas mães têm o leite mais fraco"</p>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/MitoT.png" alt="MITO">
+            <p>Não existe leite fraco! Todo leite materno é rico em nutrientes necessários para o desenvolvimento do bebê.</p>
+        </div>
+        <div class="verdade">
+            <p class="tituloMV">“Pode pintar os cabelos durante a amamentação sem prejudicar o bebê.”</p>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/VerdadeT.png" alt="VERDADE">
+            <p>Desde que que a tintura seja livre de amônia e metais pesados, como
+                o chumbo. Os tonalizantes são uma ótima alternativa neste caso.</p>
+        </div>
+        <div class="mito">
+            <p class="tituloMV">"O leite de fórmula artificial sustenta mais que o leite materno.”</p>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/MitoT.png" alt="MITO">
+            <p>O leite de fórmula é feito à base de leite de vaca
+                que é mais “pesado” e demora mais para ser digerido
+                e o leite materno é leve, de rápida absorção e digestão.</p>
+        </div>
+        <div class="verdade">
+            <p class="tituloMV">“Estresse interfere na produção de leite.”</p>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/VerdadeT.png"  alt="VERDADE">
+            <p>Estresse = menos ocitocina = menos fluxo de leite = menos
+                prolactina (hormônio da produção de leite)
+                A produção de leite regulariza quando a mulher fica tranquila.</p>
+        </div>
+        <div class="mito">
+            <p class="tituloMV">“Deve-se preparar as mamas durante a gestação.”</p>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/MitoT.png" alt="MITO">
+            <p>Não há nenhum embasamento científico para isso. O preparo da mãe
+                durante a gestação deve ser o de estudar as técnicas de amamentação.</p>
+        </div>
+        <div class="verdade">
+            <p class="tituloMV">“O bebê deve mamar sempre que sentir fome.”</p>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/VerdadeT.png"  alt="VERDADE">
+            <p>A recomendação é que se ofereça o peito em livre demanda, ou seja,
+                sempre que o bebê pedir. Com o tempo, ele fará seu próprio horário.</p>
+        </div>
+        <div class="mito">
+            <p class="tituloMV">“Quanto mais água a mulher beber, mais leite produz.”</p>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/MitoT.png" alt="MITO">
+            <p>O ideal é, em média, 2 litros para a hidratação da mãe + 1 litro para
+                a produção de leite (diários) ou sempre que a mãe sentir sede.</p>
+        </div>
+        
+        <div class="fonte-txt">
+            <p>Fonte: Rosane Baldissera, IBCLC Nutricionista e Consultora Internacional
+                de Amamentação - IBLCE.</p>
+        </div>
+
+        <div class="bem-panvel">
+            <div class="txt-facilidade">
+                <p>A gente preparou uma seleção de produtos
+                    que <span class="facil">facilitam muito</span> durante o período
+                    de <span class="facil">amamentação</span>.</p>
+            </div>
+            
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/mama/BemAzul.png" alt="">
+        </div>
+    </div>
+
+</body>

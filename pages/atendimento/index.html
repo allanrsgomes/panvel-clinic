@@ -1,0 +1,264 @@
+<style>
+     :root {
+        --color-orange-title: #ff9c16;
+        --color-background-lightblue: #00bcde;
+        --color-background-blue: #0a3383;
+        --color-background-white-gray: #E4E9F2;
+        --color-text-gray: #9E9E9E;
+        --color-text-gray-dark: #757575;
+        --color-background-dimgray: #696969;
+    }
+    
+    body {
+        background: var(--color-background-white-gray);
+    }
+    
+    #header-news {
+        height: 200px;
+        height: 62px;
+        background-color: var(--color-background-blue);
+    }
+    
+    #header-paginas {
+        width: 100%;
+        height: 62px;
+        background-color: var(--color-background-blue);
+        margin-bottom: 16px;
+    }
+    /* pagina/inicial Serviços HUB */
+    
+    #links-header a {
+        font-size: 0.9rem;
+        line-height: 18px;
+        text-decoration: none;
+        color: #9E9E9E;
+    }
+    
+    #links-header span {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 24px;
+        font-weight: bold;
+        color: var(--color-background-blue);
+        margin-bottom: 24px;
+    }
+    /* BANNER */
+    
+    .text-bold {
+        font-weight: bold;
+    }
+    
+    @media (max-width: 1080px) {
+        #links-header {
+            margin-left: 3.5%;
+        }
+    }
+    
+    .banner {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .banner-title {
+        display: block;
+        margin: 2rem 2rem 4rem 2rem;
+    }
+    
+    .banner-title span {
+        display: block;
+        font-size: 1.0rem;
+        line-height: 24px;
+    }
+    /* CARDS SERVICES */
+    
+    .card-services {
+        margin: auto;
+        box-shadow: 0px 6px 38px -3px rgba(0, 0, 0, 0.27);
+        max-width: 450px;
+    }
+    
+    .card-services-link {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        cursor: default;
+        float: left;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+    
+    .card-services-link img {
+        /* margin-top: 3rem; */
+        width: 100%;
+        height: 270px;
+    }
+    
+    .card-services-content {
+        width: 100%;
+        height: 100%;
+        margin-top: -40px;
+        min-height: 290px;
+        display: flex;
+        background-color: white;
+        border-radius: 0px 40px 0px 0px;
+        margin-bottom: 3rem;
+    }
+    
+    .card-services-text {
+        margin: auto;
+        height: 100%;
+        width: 90%;
+        display: block;
+        font-size: 16px;
+        line-height: normal;
+    }
+    
+    .card-services-text p {
+        font-size: 0.9rem;
+        line-height: 18px;
+        color: #909090;
+        height: 50%;
+    }
+    /* .card-services-text .service-title {
+    color: #183D8E;
+    font-weight: bold;
+       
+} */
+    
+    .card-services-text .service-title {
+        color: #183D8E;
+        font-weight: bold;
+        margin-top: -10px;
+    }
+    
+    .card-services-text p:first-child {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-services-text p:last-child {
+        margin-bottom: 3rem;
+    }
+    
+    .card-container {
+        margin-bottom: 5rem;
+    }
+    /* TELA 768 ACIMA */
+    
+    @media (min-width: 768px) {
+        .card-services {
+            max-width: 90%;
+        }
+        .card-services-content {
+            height: 360px;
+        }
+    }
+    /* TELA 1024 ACIMA */
+    
+    @media (min-width: 1024px) {
+        .container {
+            display: block;
+            max-width: 1080px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        .card-services {
+            max-width: 400px;
+        }
+        .card-services-link img {
+            width: 100%;
+            height: 350px;
+        }
+        .card-services-link img {
+            border-radius: 10px 10px 0px 0px;
+        }
+        .card-services-content {
+            width: 100%;
+            height: 360px;
+            margin-top: -40px;
+            min-height: 290px;
+            display: flex;
+            background-color: white;
+            border-radius: 0px 40px 0px 0px;
+        }
+        .display-left {
+            margin-right: 15px;
+        }
+        .display-right {
+            margin-left: 15px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div id="links-header">
+            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+            <a href="https://www.panvel.com/panvel/panvelClinic.do">\ Clinic</a>
+            <span>Atendimento farmacêutico</span>
+        </div>
+
+        <picture>
+            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento/atendimento_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento/atendimento_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_farmaceutica.jpg" class="banner" alt="Atendimento" title="Atendimento">
+        </picture>
+
+        <div class="banner-title">
+            <span>A <b>PANVEL</b>, PENSANDO NA SUA SAÚDE, OFERECE UMA SÉRIE DE <b>PROCEDIMENTOS</b> E 
+                <b>CONSULTAS</b> FARMACÊUTICAS EM <b>AMBIENTES INDIVIDUALIZADOS</b> PARA VOCÊ FICAR SEMPRE BEM.
+            </span>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="card-services display-left">
+                    <a class="card-services-link">
+                        <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/7.jpg" alt="">
+                        <div class="card-services-content">
+                            <div class="card-services-text">
+                                <p>
+                                    <span class="service-title">PROCEDIMENTO<br>
+                                        ACOMPANHAMENTO DE TRATAMENTO</span><br><br> Se você está iniciando um novo tratamento ou já possui algum problema de saúde e faz uso de medicamentos para pressão arterial, diabetes,
+                                    colesterol, entre outros, nossos farmacêuticos irão acompanhar seu tratamento na busca de melhores resultados. Nesse serviço está incluído 3 consultas, verificação de pressão, glicemia, temperatura, medidas corporais
+                                    e IMC, sempre que necessário.
+
+                                </p>
+                                <br>
+                                <p>
+                                    <b>Por quê?</b> Para prevenir e resolver problemas relacionados ao uso de medicamentos e correlatos, evitar abandono do tratamento e obter melhores resultados.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="card-services display-right" class="card-services-link">
+                    <a class="card-services-link">
+                        <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/clinic/8.jpg" alt="">
+                        <div class="card-services-content">
+                            <div class="card-services-text">
+
+                                <p>
+                                    <span class="service-title">PROCEDIMENTO<br>
+                                            REVISÃO DE MEDICAÇÃO</span><br><br> Indicado para quem faz uso de 4 ou mais medicamentos de forma contínua ou ainda tem alguma dúvida ou dificuldade sobre o seu tratamento.
+                                    Nossos farmacêuticos vão conversar sobre todos os medicamentos que você utiliza, orientá-lo sobre a melhor forma de uso, horários de tomar, evitando interações entre os medicamentos e alimentos, reações adversas e efeitos
+                                    indesejados, promovendo o melhor resultado no seu tratamento.
+                                </p>
+                                <br><br>
+                                <p>
+                                    <b>Por quê?</b> Para clientes que querem ajuda para organizar seus medicamentos e os horários de tomada no seu dia-a-dia conforme prescrição médica.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

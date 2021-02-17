@@ -1,0 +1,985 @@
+<style>
+
+:root {
+	--color-orange-title: #ff9c16;
+	--color-background-lightblue: #00bcde;
+	--color-background-blue: #0a3383;
+	--color-background-white-gray: #E4E9F2;
+	--color-text-gray: #9E9E9E;
+	--color-text-gray-dark: #757575;  
+	--color-background-dimgray: #696969;  
+}
+
+body  {
+    background: var(--color-background-white-gray);
+}
+.container {
+	padding: 15px;
+}
+
+#header-news {
+    height: 200px;
+    height: 62px;
+    background-color: var(--color-background-blue);
+}
+
+#header-paginas {
+    width: 100%;
+    height: 62px;
+    background-color: var(--color-background-blue);
+    margin-bottom: 16px;
+}
+
+
+/* pagina/inicial Serviços HUB */
+
+
+#links-header a{
+    font-size: 0.9rem;    
+    line-height: 18px;
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+#links-header span{
+    display: block;
+    font-size: 1.4rem;    
+    line-height: 24px;
+    font-weight: bold;
+    color: var(--color-background-blue);
+    margin-bottom: 24px;
+}
+
+/* BANNER */
+
+.text-bold {
+    font-weight: bold;
+}
+
+}
+@media (max-width: 1080px){
+    #links-header {
+        margin-left: 3.5%;
+    }
+}
+
+body {
+    background: #E4E9F2;
+}
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.banner-title {
+    display: block;
+    margin: 2rem 2rem 2rem 2rem;  
+}
+
+.banner-title span{
+    display: block;
+    font-size: 0.9rem;
+    line-height: 24px;
+}
+
+.banner-title span:first-child {
+    margin-bottom: 1rem;
+}
+
+/* CARDS 
+.pure-u-1 {
+    display: flex;
+    justify-content: center;
+}
+*/
+.cards {
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);    
+    border-radius: 14px;
+    margin-bottom: 30px;
+    min-height: 274px;
+    max-width: 516px;  
+}
+
+.cards span {
+    display: block;
+    font-size: 0.9rem; 
+    text-align: center;
+    color: var(--color-text-gray);        
+}
+
+.cards span:first-child{
+    color: var(--color-background-blue);    
+    font-size: 1.8rem;    
+    font-weight: bold;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cards > span {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.button-div .button1 {
+    margin-top: 100px;
+}
+
+.button-consulta {
+    width: 90%;
+    height: 32px;
+    border-radius: 50px;
+    background-color: var(--color-background-blue);    
+    margin-bottom: 1.0rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;    
+    outline: none;
+}
+
+.button-consulta:disabled {
+    opacity: 0.6;
+} 
+
+.text-bold {
+    font-weight: bold;
+}
+
+.cards select {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 90%;
+    height: 43px;
+    color: var(--color-text-gray-dark);
+    background: #FAFAFA;
+	border: 1px solid #E0E0E0; 
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+	outline: none;
+	
+}
+
+.cards select option {
+    font-size: 0.9rem;
+}
+
+.div-parceiro {    
+    width: 90%;
+    margin: auto;
+}
+
+#select-text,
+#drconsulta,
+#conexa {
+    display: none;
+}
+
+.div-parceiro span:first-child {
+    text-align: left;
+    font-size: 0.8rem;
+    color: var(--color-text-gray-dark);    
+}
+
+.div-parceiro input,
+.div-parceiro img {
+    margin-left: 1.2rem;
+}
+
+.partner-details {
+    width: 60%;
+    margin: auto;
+}
+
+.partner-details span:first-child {
+    font-size: 0.9rem;
+    color: #01BFE1;
+    display: inline-block;
+}
+
+.partner-details span:last-child {
+    margin-left: 1.2rem;
+    display: inline-block;
+    font-size: 1.0rem;
+}
+
+/* MODAL */
+
+#modal-container {
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+    height: 100vh;
+    width: 100vw;
+    top: 0;    
+    display: none;
+}
+
+.modal {
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.12);
+    width: 100vw; 
+    height: 90vh;   
+    max-width: 517px;
+    max-height: 690px;
+    margin: auto;
+    margin-top: 5vh;
+	transform: none;
+	float: none;
+    position: relative;
+}
+
+.modal .modal-image {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.modal span {
+    display: block;    
+    text-align: center;
+    margin: 1rem 0.9rem 2rem 1.5em;
+}
+
+.container-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-icon {
+    width: 14px;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+
+#modal-drconsulta,
+#modal-conexa {
+    display: none;
+}
+
+/* MODAL DR-CONSULTA */
+
+#modal-drconsulta {
+    background-image: linear-gradient(150.11deg, #055DF9 0%, #01EFAD 100%);
+}
+
+#modal-drconsulta .text-modal-1 {
+    color: #01EFAD;
+    font-size: 1.0rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+}
+
+#modal-drconsulta .text-modal-2 {
+    color: white;
+    font-size: 1.45rem;
+    line-height: 24px;
+    padding-bottom: 5rem;
+}
+
+.ver-detalhes:hover {
+    cursor: pointer;
+}
+/* MODAL CONEXA */
+
+#modal-conexa {
+    background: linear-gradient(152.64deg, #FFFFFF 0%, #DBDDDC 100%);
+}
+
+#modal-conexa .text-modal-1 {
+    color: #28374E;
+    font-size: 1.8rem;
+}
+
+#modal-conexa .text-modal-2 {
+    color: #49BBED;
+    font-size: 1.0rem;
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {    
+    
+    .container {
+		padding: 15px;
+        display: block;
+        margin: 0 auto;
+        max-width: 1080px;
+        margin-bottom: 50px;
+    }
+    .second-cards{
+        display:flex;    
+        justify-content: flex-end;
+    }
+
+    .cards {
+        width: 48vw;
+        max-width: 516px;
+        height: 266px;
+    }
+
+    .cards span {
+        text-align: left;
+    }
+
+    #modal-drconsulta .text-modal-2 {
+        line-height: 36px;
+    }
+    
+    hr:last-child {
+        border: 1px solid #F5F5F5;        
+        margin-bottom: 20px;
+    } 
+/* 
+    .select-parceiro {      
+        display: flex;
+        flex-direction: row;
+    }
+
+    .select-parceiro1,
+    .select-parceiro2 {       
+        height: 30px;
+        margin: auto;       
+    }
+
+    .select-parceiro1 {
+        width: 250px;      
+    }
+
+    .select-parceiro2 {
+        width: 170;   
+    }
+
+    .partner-details  {    
+        display: flex;           
+        justify-content: space-between;
+    }
+    .partner-details span:last-child {               
+        font-weight: bold;flex-direction: ;
+    } */
+
+
+}
+</style>
+<script>
+function main() {
+    createSelections();
+}
+
+
+function changeCovid() {
+    window.open("https://www.drconsulta.com/servicos/consultas/orientacao-medica-gripe-ou-resfriado?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto");
+}
+
+function openLink() {    
+    let elements = document.getElementsByName("input-consulta");
+
+    elements.forEach( item => {
+        if (item.checked) {
+            window.open(item.value);
+        }
+    })        
+}
+
+function openModal(modalName) {
+    let container = document.getElementById("modal-container");
+    container.style.display = "block";
+
+    let modal = document.getElementById(modalName);
+
+    modal.style.display = "block";
+	
+	container.style.overflow = "hidden";
+
+}
+
+function closeModal() {
+    let modal = document.getElementsByClassName("modal");
+    for(let i=0; i<modal.length; i++){
+        modal[i].style.display = "none";
+    }
+    let container = document.getElementById("modal-container");
+    container.style.display = "none";   
+	
+}
+
+
+
+
+function createSelections() {
+    let Selection = document.getElementById("select-especialidade");
+    Selection.length = 0;
+
+    let option;
+    option = document.createElement('option');
+    option.text = "Selecione";
+    option.setAttribute('disabled', false);
+    option.setAttribute('selected', true);
+    Selection.add(option);  
+
+    for (let i = 0; i < data.length; i++) {
+        option = document.createElement('option');
+        option.text = data[i].name;
+        option.value = data[i].sigla;
+        Selection.add(option)
+    }
+}
+
+function onChangeState(option) {
+
+    let cards2 = document.getElementById("cards-2");
+    cards2.style.height = "100%";
+    
+    let selecione = document.getElementById("select-text");
+    selecione.style.display = "block";
+    
+    const partnersList = data[option.value].partners;
+    
+    let displayPartner;
+    let partnerName;
+
+    let hidden;
+    hidden = document.getElementById("drconsulta");
+    hidden.style.display = "none";
+
+    hidden = document.getElementById("conexa");
+    hidden.style.display = "none";
+
+    for(let i=0; i<partnersList.length; i++) {
+        partnerName = partnersList[i];
+
+        if(partnerName.partner == "drconsulta") {
+            displayPartner = document.getElementById("drconsulta");
+            displayPartner.style.display = "block";
+
+            let inputValue = document.getElementById("input-consulta");
+            inputValue.setAttribute('value', partnerName.link);
+
+            // let spanPrice = document.getElementById("price-drconsulta");
+            // spanPrice.text = ""            
+        }
+        if(partnerName.partner == "conexa") {
+            displayPartner = document.getElementById("conexa");
+            displayPartner.style.display = "block";
+
+            let inputValue = document.getElementById("input-conexa");
+            inputValue.setAttribute('value', partnerName.link);
+        }
+    }
+
+    let search = document.getElementById("search-button");
+    search.disabled = false;
+    
+}
+
+function mainFiltros() {
+    createFiltrosConexa();
+    createFiltrosDrconsulta();
+}
+
+function createFiltrosConexa() {
+    let Selection = document.getElementById("select-especialidade-conexa");
+    
+    Selection.length = 0;
+    let option;
+
+    option = document.createElement('option');
+    option.text = "Selecione";
+    option.setAttribute('disabled', false);
+    option.setAttribute('selected', true);
+    Selection.add(option);  
+
+    for (let i = 0; i < data.length; i++) {
+        for(let j=0; j<data[i].partners.length; j++){  
+            if(data[i].partners[j].partner == "conexa"){
+                option = document.createElement('option');
+                option.text = data[i].name;
+                option.value = data[i].partners[j].link;
+                Selection.add(option)    
+            }   
+        }             
+    }
+}
+
+function createFiltrosDrconsulta() {
+    let Selection = document.getElementById("select-especialidade-drconsulta");
+    Selection.length = 0;
+
+    let option;
+    option = document.createElement('option');
+    option.text = "Selecione";
+    option.setAttribute('disabled', false);
+    option.setAttribute('selected', true);
+    Selection.add(option);  
+
+    for (let i = 0; i < data.length; i++) {
+        for(let j=0; j<data[i].partners.length; j++){  
+            if(data[i].partners[j].partner == "drconsulta"){
+                option = document.createElement('option');
+                option.text = data[i].name;
+                option.value = data[i].partners[j].link;
+                Selection.add(option)    
+            }   
+        }             
+    }
+}
+
+function onFiltroDrconsulta(sel) { 
+    let ahref = document.getElementById('link-drconsultar');    
+    ahref.setAttribute('href', sel.value);    
+}
+
+function onFiltroConexa(sel) { 
+    let ahref = document.getElementById('link-consultar');    
+    ahref.setAttribute('href', sel.value);    
+}
+
+
+
+var data = [
+    {
+        "name": "ALERGOLOGIA",
+        "sigla": 0,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/alergia-e-imunologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=telemedicina&utm_campaign=voucher-desconto",
+                "price": "R$48,00"
+            }
+        ]
+    },
+    {
+        "name": "CARDIOLOGIA",
+        "sigla": 1,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/cardsiologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$49,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ] 
+    },
+    {
+        "name": "CLINICO GERAL",
+        "sigla": 2,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/clinica-geral-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$51,00"
+            }
+        ]
+    },
+    {
+        "name": "DERMATOLOGIA",
+        "sigla": 3,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/dermatologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "ENDOCRINOLOGIA",
+        "sigla": 4,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/endocrinologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "GASTROENTEROLOGIA",
+        "sigla": 5,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/endocrinologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "GERIATRA",
+        "sigla": 6,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/geriatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            }
+        ]
+    },
+    {
+        "name": "GINECOLOGIA/OBSTETRÍCIA",
+        "sigla": 7,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/ginecologia-e-obstetricia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "INFECTOLOGIA",
+        "sigla": 8,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/infectologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            }
+        ]
+    },
+    {
+        "name": "NEFROLOGIA",
+        "sigla": 9,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/nefrologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "NUTRICIONISTA",
+        "sigla": 10,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/nutricionista-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            }
+        ]
+    },
+    {
+        "name": "OFTALMOLOGIA",
+        "sigla": 11,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/oftalmologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "ORTOPEDIA",
+        "sigla": 12,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/ortopedia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "OTORRINOLARINGOLOGIA",
+        "sigla": 13,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/otorrinolaringologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "PEDIATRIA",
+        "sigla": 14,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/pediatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "PNEUMOLOGIA PEDIATRICA",
+        "sigla": 15,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/pneumologia-pediatrica-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            }
+        ]
+    },
+    {
+        "name": "PNEUMOLOGIA",
+        "sigla": 16,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/pneumologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "PSICOLOGIA",
+        "sigla": 17,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/psicologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            }
+        ]
+    },
+    {
+        "name": "PSIQUIATRIA",
+        "sigla": 18,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/psiquiatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "REUMATOLOGIA",
+        "sigla": 19,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/reumatologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "UROLOGIA",
+        "sigla": 20,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/agendamento/consultas/urologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            },
+            {
+                "partner": "conexa",
+                "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                "price": "R$49,00"
+            }
+        ]
+    },
+    {
+        "name": "TELEORIENTAÇÃO COVID-19",
+        "sigla": 21,
+        "partners": [
+            {
+                "partner": "drconsulta",
+                "link": "https://www.drconsulta.com/servicos/consultas/orientacao-medica-gripe-ou-resfriado?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                "price": "R$50,00"
+            }
+        ]
+    },  
+]
+
+</script>
+
+<body onload="main()">    
+    <div class="container">        
+        <div class="content-center">
+
+            <div id="links-header">
+                <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+                <a href="https://www.panvel.com/panvel/panvelClinic.do">\ Clinic</a>             
+                <span>Telemedicina</span>
+            </div>    
+			
+			<picture>
+                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/medicina/medicina_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/medicina/medicina_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_telemedicina.jpg" class="banner" alt="Medicina" title="Medicina">
+           </picture>
+
+            <div class="banner-title">
+                <span>Telemedicina pode ser definida como o conjunto de tecnologias e aplicações que permitem a realização de ações médicas à distância.
+                    É possível que novas modalidades de ação médica, onde a telemedicina esteja sendo aplicada, surjam com grande velocidade nos próximos anos.                    
+                </span>
+                <span>Com a evolução dos meios de comunicação, é natural que o contato entre o médico e o paciente possa ser feito a distância.            
+                    Por isso, ao contrário do que se possa pensar, todas as aplicações dessa técnica apresentaram respostas positivas, tanto de médicos quanto de pacientes
+                </span>
+            </div>          
+                       
+            <div class = "pure-g">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="cards" >                        
+                        <span>Consulta COVID-19</span>
+                        <span>Está com algum sintoma? Consulte com os especialistas sem sair de casa.</span>
+                        <div class="button-div" >                         
+                            <button class="button-consulta button1" onclick="changeCovid()">                                
+                                Consultar
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/arrow.png" alt="arrow img">                              
+                            </button>                            
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="pure-u-1 pure-u-md-1-2 second-cards">
+                    <div class="cards" id="cards-2">
+                        <span >Consulta Especialidades</span>
+                        <span>Temos diversas especialidades para atendermos sintomas específicos.</span>
+                        <span class="text-bold">SELECIONE UMA ESPECIALIDADE</span>    
+                        <div class="button-div">
+                            <select name="select-especialidade" id="select-especialidade" onchange="onChangeState(this)">                                                      
+                            </select>  
+                        </div>                               
+                          
+                        <div class="div-parceiro">
+                            <span class="text-bold" id="select-text">SELECIONE UM PARCEIRO</span>
+
+                            <div class="select-parceiro" id="drconsulta">
+                                <div class="select-parceiro1"> 
+                                    <input type="radio" id="input-consulta" name="input-consulta" value="#">
+                                    <label for="input-consulta" id="label1">
+                                        <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/logo-dr-consulta.png" alt="dr-consulta">
+                                    </label>
+                                </div>                        
+                                <div class="partner-details">                                    
+                                    <span onclick="openModal('modal-drconsulta')" class="ver-detalhes">(ver detalhes)</span>
+                                    <span id="price-drconsulta">Desconto Panvel de 10%</span>                                    
+                                </div>  
+                                <hr class="hr">                              
+                            </div>
+                            
+                            <div class="select-parceiro" id="conexa">
+                                <div class="select-parceiro2">
+                                    <input type="radio" id="input-conexa" name="input-consulta" value="#">
+                                    <label for="input-conexa" id="label2">
+                                        <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/logo-docpass-tele.png" alt="conexa"> 
+                                    </label>               
+                                </div>                                                                                   
+                                <div class="partner-details">
+                                    <span onclick="openModal('modal-conexa')" class="ver-detalhes">(ver detalhes)</span>
+                                    <span id="price-conexa">Desconto Panvel de 10%</span>
+                                </div>
+                                <hr class="hr">
+                            </div>                               
+                        </div>
+
+                        <div class="button-div">
+                            <button type="button" class="button-consulta" id="search-button"  onclick="openLink()" disabled>
+                                Consultar                          
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/arrow.png" alt="arrow img">                                
+                            </button>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div> 
+    </div>  
+
+    <div id="modal-container" onclick="closeModal()">
+        <div class="modal" id="modal-conexa">
+            <div class="container-icon">
+                <img id="close-icon" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/icon-close.png" alt="close img" onclick="closeModal()">
+            </div>            
+            <img class="modal-image" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/logo-docpass-tele.png" alt="dr-consulta img">
+            <span class="text-modal-1">A Conexa Saúde é a plataforma de telemedicina, integrada a uma clínica de atenção primária no Rio de Janeiro, que utiliza a telemedicina para tornar os processos médicos mais ágeis e aumentar a resolutividade dos atendimentos, evitando assim visitas desnecessárias à emergência.</span>
+            <span class="text-modal-2">
+                A Conexa Saúde tem como objetivo atuar na prevenção e, com o auxílio da tecnologia, levar a solução de telemedicina para todo o país, rompendo distâncias, promovendo o networking médico e democratizando o acesso à saúde.
+            </span>
+        </div>
+
+        <div class="modal" id="modal-drconsulta">
+            <div class="container-icon">
+                <img id="close-icon" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/icon-close.png" alt="close img" onclick="closeModal()">
+            </div>            
+            <img class="modal-image" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/logo-dr-consulta.png" alt="dr-consulta img">
+            <span class="text-modal-1">Com mais de 3 M de pacientes, oferece consultas e exames de qualidade a preços acessíveis em seus 55 centros médicos, além de atender por Telemedicina para todo o país.</span>
+            <span class="text-modal-2">
+                Excelentes médicos<br>
+                Algoritmos e protocolos para diagnóstico mais preciso<br>
+                Atendimento COVID-19 e mais 60 especialidades<br>
+                Agendamento fácil por site, aplicativo ou telefone<br>
+                Consulta por vídeo chamada via aplicativo<br>
+                Desconto exclusivo ao usuário PanVel<br>
+            </span>
+        </div>
+    </div>   
+</body>

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Foco';
+    src: url('Foco-Regular.ttf');
+    src: url('Foco-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Bold';
+    src: url('Foco-Bold.ttf');
+    src: url('Foco-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Bold Italic';
+    src: url('Foco_BlkIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}

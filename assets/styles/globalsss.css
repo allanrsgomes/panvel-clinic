@@ -1,0 +1,71 @@
+:root {
+	--color-orange-title: #ff9c16;
+	--color-background-lightblue: #00bcde;
+	--color-background-blue: #0a3383;
+	--color-background-white-gray: #E4E9F2;
+	--color-text-gray: #9E9E9E;
+	--color-text-gray-dark: #757575;  
+	--color-background-dimgray: #696969;  
+}
+
+body  {
+    background: var(--color-background-white-gray);
+}
+
+.container {
+	font-size: 60%; 
+}
+
+#header-news {
+    height: 200px;
+    height: 62px;
+    background-color: var(--color-background-blue);
+}
+
+#header-paginas {
+    width: 100%;
+    height: 62px;
+    background-color: var(--color-background-blue);
+    margin-bottom: 16px;
+}
+
+
+/* pagina/inicial Serviços HUB */
+
+
+#links-header a{
+    font-size: 1.4rem;    
+    line-height: 18px;
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+#links-header span{
+    display: block;
+    font-size: 1.8rem;    
+    line-height: 24px;
+    font-weight: bold;
+    color: var(--color-background-blue);
+    margin-bottom: 24px;
+}
+
+/* BANNER */
+
+#banner-home {
+    width: 100%;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+@media (min-width: 768px){
+	.container {
+        font-size: 62.5%;
+	}
+}
+@media (max-width: 1080px){
+    #links-header {
+        margin-left: 3.5%;
+    }
+}

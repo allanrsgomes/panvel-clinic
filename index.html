@@ -1,0 +1,3054 @@
+<script>
+    var SimplybookWidget = function(options) {
+        this.options = {
+            // common options
+            'widget_type': 'iframe',
+            'theme': 'default',
+            'theme_settings': {},
+            'app_config': {},
+            'timeline': null,
+            'datepicker': null,
+            'url': '',
+            // iframe widget options
+            'iframe_postpone': false,
+            // button widget options
+            'button_position': 'right',
+            'button_position_offset': 'auto',
+            'button_background_color': '#06acee',
+            'button_text_color': '#ffffff',
+            'button_title': 'Book Now',
+            'button_preload': true,
+            'button_custom_id': null,
+            'navigate': 'book'
+        };
+        this.modalsPositions = {};
+        this.name = 'widget_' + Math.random();
+        this.frame = null;
+
+        for (var name in options) {
+            if (!options.hasOwnProperty(name)) {
+                continue;
+            }
+            this.options[name] = options[name];
+        }
+
+        this.init();
+    };
+
+    SimplybookWidget.prototype.init = function() {
+        if (!this.options.postpone) {
+            switch (this.options.widget_type) {
+                case 'iframe':
+                    this.displayIframe();
+                    break;
+
+                case 'reviews':
+                    this.options.navigate = 'reviews';
+                    this.displayIframe();
+                    break;
+
+                case 'button':
+                    this.addButton();
+                    break;
+
+                case 'contact-button':
+                    this.addContactButton();
+                    break;
+            }
+        }
+    };
+
+    SimplybookWidget.prototype.onReceiveMessage = function(message) {
+        if (typeof message.data === 'object') {
+            if (!this.frame || message.source !== this.frame.contentWindow) {
+                return;
+            }
+            switch (message.data.event) {
+                case 'appReady':
+                    this.setSettings(message.data);
+                    break;
+                case 'updateWidgetSize':
+                    this.updateWidgetSize(message.data);
+                    break;
+                case 'closeWidget':
+                    this.closePopup();
+                    break;
+                case 'modalShown':
+                    if (this.options.widget_type === 'iframe') {
+                        this.changeModalPosition(message.data.listener_id);
+                    }
+                    break;
+                case 'modalShow':
+                    if (this.options.widget_type === 'iframe') {
+                        this.saveModalPosition(message.data.listener_id);
+                    }
+                    break;
+                case 'modalHidden':
+                    if (this.options.widget_type === 'iframe') {
+                        this.updatePositionAfterModal(message.data.listener_id);
+                    }
+                    break;
+                case 'stepChanged':
+                case 'scrollTo':
+                    if (this.options.widget_type === 'iframe') {
+                        this.scrollToContent(message.data.content_position);
+                    }
+                    break;
+            }
+        }
+    };
+
+    SimplybookWidget.prototype.setSettings = function() {
+        var win = this.frame.contentWindow || this.frame;
+
+        var postData = {
+            'update_config': true,
+            'update_theme_vars': true,
+            'theme_vars': this.options.theme_settings,
+            'config_vars': this.options.app_config,
+        };
+
+        if (this.options.navigate) {
+            postData['navigate'] = this.options.navigate;
+            this.options.navigate = null;
+        }
+
+        if (this.options.reviews_count || this.options.hide_add_reviews) {
+            postData['reviews_vars'] = {
+                "reviews_count": this.options.reviews_count,
+                "hide_add_reviews": parseInt(this.options.hide_add_reviews)
+            };
+        }
+
+        win.postMessage(postData, '*');
+    };
+
+    SimplybookWidget.prototype.navigate = function(to) {
+        var win = this.frame.contentWindow || this.frame;
+
+        win.postMessage({
+            'navigate': to
+        }, '*');
+    };
+
+    SimplybookWidget.prototype.scrollToContent = function(contentPos) {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var iframePosition = this.frame.getBoundingClientRect();
+
+        var top = scrollTop + iframePosition.top + contentPos;
+
+        if (scrollTop > top) {
+            window.scrollTo(0, top);
+        }
+    };
+
+    SimplybookWidget.prototype.changeModalPosition = function(listenerId) {
+        if (this.modalsPositions[listenerId]) {
+            window.scrollTo(0, this.modalsPositions[listenerId]);
+        }
+
+        var win = this.frame.contentWindow || this.frame;
+
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var iframePosition = this.frame.getBoundingClientRect();
+
+        var top = scrollTop + iframePosition.top;
+        var scrollTo = scrollTop - top;
+
+        win.postMessage({
+            'update_modal_position': true,
+            'listener_id': listenerId,
+            'top': Math.max(scrollTo, 0)
+        }, '*');
+    };
+
+    SimplybookWidget.prototype.saveModalPosition = function(listenerId) {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        this.modalsPositions[listenerId] = scrollTop;
+    };
+
+    SimplybookWidget.prototype.updatePositionAfterModal = function(listenerId) {
+        if (this.modalsPositions[listenerId]) {
+            window.scrollTo(0, this.modalsPositions[listenerId]);
+        }
+    };
+
+    SimplybookWidget.prototype.getUrl = function() {
+        var widget_type = this.options.widget_type;
+        if (widget_type == 'contact-button') {
+            widget_type = 'button';
+        }
+
+        var url = this.options.url + '/v2/?widget-type=' + widget_type + '&theme=' + this.options.theme;
+        if (this.options.theme) {
+            url += '&theme=' + this.options.theme;
+        }
+        if (this.options.theme_id) {
+            url += '&theme_id=' + this.options.theme_id;
+        }
+        if (this.options.timeline) {
+            url += '&timeline=' + this.options.timeline;
+        }
+        if (this.options.datepicker) {
+            url += '&datepicker=' + this.options.datepicker;
+        }
+        if (this.options.is_rtl) {
+            url += '&is_rtl=1';
+        }
+        return url;
+    };
+
+    SimplybookWidget.prototype.subscribeMessages = function() {
+        var instance = this;
+        window.addEventListener("message", function(data) {
+            instance.onReceiveMessage(data);
+        }, false);
+    };
+
+    // iframe widget methods
+    SimplybookWidget.prototype.updateWidgetSize = function(data) {
+        if (this.options.widget_type !== 'iframe' && this.options.widget_type !== 'reviews') {
+            return;
+        }
+        this.frame.height = data.height;
+    };
+
+    SimplybookWidget.prototype.displayIframe = function() {
+        document.write(
+            '<iframe scrolling="no" class="sb-widget-iframe" width="100%" border="0" frameborder="0" src="' + this.getUrl() + '" name="' + this.name + '" id="' + this.name + '"></iframe>'
+        );
+        this.frame = document.getElementById(this.name);
+
+        this.subscribeMessages();
+    };
+
+    // button widget methods
+    SimplybookWidget.prototype.addButton = function() {
+        this.addButtonWidgetStyles();
+
+        var btn;
+        if (this.options.button_custom_id) {
+            btn = document.getElementById(this.options.button_custom_id);
+        } else {
+            btn = this.getButtonNode();
+        }
+
+        var instance = this;
+        btn.addEventListener('click', function() {
+            instance.showPopupFrame('book');
+        });
+
+        if (!this.options.button_custom_id) {
+            let agendar = document.getElementById("agendar");
+            agendar.appendChild(btn);
+            // document.body.appendChild(btn);
+        }
+    };
+
+    SimplybookWidget.prototype.addContactButton = function() {
+        this.addButtonWidgetStyles();
+
+        var btn;
+        if (this.options.button_custom_id) {
+            btn = document.getElementById(this.options.button_custom_id);
+        } else {
+            btn = this.getButtonNode();
+        }
+
+        var instance = this;
+        btn.addEventListener('click', function() {
+            instance.showPopupFrame('contact-widget');
+        });
+
+        if (!this.options.button_custom_id) {
+            document.body.appendChild(btn);
+        }
+    };
+
+    SimplybookWidget.prototype.getButtonNode = function() {
+        this.btn = document.createElement('div');
+        this.btnLabel = document.createElement('div');
+        this.btnLabel.innerText = this.options.button_title;
+
+        this.btn.appendChild(this.btnLabel);
+
+        this.updateButtonStyles();
+
+        return this.btn;
+    };
+
+    SimplybookWidget.prototype.updateButtonStyles = function(options) {
+        if (!this.btn) {
+            return;
+        }
+        if (options) {
+            this.options.button_position = options.button_position;
+            this.options.button_background_color = options.button_background_color;
+            this.options.button_text_color = options.button_text_color;
+            this.options.button_position_offset = options.button_position_offset;
+            this.options.button_title = options.button_title;
+        }
+
+        this.btn.className = 'simplybook-widget-button ' + this.options.button_position;
+        this.btn.style.backgroundColor = this.options.button_background_color;
+        this.btn.style.color = this.options.button_text_color;
+        if (this.options.button_position === 'top' || this.options.button_position === 'bottom') {
+            this.btn.style.right = this.options.button_position_offset;
+            this.btn.style.bottom = '';
+        } else {
+            this.btn.style.bottom = this.options.button_position_offset;
+            this.btn.style.right = '';
+        }
+        this.btnLabel.innerText = this.options.button_title;
+    };
+
+    SimplybookWidget.prototype.resetWidget = function(options) {
+        this.options = options;
+
+        this.updateButtonStyles(options);
+
+        this.container = null;
+        this.frame = null;
+    };
+
+    SimplybookWidget.prototype.showPopupFrame = function(navigateTo) {
+        if (navigateTo === undefined) {
+            navigateTo = 'book';
+        }
+
+        if (!this.container) {
+            this.container = document.createElement('div');
+            this.container.className = 'simplybook-widget-container active';
+
+            this.options.navigate = navigateTo;
+            this.container.appendChild(this.getIframeNode());
+
+            document.body.appendChild(this.container);
+        } else {
+            this.container.className = 'simplybook-widget-container active';
+            this.navigate(navigateTo);
+        }
+
+        this.showOverlay();
+    };
+
+    SimplybookWidget.prototype.closePopup = function() {
+        this.hideOverlay();
+        this.container.className = 'simplybook-widget-container';
+    };
+
+    SimplybookWidget.prototype.showOverlay = function() {
+        if (!this.overlay) {
+            this.overlay = document.createElement('div');
+            this.overlay.className = 'simplybook-widget-overlay';
+
+            var instance = this;
+            this.overlay.addEventListener('click', function() {
+                instance.closePopup();
+            });
+        }
+
+        document.body.appendChild(this.overlay);
+
+        var instance = this;
+        // to show animated appear
+        setTimeout(function() {
+            instance.overlay.className = instance.overlay.className + ' active';
+        }, 10);
+    };
+
+    SimplybookWidget.prototype.hideOverlay = function() {
+        if (this.overlay) {
+            this.overlay.className = 'simplybook-widget-overlay';
+
+            var instance = this;
+            setTimeout(function() {
+                document.body.removeChild(instance.overlay);
+            }, 300);
+        }
+    };
+
+    SimplybookWidget.prototype.addButtonWidgetStyles = function() {
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('type', 'text/css');
+        //link.setAttribute('href', './widget.css');
+
+        document.getElementsByTagName('head')[0].appendChild(link);
+    };
+
+    SimplybookWidget.prototype.getIframeNode = function() {
+        if (!this.frame) {
+            this.frame = document.createElement('iframe');
+            this.frame.border = '0';
+            this.frame.frameBorder = '0';
+            if (this.options.widget_type == 'iframe') {
+                this.frame.scrolling = 'no';
+            }
+            this.frame.name = this.name;
+            this.frame.id = this.name;
+            this.frame.src = this.getUrl();
+
+            this.subscribeMessages();
+        }
+
+        return this.frame;
+    };
+
+
+    // fim do widget
+
+    var slideIndex = 1;
+    // Next/previous controls
+
+
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    var timeOutSlides
+
+    function showSlides(n) {
+        clearTimeout(timeOutSlides);
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        timeSlides();
+    }
+
+    function timeSlides() {
+        timeOutSlides = setTimeout(() => {
+            showSlides(slideIndex += 1)
+        }, 4500);
+    }
+
+
+    // Thumbnail image controls
+    // function currentSlide(n) {
+    //   showSlides(slideIndex = n);
+    // }
+    // Slide automatico
+    // slide com next e prev
+
+    // function showSlides(n) {
+    //   var i;
+    //   var slides = document.getElementsByClassName("mySlides");
+    //   var dots = document.getElementsByClassName("dot");
+    //   if (n > slides.length) {slideIndex = 1}
+    //   if (n < 1) {slideIndex = slides.length}
+    //   for (i = 0; i < slides.length; i++) {
+    //       slides[i].style.display = "none";
+    //   }
+    //   for (i = 0; i < dots.length; i++) {
+    //       dots[i].className = dots[i].className.replace(" active", "");
+    //   }
+    //   slides[slideIndex-1].style.display = "block";
+    //   dots[slideIndex-1].className += " active";
+    // }
+
+    function todosButton() {
+        var buttonList = document.querySelectorAll('.iconButton');
+        var activeButton = document.getElementById('imgTodos');
+        var changeColor = document.getElementById('buttonTodos');
+        var changeFiltros = document.querySelectorAll('.filtroButton');
+
+        for (i = 0; i < changeFiltros.length; i++) {
+            if (changeFiltros[i].className.includes(' active-filter')) {
+                changeFiltros[i].className = changeFiltros[i].className.replace(" active-filter", "");
+            }
+        }
+        changeColor.className += " active-filter";
+        showAllFilters();
+        for (i = 0; i < buttonList.length; i++) {
+            var nome = buttonList[i].className;
+            if (nome.includes(' active-button'))
+                buttonList[i].className = buttonList[i].className.replace(" active-button", "");
+        }
+
+        activeButton.className += " active-button";
+    }
+
+    function hideAllFilters() {
+        var filtros = document.querySelectorAll(".pureFilter");
+        for (i = 0; i < filtros.length; i++) {
+            filtros[i].style.display = "none";
+        }
+    }
+
+    function showAllFilters() {
+        var filtros = document.querySelectorAll(".pureFilter");
+        for (i = 0; i < filtros.length; i++) {
+            filtros[i].style.display = "inline-block";
+        }
+    }
+
+    function verificaFiltro(classe, buttonID, IDButton) {
+        var activeButton = document.getElementById(buttonID);
+        var filtros = document.querySelectorAll(classe);
+        var buttonList = document.querySelectorAll('.iconButton');
+        var changeColor = document.getElementById(IDButton);
+        var changeFiltros = document.querySelectorAll('.filtroButton');
+
+        hideAllFilters();
+
+        for (i = 0; i < changeFiltros.length; i++) {
+            if (changeFiltros[i].className.includes(' active-filter')) {
+                changeFiltros[i].className = changeFiltros[i].className.replace(" active-filter", "");
+            }
+        }
+
+        for (i = 0; i < buttonList.length; i++) {
+            var nome = buttonList[i].className;
+            if (nome.includes(' active-button')) {
+                buttonList[i].className = buttonList[i].className.replace(" active-button", "");
+            }
+        }
+        for (i = 0; i < filtros.length; i++) {
+            filtros[i].style.display = "inline-block";
+        }
+        changeColor.className += " active-filter";
+        activeButton.className += " active-button";
+    }
+
+    var data = [{
+        "name": "ALERGOLOGIA",
+        "sigla": 0,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/alergia-e-imunologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=telemedicina&utm_campaign=voucher-desconto",
+            "price": "R$48,00"
+        }]
+    }, {
+        "name": "CARDIOLOGIA",
+        "sigla": 1,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/cardiologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$49,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "CLINICO GERAL",
+        "sigla": 2,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/clinica-geral-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$51,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$51,00"
+        }]
+    }, {
+        "name": "NEUROLOGIA",
+        "sigla": 3,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "GASTROENTEROLOGIA",
+        "sigla": 4,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/endocrinologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "PEDIATRIA",
+        "sigla": 5,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/pediatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "GINECOLOGIA/OBSTETRÍCIA",
+        "sigla": 6,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/ginecologia-e-obstetricia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "PNEUMOLOGIA",
+        "sigla": 7,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/pneumologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "GERIATRA",
+        "sigla": 8,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/geriatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }]
+    }, {
+        "name": "INFECTOLOGIA",
+        "sigla": 9,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/infectologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }]
+    }, {
+        "name": "ORTOPEDIA",
+        "sigla": 10,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/ortopedia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "DERMATOLOGIA",
+        "sigla": 11,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/dermatologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "NUTRICIONISTA",
+        "sigla": 12,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/nutricionista-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }]
+    }, {
+        "name": "PSICOLOGIA",
+        "sigla": 13,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/psicologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }]
+    }, {
+        "name": "OFTALMOLOGIA",
+        "sigla": 14,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/oftalmologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "OTORRINOLARINGOLOGIA",
+        "sigla": 15,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/otorrinolaringologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "NEFROLOGIA",
+        "sigla": 16,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/nefrologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }]
+    }, {
+        "name": "PSIQUIATRIA",
+        "sigla": 17,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/psiquiatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "ANESTESIOLOGIA",
+        "sigla": 20,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "UROLOGIA",
+        "sigla": 22,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/urologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "ENDOCRINOLOGIA / METABOLOGIA",
+        "sigla": 24,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/endocrinologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "CIRURGIA GERAL",
+        "sigla": 29,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "CIRURGIA PLASTICA",
+        "sigla": 30,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "MASTOLOGIA",
+        "sigla": 31,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "REUMATOLOGIA",
+        "sigla": 32,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/reumatologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }, {
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "NEUROCIRURGIA",
+        "sigla": 33,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "NEUROLOGIA PEDIATRICA",
+        "sigla": 40,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "GASTROENTEROLOGIA PEDIATRICA",
+        "sigla": 69,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "ALERGIA E IMUNOLOGIA PEDIATRICA",
+        "sigla": 77,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "PNEUMOLOGIA PEDIATRICA",
+        "sigla": 78,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }, {
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/agendamento/consultas/pneumologia-pediatrica-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }]
+    }, {
+        "name": "OFTALMOLOGIA PEDIATRICA",
+        "sigla": 79,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "INFECTOLOGIA PEDIATRICA",
+        "sigla": 81,
+        "partners": [{
+            "partner": "conexa",
+            "link": "https://docpass.com.br/cadastro/5084",
+            "price": "R$49,00"
+        }]
+    }, {
+        "name": "TELEORIENTAÇÃO COVID-19",
+        "sigla": 91,
+        "partners": [{
+            "partner": "drconsulta",
+            "link": "https://www.drconsulta.com/servicos/consultas/orientacao-medica-gripe-ou-resfriado?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+            "price": "R$50,00"
+        }]
+    }, ]
+
+
+    function main() {
+        createSelections();
+    }
+
+
+    function changeCovid() {
+        window.open("https://www.drconsulta.com/servicos/consultas/orientacao-medica-gripe-ou-resfriado?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto");
+    }
+
+    function openLink() {
+        let elements = document.getElementsByName("input-consulta");
+
+        elements.forEach(item => {
+            if (item.checked) {
+                window.open(item.value);
+            }
+        })
+    }
+
+    function openModal(modalName) {
+        let container = document.getElementById("modal-container");
+        container.style.display = "block";
+
+        let modal = document.getElementById(modalName);
+
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        let modal = document.getElementsByClassName("modal");
+        for (let i = 0; i < modal.length; i++) {
+            modal[i].style.display = "none";
+        }
+        let container = document.getElementById("modal-container");
+        container.style.display = "none";
+    }
+
+
+
+
+    function createSelections() {
+        let Selection = document.getElementById("select-especialidade");
+        Selection.length = 0;
+
+        let option;
+        option = document.createElement('option');
+        option.text = "Selecione";
+        option.setAttribute('disabled', false);
+        option.setAttribute('selected', true);
+        Selection.add(option);
+
+        for (let i = 0; i < data.length; i++) {
+            option = document.createElement('option');
+            option.text = data[i].name;
+            option.value = data[i].sigla;
+            Selection.add(option)
+        }
+    }
+
+    function onChangeState(option) {
+
+        let card2 = document.getElementById("card-2");
+        card2.style.height = "100%";
+
+        let selecione = document.getElementById("select-text");
+        selecione.style.display = "block";
+
+        const partnersList = data[option.value].partners;
+
+        let displayPartner;
+        let partnerName;
+
+        let hidden;
+        hidden = document.getElementById("drconsulta");
+        hidden.style.display = "none";
+
+        hidden = document.getElementById("conexa");
+        hidden.style.display = "none";
+
+        for (let i = 0; i < partnersList.length; i++) {
+            partnerName = partnersList[i];
+
+            if (partnerName.partner == "drconsulta") {
+                displayPartner = document.getElementById("drconsulta");
+                displayPartner.style.display = "block";
+
+                let inputValue = document.getElementById("input-consulta");
+                inputValue.setAttribute('value', partnerName.link);
+
+                // let spanPrice = document.getElementById("price-drconsulta");
+                // spanPrice.text = ""            
+            }
+            if (partnerName.partner == "conexa") {
+                displayPartner = document.getElementById("conexa");
+                displayPartner.style.display = "block";
+
+                let inputValue = document.getElementById("input-conexa");
+                inputValue.setAttribute('value', partnerName.link);
+            }
+        }
+
+        let search = document.getElementById("search-button");
+        search.disabled = false;
+
+    }
+
+    function mainFiltros() {
+        showSlides(slideIndex);
+        // timeSlides();
+        createFiltrosConexa();
+        createFiltrosDrconsulta();
+    }
+
+    function createFiltrosConexa() {
+        let Selection = document.getElementById("select-especialidade-conexa");
+
+        Selection.length = 0;
+        let option;
+
+        option = document.createElement('option');
+        option.text = "Selecione";
+        option.setAttribute('disabled', false);
+        option.setAttribute('selected', true);
+        Selection.add(option);
+
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data[i].partners.length; j++) {
+                if (data[i].partners[j].partner == "conexa") {
+                    option = document.createElement('option');
+                    option.text = data[i].name;
+                    option.value = data[i].partners[j].link;
+                    Selection.add(option)
+                }
+            }
+        }
+    }
+
+    function createFiltrosDrconsulta() {
+        let Selection = document.getElementById("select-especialidade-drconsulta");
+        Selection.length = 0;
+
+        let option;
+        option = document.createElement('option');
+        option.text = "Selecione";
+        option.setAttribute('disabled', false);
+        option.setAttribute('selected', true);
+        Selection.add(option);
+
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data[i].partners.length; j++) {
+                if (data[i].partners[j].partner == "drconsulta") {
+                    option = document.createElement('option');
+                    option.text = data[i].name;
+                    option.value = data[i].partners[j].link;
+                    Selection.add(option)
+                }
+            }
+        }
+    }
+
+    function onFiltroDrconsulta(sel) {
+        let ahref = document.getElementById('link-drconsultar');
+        ahref.setAttribute('href', sel.value);
+    }
+
+    function onFiltroConexa(sel) {
+        let ahref = document.getElementById('link-consultar');
+        ahref.setAttribute('href', sel.value);
+    }
+
+    function modalOpen() {
+        document.getElementById('modalParceiros').style.display = 'inherit';
+    }
+
+    function closeModal() {
+        document.getElementById('modalParceiros').style.display = 'none';
+    }
+
+    function enviarDados() {
+        closeModal();
+        divSuccess();
+    }
+
+    function divSuccess() {
+        document.getElementById('modalSuccess').style.display = 'flex';
+        setTimeout(() => {
+            document.getElementById('modalSuccess').style.display = 'none';
+        }, 2000);
+    }
+</script>
+
+<body onload="mainFiltros()">
+    <div class="container">
+        <div class="center-items">
+            <div class="pageDiv">
+                <a class="inicialText" href="/panvel/main.do">Página Inicial \</a>
+                <h4 class="primary-title">Clinic</h4>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <!-- <a class="item" href="#"> -->
+                        <picture>
+                            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_geral.jpg" class="banner" id="banner-home" alt="Geral" title="Geral">
+                        </picture>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <a class="item" href="/panvel/panvelClinic.do?secao=vacina">
+                            <picture>
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_vacinas.jpg" class="banner" id="banner-home" alt="Vacinas" title="Vacinas">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <a class="item" href="/panvel/servicos-clinicos.do">
+                            <picture>
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_servicosclinicos.jpg" class="banner" id="banner-home" alt="Serviços Clinicios" title="Serviços Clinicios">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <a class="item" href="panvel/atendimento-farmaceutico.do">
+                            <picture>
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_farmaceutica.jpg" class="banner" id="banner-home" alt="Atendimento Farmaceutico" title="Atendimento Farmaceutico">
+                            </picture>
+                        </a>
+                    </div>
+<!--
+                    <div class="mySlides fade">
+                        <a class="item" href="/panvel/telemedicina.do">
+                            <picture>
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_telemedicina.jpg" class="banner" id="banner-home" alt="Telemedicina" title="Telemedicina">
+                            </picture>
+                        </a>
+                    </div>
+-->
+                    <div class="mySlides fade">
+                        <a class="item" href="/panvel/aconselhamento.do">
+                            <picture>
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_teleaconselhamento.jpg" class="banner" id="banner-home" alt="Teleaconselhamento" title="Teleaconselhamento">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <a class="item" href="/panvel/teste-covid.do">
+                            <picture>
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                                <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+                                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_covid.jpg" class="banner" id="banner-home" alt="Covid" title="Covid">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="agendamento">
+            <div id="agendar-texto">
+                <p><b><i>É muito fácil agendar seus atendimentos ou vacinas na Panvel Clinic.</i></b></p>
+                <p><i>1. Escolha um <b>serviço</b> ou <b>vacina</b></i></p>
+                <p><i>2. Escolha a <b>loja</b> de aplicação</i></p>
+                <p><i>3. Defina o <b>dia e horário</b> disponível</i></p>
+                <p><b><i>Simples, rápido e fácil.</i></b></p>
+            </div>
+            <div id="agendar">
+                <a href="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/simplyBook.html" target="_blank">
+                    <button style="cursor: pointer;">
+                            <i>Agendar atendimento</i>
+                        </button>
+                </a>
+                <!-- <script>
+                    var widget = new SimplybookWidget({
+                        "widget_type":"button",
+                        "url":"https://grupodimed.simplybook.me",
+                        "theme":"bookingtroll",
+                        "theme_settings":{
+                            "timeline_hide_unavailable":"0",
+                            "timeline_show_end_time":"0",
+                            "timeline_modern_display":"as_slots",
+                            "sb_base_color":"#009cff",
+                            "display_item_mode":"block",
+                            "dark_font_color":"#2d3a58",
+                            "light_font_color":"#ffffff",
+                            "btn_color_1":"#ff3f6c",
+                            "sb_company_label_color":"#ffffff",
+                            "hide_img_mode":"1",
+                            "sb_busy":"#dad2ce",
+                            "sb_available":"#d3e0f1"
+                        },
+                        "timeline":"modern",
+                        "datepicker":"top_calendar",
+                        "is_rtl":false,
+                        "app_config":{"predefined":{"category":"1"}},
+                        "button_title":"Agendar atendimento",
+                        "button_background_color":"#FFA500",
+                        "button_text_color":"#143c8d",
+                        "button_position":"center",
+                        "button_position_offset":"50%"
+                    });
+                </script>    -->
+            </div>
+            <!-- <div id="agendar">   
+                <script>
+                    var widget = new SimplybookWidget({
+                        "widget_type":"button",
+                        "url":"https://grupodimed.simplybook.me",
+                        "theme":"bookingtroll",
+                        "theme_settings":{
+                            "timeline_hide_unavailable":"0",
+                            "timeline_show_end_time":"0",
+                            "timeline_modern_display":"as_slots",
+                            "sb_base_color":"#009cff",
+                            "display_item_mode":"block",
+                            "dark_font_color":"#2d3a58",
+                            "light_font_color":"#ffffff",
+                            "btn_color_1":"#ff3f6c",
+                            "sb_company_label_color":"#ffffff",
+                            "hide_img_mode":"0",
+                            "sb_busy":"#dad2ce",
+                            "sb_available":"#d3e0f1"
+                        },
+                        "timeline":"modern",
+                        "datepicker":"top_calendar",
+                        "is_rtl":false,
+                        "app_config":{"predefined":{"category":"1"}},
+                        "button_title":"Agendar atendimento",
+                        "button_background_color":"#FFA500",
+                        "button_text_color":"#143c8d",
+                        "button_position":"center",
+                        "button_position_offset":"50%"
+                    });                    
+                </script>   
+            </div>-->
+            <!-- </div> -->
+        </div>
+
+        <div class="pure-g center-items">
+            <div class="pure-u-1-1 card-body">
+                <div class="pure-u-md-1-3 pure-u-sm-1-1">
+                    <div class="cardClass cardVacinas">
+                        <a href="/panvel/panvelClinic.do?secao=vacina" class="cardLinkNew">
+                            <div class="card_content">
+                                <div class="card_telemedicina">
+                                    <span class="titulo-card">Vacinas</span><br>
+                                    <span class="descricao-card">Sua imunidade<br>bem fortalecida.                                                        
+                                </div>                                  
+                                <button class="button-saiba-mais">
+                                    <p class="text-saiba-mais">Saiba mais</p>
+                                </button>                            
+                            </div>  
+                        </a>   
+                    </div>             
+                </div>                
+                <div class="pure-u-1 pure-u-md-1-3">
+                    <div class="cardClass cardCovid">
+                        <a href="/panvel/teste-covid.do" class="cardLinkNew">
+                            <div class="card_content">
+                                <div>
+                                    <span class="titulo-card">Testes COVID-19<br></span>
+                                    <span class="descricao-card">Uma resposta<br> à pandemia bem aqui.</span>
+                                </div>
+                                <button class="button-saiba-mais">
+                                    <p class="text-saiba-mais">Saiba mais</p>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pure-u-md-1-3 pure-u-sm-1-1">
+                    <div class="cardClass cardAtendimento">
+                        <a href="/panvel/atendimento-farmaceutico.do" class="cardLinkNew">
+                            <div class="card_content">
+                                <div>
+                                    <span class="titulo-card">Atendimento Farmacêutico<br></span>
+                                    <span class="descricao-card">Atendimento com a <br>segurança e qualidade<br> que você merece.</span>
+                                </div>
+                                <button class="button-saiba-mais">
+                                    <p class="text-saiba-mais">Saiba mais</p>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1-1">
+               <!-- <div class="pure-u-1 pure-u-md-1-3">
+                    <div class="cardClass cardMedicina">
+                        <a href="/panvel/telemedicina.do" class="cardLinkNew">
+                            <div class="card_content">
+                                <div>
+                                    <span class="titulo-card">Telemedicina<br></span>
+                                    <span class="descricao-card">O seu contato<br>médico de confiança.</span>
+                                </div>
+                                <button class="button-saiba-mais">
+                                    <p class="text-saiba-mais">Saiba mais</p>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+				-->
+				
+                <div class="pure-u-1 pure-u-md-1-3 pureServicos">
+                    <div class="cardClass cardAconselhamento ">
+                        <a href="/panvel/aconselhamento.do" class="cardLinkNew">
+                            <div class="card_content">
+                                <div>
+                                    <span class="titulo-card">Teleaconselhamento<br></span>
+                                    <span class="descricao-card">O Seu psicólogo<br>de confiança.</span>
+                                </div>
+                                <button class="button-saiba-mais">
+                                    <p class="text-saiba-mais">Saiba mais</p>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pure-u-md-1-3 pureServicos pure-u-sm-1-1">    
+                    <div class="cardClass cardServicos">
+                        <a href="/panvel/servicos-clinicos.do" class="cardLinkNew">
+                            <div class="card_content">
+                                <div>
+                                    <span class="titulo-card">Serviços Clínicos</span><br>
+                                    <span class="descricao-card">Procedimentos<br>essenciais para<br>você ficar bem.</span>
+                                </div>
+                                <button class="button-saiba-mais">
+                                    <p class="text-saiba-mais">Saiba mais</p>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+				
+            </div>
+        </div>
+        <div class="pure-g center-items">
+            <div class="pure-u-1-1">
+                <div class="buttonDivs" id="buttonList">
+                    <p class="filtroText">Filtre por necessidade</p>
+                    <button class="button-todos pure-button filtroButton active-filter" id="buttonTodos" onclick="todosButton()">
+                        Todos <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                        class="iconFiltro active-button iconButton" id="imgTodos">
+                    </button>
+                    <button class="button-xsmall pure-button filtroButton" id="idCovidButton" onclick="verificaFiltro('.filtroCovid','imgCovid','idCovidButton')">
+                        Testes Covid <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                        class="iconFiltro iconButton" id="imgCovid">
+                    </button>
+					<!--
+                    <button class="button-xsmall pure-button filtroButton" id="idTelemedicinaButton" onclick="verificaFiltro('.filtroMedicina','imgTelemedicina','idTelemedicinaButton')">
+                        Telemedicina <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                        class="iconFiltro iconButton" id="imgTelemedicina">
+                     </button>
+					 -->
+                    <button class="button-xsmall pure-button filtroButton" id="idAconselhamentoButton" onclick="verificaFiltro('.filtroAconselhamento','imgAconselhamento','idAconselhamentoButton')">
+                       Teleaconselhamento <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                       class="iconFiltro iconButton" id="imgAconselhamento">
+                    </button>
+					<!--
+                    <button class="button-xsmall pure-button filtroButton" id="idConexaButton" onclick="verificaFiltro('.filtroConexa','imgConexa','idConexaButton')">
+                        Docpass <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                        class="iconFiltro iconButton" id="imgConexa">
+                    </button>
+                    <button class="button-xsmall pure-button filtroButton" id="idConsultaButton" onclick="verificaFiltro('.filtroConsulta','imgConsulta','idConsultaButton')">
+                        Dr. Consulta <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                        class="iconFiltro iconButton" id="imgConsulta">
+                    </button>
+					-->
+                    <button class="button-xsmall pure-button filtroButton" id="idVittudeButton" onclick="verificaFiltro('.filtroVittude','imgVittude','idVittudeButton')">
+                       Vittude <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                       class="iconFiltro iconButton" id="imgVittude">
+                    </button>
+                    <button class="button-xsmall pure-button filtroButton" id="idCCGButton" onclick="verificaFiltro('.filtroCCG','imgCCG','idCCGButton')">
+                       CCG <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/IconPlus.png" 
+                       class="iconFiltro iconButton" id="imgCCG">
+                    </button>
+                </div>
+            </div>
+            <div class="pure-u-1-1 pureFilterContainer">
+                <div class="filterContainer">
+					<!--
+                    <div class="pure-u-1-5 pureFilter filtroConsulta filtroMedicina">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets//hub/dr-consulta.png" alt="imagem" class="cardFilterImg">
+                            <p class="cardText1">Consulta Especialidade</p>
+                            <select name="select-especialidade-drconsulta" id="select-especialidade-drconsulta" onclick="onFiltroDrconsulta(this)">                                           
+                            </select>
+                            <a id="link-drconsultar" target="_blank">
+                                <button class="button-xsmall pure-button" id="buttonCard1">
+                                    <span>Agendar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/calender.png" class="iconFiltro">
+                                </button>
+                            </a>
+                            <p class="cardText5">Desconto Panvel de <span>10%</span></p>
+                        </div>
+                    </div>
+					-->
+					<!--
+                    <div class="pure-u-1-5 pureFilter filtroConsulta filtroMedicina">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/dr-consulta.png" alt="imagem" class="cardFilterImg">
+                            <p class="cardText1">Consulta COVID-19</p>
+                            <a href="https://www.drconsulta.com/servicos/consultas/video-orientacao">
+                                <button class="button-xsmall pure-button cardButton">
+                                    <span>Agendar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/calender.png" class="iconFiltro">
+                                </button>
+                            </a>
+                            <p class="cardText5">Desconto Panvel de <span>15%</span></p>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroConexa filtroMedicina">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/logo-docpass.png" alt="imagem" class="cardFilterImg">
+                            <p class="cardText1">Consulta Especialidade</p>
+                            <select name="select-especialidade-conexa" id="select-especialidade-conexa" onclick="onFiltroConexa(this)">                                           
+                            </select>
+                            <a id="link-consultar" href="#" target="_blank">
+                                <button class="button-xsmall pure-button" id="buttonCard3">
+                                    <span>Agendar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/calender.png" class="iconFiltro">
+                                </button>
+                            </a>
+                            <p class="cardText5">Desconto Panvel de <span>10%</span></p>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroConexa filtroMedicina">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/logo-docpass.png" alt="imagem" class="cardFilterImg">
+                            <p class="cardText1">Consulta Clinico Geral</p>
+                            <a href="https://docpass.com.br/cadastro/5084">
+                                <button class="button-xsmall pure-button cardButton">
+                                    <span>Agendar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/calender.png" class="iconFiltro">
+                                </button>
+                            </a>
+                            <p class="cardText5">Desconto Panvel de <span>15%</span></p>
+                        </div>
+                    </div>
+					-->
+                    <div class="pure-u-1-5 pureFilter filtroVittude filtroAconselhamento">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/vittude1.png" alt="imagem" class="cardFilterImg">
+                            <p class="cardText1">Tele Aconselhamento</p>
+                            <a href="https://corporate.vittude.com/bempanvel/">
+                                <button class="button-xsmall pure-button cardButton" id="buttonCard5">
+                                    <span>Agendar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/calender.png" class="iconFiltro">
+                                </button>
+                            </a>
+                            <p class="cardText5">Desconto Panvel de <span>40%</span></p>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroCovid">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/panvel-logo-novo.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardText1">Teste COVID-19 IgG</p>
+                            <p class="cardText3">A partir de</p>
+                            <p class="cardText4">R$ 169.00</p>
+                            <a href="https://www.panvel.com/panvel/teste-covid-19-igg-grupo-exame/p-112288">
+                                <button class="button-xsmall pure-button">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroCovid">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/panvel-logo-novo.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardText1">Teste COVID-19 IgG+IgM</p>
+                            <!-- <p class="cardText2">Lorem ipsum dolor sit amet</p> -->
+                            <p class="cardText3">A partir de</p>
+                            <p class="cardText4">R$ 259.00</p>
+                            <a href="https://www.panvel.com/panvel/teste-covid-19-igg-igm-grupo-exame/p-111829">
+                                <button class="button-xsmall pure-button">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="pure-u-1-5 pureFilter filtroCovid">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/panvel-logo-novo.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardText1">Teste COVID-19 PCR</p>
+                            <!-- <p class="cardText2">Lorem ipsum dolor sit amet</p> -->
+                            <p class="cardText3">A partir de</p>
+                            <p class="cardText4">R$ 269.00</p>
+                            <a href="https://www.panvel.com/panvel/teste-covid--19-rt--pcr-grupo-exame/p-111502">
+                                <button class="button-xsmall pure-button">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroCovid">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/panvel-logo-novo.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardText1">Teste COVID-19 PCR(URGENCIA)</p>
+                            <!-- <p class="cardText2">Lorem ipsum dolor sit amet</p> -->
+                            <p class="cardText3">A partir de</p>
+                            <p class="cardText4">R$ 349.00</p>
+                            <a href="https://www.panvel.com/panvel/teste-covid--19-rt--pcr-urgencia-24h-grupo-exame/p-111503">
+                                <button class="button-xsmall pure-button" id="button-buy4">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroCCG">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/CCG/ccg_icon.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardCCG1">Saúde da Mulher</p>
+                            <p class="cardCCG2">Pacote Básico:</p>
+
+                            <ul class="cardCCG3">
+                                <li>Consulta Ginecologista</li>
+                                <li>Exame Preventivo do Colo do Útero</li>
+                            </ul>
+
+                            <p class="cardText4">R$ 116,90</p>
+                            <a href="https://www.planosccgsaude.com.br/pacotes/inicio/1/panvel">
+                                <button class="button-xsmall pure-button" id="button-buy5">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroCCG ">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/CCG/ccg_icon.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardCCG1">Saúde da Mulher</p>
+                            <p class="cardCCG2">Pacote Plus:</p>
+
+                            <ul class="cardCCG3">
+                                <li>Consulta Gineco</li>
+                                <li>Ecografia Transvaginal</li>
+                                <li>Exame Preventivo do Colo de Útero</li>
+                                <li>Mamografia</li>
+                            </ul>
+
+                            <p class="cardCCG4">R$ 179,90</p>
+                            <a href="https://www.planosccgsaude.com.br/pacotes/inicio/4/panvel">
+                                <button class="button-xsmall pure-button">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroCCG">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/CCG/ccg_icon.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardCCG1">Saúde do Homem</p>
+                            <p class="cardCCG2">Pacote Básico:</p>
+
+                            <ul class="cardCCG3">
+                                <li>Consulta Urologista</li>
+                                <li>PSA TOTAL</li>
+                            </ul>
+
+                            <p class="cardText4">R$ 107,90</p>
+                            <a href="https://www.planosccgsaude.com.br/pacotes/inicio/7/panvel">
+                                <button class="button-xsmall pure-button" id="button-buy6">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="pure-u-1-5 pureFilter filtroCCG">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/CCG/ccg_icon.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardCCG1">Saúde do Homem</p>
+                            <p class="cardCCG2">Pacote Plus:</p>
+                            <ul class="cardCCG3">
+                                <li>Consulta Urulogista</li>
+                                <li>PSA TOTAL</li>
+                                <li>Ecografia do Aparelho Urinário</li>
+                            </ul>
+
+                            <p class="cardText4">R$ 179,90</p>
+                            <a href="https://www.planosccgsaude.com.br/pacotes/inicio/8/panvel">
+                                <button class="button-xsmall pure-button" id="button-buy7">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+					<!--
+                    <div class="pure-u-1-5 pureFilter filtroMedicina filtroCCG">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/CCG/ccg_icon.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardCCG1">Telemedicina</p>
+                            <p class="cardCCG2">Pacote Basico</p>
+                            <ul class="cardCCG3">
+                                <li>Consulta Avulsa: Consulta Telemedicina (Clínico Geral)</li>
+                            </ul>
+                            <p class="cardText4">R$ 44,90</p>
+                            <a href="https://www.planosccgsaude.com.br/pacotes/inicio/9/panvel">
+                                <button class="button-xsmall pure-button" id="button-buy8">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+					-->
+					<!--
+                    <div class="pure-u-1-5 pureFilter filtroMedicina filtroCCG">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/CCG/ccg_icon.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardCCG1">Telemedicina</p>
+                            <p class="cardCCG2">Pacote Plus I:</p>
+                            <ul class="cardFlex">
+                                <li>Consulta Telemedicina (Clínico Geral)</li>
+                                <li>Hemograma</li>
+                                <li>Colesterol Total</li>
+                                <li>Glicose Total</li>
+                                <li>HDL</li>
+                            </ul>
+                            <p class="cardCCG4">R$ 80,90</p>
+                            <a href="https://www.planosccgsaude.com.br/pacotes/inicio/10/panvel">
+                                <button class="button-xsmall pure-button" id="button-buy9">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+					-->
+					<!--
+                    <div class="pure-u-1-5 pureFilter filtroMedicina filtroCCG">
+                        <div class="cardFiltro">
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/CCG/ccg_icon.png" alt="imagem" class="cardFilterImg" id="img-panvel">
+                            <p class="cardCCG1">Telemedicina</p>
+                            <p class="cardCCG2">Pacote Plus II:</p>
+                            <ul class="cardFlex">
+                                <li>Consulta Telemedicina (Clínico Geral)</li>
+                                <li>Hemograma</li>
+                                <li>HDL</li>
+                                <li>Colesterol Total</li>
+                                <li>EQU</li>
+                                <li>Glicose Total</li>
+                                <li>TGO</li>
+                                <li>Creatinina</li>
+                                <li>TGP</li>
+                            </ul>
+                            <p class="cardCCG4">R$ 80,90</p>
+                            <a href="https://www.planosccgsaude.com.br/pacotes/inicio/11/panvel">
+                                <button class="button-xsmall pure-button">
+                                    <span>Comprar</span> <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/shopping-bag.png" class="iconFiltroBuy">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+					-->
+                </div>
+            </div>
+        </div>
+
+        <div class="center-items">
+            <span class="post-title">Últimas Postagens</span>
+            <div class="posts">
+                <a href="https://www.panvel.com/panvel/hipertensao.do">
+                    <div class="post-card ">
+                        <div class="post-img" id="noticia-1"></div>
+                        <p class="post-content">Afinal, o que é a Hipertensão?</p>
+                    </div>
+                </a>
+                <a href="https://www.panvel.com/panvel/cuidados-pele.do">
+                    <div class="post-card ">
+                        <div class="post-img" id="noticia-2"></div>
+                        <p class="post-content">Cuidados com a pele depois dos 50</p>
+                    </div>
+                </a>
+                <a href="https://www.panvel.com/panvel/amamentacao.do">
+                    <div class="post-card ">
+                        <div class="post-img" id="noticia-3"></div>
+                        <p class="post-content">Conheça os benefícios da amamentação</p>
+                    </div>
+                </a>
+                <a href="https://www.panvel.com/panvel/tabaco.do">
+                    <div class="post-card">
+                        <div class="post-img" id="noticia-4"></div>
+                        <p class="post-content">O quão prejudicial o tabaco é para a saúde?</p>
+                    </div>
+                </a>
+            </div>
+            </a>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="center-items"> -->
+    <!-- <a href="#" class="ser-parceiro">
+            <div class="ser-parceiro">
+                <div class="img-parceiro">
+                    <img src="./assets/hub/SerParceiro/Logo_Panvel_Clinic2.png" alt="">
+                </div>
+                <div class="text-parceiro">
+                    <p>Se você deseja se tornar um parceiro do Panvel Clinic, envie seus dados e entraremos em contato:</p>
+                </div>
+                <div class="button-parceiro">
+                    <a href="#modalParceiros">
+                        <button onclick="modalOpen()">QUERO SER UM PARCEIRO</button>
+                    </a>
+                </div>
+                
+            </div> -->
+    <!-- </a> -->
+    <!-- </div> -->
+    </div>
+    <div id="modalParceiros" class="modal" overflow>
+        <div class="modal-header">
+            <h1><i>Parceiros Panvel</i></h1><img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/parceiros/Path.png" alt="">
+            <a href="" onclick="closeModal()">
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/parceiros/times.png" alt="">
+            </a>
+            <p>Você é fornecedor nas áreas de <i><b>telemedicina, teleaconselhamento,<br>serviços clínicos, exames </i></b>ou <i> <b>testes rápidos?</b> </i>Entre em contato!</p>
+        </div>
+        <div class="modal-formulario">
+            <form action="https://us-central1-sendmail-clinic-41bd1.cloudfunctions.net/enviarEmail" method="post">
+                <label for="empresa">Empresa<br></label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+                <label for="titulo"><br>Título do Serviço a Oferecer<br></label>
+                <input type="text" id="titulo" name="titulo" placeholder="Título do serviço">
+                <label for="descricao"><br>Descrição Serviço a Oferecer<br></label>
+                <textarea id="descricao" rows="3" name="descricao" placeholder="Informe uma descrição" autocapitalize="sentences"></textarea>
+                <label for="nome"><br>Nome do Responsável</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do responsável">
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="remetente" placeholder="Digite seu e-mail">
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="Informe seu telefone">
+                </div>
+                <button type="submit"><b>ENVIAR DADOS</b></button>
+            </form>
+        </div>
+    </div>
+    <div class="success" id="modalSuccess">
+        <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/parceiros/check.png" alt="">
+        <h1>Dados Enviados com Sucesso!</h1>
+    </div>
+
+
+</body>
+
+<style>
+    .container a {
+        text-decoration: none;
+    }
+    /* The dots/bullets/indicators */
+    /* .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            top: -70px;
+            right: 20px;
+            transition: background-color 0.6s ease;
+        }
+    
+        .active, .dot:hover {
+            background-color: #717171;
+        } */
+    /* Slideshow container */
+    
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    /* Next & previous buttons */
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 50px;
+        user-select: none;
+    }
+    /* Position the "next button" to the right */
+    
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* The dots/bullets/indicators */
+    
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    /* SLIDES END */
+    
+    .simplybook-widget-button {
+        /* position: fixed; */
+        /* display: table; */
+        /* padding: 10px;    */
+        padding: 0px 25px 0px 25px;
+        font-size: 14px;
+        font-style: italic;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        z-index: 9999;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.35);
+        max-width: 200px;
+    }
+    
+    .simplybook-widget-button div {
+        padding: 10px 0px 10px 0px;
+    }
+    
+    .simplybook-widget-button:hover div {
+        /* margin-bottom: 5px; */
+    }
+    
+    .simplybook-widget-button.right {
+        right: 0px;
+        transform: rotate(-90deg);
+        transform-origin: 100% 100%;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .simplybook-widget-button.left {
+        left: 0px;
+        transform: rotate(90deg);
+        transform-origin: 0% 100%;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .simplybook-widget-button.top {
+        top: 0px;
+        border-radius: 0 0 5px 5px;
+    }
+    
+    .simplybook-widget-button.bottom {
+        bottom: 0px;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .simplybook-widget-container {
+        position: fixed;
+        top: 20px;
+        z-index: 9999;
+        display: none;
+        width: 100%;
+        max-width: 768px;
+        max-height: 740px;
+        max-height: 90vh;
+        bottom: 65px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    
+    .simplybook-widget-container.active {
+        display: block;
+    }
+    
+    .simplybook-widget-container iframe {
+        width: 100%;
+        height: 100%;
+    }
+    
+    iframe.sb-widget-iframe {
+        min-width: 100%;
+        max-width: 100%;
+        width: 0;
+    }
+    
+    .simplybook-widget-overlay {
+        background-color: #000000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        opacity: 0;
+        z-index: 9950;
+        transition: all 0.3s;
+    }
+    
+    .simplybook-widget-overlay.active {
+        opacity: 0.5;
+    }
+    /* AGENDAMENTO */
+    
+    .agendamento {
+        background-color: white;
+        display: flex;
+        max-width: 1080px;
+        margin: auto;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        color: #143c8d;
+        justify-content: space-between;
+    }
+    
+    .agendamento div {
+        width: 100%;
+    }
+    
+    #agendar-texto {
+        font-size: 20px;
+        padding-left: 30px;
+    }
+    
+    #agendar-texto p:first-child {
+        font-size: 20px;
+    }
+    
+    #agendar-texto p:last-child {
+        font-size: 16px;
+    }
+    
+    #agendar-texto p:nth-child(2),
+    #agendar-texto p:nth-child(3),
+    #agendar-texto p:nth-child(4) {
+        font-size: 16px;
+        line-height: .5em;
+    }
+    
+    #agendar {
+        width: 40%;
+        margin: auto;
+    }
+    /* .simplybook-widget-button {
+            padding: 0;
+        } */
+    
+    .simplybook-widget-button div {
+        text-align: center;
+    }
+    
+    #agendar button {
+        font-size: .85em;
+        padding: .8em 5em .8em 5em;
+        outline: none;
+        border: none;
+        background: orange;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #143c8d;
+    }
+    /* FIM DO AGENDAMENTO */
+    /* widget */
+    
+    body {
+        background: #E4E9F2;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .grey-background {
+        background-color: #D8D9DB;
+        padding-top: 24px;
+    }
+    
+    .panvey-bl-header {
+        width: 100%;
+        height: 62px;
+        background-color: #143c8d;
+    }
+    
+    .center-items {
+        max-width: 1080px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .center-items a {
+        text-decoration: none;
+    }
+    
+    .pageDiv {
+        margin-bottom: 24px;
+        font-style: normal;
+    }
+    
+    .items {
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .item {
+        flex: none;
+    }
+    
+    .inicialText {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #9E9E9E;
+        text-decoration: none;
+    }
+    
+    .primary-title {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 24px;
+        color: #183D8E;
+        margin: 0px 0px 24px 0px;
+    }
+    
+    .cardClass {
+        height: 334px;
+        max-width: 334px;
+        margin-bottom: 24px;
+        border-radius: 8px;
+        /*
+            background: linear-gradient(86.16deg, #01BFE1 6.29%, rgba(0, 224, 212, 0.48) 93.71%); 
+            */
+        box-shadow: 0px 6px 38px -3px rgba(0, 0, 0, 0.27);
+    }
+    
+    .cardLinkNew {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        cursor: pointer;
+        float: left;
+        border-radius: 8px;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+    
+    .card_content {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        background-color: white;
+        border-radius: 0px 40px 0px 0px;
+        line-height: 40px;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 0px;
+        margin-top: 210px;
+    }
+    
+    .card_content div {
+        margin: auto;
+        margin-left: 5%;
+        width: 55%;
+        display: block;
+        font-size: 16px;
+        line-height: normal;
+    }
+    
+    .card_content .titulo-card {
+        color: #F66715;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .main-card-text {
+        min-width: 200px;
+        border: dotted red 2px;
+    }
+    
+    .card_content .descricao-card {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #183D8E;
+    }
+    
+    .card_content i:nth-child(1) {
+        color: #f99d1c;
+    }
+    
+    .card_content i:nth-child(2) {
+        color: #0a3383;
+    }
+    
+    .button-saiba-mais {
+        margin: auto;
+        border: none;
+        width: 111px;
+        height: 39px;
+        min-width: 85;
+        background-color: #F66715;
+        border-radius: 4px;
+        margin-right: 25px;
+        outline: none;
+    }
+    
+    .text-saiba-mais {
+        font-style: normal;
+        font-size: 13.6px;
+        color: white;
+        margin: 0;
+    }
+    /* .button-saiba-mais:focus{
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: 0;
+        } */
+    
+    .cardTitle {
+        color: #FFFFFF;
+        font-size: 26px;
+        font-weight: normal;
+        line-height: 40px;
+        font-style: normal;
+        margin-bottom: 7px;
+        margin-left: 24px;
+        margin-top: 245px;
+    }
+    
+    .iconLink {
+        margin-left: 10px;
+    }
+    
+    .cardVacinas {
+        background-size: 100% 235px;
+        background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/card_vacinas.jpg);
+    }
+    
+    .cardServicos {
+        background-size: 100% 235px;
+        background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/card_servicos.jpg);
+    }
+    
+    .cardAtendimento {
+        background-size: 100% 235px;
+        background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/card_farmaceutica.jpg);
+    }
+    
+    .cardMedicina {
+        background-size: 100% 235px;
+        background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/card_telemedicina.jpg);
+    }
+    
+    .cardAconselhamento {
+        background-size: 100% 235px;
+        background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/card_teleaconselhamento.jpg);
+    }
+    
+    .cardCovid {
+        background-size: 100% 235px;
+        background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/card_covid.jpg);
+    }
+    
+    .iconTodos {
+        background-image: url(assets/hub/IconTodos.png);
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 2px;
+        margin: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .iconFiltro {
+        width: 13px;
+        height: 13px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .iconFiltroBuy {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .active-button {
+        background-image: url(assets/hub/IconTodos.png);
+        width: 10px;
+        height: 2px;
+    }
+    
+    .filtroText {
+        color: #9E9E9E;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 18px;
+    }
+    
+    .buttonDivs {
+        margin-bottom: 42px;
+    }
+    
+    .buttonDivs button {
+        border-radius: 100px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 12px;
+        font-size: 13.6px;
+        padding: 10px;
+        background-color: white;
+        color: #9E9E9E;
+        height: 32px;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        border: 1px!important;
+        outline: none;
+    }
+    
+    .buttonDivs button span {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    button#buttonTodos {
+        background-color: white;
+    }
+    /* #button-buys{
+            border: solid 1px red;
+            margin-top: -50px;
+        } */
+    /* CARDS FILTROS */
+    
+    #buttonCard1 {
+        margin-top: 25px;
+    }
+    
+    #buttonCard3 {
+        margin-top: 25px;
+    }
+    
+    #buttonCard5 {
+        margin-top: 68px;
+    }
+    
+    #button-buy4 {
+        margin: 16px 0 0px 0;
+    }
+    
+    #button-buy5 {
+        margin: 7px 0 0px 0;
+    }
+    
+    #button-buy6 {
+        margin: 18px 0 0px 0;
+    }
+    
+    #button-buy7 {
+        margin: 30px 0 0px 0;
+    }
+    
+    #button-buy8 {
+        margin: 43px 0 0px 0;
+    }
+    
+    #button-buy9 {
+        margin: 15px 0 0px 0;
+    }
+    
+    .pureFilter {
+        background: #FFFFFF;
+        min-width: 252px;
+        height: 300px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        margin-right: 12px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+    }
+    
+    .cardFiltro {
+        margin-left: 24px;
+        margin-top: 18px;
+        width: 240px;
+        height: 246px;
+        /* height: 300px; */
+        /* border: solid 1px red;    */
+    }
+    
+    .cardFiltro p {
+        font-style: normal;
+        /* font-weight: bold; */
+    }
+    
+    .cardFilterImg {
+        object-fit: cover
+    }
+    
+    .cardText1 {
+        color: #183D8E;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 500;
+        font-weight: bold;
+    }
+    
+    .cardText2,
+    .cardText3 {
+        font-size: 10px;
+        line-height: 16px;
+        color: #9E9E9E;
+        font-weight: bold;
+        font-size: 13.6px;
+    }
+    
+    .cardText4 {
+        font-size: 18px;
+        line-height: 24px;
+        color: #424242;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .cardText5 {
+        font-size: 18px;
+        line-height: 24px;
+        color: #424242;
+    }
+    
+    .cardText5 span {
+        font-weight: bold;
+    }
+    /* cards dos box CCG*/
+    
+    .cardCCG1 {
+        color: #183D8E;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 500;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: -8px;
+    }
+    
+    .cardCCG2 {
+        color: #183D8E;
+        font-size: 14px;
+        font-weight: 500;
+        font-weight: bold;
+    }
+    
+    .cardCCG3 {
+        color: #183D8E;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .cardFlex {
+        font-weight: bold;
+        color: #183D8E;
+        max-width: 172px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        font-size: 12px;
+        /* color: #183D8E;
+            font-size: 12px ;
+            position:relative;   */
+        /* width:100%;         */
+    }
+    
+    .cardFlex li {
+        /* border: 1px solid #000000;
+            display:block;             
+            margin:0;                  
+            box-sizing: border-box;     */
+        margin-top: 1px;
+        margin-left: 5px;
+        padding-bottom: 1px;
+    }
+    /* .cardFlex li:nth-child(odd) {         
+            clear:both;               
+            float:left;               
+            width:50%;               
+        } */
+    
+    .cardCCG4 {
+        margin-top: 1px;
+        display: block;
+        font-size: 18px;
+        color: #424242;
+        font-weight: bold;
+        margin-bottom: 1px;
+    }
+    
+    .cardFiltro img {
+        margin-top: 0;
+        max-height: 30px;
+        max-width: auto;
+    }
+    
+    .cardFiltro button {
+        max-width: 204px;
+        width: 204px;
+        color: #FFFFFF;
+        ;
+        background: #F66715;
+        border-radius: 4px;
+        border: 1px;
+        padding: 7px 7px;
+        outline: none;
+    }
+    
+    .cardButton {
+        margin-top: 76px;
+        /* border: dotted 2px black; */
+    }
+    
+    .cardFiltro select {
+        width: 204px;
+        height: 30px;
+        background: #FAFAFA;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 6px;
+        margin: auto;
+        margin-bottom: 22px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #757575;
+        padding-left: 16px;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .cardFiltro button span {
+        margin-left: 55px;
+        margin-right: 40px;
+    }
+    
+    .filterContainer {
+        min-height: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    /* Corousel */
+    
+    .slideshow-container {
+        width: 100%;
+        position: relative;
+    }
+    
+    .mySlides {
+        display: none;
+    }
+    
+    .item1 {
+        background: url(assets/hub/Home-Clinic.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .item2 {
+        background: url(assets/hub/main.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .item3 {
+        background: url(assets/hub/main.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    #banner-home {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        margin-top: -22px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 16px;
+        color: gray;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 50%;
+        user-select: none;
+        background-color: #f7f7f7;
+        opacity: .7;
+        display: grid;
+        place-items: center;
+    }
+    
+    .next {
+        right: 0;
+    }
+    
+    .prev:hover,
+    .next:hover {
+        background-color: white;
+        opacity: 1;
+    }
+    
+    .text {
+        color: #0a3383;
+        font-size: 36px;
+        padding: 8px 44px;
+        position: absolute;
+        bottom: 152px;
+        width: 70%;
+        text-align: left;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 48px;
+    }
+    
+    .text_1 {
+        color: #0a3383;
+        padding: 8px 44px;
+        position: absolute;
+        bottom: 48px;
+        width: 50%;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    .posts {
+        margin: 0;
+        margin-top: 40px;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        justify-content: center;
+    }
+    
+    .post-title {
+        color: #9E9E9E;
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 18px;
+    }
+    
+    .posts a {
+        text-decoration: none;
+        /* height: 100%; */
+        color: black;
+    }
+    
+    .post-card {
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+    }
+    
+    .post-img {
+        background-color: blueviolet;
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/Vacina.png");
+        background-size: cover;
+        border-radius: 1em 1em 0 0;
+        height: 50%;
+    }
+    
+    #noticia-1 {
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/hipertensao.jpg");
+    }
+    
+    #noticia-2 {
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/cuidados-pele.jpg");
+    }
+    
+    #noticia-3 {
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/amamentacao2.jpg");
+    }
+    
+    #noticia-4 {
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/hub/tabaco.jpg");
+    }
+    
+    .post-content {
+        flex: 0, 1, auto;
+        padding: 20px;
+        padding-top: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+    
+    .post-card {
+        margin-bottom: 20px;
+        position: relative;
+        border-radius: 1em;
+        width: 252px;
+        height: 350px;
+        background-color: white;
+    }
+    /* SER PARCEIRO */
+    
+    .ser-parceiro {
+        display: flex;
+        flex-direction: row;
+        background-color: #0a3383;
+        height: 131px;
+        border-radius: 8px;
+        margin-bottom: 48px;
+    }
+    
+    .img-parceiro {
+        /* margin-right: 45px;
+            margin-left: 31px; */
+        margin: auto;
+        width: 12%;
+        max-height: 135px;
+    }
+    
+    .img-parceiro img {
+        width: 100%;
+    }
+    
+    .text-parceiro {
+        margin: auto;
+        max-width: 50%;
+    }
+    
+    .text-parceiro p {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: auto;
+        font-style: italic;
+    }
+    
+    .button-parceiro {
+        width: 30%;
+        margin: auto 10px auto auto;
+    }
+    
+    .button-parceiro button {
+        border: none;
+        /* width: 307px; */
+        width: 100%;
+        min-height: 30px;
+        height: auto;
+        border-radius: 20px;
+        color: #0a3383;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+    }
+    /* FIM DO SER PARCEIRO */
+    /* MODAL SER PARCEIOR*/
+    
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        max-width: 707px;
+        min-width: 310px;
+        height: 95%;
+        min-height: 540px;
+        /* max-height: 900px; */
+        margin: 20 auto 20 auto;
+        background-color: #000000;
+        border-radius: 10px;
+        border: none;
+        box-sizing: border-box;
+        background: #fff;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .modal>div {
+        background: #fff;
+    }
+    
+    .modal-header {
+        width: 100%;
+        max-height: 30%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px 0 0 10%;
+        box-sizing: border-box;
+        border: none;
+    }
+    
+    .modal-header h1 {
+        margin-right: 30px;
+        font-family: 'Dosis', sans-serif;
+        color: rgba(36, 63, 140, 1);
+    }
+    
+    .modal-header img {
+        width: 47px;
+        height: 42px;
+    }
+    
+    .modal-header p {
+        color: rgba(36, 63, 140, 1);
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .modal-header a {
+        text-decoration: none;
+        position: absolute;
+        width: 30px;
+        right: 0;
+        top: 0;
+        line-height: 30px;
+        margin-top: 5px;
+    }
+    
+    .modal-header a img {
+        width: 14px;
+        height: 25px;
+    }
+    
+    .modal-formulario {
+        width: 100%;
+        height: 80%;
+        padding: 0 70px 0 10%;
+        margin: auto;
+        box-sizing: border-box;
+        border: none;
+    }
+    
+    .modal-formulario input {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0 20px 0;
+        box-sizing: border-box;
+    }
+    
+    .modal-formulario label {
+        font-size: 15px;
+        color: rgba(158, 158, 158, 1);
+        letter-spacing: -0.02em;
+    }
+    
+    .modal-formulario button {
+        margin: 10px auto auto auto;
+        width: 100%;
+        padding: 20px;
+        color: white;
+        background-color: rgba(13, 59, 126, 1);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .modal-formulario textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+    }
+    
+    @media screen and (max-width:500px) {
+        .modal-header {
+            margin-bottom: 10px;
+        }
+        .modal-header h1 {
+            font-size: 20px;
+        }
+        .modal-header p {
+            font-size: 13px;
+            margin-right: 10px;
+        }
+    }
+    
+    .success {
+        display: none;
+        /* display: flex; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 480px;
+        height: 120px;
+        background: #fff;
+        border-radius: 8px;
+        margin: 100 auto 20 auto;
+        align-items: center;
+        margin: auto;
+        flex-direction: row;
+    }
+    
+    .success img {
+        align-items: center;
+        margin: auto 10 auto auto;
+    }
+    
+    .success h1 {
+        color: rgba(36, 63, 140, 1);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: italic;
+        margin: auto auto auto 0;
+    }
+    /* FIM MODAL SER PARCEIRO */
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @media screen and (max-width: 47.99em) {
+        .pure-u-md-1-3 {
+            max-width: 100%;
+            margin: 0;
+        }
+        .cardClass {
+            max-width: 100%;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: cover;
+        }
+        .text {
+            font-size: 24px;
+            padding: 8px 44px;
+            top: 20%;
+            width: 70%;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 30px;
+        }
+        .text_1 {
+            position: absolute;
+            top: 50%;
+            width: 75%;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 15px;
+        }
+        .post-card {
+            width: 100%;
+        }
+        .posts {
+            display: block;
+        }
+        /* AGENDAMENTO */
+        #agendar-texto {
+            text-align: center;
+            padding: 0;
+        }
+        .agendamento {
+            flex-direction: column;
+            border-radius: 0px;
+        }
+        .agendamento div {
+            width: 100%;
+            padding: 0;
+        }
+        #agendar {
+            margin-top: 1em;
+            margin-bottom: 1.5em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .simplybook-widget-button div {
+            padding: 10px 10px 10px 10px;
+        }
+        /* FIM DO AGENDAMENTO */
+    }
+    /* Tela 768px >  */
+    
+    @media screen and (min-width: 48em) {
+        .pure-u-md-1-3 {
+            max-width: 32%;
+            margin: 0;
+        }
+        .pureServicos {
+            padding: 0;
+            margin: 0;
+            /* margin-left: 10px; */
+            /* margin-right: 10px; */
+        }
+    }
+    /* tela < 768px */
+    
+    @media screen and (max-width: 47.99em) {
+        .buttonDivs {
+            margin-left: 10px;
+        }
+        .post-title {
+            margin-left: 10px;
+        }
+        .pureFilter {
+            min-width: 290px;
+            width: 100%;
+            margin-right: 0px;
+            text-align: center;
+        }
+        .cardFlex {
+            margin: auto;
+        }
+        .cardFiltro {
+            margin-left: 0px;
+            margin-top: 18px;
+            width: 100%;
+            height: 246px;
+        }
+        .posts {
+            display: block;
+        }
+        .success {
+            width: 90%;
+            margin: auto;
+        }
+        .success img {
+            align-items: center;
+            margin: auto 10 auto 10;
+        }
+        .success h1 {
+            margin: auto auto auto 0;
+        }
+        .servicoSaudeC19 h1 {
+            font-size: 100%;
+        }
+        .servicoSaudeC19 p {
+            font-size: 100%;
+        }
+        .servicoSaudeC19 h2 {
+            font-size: 100%;
+            margin-top: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 817px) {
+        .servicoSaudeC19 button {
+            width: 49%;
+            font-size: 15px;
+        }
+        .servicoSaudeC19 {
+            height: 330px;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .servicoSaudeC19 {
+            height: 250px;
+        }
+    }
+    
+    @media screen and (max-width: 460px) {
+        .servicoSaudeC19 {
+            height: 335px;
+        }
+    }
+    
+    @media screen and (min-width: 35.5em) and (max-width:47.99em) {
+        .filterContainer {
+            max-width: 540px;
+        }
+    }
+    
+    @media screen and (min-width:47.99em) and (max-width: 64em) {
+        .filterContainer {
+            max-width: 803px;
+        }
+        .buttonDivs {
+            margin-left: 10px;
+        }
+        .post-title {
+            margin-left: 10px;
+        }
+    }
+    
+    @media screen and (min-width: 48em) and (max-width:1023px) {
+        #agendar {
+            width: 60%;
+        }
+    }
+    
+    #buttonList .active-filter {
+        color: white;
+        background: #183D8E;
+        font-weight: 500;
+        line-height: 10px;
+    }
+</style>

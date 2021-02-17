@@ -1,0 +1,36 @@
+
+#card {
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+.description {
+    font-size: 1.5rem;
+}
+
+/* TELA 768 ACIMA */
+@media (min-width: 768px) { 
+    .container {
+        display: block;
+        max-width: 1080px;
+        margin: 0 auto;        
+        margin-bottom: 50px;
+    }
+
+    #card {        
+        margin-top: 5rem;
+    }
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+    .description {
+        font-size: 1.5rem;
+        margin-bottom: 10rem;
+    }
+}

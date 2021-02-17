@@ -1,0 +1,316 @@
+<style>
+    body {
+        background: #E4E9F2;
+        font-size: 62.5%;
+        -webkit-text-size-adjust: none;
+    }
+    
+     :root {
+        --color-orange-title: #ff9c16;
+        --color-background-lightblue: #00bcde;
+        --color-background-blue: #0a3383;
+        --color-background-white-gray: #E4E9F2;
+        --color-text-gray: #9E9E9E;
+        --color-text-gray-dark: #757575;
+        --color-background-dimgray: #696969;
+    }
+    
+    .center {
+        margin: 0 auto;
+        /* margin-top: 100px; */
+        max-width: 1080px;
+        padding: 15px;
+    }
+    
+    #links-header a {
+        font-size: 0.9rem;
+        line-height: 18px;
+        text-decoration: none;
+        color: #9E9E9E;
+    }
+    
+    #links-header span {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 24px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        color: var(--color-background-blue);
+        /* margin-bottom: 24px; */
+    }
+    
+    #links-header {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+    }
+    
+    .voltarButton {
+        font-size: 100%;
+        font-weight: bold;
+        color: var(--color-background-blue);
+        font-family: 'Foco-Bold', sans-serif;
+        background-color: var(--color-background-white-gray);
+        min-width: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 2px solid var(--color-background-blue);
+        cursor: pointer;
+        border-radius: 30px;
+        margin: auto 0 auto auto;
+    }
+    
+    .banner {
+        width: 100%;
+        position: relative;
+        border-radius: 8px;
+        max-width: 1080;
+        max-height: 293px;
+        margin-bottom: 20px;
+    }
+    
+    .banner img {
+        width: 100%;
+    }
+    
+    .banner h1 {
+        position: relative;
+        margin: 0;
+        /* margin-left: 5%; */
+        width: 90%;
+        padding-top: 48px;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.6em;
+        line-height: 18px;
+    }
+    
+    .banner-title {
+        display: block;
+        margin: 2rem 2rem 0rem 2rem;
+    }
+    
+    .banner-title span {
+        display: block;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    
+    .banner-title div:last-child {
+        margin-top: 10px;
+    }
+    
+    .container {
+        width: 100%;
+        color: var(--color-background-blue);
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding: 20px 50px;
+        line-height: 24px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .container h1 {
+        margin-top: 50px;
+        font-size: 300%;
+        font-style: italic;
+        font-weight: bold;
+    }
+    
+    .container p {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        font-size: 150%;
+        font-weight: 500;
+    }
+    
+    .container h2 {
+        margin-bottom: 0;
+        margin-top: 30px;
+        font-size: 150%;
+        font-weight: bold;
+    }
+    
+    .container li {
+        font-size: 150%;
+    }
+    
+    .container img {
+        width: 170px;
+        height: 35px;
+        display: flex;
+        margin: 0 0 80px 250px;
+        justify-content: flex-start;
+    }
+    
+    .container a {
+        text-decoration: none;
+    }
+    
+    .container button {
+        font-size: 150%;
+        background-color: rgba(75, 172, 137, 1);
+        color: white;
+        font-weight: bold;
+        width: 70%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin: 30px auto;
+        align-self: center;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .spacearound {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .consulta {
+        display: flex;
+        height: 100px;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    
+    .consulta img {
+        display: flex;
+        /* justify-content: center; */
+        margin: 10px auto 0 auto;
+        height: 80px;
+    }
+    
+    .consulta h1 {
+        display: flex;
+        margin: 5px auto 0 auto;
+        justify-content: center;
+        font-size: 18px;
+        align-items: flex-start;
+    }
+    
+    .drconsulta img {
+        height: 22px;
+    }
+    
+    .drconsulta {
+        margin: 0px auto 0px auto;
+    }
+    
+    @media screen and (min-width: 320px) {
+        .banner {
+            height: 380px;
+        }
+        .consulta {
+            height: 200px;
+        }
+    }
+    /* >= 768 < 1024 */
+    
+    @media screen and (min-width: 48em) {
+        .banner h1 {
+            line-height: 48px;
+            margin-left: 48px;
+        }
+    }
+    /* >= 1024 */
+    
+    @media screen and (min-width: 64em) {
+        .banner h1 {
+            line-height: 48px;
+            border-radius: 8px;
+            margin-left: 48px;
+        }
+        .banner p {
+            margin-left: 48px;
+        }
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div id="links-header">
+            <div style="width: 50%;">
+                <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+                <a href="https://www.panvel.com/panvel/panvelClinic.do">\ Clinic</a>
+                <span>Serviço Saude Covid-19</span>
+            </div>
+            <div style="width: 50%; display: flex;">
+                <a href="./pages/covid/teste_covid.html" style="margin: auto 0 10px auto;">
+                    <button class="voltarButton">Voltar</button>
+                </a>
+            </div>
+        </div>
+        <picture>
+            <!-- <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/covid/covid_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+                    <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/covid/covid_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)"> -->
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/triagem/tele.jpg" class="banner" alt="Covid" title="Covid">
+        </picture>
+        <div class="container">
+            <h1>Sobre o procedimento</h1>
+            <p>A Vídeo Orientação Médica é direcionada para pacientes com quadro de sinais e sintomas de gripe/resfriado<br> e suspeita de infecção pelo Coronavírus (COVID-19).</p>
+            <h2>Alguns dos sintomas e critérios avaliados na Vídeo Orienttação Médica - Gripe e Resfriado são:</h2>
+
+            <li>Febre;</li>
+            <li>Tosse;</li>
+            <li>Coriza;</li>
+            <li>Dor de garganta;</li>
+            <li>Contato próximo com suspeito ou caso confirmado de Coronavírus (COVID-19) ou visita aos continentes de risco<br> nos últimos 14 dias;</li>
+
+
+            <h2>Esse procedimento não é recomendado para os seguintes sintomas:</h2>
+
+            <li>Dificuldade respiratória;</li>
+            <li>Dores no peito;</li>
+            <li>Tontura;</li>
+            <li>Coração acelerado;</li>
+
+            <p>Para complemento da vídeo orientação, o médico poderá solicitar alguns exames e /ou direcionar para outros serviços.</p>
+            <h2>Você deve verificar os seguintes itens antes da vídeo orientação:</h2>
+
+            <li>Estar em um lugar sem barulho e onde não sera interrompido;</li>
+            <li>Ter boa iluminação;</li>
+            <li>Conexão estável de internet;</li>
+            <li>Conferir que câmera e microfone do dispositivo estão funcionando corretamente;</li>
+            <li>Dê prefeência para o uso de fone de ouvido na chamada;</li>
+            <li>Permitir receber notificações e estar com o WhatsApp aberto para receber ligação por vídeo do médico;</li>
+            <li>O retorno com o médico não está incluso no valor;</li>
+
+            <h1>Instruções</h1>
+            <h2>Você deve verificar os seguintes itens antes da vídeo orientação:</h2>
+
+            <li>Estar em um lugar sem barulho e onde não será interrompido;</li>
+            <li>Ter boa iluminação;</li>
+            <li>Conexão estável de internet;</li>
+            <li>Conferir que câmera e microfone do dispositivo estão funcionando corretamente;</li>
+            <li>Dê preferência para o uso de fone de ouvido na chamada;</li>
+            <li>Permitir receber notificações e estar com o WhatsApp aberto para receber ligação por vídeo do médico;</li>
+            <li>O retorno com o médico não está incluso no valor;</li>
+
+            <h1>Atendimento</h1>
+            <p>Não atende menores de 18 anos<br>Homens e mulheres<br>Não atende urgência e emergência.</p>
+            <div class="spacearound">
+                <div class="consulta">
+                    <div class="drconsulta">
+                        <img src="/public/assets/servicoSaude/consulta.png" alt="">
+                        <h1>DESCONTO PANVEL DE 10%</h1>
+                    </div>
+
+                    <img src="/public/assets/servicoSaude/preco.jpg" alt="">
+                </div>
+            </div>
+
+
+            <a href="">
+                <button>Agendar Consulta</button>
+            </a>
+
+
+        </div>
+
+    </div>
+</body>
+/public/asses/eteCovidtespn

@@ -1,0 +1,858 @@
+<style>
+     :root {
+        --color-orange-title: #ff9c16;
+        --color-background-lightblue: #00bcde;
+        --color-background-blue: #0a3383;
+        --color-background-white-gray: #E4E9F2;
+        --color-text-gray: #9E9E9E;
+        --color-text-gray-dark: #757575;
+        --color-background-dimgray: #696969;
+    }
+    
+    body {
+        background: #E4E9F2;
+    }
+    
+    a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+    }
+    
+    h4 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    button {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+    }
+    
+    .center {
+        display: block;
+        margin: 0 auto;
+        max-width: 1200px;
+        height: 100%;
+        padding: 15px;
+    }
+    
+    .link {
+        position: relative;
+        width: 181px;
+        height: 18px;
+        /* left: 145px; */
+        /* top: 16px; */
+        font-size: 14px;
+        margin: 0;
+        text-decoration: none;
+        color: #9E9E9E;
+    }
+    
+    .primary-title {
+        position: relative;
+        width: 176px;
+        /* height: 24px; */
+        /* left: 145px; */
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 0;
+        color: #183D8E;
+    }
+    
+    .banner {
+        width: 100%;
+        position: relative;
+        border-radius: 8px;
+    }
+    
+    .banner img {
+        width: 100%;
+    }
+    
+    .banner h1 {
+        position: relative;
+        width: 50%;
+        height: 36px;
+        left: 5%;
+        top: 60px;
+        color: #ffffff;
+        text-align: left;
+        font-size: 44px;
+        line-height: 48px;
+    }
+    
+    .texto-aconselhamento p {
+        position: relative;
+        width: 100%;
+        /* height: 180px;   */
+        text-align: left;
+        font-size: 16px;
+        padding-top: 24px;
+        /* top: 15%; */
+        color: #757575;
+        text-justify: inter-word;
+    }
+    
+    .cards {
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+    }
+    
+    #card {
+        position: relative;
+        text-align: center;
+        width: 95%;
+        height: 192px;
+        /* left: 20%; */
+        margin-top: 46px;
+        /* top: 60px; */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        background-color: white;
+    }
+    
+    .cards h4 {
+        position: relative;
+        text-align: left;
+        width: 100%;
+        height: 24px;
+        top: 12%;
+        left: 5%;
+        color: #183D8E;
+    }
+    
+    .cards p {
+        position: relative;
+        text-align: left;
+        width: 85%;
+        font-size: 14px;
+        height: 36px;
+        top: 10px;
+        left: 5%;
+        color: #9E9E9E;
+    }
+    
+    .cards button a {
+        display: flex;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    
+    .cards button {
+        display: flex;
+        position: relative;
+        font-weight: bold;
+        background-color: #183D8E;
+        border-radius: 15px;
+        top: 30px;
+        border: none;
+        height: 32px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .cards button:focus {
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+    
+    .cards button p {
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        height: 35px;
+        left: 0;
+        top: 0;
+        color: #FFFFFF;
+        padding: 1%;
+        margin: auto;
+    }
+    
+    .cards button img {
+        position: relative;
+        margin-right: 2%;
+        height: 10px;
+        width: 15px;
+        top: 10px;
+        text-align: right;
+        justify-content: center;
+    }
+    /* Smartphone */
+    
+    @media screen and (max-width: 567px) {
+        body {
+            /* width: 100vw; */
+            /* position: relative; */
+            max-width: 100%;
+        }
+        .link {
+            top: 5px;
+            margin: 0;
+            /* line-height: 10px;
+    margin-top: 100px; */
+            left: 15px;
+            /* font-size: 8px; */
+        }
+        .primary-title {
+            /* top: 30px; */
+            /* font-size: 10px; */
+            margin-top: 13px;
+            left: 15px;
+            line-height: 5px;
+        }
+        .banner {
+            width: 100%;
+            margin: auto;
+            /* top: 15px; */
+            left: 0px;
+        }
+        .banner h1 {
+            width: 90%;
+            top: 0;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+        .banner p {
+            width: 90%;
+            top: -10px;
+            font-size: 12px;
+            line-height: 13px;
+        }
+        .cards #card {
+            top: 10px;
+            text-align: center;
+            width: 100%;
+            height: 150px;
+            left: 0;
+            margin: auto
+        }
+        .cards h4 {
+            text-align: center;
+            top: 3%;
+            /* left: 3%; */
+            width: 80%;
+            /* font-size: 10px; */
+        }
+        .cards p {
+            text-align: center;
+            top: 0;
+            /* left: 3%; */
+            /* font-size: 10px; */
+            width: 90%;
+        }
+        .cards button {
+            top: 15px;
+        }
+        .cards button p {
+            top: 3px;
+        }
+    }
+    /*Tela 568px*/
+    
+    @media screen and (min-width: 35.5em) and (max-width: 767px) {
+        .link {
+            left: 5%;
+            font-size: 80%;
+        }
+        .primary-title {
+            left: 5%;
+            font-size: 80%;
+            margin-bottom: 0;
+        }
+        .banner {
+            height: 250px;
+            width: 90%;
+            /* top: 50px; */
+            text-align: center;
+            margin-top: 0;
+            margin: auto;
+        }
+        .banner h1 {
+            position: relative;
+            top: 0;
+            font-size: 80%;
+        }
+        .texto-aconselhamento p {
+            position: relative;
+            top: 0;
+            font-size: 70%;
+            left: 5%;
+            width: 90%;
+        }
+        .cards #card {
+            position: relative;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            /* top: 70px; */
+            left: 0;
+            max-width: 300px;
+            height: 140px;
+            text-align: center;
+        }
+        .cards h4 {
+            position: relative;
+            text-align: center;
+            top: 10px;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            font-size: 80%;
+        }
+        .cards p {
+            position: relative;
+            text-align: center;
+            margin: auto;
+            width: 70%;
+            top: 20px;
+            left: 0;
+            font-size: 70%;
+        }
+        .cards button {
+            position: relative;
+            top: 25px;
+            margin-top: 10px;
+            left: 0;
+            width: 90%;
+        }
+        .cards button p {
+            top: 2.5px;
+            width: 100%;
+        }
+    }
+    /*Tela 768px*/
+    
+    @media screen and (min-width: 48em) and (max-width: 1023px) {
+        .link {
+            left: 5%;
+            font-size: 90%;
+        }
+        .primary-title {
+            left: 5%;
+            font-size: 90%;
+        }
+        .banner {
+            height: 300px;
+            width: 90%;
+            /* top: 50px; */
+            text-align: center;
+            margin: auto;
+        }
+        .banner h1 {
+            position: relative;
+            top: 10%;
+            font-size: 95%;
+        }
+        .texto-aconselhamento p {
+            position: relative;
+            top: 10%;
+            font-size: 80%;
+            width: 90%;
+            left: 5%;
+        }
+        .cards #card {
+            position: relative;
+            left: 5%;
+            width: 50%;
+            /* top: 50px; */
+        }
+        .cards h4 {
+            font-size: 95%;
+        }
+        .cards p {
+            top: 0;
+            width: 90%;
+            font-size: 80%;
+            font-size: 80%;
+        }
+        .cards button p {
+            top: 10%;
+        }
+    }
+    /*Tela 1024px*/
+    
+    @media screen and (min-width: 64em) and (max-width: 1279px) {
+        /* .cards #card{
+    width: 94%;
+  } */
+    }
+    /*Tela maior de 1280*/
+    
+    @media screen and (min-width: 80em) and (max-width: 1366px) {
+        /* .banner {
+    height: 60%;
+    height: 400px;
+  }
+
+  .link {
+  }
+
+  .primary-title {
+  }
+
+  .cards #card {
+  }
+*/
+    }
+    /*  !!MODAL!!  */
+    
+    .modal-container {
+        display: none;
+        position: fixed;
+        margin: auto;
+        /* background-color: mintcream; */
+        width: 100%;
+        max-width: 551px;
+        height: 100%;
+        max-height: 517px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 4px;
+    }
+    
+    .modal:before {
+        content: "";
+        position: fixed;
+        display: none;
+        background-color: rgba(224, 224, 224, 0.8);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .modal:target:before {
+        display: block;
+    }
+    
+    .modal:target .modal-container {
+        display: block;
+        margin: auto;
+    }
+    
+    #modal-close {}
+    
+    .modal-close-icon {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+    }
+    
+    .modal-cards {
+        display: inline;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .card-vittude1 {
+        flex: 1 1 0px;
+        background-image: linear-gradient(154.1deg, #FFFFFF 0%, #DBDDDC 100%);
+        height: 100%;
+        font-style: normal;
+        text-align: center;
+        position: relative;
+        margin: auto;
+        max-width: 551px;
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.12);
+    }
+    
+    .inner-card-vittude1 {
+        position: relative;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .img-card {
+        margin: auto;
+        /* padding-top: 2.500vw; 48px */
+        padding-top: 30px;
+    }
+    
+    .header-card {
+        position: relative;
+        margin: auto;
+        padding-top: 2.500vw;
+        /*48px*/
+        /* padding-top: 48px; */
+        color: #28374E;
+        ;
+        font-weight: 501;
+        line-height: 24px;
+        font-size: 1.0em;
+        width: 91.2%;
+    }
+    
+    .text-card {
+        position: relative;
+        margin: auto;
+        color: #FF6B52;
+        ;
+        padding-top: 1.250vw;
+        /*24px*/
+        /* padding-top: 24px; */
+        font-size: 0.875em;
+        font-weight: normal;
+        line-height: 18px;
+        width: 92%;
+        /* max-width: 341px; */
+    }
+    
+    .price-card {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        color: #FFFFFF;
+        background: #28374E;
+        height: 90px;
+        width: 95%;
+        max-width: 455px;
+        border-radius: 20px;
+        text-align: center;
+        /* bottom: 2.292vw; */
+        bottom: 32px;
+    }
+    
+    .price-text {
+        margin: auto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.625em;
+        line-height: 1.6em;
+        display: inline-flex;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+    }
+    
+    .price-type {
+        margin: auto;
+        ;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 0.75em;
+        line-height: 1.6em;
+        text-transform: uppercase;
+        display: inline-flex;
+        position: absolute;
+        left: 130px;
+        top: 24px;
+    }
+    
+    .price-value {
+        margin: auto;
+        padding-bottom: 6px;
+        font-style: normal;
+        font-weight: bold;
+        /* font-size: 1.563vw; */
+        font-size: 1.85em;
+        line-height: 40px;
+        text-align: right;
+        display: inline-flex;
+        position: absolute;
+        top: 12px;
+        right: 24px;
+    }
+    
+    .price-button {
+        height: 32px;
+        width: 100%;
+        max-width: 468px;
+        border-radius: 100px;
+        background: #FF6B52;
+        color: #FFFFFF;
+        margin-top: 58px;
+        border: none;
+    }
+    
+    .price-button:focus {
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+    
+    .price-consultar {
+        position: absolute;
+        font-size: 12px;
+        line-height: 16px;
+        height: 16px;
+        top: 60%;
+        left: 14px;
+        right: 2px;
+        font-style: normal;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .price-button-icon {
+        position: absolute;
+        bottom: 12.5%;
+        right: 2.785%;
+    }
+    /*  !!RESPONSA!!  */
+    
+    @media screen and (max-width: 567px) {
+        .modal-container {
+            /* top: 260px; */
+            width: 95%;
+            max-height: 560px;
+        }
+        .header-card {
+            margin-top: 20px;
+            max-width: 320px;
+            top: 0;
+            font-size: 0.9em;
+        }
+        .text-card {
+            margin-top: 20px;
+            max-width: 320px;
+            font-size: 0.6875em;
+        }
+        .price-card {
+            top: 470px;
+            /* transform: scale(0.9,0.9); */
+        }
+        #price-value {
+            font-size: 1em;
+        }
+        /* .price-card p {
+    font-size: 1em;
+  } */
+    }
+    
+    @media screen and (min-width: 35.5em) and (max-width: 768px) {
+        .modal-container {
+            top: 250px;
+            max-height: 1024px;
+            min-height: 812px;
+        }
+        .modal-cards {
+            flex-direction: column-reverse;
+        }
+        .card-vittude1 {
+            max-width: 551px;
+            max-height: 612px;
+        }
+        .img-card {
+            padding-top: 36px;
+        }
+        .header-card {
+            position: relative;
+            margin: auto;
+            /* padding-top: 2.500vw; 48px */
+            padding-top: 36px;
+            color: #28374E;
+            font-weight: 500;
+            line-height: 20px;
+            font-size: 1.2em;
+            width: 91.2%;
+        }
+        .text-card {
+            position: relative;
+            margin: auto;
+            color: #FF6B52;
+            /* padding-top: 1.250vw; 24px */
+            padding-top: 22px;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 18px;
+            width: 95%;
+            max-width: 341px;
+        }
+        .price-card {
+            top: 400px;
+            bottom: 32px;
+        }
+        .price-text {
+            top: 24px;
+            left: 24px;
+        }
+        .price-type {
+            left: 130px;
+            top: 24px;
+        }
+        .price-value {
+            font-size: 1.65em;
+        }
+    }
+    
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        /* .price-text {
+      top: 14px;
+      left: 24px;
+  }
+  .price-type {
+      left: 24px;
+
+@media screen and (max-width: 568px) {
+    .modal-container {
+        width: 95%;
+        max-height: 560px;
+      }
+}
+
+      top: 32px;
+  } */
+        /* .price-value { 
+      margin: auto;
+      padding-bottom: 6px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.563vw;
+      line-height: 40px;
+      text-align: right;
+      display: inline-flex;
+      position: absolute;
+      top: 12px;
+      right: 24px;
+  } */
+    }
+    
+    @media screen and (min-width: 1921px) {
+        .header-card {
+            padding-top: 48px;
+        }
+        .text-card {
+            padding-top: 24px;
+            /*24px*/
+        }
+        .price-card {
+            bottom: 32px;
+        }
+        .img-card {
+            padding-top: 32px;
+        }
+        .price-value {
+            font-size: 1.9em;
+        }
+    }
+    
+    #links-header a {
+        font-size: 0.9rem;
+        line-height: 18px;
+        text-decoration: none;
+        color: #9E9E9E;
+    }
+    
+    #links-header span {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 24px;
+        font-weight: bold;
+        color: var(--color-background-blue);
+        margin-bottom: 24px;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div id="links-header">
+            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+            <a href="https://www.panvel.com/panvel/panvelClinic.do">\ Clinic</a>
+            <span>Teleaconselhamento</span>
+        </div>
+
+        <picture>
+            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/aconselhamento/aconselhamento_m_h.jpg" class="banner" media="(min-width: 481px) and (max-width: 767px)">
+            <source srcset="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/aconselhamento/aconselhamento_m.jpg" class="banner" media="(min-width: 320px) and (max-width: 480px)">
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/hub/home_teleaconselhamento.jpg" class="banner" alt="Aconselhamento" title="Aconselhamento">
+        </picture>
+
+        <div class="texto-aconselhamento">
+            <p>
+                Com o Bem Panvel e a Vittude você tem acesso a psicólogos das mais diversas abordagens em todo o país, para falar o que sente e se permitir ser cuidado. Quanto mais você é Bem Panvel, mais a Panvel é Bem você.
+            </p>
+
+        </div>
+
+        <div class="pure-g cards">
+            <div class="pure-u-1 pure-u-sm-1-1 pure-u-lg-1-2">
+                <div id="card">
+                    <h4>Encontre o seu psicólogo</h4>
+                    <p>Descubra o profissional mais compatível com você através da nossa ferramenta.</p>
+
+                    <button id="modal-open">
+                        <a href="https://vittude.com/encontre-seu-psicologo">
+                            <p>Começar</p>
+                            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/aconselhamento/icon-arrow.png" />
+                        </a>    
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div id="modal-container">     
+        <div class="modal" id="modal-vittude">
+            <div class="container-icon">
+                <img id="close-icon" src="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/medicina/icon-close.png" alt="close img" onclick="closeModal()">
+            </div>            
+            <img class="modal-image" src="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/aconselhamento/vittude.png" alt="vittude img">
+            <span class="text-modal-1">Vittude é uma plataforma que conecta psicólogos e pacientes, promovendo saúde e bem-estar para todos. Os pacientes realizam seu cadastro em menos de 1 minuto, escolhem seu psicólogo online de acordo com suas preferências de horário e localização e agendam sua sessão.</span>
+            <span class="text-modal-2" id="textModal2">
+                O atendimento psicológico online é um serviço realizado por um psicólogo online, via vídeo. Trata-se de uma abordagem equivalente a psicoterapia presencial. Desde novembro de 2018 o atendimento online é permitido pelo Conselho Federal de Psicologia sem limite de sessões. As sessões duram 50 minutos e são feitas via vídeo mediante agendamento e pagamento prévios. Esse serviço não é indicado para casos de saúde graves. Crianças e menores de 18 anos precisam de autorização por escrito de um responsável.
+            </span>
+
+            <div class="price-card" id="price-card">
+                <p class="price-text">Psicólogo Com</p>
+                <p class="price-type">Desconto Panvel De</p> 
+                <p class="price-value" id="price-value">40%</p>
+                <a href="https://corporate.vittude.com/bempanvel/" target="_blank">
+                    <button type="button" class="price-button" id="price-button">
+                        <p class="price-consultar" >Consultar</p>
+                        <img class="price-button-icon" src="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/aconselhamento/seta1.png">
+                    </button>
+                </a>
+            </div>  
+        </div>
+    </div>
+-->
+</body>
+
+<script>
+    function openModal(modalName) {
+        let container = document.getElementById("modal-container");
+        container.style.display = "block";
+
+        let modal = document.getElementById('modal-vittude');
+
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        let modal = document.getElementsByClassName("modal");
+        for (let i = 0; i < modal.length; i++) {
+            modal[i].style.display = "none";
+        }
+        let container = document.getElementById("modal-container");
+        container.style.display = "none";
+    }
+</script>
