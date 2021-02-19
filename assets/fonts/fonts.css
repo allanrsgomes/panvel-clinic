@@ -3,7 +3,8 @@
     src: url('Foco-Regular.eot');
     src: url('Foco-Regular.eot?#iefix') format('embedded-opentype'),
         url('Foco-Regular.woff2') format('woff2'),
-        url('Foco-Regular.woff') format('woff');
+        url('Foco-Regular.woff') format('woff'),
+        url('Foco-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -14,9 +15,53 @@
     src: url('Foco-Bold.eot');
     src: url('Foco-Bold.eot?#iefix') format('embedded-opentype'),
         url('Foco-Bold.woff2') format('woff2'),
-        url('Foco-Bold.woff') format('woff');
+        url('Foco-Bold.woff') format('woff'),
+        url('Foco-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Foco Bold Italic';
+    src: url('Foco-BoldItalic.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Italic';
+    src: url('Foco-Italic.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Bold Italic';
+    src: url('Foco-BoldItalic.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Black';
+    src: url('FocoBlack-Regular.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Black Italic';
+    src: url('FocoBlack-Italic.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Light';
+    src: url('FocoLight-Regular.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Foco Light Italic';
+    src: url('FocoLight-Italic.ttf');
+    font-display: swap;
+}
+
 
