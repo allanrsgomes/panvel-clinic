@@ -4444,6 +4444,15 @@
                 let cardEnd = document.createElement("div");
                 cardEnd.className = "card-end";
 
+                let cardTelefone = document.createElement("div");
+                cardTelefone.className = "card-adress";
+
+                let telefone = document.createElement("span");
+                telefone.textContent = ((typeof dataExame[i].WhatsApp !== 'undefined') ? dataExame[i].WhatsApp + ' / ' : '') + ((typeof dataExame[i].Telefone !== 'undefined') ? dataExame[i].Telefone : '');
+                cardTelefone.appendChild(telefone);
+
+                items.appendChild(cardTelefone);
+
                 items.appendChild(cardEnd);
 
                 itemsContainer.appendChild(items);
