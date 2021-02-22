@@ -1,3 +1,14 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+  </head>
+  <!--RETIRAR-->
 <style>
     @import url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonts/fonts.css");
     body {
@@ -128,7 +139,7 @@
     }
     
     .card-container .card-desc {
-        padding: 7px 0
+        padding: 5px 0;
     }
     
     .card-container .card-desc span {
@@ -1151,25 +1162,88 @@
         margin-bottom: 17px;
         border-radius: 8px;
     }
+
+    .card-clock {
+        width: 15%;
+        float: left;
+    }
     
-    @media (min-width:768px) {
+    div.more-info {
+        width: 85%;
+        float: left;
+        font-weight: bold;
+        font-style: italic;
+        color: #21B8DD;
+        text-align: left;
+    }
+    
+    @media (max-width:767px) {
+        div.more-info {
+            width: 50%;
+        }
+    }
+    
+    @media (min-width:940px) {
+        .card-teste .card-header {
+            flex-direction: row;
+        }
+
         .card-teste .card-header {
             height: 40%;
         }
-        .card-teste>.card-desc {
-            height: 32%;
+
+        .teste-exame .card-header {
+            height: 46%;
+        }
+
+        .teste-panvel .card-teste>.card-desc {
+            height: 36%;
+        }
+
+        .teste-panvel:last-of-type .card-teste>.card-desc {
+            height: 39%;
+        }
+
+        .teste-exame .card-teste>.card-desc {
+            height: 38%;
         }
     }
     
     @media screen and (min-width:768px) and (max-width:940px) {
         .card-teste .card-header {
+            flex-direction: column;
+        }
+
+        .card-teste .card-header {
             height: 40%;
         }
-        .card-teste>.card-desc {
-            height: 44%;
+
+        .teste-panvel:last-of-type .card-header, .teste-exame .card-header{
+            height: 47%;
         }
-        .pure-u-1.card-unitario .card-teste>.card-desc {
-            height: 32%;
+
+        .card-teste .card-info {
+            text-align: center;
+        }
+
+        .card-teste .card-info .card-info-result {
+            align-items: center;
+        }
+
+        .card-teste .card-info .card-info-result .more-info {
+            text-align: center;
+        }
+
+        .teste-panvel .card-teste>.card-desc {
+            height: 43%;
+        }
+
+        .teste-panvel:last-of-type .card-teste>.card-desc {
+            height: 34%;
+        }
+
+        .teste-exame .card-teste>.card-desc {
+            height: 43%;
         }
     }
     
@@ -1293,25 +1367,6 @@
         margin-right: 30px;
     }
     
-    .card-clock {
-        width: 15%;
-        float: left;
-    }
-    
-    div.more-info {
-        width: 85%;
-        float: left;
-        font-weight: bold;
-        font-style: italic;
-        color: #21B8DD;
-        text-align: left;
-    }
-    
-    @media (max-width:767px) {
-        div.more-info {
-            width: 50%;
-        }
-    }
     
     div.pure-u-1-12 img {
         margin-top: 5px;
@@ -1345,6 +1400,11 @@
             height: max-content;
             flex-direction: column;
         }
+
+        div.table-info img {
+            margin-right: 10px;
+        }
+        
         .pure-table {
             font-size: 14px;
             color: #193D8D;
@@ -4490,7 +4550,7 @@
         </div>
 
         <div class="pure-g test-container">
-            <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pure-u-1 pure-u-md-1-2 teste-panvel">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4528,7 +4588,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pure-u-1 pure-u-md-1-2 teste-panvel">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4563,7 +4623,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 div-unitaria">
+            <div class="pure-u-1 teste-panvel">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4611,7 +4671,7 @@
         </div>
 
         <div class="pure-g test-container">
-            <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pure-u-1 pure-u-md-1-2 teste-exame">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4645,11 +4705,11 @@
                         <a href="https://www.panvel.com/panvel/teste-covid--19-rt--pcr-grupo-exame/p-111502"><button
                                 class="button">
                                 Comprar </button></a>
-                        <button class="button-modal exame-btn"> Lojas onde realizar </button>
+                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pure-u-1 pure-u-md-1-2 teste-exame">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4685,11 +4745,11 @@
                         <a href="https://www.panvel.com/panvel/teste-covid-19-igg-igm-grupo-exame/p-111829"><button
                                 class="button">
                                 Comprar </button></a>
-                        <button class="button-modal exame-btn"> Lojas onde realizar </button>
+                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pure-u-1 pure-u-md-1-2 teste-exame">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4724,11 +4784,11 @@
                         <a href="https://www.panvel.com/panvel/teste-covid-19-igg-grupo-exame/p-112288"><button
                                 class="button">
                                 Comprar </button></a>
-                        <button class="button-modal exame-btn"> Lojas onde realizar </button>
+                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 pure-u-md-1-2 card-last">
+            <div class="pure-u-1 pure-u-md-1-2 teste-exame">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4762,7 +4822,7 @@
                     <div class="card-buttons">
                         <a href="https://www.panvel.com/panvel/teste-covid--19-rt--pcr-urgencia-24h-grupo-exame/p-111503"><button
                                 class="button"> Comprar </button></a>
-                        <button class="button-modal exame-btn"> Lojas onde realizar </button>
+                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
                 </div>
             </div>
