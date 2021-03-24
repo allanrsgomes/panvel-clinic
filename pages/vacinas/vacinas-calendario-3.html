@@ -1,0 +1,1931 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    @import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonte/fonts.css);
+
+    :root {
+      --color-orange-title: #ff9c16;
+      --color-background-lightblue: #00bcde;
+      --color-background-blue: #0a3383;
+      --color-background-white-gray: #e4e9f2;
+      --color-text-gray: #9e9e9e;
+      --color-text-gray-dark: #757575;
+      --color-background-dimgray: #696969;
+      --yale-blue: #1d3780;
+      --st-patrick-blue: #243f8c;
+      --medium-turquoise: #4fc0e0;
+    }
+
+    /*-----------------
+ <SLIDER & BANNER>
+-------------------*/
+    .slideshow-container {
+      min-height: 200px;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .slideshow-container .mySlides {
+      display: none;
+    }
+
+    .slideshow-container .prev,
+    .slideshow-container .next {
+      width: 35px;
+      height: 35px;
+      background: #d5d5d5;
+      color: #939393;
+      border-radius: 35px;
+      margin: auto;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      padding: 0;
+      text-align: center;
+      transition: 0.6s ease;
+      user-select: none;
+      position: absolute;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 50%;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .slideshow-container .prev i,
+    .slideshow-container .next i {
+      display: block;
+      margin-top: 2px;
+      line-height: 0;
+    }
+
+    .slideshow-container .prev {
+      left: 20px;
+    }
+
+    .slideshow-container .prev i {
+      margin-left: -4px;
+    }
+
+    .slideshow-container .next {
+      right: 20px;
+    }
+
+    .slideshow-container .next i {
+      margin-right: -2px;
+    }
+
+    .slideshow-container .ul-dots {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      margin: 0 auto;
+      list-style: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: auto;
+      bottom: 19px;
+      padding: 0;
+    }
+
+    .slideshow-container .ul-dots li {
+      cursor: pointer;
+      width: 11px;
+      height: 11px;
+      border: none;
+      background: #dadada;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      border-radius: 11px;
+      margin: 0 5.5px;
+      display: inline-block;
+      vertical-align: middle;
+      transition: background-color 0.6s ease;
+    }
+
+    .slideshow-container .ul-dots li.active {
+      background: #4fc0e0;
+    }
+
+    @media only screen and (max-width: 480px) {
+
+      .slideshow-container .prev,
+      .slideshow-container .next {
+        height: 25px;
+        width: 25px;
+        font-size: 13px;
+      }
+
+      .slideshow-container .prev {
+        left: 15px;
+      }
+
+      .slideshow-container .next {
+        right: 15px;
+      }
+
+      .slideshow-container .ul-dots {
+        bottom: 10px;
+      }
+
+      .slideshow-container .ul-dots li {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    .fadeSlideClass {
+      -webkit-animation-name: fadeSlide;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fadeSlide {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .section-banner {
+      border-radius: 8px 8px 0 0;
+      float: none;
+    }
+
+    .section-banner .banner {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+    }
+
+    body {
+      background: var(--color-background-white-gray);
+      font-family: Foco, Open Sans, sans-serif;
+    }
+
+    .pure-g {
+      font-family: Foco, Open Sans, sans-serif;
+    }
+
+    .custom-breadcrumb {
+      text-align: left;
+    }
+
+    .custom-breadcrumb a {
+      font-size: 15px;
+      color: #828282;
+      letter-spacing: -0.02em;
+      display: inline-block;
+      white-space: nowrap;
+      font-style: normal;
+      font-family: Foco, Open Sans, sans-serif;
+      font-weight: 400;
+    }
+
+    .custom-breadcrumb a+a::before {
+      content: "/";
+      padding: 0 5px;
+      color: #828282;
+    }
+
+    .custom-breadcrumb span {
+      display: block;
+      font-family: Foco, Open Sans, sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 20px;
+      color: #143c8d;
+      letter-spacing: -0.03em;
+    }
+
+    .sub-header {
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 0 21px;
+      background: transparent;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+    }
+
+    .sub-header .breadcrumb {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+    }
+
+    .sub-header .btn-back {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      padding: 6px 41px 7px;
+      width: auto;
+      display: block;
+      font-family: Foco, Open Sans, sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #143c8d;
+      text-align: center;
+      letter-spacing: -0.03em;
+      border: 1px solid #143c8d;
+      border-radius: 18px;
+    }
+
+    .sub-header .btn-back:hover {
+      background: #143c8d;
+      color: #fff;
+    }
+
+    .row-tabs {
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .section-tabs {
+      background: #fff;
+      width: 100%;
+      max-width: 100%;
+      float: none;
+      border-radius: 0 0 8px 8px;
+      -moz-box-shadow: 0px 8px 16px 0px rgba(24, 61, 142, 0.12),
+        0 2px 4px 0px rgba(24, 61, 142, 0.12), 0 0 16px 0px rgba(24, 61, 142, 0.12);
+      -webkit-box-shadow: 0px 8px 16px 0px rgba(24, 61, 142, 0.12),
+        0 2px 4px 0px rgba(24, 61, 142, 0.12), 0 0 16px 0px rgba(24, 61, 142, 0.12);
+      box-shadow: 0px 8px 16px 0px rgba(24, 61, 142, 0.12),
+        0 2px 4px 0px rgba(24, 61, 142, 0.12), 0 0 16px 0px rgba(24, 61, 142, 0.12);
+    }
+
+    .section-tabs .link-tab {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      padding: 0;
+      margin: 0 calc(0.8vw + 5px);
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: -0.02em;
+      font-size: 16px;
+      color: var(--medium-turquoise);
+      cursor: pointer;
+      text-align: left;
+      width: auto;
+      max-width: 100%;
+      height: 54px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    .section-tabs .link-tab span {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      color: var(--medium-turquoise);
+    }
+
+    .section-tabs .link-tab img {
+      width: 100%;
+      max-width: 26px;
+      -webkit-box-flex: 0 0 26px;
+      -moz-box-flex: 0 0 26px;
+      -webkit-flex: 0 0 26px;
+      -ms-flex: 0 0 26px;
+      flex: 0 0 26px;
+      margin-right: 8px;
+    }
+
+    .section-tabs .link-tab.active,
+    .section-tabs .link-tab:hover {
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+
+    .section-tabs .link-tab.active::after,
+    .section-tabs .link-tab:hover::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--medium-turquoise);
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+    #links-header a {
+      font-size: 0.9rem;
+      line-height: 18px;
+      text-decoration: none;
+      color: #9e9e9e;
+    }
+
+    #links-header span {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 24px;
+      font-weight: bold;
+      color: var(--color-background-blue);
+      margin-bottom: 24px;
+    }
+
+    @media screen and (max-width: 400px) {
+      .section-tabs .link-tab span {
+        font-size: 10px;
+      }
+    }
+
+    /* Agendar */
+
+    .agendar button {
+      margin: -8% 0 -10% 0;
+      width: 99%;
+      padding: 13px;
+      color: white;
+      background-color: rgba(75, 172, 137, 1);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+    }
+
+    .agendar b {
+      margin: auto;
+    }
+
+    /* BANNER */
+
+    .text-bold {
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        font-size: 62.5%;
+      }
+
+      .agendar button {
+        display: flex;
+      }
+    }
+
+    .banner {
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .center-items {
+      display: block;
+      margin: 0 auto;
+      max-width: 1080px;
+      height: 100%;
+      padding: 15px;
+    }
+
+    .banner-title {
+      display: block;
+      margin: 2rem 2rem 0rem 2rem;
+    }
+
+    .banner-title span {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 24px;
+    }
+
+    /* 
+    CARDS 
+    Vacinas disponíveis  
+*/
+    .cards {
+      background: white;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      width: calc(100% - 15px);
+    }
+
+    .items {
+      margin-left: 24px;
+      margin-right: 24px;
+      padding-bottom: 14px;
+    }
+
+    .items span {
+      display: block;
+      color: var(--color-text-gray);
+      font-size: 0.9rem;
+    }
+
+    .items span:first-child {
+      font-weight: bold;
+    }
+
+    .card-title span {
+      padding-top: 24px;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 24px;
+      color: var(--color-background-blue);
+    }
+
+    /* 
+    CARDS
+    ONDE POSSO ME VACINAR
+*/
+    .card-description span:first-child {
+      font-size: 0.9rem;
+      line-height: 18px;
+      font-weight: normal;
+    }
+
+    .dropdown-title {
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 16px;
+    }
+
+    .dropdown-card {
+      width: 100%;
+      position: relative;
+    }
+
+    .dropdown-card select {
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 24px;
+      outline: none;
+      padding-left: 16px;
+      width: 100%;
+      height: 48px;
+      border: 1px solid #e0e0e0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background: #fafafa;
+      color: #757575;
+    }
+
+    .card-adress {
+      margin-left: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-adress span,
+    .card-end span {
+      margin-bottom: 3px;
+    }
+
+    .card-adress span:first-child,
+    .card-end span:first-child {
+      margin-bottom: 5px;
+    }
+
+    .card-end {
+      margin-left: 12px;
+      padding-bottom: 17px;
+      box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    #items-container {
+      overflow-y: auto;
+      max-height: 580px;
+    }
+
+    /* Tela 320px a 768px */
+    @media screen and (max-width: 47.99em) {
+      .cards {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
+
+      .second-card {
+        margin-top: 0px;
+        margin-bottom: 40px;
+      }
+
+      div.btn-search-container {
+        float: none;
+      }
+
+      .btn-search-container #search {
+        width: 72%;
+      }
+    }
+
+    /* Tela 768px a 1360px */
+    @media screen and (min-width: 47.99em) {
+      .second-card {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 56px;
+      }
+
+      .cards {
+        margin-top: 46px;
+        margin-bottom: 56px;
+        height: 890px;
+      }
+
+      .vacina-item span {
+        padding-right: 1.2em;
+      }
+    }
+
+    /* COMO AGENDAR SUA VACINA */
+    span,
+    li {
+      color: var(--st-patrick-blue);
+    }
+
+    .card-tutorial,
+    .card-security,
+    .card-vacinas,
+    .card-header-detalhe,
+    .card-detalhe,
+    .card-header-calendario,
+    .card-calendario,
+    .card-faixa,
+    .card-seleciona-faixa,
+    .vacina-calendario {
+      background: white;
+      box-shadow: 0px 8px 16px rgba(24, 61, 142, 0.12);
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+
+    .card-vacinas {
+      padding: 32px 32px 10px;
+    }
+
+    .card-vacinas h2 {
+      text-align: center;
+    }
+
+    .card-tutorial {
+      padding: 12px;
+    }
+
+    .card-security {
+      display: flex;
+    }
+
+    .card-security-body {
+      font-family: Foco, Open Sans, sans-serif;
+      width: 100%;
+      padding: 28px 78px;
+      line-height: 26px;
+    }
+
+    .agendar-btn {
+      height: 50px;
+      width: 200px;
+      background-color: #65a48b;
+      border-radius: 4px;
+      border: none;
+      font-size: 21px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    #btn-hover {
+      box-shadow: 0px 8px 16px rgba(101, 164, 139, 1);
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
+      height: 42px;
+      width: 222px;
+      z-index: 99;
+    }
+
+    .fa.fa-calendar {
+      color: black;
+      margin-right: 5px;
+    }
+
+    .baby-img {
+      border-radius: 12px;
+      width: 380px;
+    }
+
+    .card-tuto-header {
+      margin-top: 12px;
+      text-align: center;
+      padding: 0 182px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      font-style: italic;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+      line-height: 44px;
+    }
+
+    .card-tuto-header span {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 18px;
+      font-weight: normal;
+      letter-spacing: -0.03em;
+    }
+
+    .store-icon {
+      width: 100%;
+    }
+
+    .icon-div {
+      padding: 24px 52px;
+      text-align: center;
+    }
+
+    .icon-div img {
+      padding-bottom: 24px;
+    }
+
+    .icon-div span {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 21px;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .flex-between {
+      justify-content: space-between;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .inside-title {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      color: var(--st-patrick-blue);
+    }
+
+    .card-inside {
+      background: white;
+      box-shadow: 0px 8px 16px rgba(24, 61, 142, 0.12);
+      border-radius: 12px;
+      max-width: 255px;
+    }
+
+    .card-inside .card-text {
+      padding: 27px 18px;
+      font-size: 21px;
+      font-weight: bold;
+      font-style: italic;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      line-height: 24px;
+    }
+
+    .image-card-blog {
+      border-radius: 12px;
+      width: 100%;
+    }
+
+    .see-all {
+      font-size: 21px;
+      font-style: italic;
+      color: var(--yale-blue);
+    }
+
+    .vacinas {
+      display: flex;
+      flex-flow: column;
+      padding-bottom: 16px;
+    }
+
+    .vacina-item {
+      font-family: Foco, Open Sans, sans-serif;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+    .vacina-item:last-child {
+      border-bottom: none;
+    }
+
+    .vacina-item h3 {
+      font-weight: bold;
+      font-style: italic;
+      color: var(--yale-blue);
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .vacina-item span {
+      font-size: 18px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      line-height: 26px;
+    }
+
+    .vacina-item-desc {
+      width: 100%;
+    }
+
+    .vacina-item-price {
+      min-width: 140px;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+    }
+
+    .vacina-item-link {
+      color: var(--yale-blue);
+      font-size: 16px;
+      letter-spacing: -0.03em;
+      min-width: 140px;
+      text-decoration: none;
+    }
+
+    .vacina-item-btn {
+      color: white;
+      font-weight: 500;
+      background-color: rgba(75, 172, 137, 1);
+      border: none;
+      border-radius: 4px;
+      height: 36px;
+      min-width: 140px;
+    }
+
+    .vacina-legenda {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 14px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      line-height: 26px;
+    }
+
+    .vacina-img {
+      border-radius: 12px;
+      height: 195px;
+    }
+
+    .card-header-detalhe {
+      display: flex;
+      height: 195px;
+    }
+
+
+
+    .card-detalhe-body {
+      font-family: Foco, Open Sans, sans-serif;
+      width: 100%;
+      padding: 24px 50px;
+      line-height: 26px;
+    }
+
+    .tarja {
+      background-color: rgba(237, 161, 64, 1);
+      margin-left: -50px;
+      padding-left: 50px;
+    }
+
+    .card-detalhe-body h2 {
+      font-size: 36px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      font-style: italic;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .card-detalhe-body h3 {
+      font-size: 48px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 48px;
+      margin: 0;
+    }
+
+    .card-detalhe-body h4 {
+      font-size: 24px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .card-detalhe {
+      padding: 46px;
+      display: flex;
+      font-family: Foco, Open Sans, sans-serif;
+    }
+
+    .card-detalhe-icon {
+      max-width: 253px;
+      margin-right: 64px;
+    }
+
+    .card-header-calendario {
+      padding: 32px 64px;
+      padding-bottom: 53px;
+      text-align: center;
+      font-family: Foco, Open Sans, sans-serif;
+    }
+
+    .card-faixa {
+      padding: 32px 64px;
+      text-align: center;
+      font-family: Foco, Open Sans, sans-serif;
+    }
+
+    .card-faixa h3 {
+      font-family: Foco, Open Sans, sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 28px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      margin-bottom: 32px;
+    }
+
+    .card-faixa-body {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .faixa-icon,
+    .faixa-div {
+      max-width: 122px;
+    }
+
+    .faixa-div {
+      border: none;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    .faixa-div img {
+      margin-bottom: 12px;
+    }
+
+    .faixa-div span {
+      font-size: 21px;
+      font-style: italic;
+      letter-spacing: -0.03em;
+      line-height: 24px;
+    }
+
+    .header-calendario {
+      display: flex;
+      justify-content: space-between;
+      padding: 42px 32px 24px;
+    }
+
+    .header-calendario img {
+      max-width: 155px;
+      max-height: 66px;
+    }
+
+    .header-calendario h3 {
+      font-family: Foco, Open Sans, sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 28px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      line-height: 14px;
+    }
+
+    .footer-calendario {
+      display: flex;
+      padding: 64px 32px 32px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .legenda-calendario {
+      display: flex;
+      font-size: 15px;
+      font-size: 14px;
+      font-family: Foco, Open Sans, sans-serif;
+      letter-spacing: -0.03em;
+    }
+
+    .legenda-calendario span {
+      margin-right: 24px;
+      line-height: 16px;
+    }
+
+    .circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    .download-link {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 14px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+    }
+
+    .orientacoes-calendario {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 12px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      padding: 0 24px 24px;
+    }
+
+    .card-seleciona-faixa {
+      margin-top: 12px;
+      margin-right: 12px;
+      padding: 32px;
+    }
+
+    .card-seleciona-faixa h3 {
+      font-family: Foco, Open Sans, sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 28px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      margin-bottom: 44px;
+    }
+
+    .vacina-calendario {
+      padding: 32px;
+      font-family: Foco, Open Sans, sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 0 12px 12px;
+    }
+
+    .vacina-calendario a {
+      text-decoration: none;
+    }
+
+    .vacina-calendario h3 {
+      font-weight: bold;
+      font-style: italic;
+      color: var(--yale-blue);
+      font-size: 30px;
+      letter-spacing: -0.03em;
+      margin: 0;
+      min-width: 340px;
+    }
+
+    .vacina-calendario span {
+      font-size: 18px;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      line-height: 26px;
+    }
+
+    .card-seleciona-faixa h4 {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 21px;
+      font-style: italic;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+      line-height: 40px;
+      padding: 12px;
+      margin: 0;
+      border-bottom: solid 1px rgb(222, 222, 222);
+    }
+
+    .card-seleciona-faixa a {
+      text-decoration: none;
+    }
+
+    .card-seleciona-faixa a {
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 21px;
+      font-style: italic;
+      color: var(--yale-blue);
+      letter-spacing: -0.03em;
+    }
+
+    .card-seleciona-faixa a:hover {
+      font-weight: bold;
+    }
+
+    .dropdown,
+    .dropdown2 {
+      transition: all 0.2s ease-in-out;
+      overflow: hidden;
+      display: grid;
+      cursor: pointer;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "icon"
+        "menu";
+    }
+
+    dropdown.closed {
+      grid-template-areas: "icon";
+    }
+
+    .icon {
+      grid-area: icon;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+      align-items: center;
+    }
+
+    .icon i {
+      font-style: normal;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+      transform: rotateX(180deg) rotateY(180deg);
+      color: var(--yale-blue);
+      height: 22px;
+    }
+
+    .closed .icon i {
+      transform: rotateX(0deg);
+    }
+
+    .menu {
+      grid-area: menu;
+      transition: all 0.2s ease-in-out;
+      height: auto;
+    }
+
+    .menu li {
+      transition: all 0.2s ease-in-out;
+      padding: 12px;
+    }
+
+    .dropdown.closed .menu,
+    .dropdown2.closed .menu {
+      height: 0;
+      margin: 0;
+    }
+
+    .vacina-item-nome-mob,
+    .vacina-item-desc-mob {
+      display: none;
+    }
+
+    .card-header-detalhe .agendar-btn {
+      display: none;
+    }
+
+    .hide-desk {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .link-tab {
+        justify-content: space-around !important;
+        flex-flow: column;
+        font-size: 12px !important;
+        margin: 0 !important;
+      }
+
+      .link-tab img {
+        margin: 0 !important;
+      }
+
+      .row-tabs {
+        justify-content: space-around !important;
+      }
+
+      .card-security {
+        display: block;
+      }
+
+      .card-security h2 {
+        font-size: 28px;
+        text-align: center;
+        line-height: 29px;
+      }
+
+      .card-security-body {
+        padding: 12px;
+        width: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+      }
+
+      .card-security-extra {
+        display: none;
+      }
+
+      .baby-img {
+        width: 100%;
+      }
+
+      .agendar-btn {
+        margin-top: 24px;
+        height: 36px;
+        font-size: 18px;
+      }
+
+      .card-tuto-header {
+        padding: 12px;
+      }
+
+      .card-tuto-header h2 {
+        font-size: 28px;
+        line-height: 29px;
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+
+      .card-tuto-header span {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .icon-div {
+        flex-flow: column;
+        display: flex;
+        align-items: center;
+        padding: 24px;
+      }
+
+      .store-icon {
+        width: 122px;
+      }
+
+      .card-inside {
+        max-width: 100%;
+        margin-bottom: 12px;
+      }
+
+      .card-vacinas {
+        padding: 12px;
+      }
+
+      .card-vacinas h2 {
+        margin-top: 12px;
+        font-size: 28px;
+        line-height: 29px;
+      }
+
+      .vacina-item-nome-mob {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .vacina-item-nome-mob span {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+      }
+
+      .vacina-item-nome-mob h3 {
+        margin: 0;
+      }
+
+      .vacina-item-desc-mob,
+      .vacina-item {
+        display: block;
+      }
+
+      .vacina-item-desc-mob span {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .vacina-item-btn {
+        margin-top: 18px;
+        width: 100%;
+      }
+
+      .vacina-item-desc,
+      .vacina-item-price,
+      .vacina-item-link,
+      .card-header-detalhe .card-image {
+        display: none;
+      }
+
+
+      .tarja {
+        margin-top: 15px;
+        margin-left: unset;
+        padding-left: unset;
+      }
+
+      .card-detalhe-body {
+        padding: 32px 12px 12px;
+      }
+
+      .card-header-detalhe {
+        text-align: center;
+        height: auto;
+      }
+
+      .card-header-detalhe h2 {
+        font-size: 32px;
+        line-height: 22px;
+      }
+
+      .card-header-detalhe h3 {
+        font-size: 36px;
+      }
+
+      .card-header-detalhe h4 {
+        font-size: 28px;
+        margin: 12px 0;
+      }
+
+      .card-header-detalhe .agendar-btn {
+        display: block;
+        width: 100%;
+      }
+
+      .card-detalhe {
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 12px 12px;
+      }
+
+      .card-detalhe img {
+        width: 122px;
+        margin-right: 0;
+      }
+
+      .card-detalhe h2 {
+        font-size: 28px;
+        margin-bottom: 0;
+      }
+
+      .card-header-calendario h2 {
+        margin-top: 0;
+        margin-bottom: 24px;
+        font-size: 28px;
+        line-height: 29px;
+      }
+
+      .card-header-calendario span {
+        line-height: 20px;
+      }
+
+      .card-faixa {
+        padding: 12px;
+      }
+
+      .card-faixa-body {
+        flex-flow: column;
+        align-items: center;
+      }
+
+      .faixa-div {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+      }
+
+      .faixa-div img {
+        margin-right: 24px;
+      }
+
+      .faixa-div div {
+        width: 100px;
+      }
+
+      .card-seleciona-faixa {
+        margin-right: 0;
+        padding: 24px 12px;
+      }
+
+      .card-seleciona-faixa h3 {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 24px;
+      }
+
+      .card-seleciona-faixa h4 {
+        font-size: 21px;
+        font-weight: normal;
+      }
+
+      .vacina-calendario {
+        padding: 24px 12px;
+        margin: 12px 0;
+      }
+
+      .vacina-calendario h3 {
+        margin-top: 0;
+        min-width: auto;
+        font-size: 20px;
+      }
+
+      .vacina-calendario .vacina-item-btn {
+        max-width: 134px;
+        margin-top: 0;
+      }
+
+      .card-calendario .header-calendario {
+        padding: 18px 12px;
+      }
+
+      .card-calendario .header-calendario img {
+        display: none;
+      }
+
+      .card-calendario .header-calendario h2 {
+        font-size: 28px;
+        margin-top: 0;
+        line-height: 28px;
+      }
+
+      .card-calendario .header-calendario h3 {
+        font-size: 21px;
+        margin: 12px 0 0;
+        line-height: 21px;
+      }
+
+      .footer-calendario {
+        padding: 12px;
+        display: block;
+      }
+
+      .download-link {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+      }
+
+      .orientacoes-calendario {
+        padding: 0 12px 12px;
+      }
+
+      .orientacoes-calendario a {
+        text-decoration: none;
+      }
+
+      .orientacoes-calendario span {
+        width: 100%;
+      }
+
+      .legenda-calendario {
+        display: block;
+        margin-bottom: 18px;
+      }
+
+      .legenda-calendario div {
+        display: flex;
+        margin-bottom: 8px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .hide-mob {
+        display: none !important;
+      }
+
+      .hide-desk {
+        display: block;
+      }
+    }
+
+    /* Busca de locais */
+
+    .cards.form-filial {
+      max-width: 582px;
+      box-shadow: none;
+      margin: 0 auto;
+    }
+
+    .btnFilter {
+      font-family: Foco, Open Sans, sans-serif;
+      padding: 12.5px;
+      background-color: white;
+      text-transform: uppercase;
+      font-style: bold;
+      color: grey;
+      border: 1px solid lightgrey;
+    }
+
+    .btnFilter:active,
+    .btnFilter.active {
+      background-color: rgba(36, 63, 140, 1);
+      color: white;
+      border: none;
+    }
+
+    .btn-search-container {
+      padding: 4px;
+      border: 1px solid lightgrey;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .btn-search-container #search {
+      border: none;
+    }
+
+    .btn-search-container #search_button {
+      font-family: Foco, Open Sans, sans-serif;
+      background-color: rgba(36, 63, 140, 1);
+      color: white;
+      font-style: bold;
+      border: none;
+      height: 35px;
+    }
+
+    /* The Modal (background) */
+    .LHModalContainer {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      -webkit-animation-name: fadeIn;
+      /* Fade in the background */
+      -webkit-animation-duration: 0.4s;
+      animation-name: fadeIn;
+      animation-duration: 0.4s
+    }
+
+    /* Modal Content */
+    .LHmodal-content {
+      margin: 2%;
+      height: 100%;
+      -webkit-animation-name: slideIn;
+      -webkit-animation-duration: 0.4s;
+      animation-name: slideIn;
+      animation-duration: 0.4s;
+      max-width: 753px;
+      margin: 0 auto;
+      z-index: 0;
+      margin-top: 70px;
+      max-height: 80vh;
+    }
+
+    #LHmodal-form {
+      height: 100%;
+
+      max-width: 763px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: #fefefe;
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 10%;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      z-index: 99;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #iframe-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+      from {
+        bottom: -300px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        bottom: -300px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* Botões */
+
+    .button {
+      height: 40px;
+      width: 263px;
+      background-color: rgba(75, 172, 138, 1);
+      border-radius: 6px;
+      box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.29);
+      color: #fff;
+      text-transform: uppercase;
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 14px;
+      font-weight: 900;
+      height: 40px;
+      width: 263px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 0;
+      margin: 30px auto;
+      align-self: center;
+      display: block;
+      cursor: pointer
+    }
+
+    .pic-container {
+      position: relative;
+    }
+
+    .pic-container picture button {
+      padding: unset;
+      position: absolute;
+      font-family: Foco, Open Sans, sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 1);
+      bottom: -8px;
+      left: 153px;
+      height: 36px;
+      width: 146px;
+    }
+
+    @media screen and (max-width:1200px) and (min-width:750px) {
+      .pic-container picture button {
+        bottom: calc(-24px + 0.9vw);
+        /* base -10 */
+        left: 12%;
+        /* base 186*/
+        width: 20%;
+        /* base 160*/
+      }
+
+    }
+
+    @media screen and (max-width:750px) and (min-width:480px) {
+      .pic-container picture button {
+        top: calc(59% - 1px);
+        /* base -10 */
+        left: 13%;
+        /* base 186*/
+        width: 18%;
+        /* base 160*/
+        height: 17%;
+        font-size: 15px;
+      }
+
+    }
+
+    @media screen and (max-width:480px) {
+      .pic-container picture button {
+        bottom: calc(0px - 3vw);
+        /* base -10 */
+        left: 7%;
+        /* base 186*/
+        width: 32%;
+        /* base 160*/
+        height: 11%;
+        font-size: 15px;
+      }
+    }
+
+    @media screen and (min-width:1080px) {
+      .card-header-calendario {
+        padding-left: 170px;
+        padding-right: 170px;
+      }
+    }
+  </style>
+</head>
+
+<body onload="LHevents()">
+  <button class="agendar-btn" id="btn-hover"> <i class="fa fa-calendar"></i> Agendar Vacina</button>
+  <div class="center-items">
+    <div>
+      <div class="sub-header">
+        <div id="links-header">
+          <a href="/panvel/main.do">Página Inicial</a>
+          <a href="/panvel/panvelClinic.do">\ Clinic</a>
+          <span>Vacinas</span>
+        </div>
+        <a class="btn-back" href="http://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+      </div>
+
+      <!--<a hrefhttp://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/="vacinas-calendario-detalhe.html">-->
+      <section class="section-banner">
+        <div class="pic-container">
+          <picture>
+            <source media="(max-width: 480px)"
+              srcset="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/banner-mobile-calendario-vacinal.png"
+              class="banner">
+            <img
+              src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/banner-calendario-vacinal.png"
+              class="banner" alt="Covid" title="Covid">
+            <!--<button class="button">                                
+                    Saiba mais                  
+                  </button>-->
+          </picture>
+        </div>
+      </section>
+      <!--</a>-->
+
+      <section class="section-tabs">
+        <div class="row-tabs" role="navigation">
+          <a class="link-tab" href="/panvel/panvelClinic.do?secao=vacina">
+            <span>Início</span>
+          </a>
+          <a class="link-tab" href="/panvel/vacinas-disponiveis.do">
+            <span class="hide-mob">Vacinas disponíveis</span>
+            <span class="hide-desk">Vacinas</span>
+          </a>
+          <a class="link-tab active" href="/panvel/calendario-vacinal.do">
+            <span class="hide-mob">Calendário vacinal</span>
+            <span class="hide-desk">calendário</span>
+          </a>
+          <a class="link-tab" href="/panvel/vacina-da-gripe.do">
+            <span>Vacina da Gripe</span>
+          </a>
+          <a class="link-tab" href="/panvel/onde-vacinar.do">
+            <span>Onde vacinar</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <div class="card-header-calendario">
+            <h2>Calendário Vacinal</h2>
+            <span>
+              Para cada faixa etária, são recomendadas vacinas específicas. Confira quais são as vacinas indicadas para
+              a sua fase de vida e, não deixe de falar com seu médico para atualizar sua carteira de vacinação se
+              necessário.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <div class="card-faixa">
+            <h3>Selecione a Faixa Etária</h3>
+            <div class="card-faixa-body">
+              <a href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-calendario-detalhe.html?id=13#vacinas" class="faixa-div">
+                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/crianca.png"
+                  class="faixa-icon" />
+                <div>
+                  <span><strong>0 a 10 anos</strong></span>
+                  <br />
+                  <span>Criança</span>
+                </div>
+              </a>
+              <a href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-calendario-detalhe.html?id=15#vacinas" class="faixa-div">
+                <img
+                  src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/adolescente.png"
+                  class="faixa-icon" />
+                <div>
+                  <span><strong>11 a 19 anos</strong></span>
+                  <br />
+                  <span>Adolescente</span>
+                </div>
+              </a>
+              <a href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-calendario-detalhe.html?id=16#vacinas" class="faixa-div">
+                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/adulto.png"
+                  class="faixa-icon" />
+                <div>
+                  <span><strong>20 a 59 anos</strong></span>
+                  <br />
+                  <span>Adulto</span>
+                </div>
+              </a>
+              <a href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-calendario-detalhe.html?id=18#vacinas" class="faixa-div">
+                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/idoso.png"
+                  class="faixa-icon" />
+                <div>
+                  <span><strong>+60 anos</strong></span>
+                  <br />
+                  <span>Idoso</span>
+                </div>
+              </a>
+              <a href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-calendario-detalhe.html?id=17#vacinas" class="faixa-div">
+                <img
+                  src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/gestante.png"
+                  class="faixa-icon" />
+                <div>
+                  <span><strong>Gestante</strong></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 1;
+      window.addEventListener('load', LHevents);
+      function LHevents() {
+
+        // Get the modal
+        var modal = document.getElementById("LHModalContainer");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("btn-hover");
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+          modal.style.display = "block";
+          document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        }
+
+        // Get the <span> element that closes the modal
+        var btnModalPanvel = document.getElementById('modalClosePanvel');
+
+        btnModalPanvel.onclick = function () {
+          modal.style.display = "none";
+          document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+          }
+        }
+
+      }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+
+    <div id="LHModalContainer" class="LHModalContainer">
+
+      <div id="LHModal" class="LHmodal-content">
+        <span id="modalClosePanvel" class="close">&times;</span>
+        <div id="LHmodal-form" class="LHmodal-body">
+          <iframe id="iframe-container"
+            src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/simplyBook.html"></iframe>
+        </div>
+      </div>
+    </div>
+</body>

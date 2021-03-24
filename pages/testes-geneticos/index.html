@@ -1,0 +1,1359 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    @import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonte/fonts.css);
+    .material-icons {
+	font-family: 'Material Icons'!important;
+	}
+    :root {
+      --color-orange-title: #ff9c16;
+      --color-background-lightblue: #00bcde;
+      --color-background-blue: #0a3383;
+      --color-background-white-gray: #e4e9f2;
+      --color-text-gray: #9e9e9e;
+      --color-text-gray-dark: #757575;
+      --color-text-lightblue: #00bedb;
+      --color-background-dimgray: #696969;
+      --yale-blue: #1d3780;
+      --st-patrick-blue: #243f8c;
+      --medium-turquoise: #4fc0e0;
+    }
+
+    /*-----------------
+   <SLIDER & BANNER>
+  -------------------*/
+    .slideshow-container {
+      min-height: 200px;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .slideshow-container .mySlides {
+      display: none;
+    }
+
+    .slideshow-container .prev,
+    .slideshow-container .next {
+      width: 35px;
+      height: 35px;
+      background: #d5d5d5;
+      color: #939393;
+      border-radius: 35px;
+      margin: auto;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      padding: 0;
+      text-align: center;
+      transition: 0.6s ease;
+      user-select: none;
+      position: absolute;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 50%;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .slideshow-container .prev i,
+    .slideshow-container .next i {
+      display: block;
+      margin-top: 2px;
+      line-height: 0;
+    }
+
+    .slideshow-container .prev {
+      left: 20px;
+    }
+
+    .slideshow-container .prev i {
+      margin-left: -4px;
+    }
+
+    .slideshow-container .next {
+      right: 20px;
+    }
+
+    .slideshow-container .next i {
+      margin-right: -2px;
+    }
+
+    .slideshow-container .ul-dots {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      margin: 0 auto;
+      list-style: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: auto;
+      bottom: 19px;
+      padding: 0;
+    }
+
+    .slideshow-container .ul-dots li {
+      cursor: pointer;
+      width: 11px;
+      height: 11px;
+      border: none;
+      background: #dadada;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      border-radius: 11px;
+      margin: 0 5.5px;
+      display: inline-block;
+      vertical-align: middle;
+      transition: background-color 0.6s ease;
+    }
+
+    .slideshow-container .ul-dots li.active {
+      background: #4fc0e0;
+    }
+
+    @media only screen and (max-width: 480px) {
+
+      .slideshow-container .prev,
+      .slideshow-container .next {
+        height: 25px;
+        width: 25px;
+        font-size: 13px;
+      }
+
+      .slideshow-container .prev {
+        left: 15px;
+      }
+
+      .slideshow-container .next {
+        right: 15px;
+      }
+
+      .slideshow-container .ul-dots {
+        bottom: 10px;
+      }
+
+      .slideshow-container .ul-dots li {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    .fadeSlideClass {
+      -webkit-animation-name: fadeSlide;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fadeSlide {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .section-banner {
+      border-radius: 8px 8px 0 0;
+      float: none;
+    }
+
+    .section-banner .banner {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+    }
+
+    body {
+      background: var(--color-background-white-gray);
+    }
+
+    .custom-breadcrumb {
+      text-align: left;
+    }
+
+    .custom-breadcrumb a {
+      font-size: 15px;
+      color: #828282;
+      letter-spacing: -0.02em;
+      display: inline-block;
+      white-space: nowrap;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .custom-breadcrumb a+a::before {
+      content: "/";
+      padding: 0 5px;
+      color: #828282;
+    }
+
+    .custom-breadcrumb span {
+      display: block;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 20px;
+      color: #143c8d;
+      letter-spacing: -0.03em;
+    }
+
+    .sub-header {
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 0 21px;
+      background: transparent;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+    }
+
+    .sub-header .breadcrumb {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+    }
+
+    .sub-header .btn-back {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      padding: 6px 41px 7px;
+      width: auto;
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+      color: #143c8d;
+      text-align: center;
+      letter-spacing: -0.03em;
+      border: 1px solid #143c8d;
+      border-radius: 18px;
+    }
+
+    .sub-header a.btn-back:link {
+      text-decoration: none;
+    }
+
+    .sub-header .btn-back:hover {
+      background: #143c8d;
+      color: #fff;
+    }
+
+    .center {
+      display: block;
+      margin: 0 auto;
+      max-width: 1080px;
+      height: 100%;
+      padding: 15px;
+    }
+
+    .flex-between {
+      justify-content: space-between;
+      letter-spacing: -0.03em;
+    }
+
+    .inside-title {
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--st-patrick-blue);
+    }
+
+    /* Cards e containers */
+
+    /* Com este id eu consigo definir/sobrescrever a fonte de tudo que vai no "miolo", tornando desnecessária a espec da font-family em tudo */
+    #LighthouseInnerContent * {
+      font-family: Foco, "Open Sans", sans-serif;
+      box-sizing: border-box;
+    }
+
+    main {
+      color: var(--yale-blue);
+    }
+
+    main h1,
+    main h2,
+    main h3,
+    main h4 {
+      margin: 0;
+    }
+
+    main h2 {
+      font-size: 46px;
+      font-style: italic;
+    }
+
+    section {
+      margin: 28px auto 30px;
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 12px;
+      box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    section h1,
+    section h2 {
+      font-size: 48px;
+      font-style: italic;
+      line-height: 48px;
+      letter-spacing: -0.02em;
+    }
+
+    @media screen and (max-width:920px) {
+
+      section h1,
+      section h2 {
+        font-size: 38px;
+      }
+    }
+
+    section h3 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section h4 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    section h5 {
+      margin-bottom: 3px;
+      margin-top: -3px;
+      font-size: 15px;
+      letter-spacing: -0.05em;
+    }
+
+    header+.section-content h3 {
+      font-size: 46px;
+    }
+
+    section .section-content {
+      padding: 60px 80px;
+      font-weight: 700;
+    }
+
+    .card-header {
+      height: 362px;
+      background-color: var(--color-background-blue);
+      display: flex;
+      align-items: center;
+      padding-left: 90px;
+      color: white;
+    }
+
+    .card-header h1 {
+      font-size: 120px;
+      line-height: 80px;
+      letter-spacing: 0;
+      margin-top: 0;
+    }
+
+    .card-header span {
+      font-size: 46px;
+      display: block;
+      color: var(--color-text-lightblue);
+    }
+
+    .card-header img {
+      width: 166px;
+      margin-right: 30px;
+    }
+
+    .card-content {
+      padding-left: 45px;
+      padding-right: 45px;
+      align-self: center;
+    }
+
+    .card-info {
+	display: flex;
+      justify-content: center;
+      align-content: stretch;
+      margin: 20px 0;
+      min-height: 386px;
+    }
+
+    .card-steps {
+      padding: 0 40px;
+    }
+
+    .card-teste {
+      background-color: #FFFFFF;
+      color: #FFFFFF;
+      border-radius: 11px;
+      height: 575px;
+      max-width: 340px;
+    }
+
+    .container-cards {
+      margin: 20px auto 40px;
+    }
+
+    .teste-wrapper {
+      border: 15px solid white;
+      border-radius: 20px;
+      background-color: var(--color-background-blue);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .teste-wrapper .center-content {
+      padding: unset;
+    }
+
+    .teste-wrapper .center-content.card-title {
+      height: 10%;
+      margin-bottom:40px;
+    }
+
+    .teste-wrapper .center-content.card-icon {
+      height: 150px;
+      margin-bottom:15px;
+    }
+
+    .teste-wrapper .center-content.card-subtitle {
+      margin-bottom:5px;
+    }
+
+
+    .teste-wrapper .center-content.logo-hygia {
+      margin-bottom:30px;
+    }
+
+    .teste-wrapper img {
+      margin-top: 40px;
+      max-width: 210px;
+      max-height: 210px;
+      width: auto;
+      margin: 0 auto;
+    }
+
+    .teste-wrapper .img-logos {
+      width: 200px;
+      height: auto;
+    }
+
+    .card-teste h1 {
+      color: #FFFFFF;
+      margin: 0 auto;
+      font-size: 55px;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: unset !important;
+    }
+
+    .card-teste h2 {
+      font-size: 25px;
+      color: #00BEDB;
+      margin: 0 auto;
+    }
+
+    .card-teste button {
+      width: 214px;
+      height: 41px;
+      border: none;
+    }
+
+    @media screen and (max-width: 955px) {
+      .card-teste h1 {
+        font-size: 44px;
+      }
+    }
+
+    @media screen and (max-width:768px) {
+
+      .card-info {
+        min-height: auto;
+      }
+
+      .container-cards .card-teste {
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      .container-cards .card-teste .teste-wrapper {
+        padding-top: unset;
+      }
+
+    }
+
+    /* Icon row */
+
+    .icon-row {
+      align-items: center;
+      display: flex;
+    }
+
+    .first-col .icon-row {
+      padding-left: 0;
+    }
+
+    section .icon-row:first-of-type.icon-large {
+      margin-top: 50px;
+    }
+
+    section .icon-row:not(:last-child).icon-large {
+      margin-bottom: 50px;
+    }
+
+    .icon-row>* {
+      margin: 0;
+    }
+
+    section .icon-large h3 {
+      font-size: 48px;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    .icon-row:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .center-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    /* Progress bar elements */
+
+    .progress-bar-wrapper {
+      width: 100%;
+    }
+
+    /* End Progress Bar Elements */
+
+    .icon-image {
+      background-color: var(--color-background-blue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/ellipse_25.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50%;
+    }
+
+    .icon-image img {
+      max-width: 376px;
+    }
+
+    .full-image {
+      min-height: 100%;
+      background-size: cover;
+    }
+
+    .full-image.genes {
+      background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_524.png");
+      min-height: 200px;
+    }
+
+    .full-image.dna {
+      background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_520.png");
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .full-image.dna img {
+      height: 25%;
+    }
+
+    .full-image.video-div iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media screen and (min-width:768px) {
+      .iframe-youtube {
+        width: 100%;
+      }
+
+      .full-image.video-div {
+        min-height: 300px;
+      }
+
+      .genes {
+        min-height: 120px;
+        background-position: center;
+      }
+    }
+
+    iframe#card-video {
+      width: 100%;
+      min-height: 486px;
+      border: none;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .icon-image img {
+        height: 100%;
+      }
+
+
+    }
+
+    /* Elementos */
+
+    .button {
+      background-color: var(--color-orange-title);
+      color: var(--yale-blue);
+      padding: 6px;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #btnVideo {
+      margin-top: 10px;
+      padding: 10px 20px;
+    }
+
+    a.button {
+      text-decoration: none;
+    }
+
+    /* Logo Teste Genético */
+    .logo-teste-genetico {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .logo-teste-genetico span {
+      display: block;
+      color: var(--color-text-lightblue);
+    }
+
+    .logo-teste-gen-small img {
+      width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .logo-teste-gen-small h2 {
+      font-size: 75px;
+      letter-spacing: 0;
+      margin-top: 0;
+    }
+
+    .logo-teste-gen-large img {
+      width: 166px;
+      height: auto;
+      margin-right: 30px;
+    }
+
+    .logo-teste-gen-large h1 {
+      font-size: 120px;
+      letter-spacing: 0;
+      margin-top: 0;
+    }
+
+    .logo-teste-gen-large span {
+      font-size: 46px;
+    }
+
+    /* End - Logo Teste Genético */
+
+    #comprar-teste-genetico {
+      flex-direction: column;
+    }
+
+    #comprar-teste-genetico .button {
+      width: 486px;
+      margin-top: 20px;
+    }
+
+    #banner-comprar-teste-genetico {
+      background-color: var(--color-background-blue);
+      width: 486px;
+      height: 286px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+
+    #banner-comprar-teste-genetico span {
+      font-size: 28px;
+      display: block;
+      color: var(--color-text-lightblue);
+    }
+
+    #banner-comprar-teste-genetico .panvel-DNHygia-logo {
+      width: 220px;
+      margin-top: 30px;
+    }
+
+
+    /* Como fazer os testes */
+
+    .step-div {
+      margin-bottom: 22px;
+    }
+
+    .step-icon {
+      margin-bottom: 22px;
+    }
+
+    .step-number {
+      margin-bottom: 22px;
+    }
+
+    .step-icon img,
+    .step-number img {
+      display: block;
+      margin: 0 auto;
+      max-height: 70px;
+    }
+
+    .step-desc {
+      text-align: center;
+      font-size: 18px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    #como-fazer-testes {
+      flex-direction: column;
+    }
+
+    #como-fazer-testes .flex-between:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    .icon-testes-wrapper {
+      display: flex;
+      flex: 0.333;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      max-width: 30%;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .icon-testes-wrapper h3 {
+      font-style: italic;
+      color: var(--color-text-lightblue);
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+
+    .icon-testes-wrapper span {
+      position: relative;
+      top: -3px;
+      padding: 3px 10px;
+      border-radius: 8px;
+      background-color: var(--yale-blue);
+      color: white;
+      margin-right: 10px;
+      font-size: 22px;
+    }
+
+    .icon-testes-wrapper img {
+      height: 80px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .center {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .full-image {
+        max-height: 200px;
+      }
+
+      main h2 {
+        text-align: center;
+      }
+
+      .icon-image {
+        height: 120px;
+      }
+
+      .icon-row {
+        margin-bottom: 20px;
+      }
+
+      .logo-teste-gen-small {
+        padding: 0 30px;
+      }
+
+      .logo-teste-gen-small img {
+        width: 100px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .logo-teste-gen-small h2 {
+        font-size: 45px;
+        line-height: 30px;
+        letter-spacing: 0;
+        margin-top: 0;
+        text-align: left;
+      }
+
+      .logo-teste-gen-large img {
+        width: 83px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .logo-teste-gen-large h1 {
+        font-size: 50px;
+        line-height: 35px;
+        letter-spacing: 0;
+        margin-top: 0;
+      }
+
+      .logo-teste-gen-large span {
+        font-size: 28px;
+      }
+
+      .card-header {
+        padding-left: 25px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: auto;
+      }
+
+      .progressbars-container+h3 {
+        margin-top: 0;
+      }
+
+      .progressbars-container>div:not(:last-child) {
+        padding-right: 0;
+      }
+
+      .progressbars-container .pure-u-md-1-2 {
+        max-width: 100%;
+      }
+
+      .icon-testes-wrapper {
+        min-width: 100%;
+        height: auto;
+        margin-bottom: 60px;
+      }
+
+      section .section-content {
+        padding: 30px 40px;
+      }
+
+      section .icon-large {
+        flex-direction: column;
+      }
+
+      section h2 {
+        font-size: 32px;
+        line-height: 30px;
+      }
+
+      .card-info {
+        min-height: auto;
+      }
+
+      .card-content {
+        padding: 30px 32px;
+      }
+
+      @media screen and (max-width:768px) {
+        .card-content {
+          text-align: center;
+        }
+      }
+
+      #banner-comprar-teste-genetico {
+        width: 100%;
+        max-width: 486px;
+      }
+
+      #comprar-teste-genetico .button {
+        width: 90%;
+        max-width: 486px;
+      }
+
+    }
+
+    #imgVideo,
+    #btnVideo {
+      cursor: pointer;
+    }
+
+
+    /* The Modal (background) */
+    .LHModalContainer,
+    .LHModalContainerExame,
+    .LHModalContainerPanvel {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: hidden;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      -webkit-animation-name: fadeIn;
+      /* Fade in the background */
+      -webkit-animation-duration: 0.4s;
+      animation-name: fadeIn;
+      animation-duration: 0.4s
+    }
+
+
+
+    /* Modal Content */
+    .LHmodal-content {
+      margin: 2%;
+      /*height: 100%;*/
+      -webkit-animation-name: slideIn;
+      -webkit-animation-duration: 0.4s;
+      animation-name: slideIn;
+      animation-duration: 0.4s;
+      max-width: 753px;
+      margin: 0 auto;
+      z-index: 0;
+      margin-top: 70px;
+    }
+
+    #LHmodal-form {
+      height: max-content;
+      max-width: 763px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: #fefefe;
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      z-index: 99;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #iframe-container {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+      from {
+        bottom: -300px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        bottom: -300px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+  </style>
+</head>
+<script>
+  window.addEventListener('load', LHevents);
+  function LHevents() {
+
+    // Get the modal
+    var modalVideo1 = document.getElementById("LHModalContainerVideo1");
+
+    var modalVideo2 = document.getElementById("LHModalContainerVideo2");
+
+
+    // Get the button that opens the modal
+    var btnVideo1 = document.getElementById("imgVideo");
+
+    var btnVideo2 = document.getElementById("btnVideo");
+
+
+    // Get the <span> element that closes the modal
+    var btnFecharVideo1 = document.getElementById('modalCloseVideo1');
+
+    var btnFecharVideo2 = document.getElementById('modalCloseVideo2');
+
+    // When the user clicks on <span> (x), close the modal
+    btnFecharVideo1.onclick = function () {
+      modalVideo1.style.display = "none";
+      document.getElementsByTagName('body')[0].style.overflow = 'auto';
+      Array.from(document.getElementsByClassName("iframe-youtube")).forEach(
+        function (element, index, array) {
+          element.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        }
+      );
+    }
+
+    btnFecharVideo2.onclick = function () {
+      modalVideo2.style.display = "none";
+      document.getElementsByTagName('body')[0].style.overflow = 'auto';
+      Array.from(document.getElementsByClassName("iframe-youtube")).forEach(
+        function (element, index, array) {
+          element.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        }
+      );
+    }
+
+    // When the user clicks the button, open the modal 
+    btnVideo1.onclick = function () {
+      modalVideo1.style.display = "block";
+      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+      modalVideo1.style.overflow = 'auto';
+    }
+
+    btnVideo2.onclick = function () {
+      modalVideo2.style.display = "block";
+      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+      modalVideo2.style.overflow = 'auto';
+    }
+
+
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener('click', function (event) {
+      if (event.target == modalVideo1) {
+        modalVideo1.style.display = "none";
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        Array.from(document.getElementsByClassName("iframe-youtube")).forEach(
+          function (element, index, array) {
+            element.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+          }
+        );
+      } else if (event.target == modalVideo2) {
+        modalVideo2.style.display = "none";
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        Array.from(document.getElementsByClassName("iframe-youtube")).forEach(
+          function (element, index, array) {
+            element.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+          }
+        );
+      }
+    }
+    );
+
+  }
+
+</script>
+
+<body id="LighthouseInnerContent">
+  <div class="center">
+    <div class="sub-header">
+      <div class="custom-breadcrumb">
+        <a href="/panvel/main.do">Página Inicial</a>
+        <span>Clinic</span>
+      </div>
+      <a class="btn-back" href="/panvel/panvelClinic.do">Voltar</a>
+    </div>
+    <!--<a href="Definir pra onde aponta">-->
+    <section class="section-banner">
+      <div class="pic-container">
+        <picture>
+          <source media="(max-width: 480px)"
+            srcset="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/geneticos/testes.jpg"
+            class="banner">
+          <img
+            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/geneticos/testes.jpg"
+            class="banner" alt="Covid" title="Covid">
+        </picture>
+      </div>
+    </section>
+    <!--</a>-->
+
+    <main>
+
+      <section class="pure-g card card-info">
+        <div class="pure-u-1 pure-u-md-1-2 full-image dna" id="imgVideo">
+          <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_521.png">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 card-content">
+          <h2>Você é único. Seu DNA também!</h2>
+          <p><b>O teste mais completo do Brasil </b>com informações assertivas sobre seu corpo para construir seu treino
+            ou montar sua dieta personalizada.</p>
+        </div>
+      </section>
+
+      <section class="pure-g card card-info">
+        <div class="pure-u-1 pure-u-md-1-2 card-content">
+          <h2>Descubra o que seus genes têm a dizer sobre você!</h2>
+          <p>Agora ficou mais fácil cuidar da sua saúde, isso porque com os testes DNHygia você descobrirá informações
+            para melhorar a sua qualidade de vida. Toda segurança e confiança que você merece!</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 full-image genes">
+        </div>
+      </section>
+
+      <section class="pure-g card card-info">
+        <div class="pure-u-1 pure-u-md-1-2 icon-image">
+          <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_545.png"
+            alt="">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 card-content">
+          <h2>Um pouco de saliva e pronto!</h2>
+          <p>Ao receber seu kit, siga as instruções, colete sua amostra e nos envie de volta. <b>Nós faremos o
+              resto!</b></p>
+          <button class="button" id="btnVideo">Assista o vídeo</button>
+        </div>
+      </section>
+
+      <section class="pure-g card card-info card-steps">
+
+        <div class="pure-u-1 center-content">
+          <h2>Como funciona:</h2>
+        </div>
+        <div class="pure-u-1-2 pure-u-md-1-4">
+          <div class="pure-g step-div flex-between">
+            <div class="pure-u-1 step-icon">
+              <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/geneticos/group_535.svg">
+            </div>
+            <div class="pure-u-1 step-number"> <img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_540.png">
+            </div>
+            <div class="pure-u-1 step-desc"><b>Compre o teste na Panvel.</b></div>
+          </div>
+        </div>
+        <div class="pure-u-1-2 pure-u-md-1-4">
+          <div class="pure-g step-div">
+            <div class="pure-u-1 step-icon">
+              <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/geneticos/group_536.svg">
+            </div>
+            <div class="pure-u-1 step-number"> <img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_541.png">
+            </div>
+            <div class="pure-u-1 step-desc"><b>
+                Você receberá um email de confirmação da aquisição, confirme seu endereço
+                para entregarmos seu kit coleta.
+              </b></div>
+          </div>
+        </div>
+        <div class="pure-u-1-2 pure-u-md-1-4">
+          <div class="pure-g step-div">
+            <div class="pure-u-1 step-icon"> <img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_539.png">
+            </div>
+            <div class="pure-u-1 step-number"> <img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_542.png">
+            </div>
+            <div class="pure-u-1 step-desc"><b>Envie seu teste via correio (postagem pré paga).</b></div>
+          </div>
+        </div>
+        <div class="pure-u-1-2 pure-u-md-1-4">
+          <div class="pure-g step-div">
+            <div class="pure-u-1 step-icon"> <img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_538.png">
+            </div>
+            <div class="pure-u-1 step-number"> <img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_543.png">
+            </div>
+            <div class="pure-u-1 step-desc"><b>Receba o resultado do teste em 40 dias (após a postagem).</b></div>
+          </div>
+        </div>
+      </section>
+
+      <h2>Testes disponíveis</h2>
+      <div class="pure-g container-cards flex-between">
+        <div class="pure-u-1 pure-u-md-1-3 card-teste">
+          <div class="teste-wrapper">
+            <div class="pure-u-1 center-content card-icon"><img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_553.png"
+                alt=""></div>
+            <div class="pure-u-1 center-content card-subtitle">
+              <h2>Teste genético</h2>
+            </div>
+            <div class="pure-u-1 center-content card-title">
+              <h1>Bem-estar</h1>
+            </div>
+            <div class="pure-u-1 center-content logo-hygia"><img class="img-logos"
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_550.png">
+            </div>
+            <a href="/panvel/bem-estar.do">
+              <button class="button">Ver mais</button>
+            </a>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3 card-teste">
+          <div class="teste-wrapper">
+            <div class="pure-u-1 center-content card-icon"><img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_595.png"
+                alt=""></div>
+            <div class="pure-u-1 center-content card-subtitle">
+              <h2>Teste genético</h2>
+            </div>
+            <div class="pure-u-1 center-content card-title">
+              <h1>Treino</h1>
+            </div>
+            <div class="pure-u-1 center-content  logo-hygia"><img class="panvel-DNHygia-logo"
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_550.png">
+            </div>
+            <a href="/panvel/treino.do">
+              <button class="button">Ver mais</button>
+            </a>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3 card-teste">
+          <div class="teste-wrapper">
+            <div class="pure-u-1 center-content card-icon"><img
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_568.png"
+                alt=""></div>
+            <div class="pure-u-1 center-content card-subtitle">
+              <h2>Teste genético</h2>
+            </div>
+            <div class="pure-u-1 center-content card-title">
+              <h1>Nutri</h1>
+            </div>
+            <div class="pure-u-1 center-content logo-hygia"><img class="img-logos"
+                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_550.png">
+            </div>
+            <a href="/panvel/nutri.do">
+              <button class="button">Ver mais</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div id="LHModalContainerVideo1" class="LHModalContainer">
+    <div id="LHModalPanvel" class="LHmodal-content">
+      <span id="modalCloseVideo1" class="close">&times;</span>
+      <iframe class="iframe-youtube" width="100%" height="315"
+        src="https://www.youtube.com/embed/jz9ilAgl4zE?enablejsapi=1&version=3&playerapiid=ytplayer""
+      allowscriptaccess=" always" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div id="LHModalContainerVideo2" class="LHModalContainer">
+    <div id="LHModalPanvel" class="LHmodal-content">
+      <span id="modalCloseVideo2" class="close">&times;</span>
+      <iframe class="iframe-youtube" width="100%" height="315"
+        src="https://www.youtube.com/embed/6-DZ2LwrUfM?enablejsapi=1&version=3&playerapiid=ytplayer""
+      allowscriptaccess=" always" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</body>

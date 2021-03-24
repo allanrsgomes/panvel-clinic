@@ -1,0 +1,1372 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    @import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonte/fonts.css);
+    .material-icons {
+	font-family: 'Material Icons'!important;
+	}
+
+    :root {
+      --color-orange-title: #ff9c16;
+      --color-background-lightblue: #00bcde;
+      --color-background-blue: #0a3383;
+      --color-background-white-gray: #e4e9f2;
+      --color-text-gray: #9e9e9e;
+      --color-text-gray-dark: #757575;
+      --color-text-lightblue: #00bedb;
+      --color-background-dimgray: #696969;
+      --yale-blue: #1d3780;
+      --st-patrick-blue: #243f8c;
+      --medium-turquoise: #4fc0e0;
+    }
+
+    /*-----------------
+ <SLIDER & BANNER>
+-------------------*/
+    .slideshow-container {
+      min-height: 200px;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .slideshow-container .mySlides {
+      display: none;
+    }
+
+    .slideshow-container .prev,
+    .slideshow-container .next {
+      width: 35px;
+      height: 35px;
+      background: #d5d5d5;
+      color: #939393;
+      border-radius: 35px;
+      margin: auto;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      padding: 0;
+      text-align: center;
+      transition: 0.6s ease;
+      user-select: none;
+      position: absolute;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 50%;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .slideshow-container .prev i,
+    .slideshow-container .next i {
+      display: block;
+      margin-top: 2px;
+      line-height: 0;
+    }
+
+    .slideshow-container .prev {
+      left: 20px;
+    }
+
+    .slideshow-container .prev i {
+      margin-left: -4px;
+    }
+
+    .slideshow-container .next {
+      right: 20px;
+    }
+
+    .slideshow-container .next i {
+      margin-right: -2px;
+    }
+
+    .slideshow-container .ul-dots {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      margin: 0 auto;
+      list-style: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: auto;
+      bottom: 19px;
+      padding: 0;
+    }
+
+    .slideshow-container .ul-dots li {
+      cursor: pointer;
+      width: 11px;
+      height: 11px;
+      border: none;
+      background: #dadada;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      border-radius: 11px;
+      margin: 0 5.5px;
+      display: inline-block;
+      vertical-align: middle;
+      transition: background-color 0.6s ease;
+    }
+
+    .slideshow-container .ul-dots li.active {
+      background: #4fc0e0;
+    }
+
+    @media only screen and (max-width: 480px) {
+
+      .slideshow-container .prev,
+      .slideshow-container .next {
+        height: 25px;
+        width: 25px;
+        font-size: 13px;
+      }
+
+      .slideshow-container .prev {
+        left: 15px;
+      }
+
+      .slideshow-container .next {
+        right: 15px;
+      }
+
+      .slideshow-container .ul-dots {
+        bottom: 10px;
+      }
+
+      .slideshow-container .ul-dots li {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    .fadeSlideClass {
+      -webkit-animation-name: fadeSlide;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fadeSlide {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .section-banner {
+      border-radius: 8px 8px 0 0;
+      float: none;
+    }
+
+    .section-banner .banner {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+    }
+
+    body {
+      background: var(--color-background-white-gray);
+    }
+
+    .custom-breadcrumb {
+      text-align: left;
+    }
+
+    .custom-breadcrumb a {
+      font-size: 15px;
+      color: #828282;
+      letter-spacing: -0.02em;
+      display: inline-block;
+      white-space: nowrap;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .custom-breadcrumb a+a::before {
+      content: "/";
+      padding: 0 5px;
+      color: #828282;
+    }
+
+    .custom-breadcrumb span {
+      display: block;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 20px;
+      color: #143c8d;
+      letter-spacing: -0.03em;
+    }
+
+    .sub-header {
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 0 21px;
+      background: transparent;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: box;
+      display: flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+    }
+
+    .sub-header .breadcrumb {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+    }
+
+    .sub-header .btn-back {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      padding: 6px 41px 7px;
+      width: auto;
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+      color: #143c8d;
+      text-align: center;
+      letter-spacing: -0.03em;
+      border: 1px solid #143c8d;
+      border-radius: 18px;
+    }
+
+    .sub-header a.btn-back:link {
+      text-decoration: none;
+    }
+
+    .sub-header .btn-back:hover {
+      background: #143c8d;
+      color: #fff;
+    }
+
+    .center {
+      display: block;
+      margin: 0 auto;
+      max-width: 1080px;
+      height: 100%;
+      padding: 15px;
+    }
+
+    .flex-between {
+      justify-content: space-between;
+      letter-spacing: -0.03em;
+    }
+
+    .inside-title {
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--st-patrick-blue);
+    }
+
+    /* Cards e containers */
+
+    /* Com este id eu consigo definir/sobrescrever a fonte de tudo que vai no "miolo", tornando desnecessária a espec da font-family em tudo */
+    #LighthouseInnerContent * {
+      font-family: Foco, "Open Sans", sans-serif;
+      box-sizing: border-box;
+    }
+
+    main {
+      color: var(--yale-blue);
+    }
+
+    main h1,
+    main h2,
+    main h3,
+    main h4 {
+      margin: 0;
+    }
+
+    main h2 {
+      font-size: 46px;
+      font-style: italic;
+      line-height: 38px;
+    }
+
+    section {
+      margin: 28px auto 30px;
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 12px;
+      box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    section h1,
+    section h2 {
+      font-size: 48px;
+      font-style: italic;
+      line-height: 48px;
+      letter-spacing: -0.02em;
+    }
+
+    section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    section h4 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    section h5 {
+      margin-bottom: 3px;
+      margin-top: -3px;
+      font-size: 15px;
+      letter-spacing: -0.05em;
+    }
+
+    header+.section-content h3 {
+      font-size: 46px;
+    }
+
+    section .section-content {
+      padding: 60px 80px;
+    }
+
+    .card-header {
+      height: 362px;
+      background-color: var(--color-background-blue);
+      display: flex;
+      align-items: center;
+      padding-left: 90px;
+      color: white;
+    }
+
+    .card-header h1 {
+      font-size: 120px;
+      line-height: 80px;
+      letter-spacing: 0;
+      margin-top: 0;
+    }
+
+    .card-header span {
+      font-size: 46px;
+      display: block;
+      color: var(--color-text-lightblue);
+    }
+
+    .card-header img {
+      width: 166px;
+      margin-right: 30px;
+    }
+
+    .card-content {
+      padding-left: 65px;
+      padding-right: 65px;
+      align-self: center;
+    }
+
+    .card-info {
+	display: flex;
+      justify-content: center;
+      align-content: stretch;
+      min-height: 386px;
+    }
+
+
+    /* Icon row */
+
+    .icon-row {
+      align-items: center;
+      display: flex;
+    }
+
+    .icon-row:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .first-col .icon-row {
+      padding-left: 0;
+    }
+
+    section .icon-row:first-of-type.icon-large {
+      margin-top: 50px;
+    }
+
+    section .icon-row:not(:last-child).icon-large {
+      margin-bottom: 50px;
+    }
+
+    .icon-row>* {
+      margin: 0;
+    }
+
+    section .icon-large img {
+      width: 130px;
+      margin-right: 30px;
+    }
+
+    section .icon-large h3 {
+      font-size: 48px;
+      font-style: italic;
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+
+    section .icon-large h3+p {
+      margin-top: 0;
+    }
+
+    section .icon-row:not(:last-child).icon-small {
+      margin-bottom: 20px;
+    }
+
+    section .icon-small img {
+      width: 70px;
+      margin-right: 10px;
+    }
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    /* Progress bar elements */
+
+    .progress-bar-wrapper {
+      width: 100%;
+    }
+
+    .progressbars-container {
+      display: flex;
+      padding: 0 60px;
+      align-self: stretch;
+    }
+
+    .section-content .progressbars-container {
+      padding: 0;
+    }
+
+    .progressbars-container>.pure-u-md-1-3 {
+      max-width: 30%;
+    }
+
+    .pure-u-md-1-3 .icon-row img {
+      width: 70px;
+      margin-right: 10px;
+    }
+
+    .pure-u-md-1-3>div {
+      flex: 0.33;
+    }
+
+    .pure-u-md-1-3 h5 {
+      font-size: 14px;
+    }
+
+    .pure-u-md-1-3 .progress-bar,
+    .pure-u-md-1-3 .progress-bar>div {
+      height: 26px;
+      border: 1px solid var(--yale-blue);
+      border-radius: 13px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .pure-u-md-1-3 .progress-bar>div {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      background-color: var(--yale-blue);
+      border: none;
+      border-radius: 0 14px 14px 0;
+    }
+
+    .pure-u-md-1-3 .progress-with-text {
+      height: auto;
+      background-color: var(--yale-blue);
+      color: white;
+      padding: 20px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .progress-10 {
+      width: 10%;
+    }
+
+    .progress-20 {
+      width: 20%;
+    }
+
+    .progress-30 {
+      width: 30%;
+    }
+
+    .progress-40 {
+      width: 40%;
+    }
+
+    .progress-50 {
+      width: 50%;
+    }
+
+    .progress-60 {
+      width: 60%;
+    }
+
+    .progress-70 {
+      width: 70%;
+    }
+
+    .progress-75 {
+      width: 75%;
+    }
+
+    .progress-80 {
+      width: 80%;
+    }
+
+    .progress-90 {
+      width: 90%;
+    }
+
+    .progress-100 {
+      width: 100%;
+    }
+
+    /* End Progress Bar Elements */
+
+    section .icon-image {
+      background-color: var(--color-background-blue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section .icon-image img {
+      height: 80%;
+      max-width: 376px;
+    }
+
+    iframe#card-video {
+      width: 100%;
+      min-height: 486px;
+      border: none;
+    }
+
+    /* Elementos */
+
+    .button {
+      background-color: var(--color-orange-title);
+      color: var(--yale-blue);
+      padding: 6px;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    a.button {
+      text-decoration: none;
+    }
+
+    .logo-teste-genetico {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .logo-teste-genetico span {
+      display: block;
+      color: var(--color-text-lightblue);
+    }
+
+    .logo-teste-gen-small img {
+      width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .logo-teste-gen-small h2 {
+      font-size: 75px;
+      line-height: 50px;
+      letter-spacing: 0;
+      margin-top: 0;
+    }
+
+    .logo-teste-gen-large img {
+      width: 166px;
+      height: auto;
+      margin-right: 30px;
+    }
+
+    .logo-teste-gen-large h1 {
+      font-size: 120px;
+      line-height: 80px;
+      letter-spacing: 0;
+      margin-top: 0;
+    }
+
+    .logo-teste-gen-large span {
+      font-size: 46px;
+    }
+
+    #comprar-teste-genetico {
+      flex-direction: column;
+    }
+
+    #comprar-teste-genetico .button {
+      width: 486px;
+      margin-top: 20px;
+    }
+
+    #banner-comprar-teste-genetico {
+      background-color: var(--color-background-blue);
+      width: 486px;
+      height: 286px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+
+    #banner-comprar-teste-genetico span {
+      font-size: 28px;
+      display: block;
+      color: var(--color-text-lightblue);
+    }
+
+    #banner-comprar-teste-genetico .panvel-DNHygia-logo {
+      width: 220px;
+      margin-top: 30px;
+    }
+
+    .icon-large h3 span {
+      font-size: 20px;
+    }
+
+    /* Como fazer os testes */
+
+    #como-fazer-testes {
+      flex-direction: column;
+    }
+
+    #como-fazer-testes .flex-between:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    .icon-testes-wrapper {
+      display: flex;
+      flex: 0.333;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      max-width: 30%;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .icon-testes-wrapper h3 {
+      font-style: italic;
+      color: var(--color-text-lightblue);
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+
+    .icon-testes-wrapper span {
+      position: relative;
+      top: -3px;
+      padding: 3px 10px;
+      border-radius: 8px;
+      background-color: var(--yale-blue);
+      color: white;
+      margin-right: 10px;
+      font-size: 22px;
+    }
+
+    .icon-testes-wrapper img {
+      height: 80px;
+    }
+
+    @media only screen and (max-width: 904px) {
+
+      section .icon-large h3 {
+        font-size: 40px;
+      }
+
+      .logo-teste-gen-large h1 {
+        font-size: 90px;
+      }
+
+      .logo-teste-gen-large span {
+        font-size: 48px;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .center {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      main h2 {
+        text-align: center;
+      }
+
+      .icon-image {
+        height: 120px;
+      }
+
+      .icon-row {
+        margin-bottom: 20px;
+      }
+
+      .logo-teste-gen-small {
+        padding: 0 30px;
+      }
+
+      .logo-teste-gen-small img {
+        width: 100px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .logo-teste-gen-small h2 {
+        font-size: 45px;
+        line-height: 30px;
+        letter-spacing: 0;
+        margin-top: 0;
+        text-align: left;
+      }
+
+      .logo-teste-gen-large img {
+        width: 83px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .logo-teste-gen-large h1 {
+        font-size: 50px;
+        line-height: 35px;
+        letter-spacing: 0;
+        margin-top: 0;
+      }
+
+      .logo-teste-gen-large span {
+        font-size: 28px;
+      }
+
+      .card-header {
+        padding-left: 25px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: auto;
+      }
+
+      .progressbars-container+h3 {
+        margin-top: 0;
+      }
+
+      .progressbars-container>div:not(:last-child) {
+        padding-right: 0;
+      }
+
+      .progressbars-container .pure-u-md-1-3 {
+        max-width: 100%;
+      }
+
+      .icon-testes-wrapper {
+        min-width: 100%;
+        height: auto;
+        margin-bottom: 60px;
+      }
+
+      .icon-testes-wrapper {
+        min-width: 100%;
+        height: auto;
+        margin-bottom: 60px;
+      }
+
+      section .icon-large {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      section .icon-large h3 {
+        font-size: 35px;
+        line-height: 38px;
+        margin-bottom: 10px;
+      }
+
+      section .icon-large img {
+        margin-right: 0;
+      }
+
+      section .section-content {
+        padding: 30px 40px;
+      }
+
+      section h2 {
+        font-size: 32px;
+        line-height: 30px;
+      }
+
+      section .icon-row:not(:last-child).icon-large {
+        margin-bottom: 25px;
+      }
+
+      section .icon-row:first-of-type.icon-large {
+        margin-top: 25px;
+      }
+
+      section p {
+        text-align: center;
+      }
+
+      .card-info {
+        min-height: auto;
+      }
+
+      .card-content {
+        padding: 30px 32px;
+      }
+
+      #banner-comprar-teste-genetico {
+        width: 100%;
+        max-width: 486px;
+      }
+
+      #comprar-teste-genetico .button {
+        width: 90%;
+        max-width: 486px;
+      }
+
+    }
+
+    @media screen and (max-width:400px) {
+
+      section .icon-large h3 {
+        font-size: 28px;
+      }
+
+      .logo-teste-gen-large h1 {
+        font-size: 36px;
+      }
+
+      .logo-teste-gen-large span {
+        font-size: 22px;
+      }
+
+      .logo-teste-gen-small h2 {
+        font-size: 30px;
+      }
+
+      #banner-comprar-teste-genetico span {
+        font-size: 21px;
+      }
+    }
+
+    #fotoVideo,
+    #btnVideo {
+      cursor: pointer;
+    }
+
+
+    /* The Modal (background) */
+    .LHModalContainer,
+    .LHModalContainerExame,
+    .LHModalContainerPanvel {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: hidden;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      -webkit-animation-name: fadeIn;
+      /* Fade in the background */
+      -webkit-animation-duration: 0.4s;
+      animation-name: fadeIn;
+      animation-duration: 0.4s
+    }
+
+
+
+    /* Modal Content */
+    .LHmodal-content {
+      margin: 2%;
+      /*height: 100%;*/
+      -webkit-animation-name: slideIn;
+      -webkit-animation-duration: 0.4s;
+      animation-name: slideIn;
+      animation-duration: 0.4s;
+      max-width: 753px;
+      margin: 0 auto;
+      z-index: 0;
+      margin-top: 70px;
+    }
+
+    #LHmodal-form {
+      height: max-content;
+      max-width: 763px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: #fefefe;
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      z-index: 99;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #iframe-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    #videoFotoMobile {
+      display: none;
+    }
+
+    #videoFotoDesktop {
+      display: block;
+    }
+
+    @media screen and (max-width:768px) {
+      #videoFotoMobile {
+        display: block;
+      }
+
+      #videoFotoDesktop {
+        display: none;
+      }
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+      from {
+        bottom: -300px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        bottom: -300px;
+        opacity: 0
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+  </style>
+</head>
+<script>
+  window.addEventListener('load', LHevents);
+  function LHevents() {
+
+    // Get the modal
+    var modalVideo2 = document.getElementById("LHModalContainerVideo2");
+
+
+    // Get the button that opens the modal
+    var btnVideo2 = document.getElementById("btnVideo");
+
+
+    // Get the <span> element that closes the modal
+    var btnFecharVideo2 = document.getElementById('modalCloseVideo2');
+
+
+    // When the user clicks on <span> (x), close the modal
+    btnFecharVideo2.onclick = function () {
+      modalVideo2.style.display = "none";
+      document.getElementsByTagName('body')[0].style.overflow = 'auto';
+      Array.from(document.getElementsByClassName("iframe-youtube")).forEach(
+        function (element, index, array) {
+          element.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        }
+      );
+    }
+
+    // When the user clicks the button, open the modal 
+    btnVideo2.onclick = function () {
+      modalVideo2.style.display = "block";
+      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+      modalVideo2.style.overflow = 'auto';
+    }
+
+
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener('click', function (event) {
+      if (event.target == modalVideo2) {
+        modalVideo2.style.display = "none";
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        Array.from(document.getElementsByClassName("iframe-youtube")).forEach(
+          function (element, index, array) {
+            element.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+          }
+        );
+      }
+    }
+    );
+
+  }
+
+</script>
+
+<body id="LighthouseInnerContent">
+  <div class="center">
+    <div class="sub-header">
+      <div class="custom-breadcrumb">
+        <a href="/panvel/main.do">Página Inicial</a>
+        <span>Clinic</span>
+      </div>
+      <a class="btn-back" href="/panvel/panvelClinic.do">Voltar</a>
+    </div>
+    <!--<a href="Definir pra onde aponta">-->
+    <section class="section-banner">
+      <div class="pic-container">
+        <picture>
+          <source media="(max-width: 480px)"
+            srcset="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/geneticos/treino.png"
+            class="banner">
+          <img
+            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/geneticos/treino.png"
+            class="banner" alt="Covid" title="Covid">
+        </picture>
+      </div>
+    </section>
+    <!--</a>-->
+
+    <main>
+      <section class="card">
+        <header class="card-header">
+          <div class="logo-teste-genetico logo-teste-gen-large">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_35.svg"
+              alt="">
+            <h1 style="color: white;"><span>Teste genético</span>Treino</h1>
+          </div>
+        </header>
+
+        <div class="section-content">
+          <h2>
+            Quer saber qual é o melhor esporte ou treino para seu corpo?
+          </h2>
+          <p><strong>Seja crossfit, maratona ou natação, pode ser que seu corpo responda melhor a exercícios de curta
+              duração e alto impacto, ou de longa duração com pouca exigência física.</strong></p>
+
+          <div class="pure-g progressbars-container flex-between">
+            <div class="pure-u-1 icon-row icon-large">
+              <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_597.svg"
+                alt="">
+              <div>
+                <h3>
+                  Potência <span>| habilidade de potência</span>
+                </h3>
+                <p><strong>Descubra seu potencial genético para exercer força substancial em um curto período de tempo e
+                    melhorar seu desempenho em treinos de potência.</strong></p>
+              </div>
+            </div>
+            <div class="pure-u-1 icon-row icon-large">
+              <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_598.svg"
+                alt="">
+              <div>
+                <h3>
+                  Resistência <span>| capacidade de resistência</span>
+                </h3>
+                <p><strong>Descubra se você é naturalmente apto para repetir uma atividade por um longo período de tempo
+                    sem sofrer com a fadiga.</strong></p>
+              </div>
+            </div>
+            <div class="pure-u-1 icon-row icon-large">
+              <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_599.svg"
+                alt="">
+              <div>
+                <h3>
+                  Potência e resistência <span>| desempenho muscular e exercícios de potência</span>
+                </h3>
+                <p><strong>Descubra se a sua predisposição genética favorece o desempenho em esportes
+                    aeróbicos-anaeróbicos mistos, assentes na repetição de força sub-máxima.</strong></p>
+              </div>
+            </div>
+            <div class="pure-u-1 icon-row icon-large">
+              <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_600.svg"
+                alt="">
+              <div>
+                <h3>
+                  VO2 máximo <span>| capacidade aeróbica</span>
+                </h3>
+                <p><strong>Entenda sua habilidade de realizar exercícios dinâmicos e de intensidade de moderada a alta
+                    que afetam seu condicionamento físico cardiorrespiratório.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pure-g card card-info">
+        <div class="pure-u-1 pure-u-md-1-2 icon-image"><img
+            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_73.svg" alt="">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 card-content">
+          <h2>
+            Conheça mais sobre o teste Treino
+          </h2>
+          <p><strong>Qual o impacto de substâncias como cafeína, sal e gorduras no seu organismo?</strong> Essas e
+            outras respostas você
+            encontra neste teste que apresenta dados de grande relevância para você. Consulte sempre o especialista na
+            área.</p>
+        </div>
+      </section>
+
+      <h2 class="pure-u-1">Treine na intensidade certa</h2>
+
+      <section id="seu-corpo" class="card center-content">
+        <div class="pure-g progressbars-container flex-between">
+          <div class="pure-u-1 icon-row icon-large">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_601.svg"
+              alt="">
+            <div>
+              <h3>
+                Construção de massa muscular <span>| crescimento muscular</span>
+              </h3>
+              <p><strong>Descubra quão fácil é para você ganhar força muscular após treinos de potência.</strong></p>
+            </div>
+          </div>
+          <div class="pure-u-1 icon-row icon-large">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_602.svg"
+              alt="">
+            <div>
+              <h3>
+                Lesão <span>| propensão à lesão</span>
+              </h3>
+              <p><strong>Descubra seu potencial genético para exercer força substancial em um curto período de tempo e
+                  melhorar seu desempenho em treinos de potência.</strong></p>
+            </div>
+          </div>
+          <div class="pure-u-1 icon-row icon-large">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_604.svg"
+              alt="">
+            <div>
+              <h3>
+                Necessidades de recuperação <span>| regeneração muscular</span>
+              </h3>
+              <p><strong>Saiba aproximadamente o tempo necessário para seus músculos se regenerarem após os
+                  exercícios.</strong></p>
+            </div>
+          </div>
+          <div class="pure-u-1 icon-row icon-large">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_603.svg"
+              alt="">
+            <div>
+              <h3>
+                Recuperação de energia <span>| necessidades nutricionais</span>
+              </h3>
+              <p><strong>Saiba suas necessidades nutricionais e o equilíbrio entre os treinos e o consumo adequado de
+                  antioxidantes ou ácidos graxos ômega-3.</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pure-g card card-info">
+        <div class="pure-u-1 pure-u-md-1-2 icon-image"><img
+            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_605.svg" alt="">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 card-content">
+          <h2>O que é analisado?</h2>
+          <p>Este teste genético analisa o DNA para avaliar 43 variantes genéticas de 34 genes. Este teste apresenta 99%
+            de precisão e só precisa ser realizado uma vez na vida. </p>
+          <p>Este teste identifica o perfil genético atlético para oferecer informações sobre o potencial genético e
+            também sobre medidas preventivas e necessidades.</p>
+        </div>
+      </section>
+
+      <h2>Comprar o teste genético</h2>
+      <section id="comprar-teste-genetico" class="card center-content">
+        <div id="banner-comprar-teste-genetico">
+          <div class="logo-teste-genetico logo-teste-gen-small">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_606.svg"
+              alt="">
+            <h2 style="color: white;"><span>Teste genético</span>Treino</h2>
+          </div>
+          <img class="panvel-DNHygia-logo"
+            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/geneticos/group_550.png">
+        </div>
+        <a href="/panvel/teste-genetico-dna-hygia-treino/p-109576" class="button">Comprar
+          teste</a>
+      </section>
+
+      <h2>Como fazer os testes</h2>
+      <section id="como-fazer-testes" class="card center-content card-content">
+        <div class="pure-g flex-between">
+          <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_402.svg"
+              alt="">
+            <h3><span>1</span>Compra</h3>
+            <p>A compra pode ser feita em todos os canais de venda da Panvel: lojas, aplicativo, panvel.com ou Alô
+              Panvel.
+            </p>
+            <a href="/panvel/teste-genetico-dna-hygia-treino/p-109576" class="button">Comprar</a>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_409.svg"
+              alt="">
+            <h3><span>2</span>Confirme seus dados e receba o kit</h3>
+            <p>Você receberá um email de confirmação da aquisição, confirme seu endereço para entregarmos seu kit
+              coleta.
+            </p>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_414.svg"
+              alt="">
+            <h3><span>3</span>Coleta da amostra</h3>
+            <p>É importante seguir as instruções para que o teste ocorra da melhor forma possível.</p>
+            <a href="#video" class="button" id="btnVideo">Assistir vídeo</a>
+          </div>
+        </div>
+        <div class="pure-g flex-between">
+          <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_420.svg"
+              alt="">
+            <h3><span>4</span>Envio</h3>
+            <p>O envio é bem simples, basta despachar pelo correio. A postagem é pré paga por nós.</p>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_425.svg"
+              alt="">
+            <h3><span>5</span>Análise</h3>
+            <p>Iremos fornecer informações mais assertivas sobre seu corpo de acordo com o teste adquirido.</p>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-3 icon-testes-wrapper">
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_429.svg"
+              alt="">
+            <h3><span>6</span>Resultados</h3>
+            <p>Você encontrará diversas informações a partir do seu resultado. Recomendamos que você procure um
+              profissional técnico qualificado para que o resultado do seu teste seja aplicado da melhor maneira na sua
+              rotina para ampliar sua qualidade de vida.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="LHModalContainerVideo2" class="LHModalContainer">
+    <div id="LHModalPanvel" class="LHmodal-content">
+      <span id="modalCloseVideo2" class="close">&times;</span>
+      <iframe class="iframe-youtube" width="100%" height="315"
+        src="https://www.youtube.com/embed/6-DZ2LwrUfM?enablejsapi=1&version=3&playerapiid=ytplayer""
+      allowscriptaccess=" always" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
