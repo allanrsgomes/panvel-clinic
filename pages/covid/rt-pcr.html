@@ -1,0 +1,2030 @@
+
+<style>
+    @import url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonts/fonts.css");
+
+	.material-icons {
+	    font-family: 'Material Icons'!important;
+}
+
+    :root {
+        --color-orange-title: #ff9c16;
+        --color-background-lightblue: #00bcde;
+        --color-background-blue: #0a3383;
+        --color-background-white-gray: #E4E9F2;
+        --color-text-gray: #9e9e9e;
+        --color-text-gray-dark: #757575;
+        --color-background-dimgray: #696969;
+        --color-yale-blue: #1d3780;
+        --color-st-patrick-blue: #243f8c;
+        --color-medium-turquoise: #4fc0e0;
+        --color-medium-turquoise-10: rgba(80, 190, 224, 0.3);
+        --color-acqua: #4BAC89;
+
+        /* padronização das medidas utilizadas */
+        --xsSpace: 10px;
+        --smSpace: 20px;
+        --mdSpace: 30px;
+        --lgSpace: 40px;
+
+        /* tamanhos para fontes (precisamos definir) */
+        --xsFontSize: 15px;
+        --smFontSize: 18px;
+        --mdFontSize: 24px;
+        --lgFontSize: 48px;
+
+        --h1Size: var(--lgFontSize);
+        --h2Size: var(--mdFontSize);
+        --h3Size: var(--smFontSize);
+    }
+
+    /* RESET WORKSPACE */
+    body#LighthouseInnerContent * {
+        font-family: Foco, "Open Sans", sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: var(--color-background-white-gray);
+        color: var(--color-yale-blue);
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-style: italic;
+    }
+
+    .custom-breadcrumb {
+        text-align: left;
+    }
+
+    .custom-breadcrumb a {
+        font-size: var(--xsFontSize);
+        color: #828282;
+        letter-spacing: -0.02em;
+        display: inline-block;
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .custom-breadcrumb a::after {
+        content: "/";
+        padding: 0 3px;
+        color: #828282;
+    }
+
+    .custom-breadcrumb span {
+        display: block;
+        font-weight: 700;
+        font-size: var(--mdFontSize);
+        line-height: var(--smSpace);
+        color: #143c8d;
+        letter-spacing: -0.03em;
+    }
+
+    .sub-header-wrapper {
+        width: 100%;
+        max-width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+
+    .sub-header {
+        width: 100%;
+        max-width: 1080px;
+        padding: 0 var(--smSpace);
+        margin-bottom: var(--mdSpace);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .sub-header .breadcrumb {
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+    }
+
+    .sub-header .btn-back {
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        padding: 6px 41px 7px;
+        width: auto;
+        display: block;
+        font-weight: 700;
+        font-size: var(--smFontSize);
+        color: #143c8d;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: -0.03em;
+        border: 1px solid #143c8d;
+        border-radius: 18px;
+    }
+
+    .sub-header .btn-back:hover {
+        background: #143c8d;
+        color: #fff;
+    }
+
+    .section-banner picture {
+        max-height: 343px;
+        max-width: 638px;
+    }
+
+    .section-banner picture img {
+        width: 100%;
+    }
+
+    .section-banner #panvel-clinic-logo {
+        max-width: 50%;
+        margin-bottom: var(--smSpace);
+    }
+
+    .section-banner .button {
+        font-size: var(--mdFontSize);
+        font-weight: 700;
+        font-style: italic;
+        color: var(--color-yale-blue);
+    }
+
+    button.button.button-modal {
+        color: #4BAC89;
+        background-color: transparent;
+        border: 1px solid #4BAC89;
+        text-transform: uppercase;
+    }
+
+    .center {
+        display: block;
+        margin: 0 auto;
+        max-width: 1080px;
+        height: 100%;
+        padding: 15px;
+    }
+
+    .flex-between {
+        justify-content: space-between;
+    }
+
+    /* Direciona para colunas e centraliza verticalmente */
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .section-banner .flex-column {
+        padding-right: 136px;
+    }
+
+    .section-banner .flex-column p {
+        padding-left: var(--xsSpace);
+    }
+
+    /* Banner */
+    .card-header-detalhe,
+    .card-detalhe-body-mobile .img-header {
+        background-image: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/covid/Grupo\ de\ máscara\ 32.png');
+        background-position: right top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 343px;
+        margin-top: 22px;
+    }
+
+    .card-detalhe-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .card-detalhe-body .img-card,
+    .card-detalhe-body-mobile .img-card {
+        font-family: Foco Bold, Open Sans, sans-serif;
+        font-size: 53px;
+        color: #003986;
+        font-style: italic;
+        width: 100%;
+        /*max-width: 279px;*/
+    }
+
+    .card-detalhe-body .img-card img,
+    .card-detalhe-body-mobile .img-card img {
+        max-width: 120px;
+        float: left;
+        margin-right: 5px;
+    }
+
+    .tarja {
+        background-color: rgba(237, 161, 64, 1);
+        margin-left: unset;
+        padding-left: unset;
+        width: 22em;
+        height: 55px;
+        border-radius: 0px 15px;
+        margin-top: 41px
+    }
+
+    .tarja h3 {
+        color: var(--color-background-blue);
+        font-size: 34px;
+        font-family: Foco, Open Sans, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        padding: 0 15px;
+        line-height: 0;
+    }
+
+    .card-detalhe-body p,
+    .card-detalhe-body-mobile p {
+        color: #003986;
+        font-family: Foco, Open Sans, sans-serif;
+        font-style: italic;
+        font-size: 22px;
+        margin: 21px 15px;
+    }
+
+    .card-detalhe-body-mobile {
+        display: none;
+    }
+
+    @media (max-width:767px) {
+        .card-header-detalhe {
+            display: none;
+        }
+
+        .card-detalhe-body-mobile .img-header {
+            background-position: center;
+            background-size: contain;
+            z-index: 1;
+            display: flex;
+            justify-content: right;
+            vertical-align: bottom;
+            align-items: end;
+            height: 53vw;
+            margin-bottom: 25px;
+        }
+
+        .card-detalhe-body-mobile>img {
+            width: 50%;
+            margin-bottom: -50px;
+            z-index: 2;
+            position: absolute;
+            top: 75vw;
+            right: 0;
+        }
+
+        .card-detalhe-body {
+            display: none;
+        }
+
+        .card-detalhe-body-mobile {
+            margin-top: 22px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-detalhe-body-mobile>.img-card {
+            font-size: 48px;
+        }
+
+        .tarja {
+            width: 100%;
+            margin-top: unset;
+            z-index: 3;
+        }
+
+        .tarja h3 {
+            text-align: center;
+            font-size: 34px;
+            padding: 6x 15px;
+            z-index: 3;
+        }
+
+        .card-detalhe-body-mobile p {
+            text-align: center;
+            font-size: 24px;
+            z-index: 3;
+        }
+    }
+
+    @media (max-width:620px) {
+        .card-detalhe-body-mobile>img {
+            top: 82vw;
+        }
+    }
+
+    @media (max-width:550px) {
+        .tarja h3 {
+            font-size: 20px;
+        }
+
+        .card-detalhe-body-mobile p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 440px) {
+        .card-detalhe-body-mobile>img {
+            top: 90vw;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .card-detalhe-body-mobile>img {
+            top: 110vw;
+        }
+    }
+
+    @media (max-width: 340px) {
+        .tarja h3 {
+            font-size: 18px;
+        }
+
+        .card-detalhe-body-mobile>img {
+            top: 120vw;
+        }
+    }
+
+
+    /* Cards e containers */
+
+    section {
+        width: 100%;
+        margin-top: var(--mdSpace);
+        padding-bottom: var(--lgSpace);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #lower-section>header {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #lower-section header .logo-parceiro-md {
+        padding: var(--mdSpace);
+        width: 150px;
+        min-height: 150px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
+    }
+
+    #lower-section header .logo-parceiro-md img {
+        width: 100%;
+        height: auto;
+    }
+
+    #lower-section .inner-content {
+        padding-left: var(--mdSpace);
+        padding-right: var(--mdSpace);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .inner-sub-header,
+    #lower-section .plano-preco {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inner-sub-header {
+        margin-bottom: var(--mdSpace);
+    }
+
+    .inner-sub-header h2 {
+        min-width: fit-content;
+        min-width: -moz-fit-content;
+        font-size: var(--lgFontSize);
+        line-height: 0;
+    }
+
+    .inner-sub-header h2:after {
+        content: ">";
+        color: white;
+        font-style: normal;
+        margin-left: var(--xsSpace);
+        margin-right: var(--xsSpace);
+        font-size: calc(var(--mdFontSize)*2);
+        align-self: center;
+        line-height: 0;
+    }
+
+    .inner-sub-header p {
+        max-width: 70%;
+        align-self: center;
+    }
+
+    #tab-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tab-content-wrapper .plano-preco {
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--mdSpace);
+        font-size: var(--h1Size);
+        font-weight: 700;
+        font-style: italic;
+        width: 100%;
+    }
+
+    #tab-content-wrapper .plano-preco a {
+        text-decoration: none;
+        font-style: normal;
+        width: 776px;
+        background-color: var(--color-acqua);
+        margin: 0 auto;
+    }
+
+    #tab-content-wrapper .plano-preco a.button-invert {
+        background-color: var(--color-acqua);
+        color: #4BAC89;
+    }
+
+    #tab-content-wrapper .plano-preco span {
+        display: block;
+        font-size: var(--smFontSize);
+    }
+
+    #tab-content-wrapper .plano-preco span+a.button {
+        margin-top: var(--mdSpace);
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 12px;
+        box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
+        color: var(--color-yale-blue);
+        padding: var(--mdSpace);
+        overflow: hidden;
+    }
+
+    .card * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .card-content {
+        padding-left: 65px;
+        padding-right: 65px;
+        align-self: center;
+    }
+
+    .center-text {
+        text-align: center;
+    }
+
+    .center-block {
+        margin: 0 auto;
+    }
+
+    /* card especial que contém texto e um botão deslocado para fora */
+
+    /* 
+    OBS.: Fiz o card abaixo de forma um pouco diferente do que tu me mandou.
+    Os objetos que saem para fora do card são posicionados absolutamente,
+    desta forma suas alturas e larguras são ignoradas pelo restante do layout.
+    Acredito que desta maneira a gente evite um possível acavalamento quando 
+    subir na plataforma.
+    */
+
+    .special-card {
+        position: relative;
+        padding: var(--mdSpace);
+        overflow: visible;
+    }
+
+    .special-card p {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* special-card com opção de imagem no topo que sai para cima */
+
+    .outer-top-img {
+        margin-top: 80px;
+        padding-top: 50px;
+    }
+
+    .outer-top-img img {
+        position: absolute;
+        left: calc(50% - 80px);
+        top: -50px;
+    }
+
+    .special-card .button {
+        position: absolute;
+        left: calc(50% - 75px);
+        bottom: -25px;
+        height: 50px;
+        width: 150px;
+    }
+
+    /* ----------------------------------------------- */
+
+    .pure-u-md-1-3.card {
+        max-width: 31%;
+    }
+
+    .pure-u-md-1-3.card-logo-deco-bg {
+        max-width: 31%;
+        min-height: 100%;
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/caminho_11.png");
+        background-size: cover;
+        align-self: stretch;
+        background-size: auto 70%;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    iframe#card-video {
+        width: 100%;
+        min-height: 486px;
+        border: none;
+    }
+
+    /* UI Elements */
+
+    .button {
+        /* Centraliza label no botão sem precisar de paddings diferentes acima e abaixo*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ---------------- */
+        background-color: var(--color-orange-title);
+        color: white;
+        padding: 10px 20px;
+        font-weight: 700;
+        font-size: var(--smFontSize);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: fit-content;
+        width: -moz-fit-content;
+        letter-spacing: 1px;
+    }
+
+    .section-banner .flex-column .button {
+        width: auto;
+    }
+
+    /* Faz o botão com apenas 2 cantos arredondados e full width */
+    .partial-radius {
+        border-radius: 0 15px 0 15px;
+        align-self: stretch;
+    }
+
+    .orange-separator {
+        width: 60px;
+        height: 5px;
+        border-radius: 8px;
+        background-color: var(--color-orange-title);
+        margin: var(--xsSpace) auto;
+    }
+
+    .orange-separator+a.button {
+        margin-top: var(--mdSpace);
+    }
+
+    .step-list img {
+        height: 15%;
+    }
+
+    p.step > img {
+        height: 28px;
+    }
+
+    p.step:last-child > img {
+        margin-top: 14px;
+    }
+
+    /* NAVEGAÇÃO */
+
+    .line-menu {
+        position: relative;
+        width: 100%;
+        min-width: fit-content;
+        min-width: -moz-fit-content;
+        text-align: center;
+        margin: var(--mdSpace) 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line-menu a {
+        position: relative;
+        padding: var(--xsSpace) 0;
+        margin-bottom: var(--xsSpace);
+        border-bottom: 4px ridge transparent;
+        z-index: 1;
+        text-decoration: none;
+        transition: border-bottom 0.3s, color 0.4s;
+        font-weight: 700;
+        color: var(--color-yale-blue);
+        opacity: 0.4;
+    }
+
+    .line-menu a.active {
+        color: var(--color-orange-title);
+        opacity: 1;
+        border-bottom: 4px solid var(--color-orange-title);
+    }
+
+    .line-menu a:not(:last-of-type) {
+        margin-right: var(--lgSpace);
+    }
+
+    .line-menu .guide-bar {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        height: 1px;
+        border-style: none;
+        background-color: var(--color-yale-blue);
+        opacity: 0.4;
+    }
+
+    /* Menu Button Bar */
+    .button-bar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .button-bar a.button {
+        transition: opacity 0.3s;
+        opacity: 0.5;
+        max-width: 31%;
+    }
+
+    .button-bar a.active {
+        opacity: 1;
+    }
+
+    .button-bar a:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .button-bar a:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+
+    .button-bar a:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .button-bar a:not(:last-child) {
+        margin-right: 2px;
+    }
+
+    /* Menu Logo Parceiro */
+
+    .scroll-menu-wrapper-arrows {
+        width: 100%;
+        position: relative;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        display: none;
+    }
+
+    .scroll-menu-wrapper {
+        width: 100%;
+    }
+
+    .logo-parceiro-bar {
+        display: flex;
+        align-self: stretch;
+        justify-content: space-between;
+    }
+
+    .logo-parceiro-bar a {
+        max-height: 50px;
+        flex: 0.12;
+        border-radius: 80px;
+        opacity: 0.4;
+        transition: opacity 0.3s;
+        background-color: white;
+    }
+
+    .logo-parceiro-bar .active {
+        opacity: 1;
+    }
+
+    .logo-parceiro-bar a img {
+        width: 100%;
+    }
+
+    /* ACCORDEON LIST */
+    .accordeon-list {
+        text-align: left;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .accordeon-item {
+        background-color: white;
+        padding-left: var(--lgSpace);
+        box-shadow: none;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+
+    .accordeon-item:not(:last-child) {
+        margin-bottom: var(--mdSpace);
+    }
+
+    .accordeon-item h3 {
+        position: relative;
+        margin-bottom: 0;
+        padding-right: var(--lgSpace);
+        cursor: pointer;
+    }
+
+    .accordeon-item p {
+        height: 0;
+        opacity: 0;
+        margin-top: 0;
+        padding-right: var(--mdSpace);
+        transform-origin: top;
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+    }
+
+    .accordeon-item.active {
+        box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
+    }
+
+    .accordeon-item.active p {
+        margin-top: var(--xsSpace);
+        height: 70px;
+        opacity: 1;
+    }
+
+    .accordeon-item h3::before {
+        content: "•";
+        position: absolute;
+        left: calc(var(--smSpace)*-1);
+        font-style: normal;
+    }
+
+    /* seta do accordeon */
+    .accordeon-item h3::after {
+        content: ">";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: -10px;
+        right: 0;
+        transform: rotate(-90deg);
+        transition: transform 0.5s;
+        font-size: var(--mdFontSize);
+        font-style: normal;
+        color: var(--color-medium-turquoise);
+        background-color: var(--color-medium-turquoise-10);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accordeon-item.active h3::after {
+        transform: rotate(90deg);
+    }
+
+            /* LISTS */
+
+            .list-3-flex-col {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .list-3-flex-col li {
+        display: block;
+        padding: 20px;
+    }
+
+    .list-3-flex-col li p strong {
+        font-size: 24px;
+    }
+
+    .list-3-flex-col li a {
+        color: var(--color-yale-blue);
+    }
+
+    .buy-content p.header-price {
+        font-size: 36px;
+        margin: 0;
+        font-style: italic;
+        font-weight: bolder;
+    }
+
+    .buy-content p.subheader-price {
+        font-size: 18px;
+        margin: 0;
+        margin-bottom: 30px;
+        font-style: italic;
+        font-weight: bolder;
+    }
+
+    .buy-content .button {
+        width: 776px;
+        height: 49px;
+        background: #4BAC89 0% 0% no-repeat padding-box;
+        border-radius: 8px;
+        opacity: 1;
+        margin-bottom: 13px;
+    }
+
+    .buy-content #btn-modal-covid {
+        border: 1px solid #4BAC89;            
+        background: transparent;
+        color: #4BAC89;
+    }
+
+    @media screen and (max-width: 768px) {
+        .buy-content .button {
+        width: 100%;
+
+    }
+    }
+
+    /* Banner com efeito de borrão */
+
+    .blur-banner {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 2px;
+        position: relative;
+        z-index: 2;
+        margin-top: var(--xlSpace);
+        margin-bottom: calc(var(--lgSpace)*2);
+        height: 29em;
+    }
+
+    .blur-banner h1{
+        margin: 0;
+    }
+
+    .blur-banner img {
+        max-height: 286px;
+        width: auto;
+        align-self: start;
+    }
+
+    .blur-banner-content-box {
+        padding: 45px 70px;
+        background-image: radial-gradient(circle at left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+        height: max-content;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        width: calc(72% + 40px);
+        backdrop-filter: blur(10px);
+        text-align: left;
+        font-size: 24px;
+    }
+
+    .blur-banner-deco {
+        width: 112px;
+        height: 100px;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.png");
+        background-size: cover;
+        align-self: stretch;
+        background-size: auto 100%;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .blur-banner-content-box h1 {
+        font-size: 36px;
+    }
+
+    .blur-banner-content-box p.step {
+        font-size: 16px;
+    }
+
+    .blur-banner-content-box p.step img {
+        float:left;
+        margin-right: 20px;
+    }
+
+    section.warning {
+        display:block;
+        text-align: center;
+        border: 1px solid #003986;
+        border-radius: 10px;
+        opacity: 1;
+        padding: 20px;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    @media screen and (max-width: 768px) {
+        .blur-banner{
+            height: max-content;
+        }
+
+        .blur-banner-content-box{
+            width: 100%;
+            position: inherit;
+            padding: 20px 30px;
+        }
+
+        .blur-banner-deco {
+            position: inherit;
+            margin: 0 auto;
+        }
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media screen and (max-width:768px) {
+
+        .pure-u-md-1-3,
+        .pure-u-md-1-2 {
+            width: 100%;
+        }
+
+        .center {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* Coloca padding lateral apenas no que não for a*/
+        .inner-center {
+            padding: 0 15px;
+        }
+
+        .accordeon-item h3::after {
+            right: -20px;
+        }
+
+        .accordeon-item.active p {
+            height: 180px;
+            padding-right: var(--xsSpace);
+        }
+
+        .inner-sub-header {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        .inner-sub-header,
+        #lower-section .plano-preco {
+            display: flex;
+            max-width: 100%;
+            justify-content: center;
+        }
+
+        .inner-sub-header h2 {
+            position: relative;
+            /* reduz a fonte em 20% */
+            font-size: calc(var(--lgFontSize)*0.7);
+        }
+
+        .inner-sub-header h2:after {
+            position: absolute;
+            left: calc(50% - var(--smFontSize));
+            transform: rotate(90deg);
+            bottom: -30px;
+        }
+
+        .inner-sub-header p {
+            max-width: 100%;
+        }
+
+        .section-banner {
+            /* Inverte a posição da imagem do banner, para que fique sobre o texto */
+            flex-direction: column-reverse;
+            margin-top: 0;
+        }
+
+        .section-banner .flex-column {
+            margin-top: var(--smFontSize);
+            padding-right: 0;
+            align-items: center;
+        }
+
+        .pure-u-md-1-3.card {
+            max-width: none;
+        }
+
+        /* detalhe do logo desaparece no mobile */
+        .pure-u-md-1-3.card-logo-deco-bg {
+            display: none;
+        }
+
+        .button-bar>* {
+            width: 100%;
+            border-radius: 8px !important;
+        }
+
+        .button-bar a+a {
+            margin-top: var(--smSpace);
+        }
+
+        .button-bar a.button {
+            max-width: 100%;
+        }
+
+        .scroll-menu-wrapper-arrows div[class^="arrow-"] {
+            position: absolute;
+            animation: arrowPulse 1s infinite;
+            color: var(--color-medium-turquoise);
+            background-color: var(--color-medium-turquoise-10);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scroll-menu-wrapper-arrows .arrow-left {
+            top: calc(50% - 10px);
+            left: 5px;
+            display: none;
+        }
+
+        .scroll-menu-wrapper-arrows .arrow-right {
+            top: calc(50% - 10px);
+            right: 5px;
+            display: flex;
+        }
+
+        @keyframes arrowPulse {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .scroll-menu-wrapper {
+            overflow-x: hidden;
+        }
+
+        .scroll-menu-wrapper nav {
+            width: fit-content;
+            width: -moz-fit-content;
+            padding: 0 var(--xsSpace);
+        }
+
+        .logo-parceiro-bar a {
+            min-width: 100px;
+        }
+
+        .logo-parceiro-bar a:not(:last-of-type) {
+            margin-right: var(--xsSpace);
+        }
+
+        .logo-parceiro-bar a::after {
+            content: ".";
+            display: block;
+        }
+
+        .special-card {
+            margin-bottom: var(--lgSpace);
+        }
+    }
+
+    /* Cards for modal */
+
+    @media screen and (max-width:768px) {
+        .cards>.card-div:last-of-type {
+            margin-top: 30px
+        }
+    }
+
+    @media screen and (min-width:48em) {
+        .cards {
+            padding-bottom: 50px
+        }
+
+        .card-title h1 {
+            font-size: 34px
+        }
+
+        .banner h1 {
+            line-height: 48px;
+            margin-left: 48px
+        }
+
+        .card-container .card-exame,
+        .card-container .card-panvel {
+            border-right: 1px solid rgba(151, 151, 151, 1);
+            height: 100%;
+            margin-right: -1px
+        }
+    }
+
+    .cards {
+        position: relative;
+        margin: 0;
+    }
+
+    .cards,
+    .card-container:first-of-type {
+        margin-top: unset;
+    }
+
+    .card-container {
+        margin: 30px 0;
+        padding: 13px 0;
+        height: 36px;
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+    }
+
+    .card-container>.container {
+        height: 100%;
+    }
+
+    .LHmodal-body .cards>.card-info {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .LHmodal-body .cards>.card-header {
+        text-align: center;
+    }
+
+    .card-form {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 8px;
+        font-family: Foco, Open Sans, sans-serif;
+        font-size: 18px;
+        color: rgba(36, 63, 140, 1);
+        letter-spacing: -0.03em;
+        line-height: 26px;
+        width: 100%;
+    }
+
+    .cards .card-header .card-title h1 {
+        font-family: Foco, Open Sans, sans-serif;
+        /* Foco italic */
+        font-style: italic !important;
+        font-weight: normal;
+    }
+
+    /* The Modal (background) */
+    .LHModalContainer,
+    .LHModalContainerExame,
+    .LHModalContainerPanvel {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 9;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: hidden;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        -webkit-animation-name: fadeIn;
+        /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s
+    }
+
+    /* Modal Content */
+
+    .LHmodal-content {
+        margin: 2%;
+        height: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+        max-width: 753px;
+        margin: 0 auto;
+        z-index: 0;
+        margin-top: calc(62px + 2%);
+        border-radius: 10px;
+        background-color: #fefefe;
+        max-height: 80vh;
+    }
+
+    .LHmodal-form {
+        height: 100%;
+        max-width: 763px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #fefefe;
+        overflow: auto;
+        max-height: 80vh;
+    }
+
+    #LHmodal-form {
+        overflow: auto;
+        height: 100%;
+    }
+
+    iframe {
+        border: none;
+    }
+
+    /* The Close Button */
+
+    .close {
+        position: absolute;
+        top: 10%;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        z-index: 99;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #iframe-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-form .form-container {
+        margin-top: 25px;
+    }
+
+    .form-container .dropdown-card {
+        padding: 0 10px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .dropdown-card select {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 24px;
+        outline: none;
+        padding-left: 16px;
+        width: 100%;
+        height: 48px;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: #fafafa;
+        color: #757575;
+    }
+
+    .card-adress,
+    .card-nome {
+        font-family: Foco, Open Sans, sans-serif;
+        font-size: 16px;
+        color: rgba(158, 158, 158, 1);
+        letter-spacing: 0.01em;
+        margin-left: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-nome {
+        text-transform: uppercase;
+    }
+
+    .card-adress span,
+    .card-end span {
+        margin-bottom: 3px;
+    }
+
+    .card-adress span:first-child,
+    .card-end span:first-child {
+        margin-bottom: 5px;
+    }
+
+    .card-end {
+        margin-left: 12px;
+        padding-bottom: 17px;
+        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    #items-container {
+        overflow-y: auto;
+        max-height: 580px;
+        width: 100%;
+        border: 1px solid rgba(224, 224, 224, 1);
+        border-radius: 6px;
+        margin-bottom: 25px;
+    }
+
+    /* Add Animation */
+
+    @-webkit-keyframes slideIn {
+        from {
+            bottom: -300px;
+            opacity: 0
+        }
+
+        to {
+            bottom: 0;
+            opacity: 1
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            bottom: -300px;
+            opacity: 0
+        }
+
+        to {
+            bottom: 0;
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+</style>
+<script>
+    const handleAnyButtonClick = (button) => {
+        // desativa todos os botões da barra de navegação
+        let buttonList = button.parentNode.getElementsByTagName('a');
+        [...buttonList].forEach(item => item.classList.remove("active"));
+        // ativa somente o clicado
+        button.classList.add("active");
+    }
+
+    const handleAccordeonClick = (button) => {
+        // desativa todos os botões da barra de navegação
+        let buttonList = button.parentNode.getElementsByTagName('li');
+        [...buttonList].forEach(item => item.classList.remove("active"));
+        // ativa somente o clicado
+        button.classList.add("active");
+    }
+
+    /* Executa após carregamento */
+    window.onload = (evt) => {
+
+        /* captura todos os elementos que vc deseja que tenham scroll horizontal arrastável */
+        const slider_array = document.querySelectorAll('.scroll-menu-wrapper');
+
+
+        /* Drag stuff */
+        let mouseDown = false;
+        let startX, scrollLeft;
+        let startDragging = function (e, slider) {
+            mouseDown = true;
+            //desktop or mobile
+            if (e.pageX) {
+                startX = e.pageX - slider.offsetLeft;
+            } else {
+                startX = e.changedTouches[0].pageX - slider.offsetLeft;
+            }
+            scrollLeft = slider.scrollLeft;
+        };
+
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        let mouseMoving = (e, slider) => {
+            e.preventDefault();
+            const arrow_wrapper = slider.parentNode;
+
+            if (!mouseDown) { return; }
+
+            let x = 0;
+            if (e.pageX) {
+                x = e.pageX - slider.offsetLeft;
+            } else {
+                x = e.changedTouches[0].pageX - slider.offsetLeft;
+            }
+
+            const scroll = x - startX;
+            slider.scrollLeft = scrollLeft - scroll;
+
+            if (slider.scrollLeft > 0) {
+                arrow_wrapper.querySelector(".arrow-left").style.display = "block";
+            } else {
+                arrow_wrapper.querySelector(".arrow-left").style.display = "none";
+            }
+
+            if (slider.scrollLeft >= slider.scrollWidth - arrow_wrapper.scrollWidth) {
+                arrow_wrapper.querySelector(".arrow-right").style.display = "none";
+            } else {
+                arrow_wrapper.querySelector(".arrow-right").style.display = "block";
+            }
+        }
+
+        // Add the event listeners
+        [...slider_array].forEach(slider => {
+            slider.addEventListener('mousemove', (e) => mouseMoving(e, slider));
+            slider.addEventListener('touchmove', (e) => mouseMoving(e, slider));
+            slider.addEventListener('mousedown', (e) => startDragging(e, slider));
+            slider.addEventListener('touchstart', (e) => startDragging(e, slider));
+            slider.addEventListener('mouseup', stopDragging);
+            slider.addEventListener('mouseleave', stopDragging);
+            slider.addEventListener('touchend', stopDragging);
+        })
+    };
+</script>
+<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais.js"></script>
+<script>
+    window.addEventListener('load', LHevents);
+
+    function LHevents() {
+
+        dataPanvel = orderDataAlphabetically(dataPanvel);
+        filtrarDadosPanvel();
+
+        // Get the modal
+        var modalPanvel = document.getElementById("LHModalContainerPanvel");
+        var panvelContainer = document.getElementById("LHModalPanvel");
+
+        // Get the button that opens the modal
+        var btnPanvel = document.getElementById("btn-modal-covid");
+        createSelectionsNovaPanvel();
+
+
+        // Get the <span> element that closes the modal
+        var btnModalPanvel = document.getElementById('modalClosePanvel');
+
+
+        // When the user clicks on <span> (x), close the moda
+        btnModalPanvel.onclick = function () {
+            modalPanvel.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        // When the user clicks the button, open the modal 
+        btnPanvel.onclick = function () {
+            modalPanvel.style.display = "block";
+            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.addEventListener('click', function (event) {
+            if (event.target == modalPanvel || event.target == panvelContainer) {
+                modalPanvel.style.display = "none";
+                document.getElementsByTagName('body')[0].style.overflow = 'auto';
+            }
+        });
+
+    }
+
+
+    function onChangeStateNovaPanvel(sel) {
+
+        let citiesSelection = document.getElementById("cidade-panvel");
+        var L = citiesSelection.length;
+
+        for (i = L; i >= 0; i--) {
+            citiesSelection.remove(i);
+        }
+
+        let districtSelection = document.getElementById("bairro-panvel");
+        var L = districtSelection.length;
+
+        for (i = L; i >= 0; i--) {
+            districtSelection.remove(i);
+        }
+
+        let items = document.getElementById("items-container-panvel");
+        items.textContent = "";
+
+        let estate = sel.value;
+
+        getCitiesNovaPanvel(estate);
+    }
+
+    function onChangeCityNovaPanvel(sel) {
+
+        let districtSelection = document.getElementById("bairro-panvel");
+        var L = districtSelection.length;
+
+        for (i = L; i >= 0; i--) {
+            districtSelection.remove(i);
+        }
+
+        let items = document.getElementById("items-container-panvel");
+        items.textContent = "";
+
+        let city = sel;
+
+        getDistrictsNovaPanvel(city);
+    }
+
+    function onChangeDistrictNovaPanvel(sel) {
+
+        districtSelection = document.getElementById('bairro-panvel');
+
+        let items = document.getElementById("items-container-panvel");
+        items.textContent = "";
+
+        let district = sel;
+
+        getAdressesNovaPanvel(district);
+    }
+
+    function createSelectionsNovaPanvel() {
+
+        //seleciona select dos estados
+        let estateSelection = document.getElementById("estado-panvel");
+        estateSelection.length = 0;
+
+        //seleciona select das cidades
+        let citySelection = document.getElementById("cidade-panvel");
+        citySelection.length = 0;
+
+        //seleciona select dos bairros
+        let districtSelection = document.getElementById("bairro-panvel");
+        districtSelection.length = 0;
+
+        let option;
+
+        var lastEstate;
+
+        for (let i = 0; i < dataPanvel.length; i++) {
+
+            if (i === 0) {
+                lastEstate = dataPanvel[i].UF;
+
+                option = document.createElement("option");
+                option.text = dataPanvel[i].Estado;
+                option.value = dataPanvel[i].UF;
+                estateSelection.add(option);
+
+            } else {
+
+                if (dataPanvel[i].UF !== lastEstate) {
+
+                    let verifState = 1;
+
+                    for (let j = 0; j < estateSelection.options.length; j++) {
+
+                        if (dataPanvel[i].UF === estateSelection.options[j].value) {
+                            verifState = 0;
+                        }
+                    }
+
+                    if (verifState !== 0) {
+                        lastEstate = dataPanvel[i].UF;
+                        option = document.createElement("option");
+                        option.text = dataPanvel[i].Estado;
+                        option.value = dataPanvel[i].UF;
+                        estateSelection.add(option);
+                    }
+                }
+            }
+        }
+
+        //Envio do UF
+        getCitiesNovaPanvel(estateSelection[0].value);
+
+    }
+
+    function getCitiesNovaPanvel(sel) {
+
+        //Indices
+        let estate = sel;
+
+        citySelection = document.getElementById('cidade-panvel');
+
+        var lastCity;
+
+        for (let i = 0; i < dataPanvel.length; i++) {
+
+            if (dataPanvel[i].UF === sel) {
+
+                if (i === 0) {
+                    lastCity = dataPanvel[i].Cidade;
+
+                    cityOption = document.createElement("option");
+                    cityOption.text = dataPanvel[i].Cidade;
+                    cityOption.value = `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`;
+                    cityOption.classList = `lista-cidades`;
+                    citySelection.add(cityOption);
+
+                } else {
+
+                    if (dataPanvel[i].Cidade !== lastCity) {
+
+                        let verifCity = 1;
+
+                        for (let j = 0; j < citySelection.options.length; j++) {
+
+                            if (dataPanvel[i].Cidade === citySelection.options[j].innerHTML) {
+                                verifCity = 0;
+                            }
+                        }
+
+                        if (verifCity !== 0) {
+                            lastCity = dataPanvel[i].Cidade;
+
+                            cityOption = document.createElement("option");
+                            cityOption.text = dataPanvel[i].Cidade;
+                            cityOption.value = `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`;
+                            cityOption.classList = `lista-cidades`;
+                            citySelection.add(cityOption);
+                        }
+                    }
+                }
+            }
+        }
+
+        citySelection[0].selected = true;
+
+        //Envio completo pra puxar tanto estado quanto innertext
+        getDistrictsNovaPanvel(citySelection[0]);
+
+    }
+
+    function getDistrictsNovaPanvel(sel) {
+
+        var splits = sel.value.split("%", 2);
+        let estate = splits[0];
+        let city = splits[1];
+
+        var lastDistrict;
+
+        districtSelection = document.getElementById('bairro-panvel');
+
+        for (let i = 0; i < dataPanvel.length; i++) {
+
+            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city) {
+
+                if (i === 0) {
+                    lastDistrict = dataPanvel[i].Bairro;
+
+                    districtOption = document.createElement("option");
+                    districtOption.text = dataPanvel[i].Bairro;
+                    districtOption.value = `${estate}%${city}%${dataPanvel[i].Bairro}`;
+                    districtOption.classList = `lista-bairros`;
+                    districtSelection.add(districtOption);
+
+                } else {
+
+                    if (dataPanvel[i].Bairro !== lastDistrict) {
+
+                        let verifDistrict = 1;
+
+                        for (let j = 0; j < districtSelection.options.length; j++) {
+
+                            if (dataPanvel[i].Bairro === districtSelection.options[j].innerText) {
+                                verifDistrict = 0;
+                            }
+                        }
+
+                        if (verifDistrict !== 0) {
+                            lastDistrict = dataPanvel[i].Bairro;
+
+                            districtOption = document.createElement("option");
+                            districtOption.text = dataPanvel[i].Bairro;
+                            districtOption.value = `${estate}%${city}%${dataPanvel[i].Bairro}`;
+                            districtOption.classList = `lista-bairros`;
+                            districtSelection.add(districtOption);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        districtSelection[0].selected = true;
+
+        getAdressesNovaPanvel(districtSelection[0]);
+    }
+
+    function getAdressesNovaPanvel(sel) {
+
+        let items = document.getElementById("items-container-panvel");
+        items.textContent = "";
+
+        var splits = sel.value.split("%", 3);
+        let estate = splits[0];
+        let city = splits[1];
+        let district = splits[2];
+
+        //adress = vetor com todos endereços
+        // console.log(adresses);
+
+        for (let i = 0; i < dataPanvel.length; i++) {
+
+            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city && dataPanvel[i].Bairro === district) {
+
+                itemsContainer = document.getElementById("items-container-panvel");
+
+                let items = document.createElement("div");
+                items.classList = `items`;
+
+                let cardNome = document.createElement("div");
+                cardNome.className = "card-nome";
+
+                let nomeLabel = document.createElement("span");
+                nomeLabel.textContent = dataPanvel[i].Bairro;
+
+                cardNome.appendChild(nomeLabel);
+
+                items.appendChild(cardNome);
+
+                let cardAdress = document.createElement("div");
+                cardAdress.className = "card-adress";
+
+                let endereco = document.createElement("span");
+                endereco.textContent = dataPanvel[i].Endereço;
+                cardAdress.appendChild(endereco);
+
+                items.appendChild(cardAdress);
+
+                let cardEnd = document.createElement("div");
+                cardEnd.className = "card-end";
+
+                let cardTelefone = document.createElement("div");
+                cardTelefone.className = "card-adress";
+
+                let telefone = document.createElement("span");
+                telefone.textContent = ((typeof dataPanvel[i].WhatsApp !== 'undefined') ? dataPanvel[i].WhatsApp + ' / ' : '') + ((typeof dataPanvel[i].Telefone !== 'undefined') ? dataPanvel[i].Telefone : '');
+                cardTelefone.appendChild(telefone);
+
+                items.appendChild(cardTelefone);
+
+                items.appendChild(cardEnd);
+
+                itemsContainer.appendChild(items);
+
+            }
+
+        }
+
+    }
+</script>
+<body id="LighthouseInnerContent">
+    <!-- Conteúdo com largura máxima 1080px começa aqui-->
+    <div class="center">
+
+        <div class="sub-header">
+            <div class="custom-breadcrumb">
+                <a href="/panvel/main.do">Página Inicial</a>
+                <span>Clinic</span>
+            </div>
+            <a class="btn-back" href="/panvel/panvelClinic.do">Voltar</a>
+        </div>
+
+        <!-- Banner -->
+        <!--<a href="Definir pra onde aponta">-->
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div class="card-header-detalhe">
+                    <div class="card-detalhe-body">
+                        <div class="img-card"><img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.svg">Panvel<br />Clinic
+                        </div>
+                        <div class="tarja">
+                            <h3 class="tarja-nome">Exames Laboratoriais</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-detalhe-body-mobile">
+                    <div class="img-card">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.svg">Panvel<br />Clinic
+                    </div>
+                    <div class="img-header">
+                    </div>
+                    <img
+                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/clinic-symbol.svg">
+                    <div class="tarja">
+                        <h3 class="tarja-nome">Serviços de saúde para COVID-19</h3>
+                    </div>
+                    <p>Momentos delicados exigem atenção especial</p>
+                </div>
+            </div>
+        </div>
+
+
+        <main>
+            <section class="center-text">
+                <!-- Todo o conteúdo da aba dos logotipos abre aqui -->
+                <section id="lower-section">
+                    <div class="inner-content">
+                        <div class="inner-sub-header">
+                            <h2>Teste RT-PCR</h2>
+                            <p>O Teste RT-PCR deve ser realizado por pessoas que apresentam sintomas da COVID-19 ou
+                                que
+                                tenham entrado em contato com casos suspeitos e/ou confirmados recentemente.</p>
+                        </div>
+                        <!-- aqui vai o conteúdo do line-menu acima-->
+                        <div id="tab-content-wrapper">
+                            <ul class="accordeon-list">
+                                <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+                                    <h3>Para que serve o Teste RT-PCR?</h3>
+                                    <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de
+                                        material genético do vírus medindo a carga viral, ou seja, verifica se a
+                                        pessoa está com o vírus no momento da coleta. <br />
+                                        <b>*Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19
+                                            segundo a OMS*</b>
+                                    </p>
+                                </li>
+                                <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+                                    <h3>Qual o período ideal para realização do exame?</h3>
+                                    <p>Após 3 dias do início dos sintomas ou possível contato com vírus. <br />
+                                        <b>*pode ser feito até 7 dias, após reduz a eficácia*</b>
+                                    </p>
+                                </li>
+                                <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+                                    <h3>O que preciso fazer antes de realizar o teste?</h3>
+                                    <p>Não é necessário jejum ou qualquer preparo anterior a coleta. </p>
+                                </li>
+                                <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+                                    <h3>Como é feita a coleta?</h3>
+                                    <p>Secreção do trato respiratório superior. </p>
+                                </li>
+                                <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+                                    <h3>O que preciso levar para a realização do teste?</h3>
+                                    <p>Você deve apresentar um documento com foto e o cupom fiscal da compra. O cupom pode ser apresentado em sua forma física ou digital, disponível no Site e App Panvel.</p>
+                                </li>
+                                <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+                                    <h3>Por que fazer o teste se não apresentei sintomas?</h3>
+                                    <p>Os testes são importantes para os cálculos estatísticos e controle epidemiológico. Os diagnósticos são essenciais para a tomada de decisão das autoridades quanto às políticas públicas para a contenção das doenças.</p>
+                                    <p>Além disso, servem para o paciente alertar as pessoas próximas, com quem teve contato, para que façam o teste também.</p>
+                                </li>
+                                <li class="card accordeon-item" onclick="handleAccordeonClick(this);">
+                                    <h3>Qual o prazo para o resultado do teste?</h3>
+                                    <p>48 horas úteis.</p>
+                                    <p> Em caso de dúvidas, acesse o <a href="https://panvel.zendesk.com/hc/pt-br/categories/360003830294-TESTE-COVID-19">Panvel Fique Bem.</a> </p>
+                                </li>
+                            </ul>
+
+                            <section class="blur-banner">
+                                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/placeholder.png" class="banner" alt="Placeholder"
+                                    title="Imagem ilustrativa" />
+                                <div class="blur-banner-content-box">
+                                    <div class="blur-banner-deco"></div>
+                                    <h1>Passo a passo para fazer o teste de covid-19</h1>
+                                    <p>A compra do teste pelo Site ou App Panvel garante a você a realização do Teste Covid-19 IgG + IgM, que deverá ser feito presencialmente em um dos laboratórios do Grupo Exame.</p>
+                                    <p class="step"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/cursor.svg">Após clicar no botão Comprar você deve se dirigir a sua cesta de compra, e definir uma loja para retirada.</p>
+                                    <p class="step"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/store.svg"><b>Você pode retirar o seu cupom fiscal na loja escolhida ou acessar seu cupom fiscal sem sair de casa</b>, na seção Meus Pedidos do Site ou App Panvel, clicando em Visualizar Nota Fiscal.</p>
+                                </div>
+                            </section>
+
+                            <section class="warning">
+                                    <strong>Você não receberá nenhum produto além do cupom fiscal.</strong> Este processo garante a você a realização do teste <br/>
+                                    em um laboratório Exame, que deve ser feito presencialmente em um dos locais indicados.
+                            </section>
+
+                            <section id="lower-section">
+                                <div class="inner-content">
+                                    <ul class="list-3-flex-col center-text pure-g step-list">
+                                        <li class="pure-u-1 pure-u-md-1-3">
+                                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/credit-card.svg" alt="">
+                                            <p>
+                                                <strong>1.</strong> Para garantir o seu teste, você poderá escolher entre todas as opções de pagamento, cartão de crédito, boleto bancário, dinheiro e débito em folha, finalizando a sua compra depois deste passo.
+                                            </p>
+                                        </li>
+                                        <li class="pure-u-1 pure-u-md-1-3">
+                                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/mail.svg" alt="">
+                                            <p>
+                                                <strong>2.</strong> Após finalizar a compra, você receberá um e-mail com a confirmação do pagamento e poderá se dirigir ao laboratório Exame de sua preferência. Consulte os locais disponíveis em Panvel Fique Bem.                                            
+                                            </p>
+                                        </li>
+                                        <li class="pure-u-1 pure-u-md-1-3">
+                                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/coupon.svg" alt="">
+                                            <p>
+                                                <strong>3.</strong> Para realização do teste, você deverá levar o cupom fiscal da sua compra (físico ou no celular) e documento com foto. O teste deverá ser realizado em uma das sedes do laboratório Exame, sendo a coleta de sangue necessária para a efetivação do teste.                                            
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <section id="lower-section">
+                                <div class="inner-content buy-content">
+                                    <p class="header-price">R$ 269,00</p> 
+                                    <p class="subheader-price">ou 10x de R$ 26,90 sem juros</p>
+                                    <a class="button" href="/panvel/teste-covid--19-rt--pcr-grupo-exame/p-111502"> COMPRAR </a>
+                                    <a class="button" id="btn-modal-covid"> ONDE REALIZAR </a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <div id="LHModalContainerPanvel" class="LHModalContainer">
+        <div id="LHModalPanvel" class="LHmodal-content">
+            <span id="modalClosePanvel" class="close">&times;</span>
+            <div id="LHmodal-form" class="LHmodal-body">
+                <div class="cards pure-g">
+                    <div class="card-header pure-u-1">
+                        <div class="card-title">
+                            <h1>Confira unidades para realização dos testes:</h1>
+                        </div>
+                        <div class="card-desc">
+                        </div>
+                    </div>
+
+                    <div class="card-form pure-u-1 pure-u-md-3-5">
+                        <div class="card-header ">
+                        </div>
+
+                        <div class="form-container" id="form-filial">
+                            <div class="dropdown-card">
+                                <span class="text-dropwdown">Estado</span>
+                                <div class="button-div">
+                                    <select name="select-estado" id="estado-panvel"
+                                        onchange="onChangeStateNovaPanvel(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Cidade</span>
+                                <div class="button-div">
+                                    <select name="select-cidade" id="cidade-panvel"
+                                        onchange="onChangeCityNovaPanvel(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Bairro</span>
+                                <div class="button-div">
+                                    <select name="select-bairro" id="bairro-panvel"
+                                        onchange="onChangeDistrictNovaPanvel(this)">
+                                    </select>
+                                </div>
+
+                                <div id="items-container-panvel">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-info pure-u-1 pure-u-md-2-5">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

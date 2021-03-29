@@ -1,14 +1,3 @@
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
-  </head>
-  <!--RETIRAR-->
 <style>
     @import url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonts/fonts.css");
     body {
@@ -20,6 +9,7 @@
     }
     
     a {
+        text-decoration: none;
         font-size: 14px;
     }
     
@@ -308,6 +298,10 @@
         font-weight: normal;
     }
     
+    .button-infos {
+       	margin-top: 10px;
+    }
+
     .buttons-aside {
         text-align: center;
         margin: 27px 0;
@@ -1175,6 +1169,14 @@
         font-style: italic;
         color: #21B8DD;
         text-align: left;
+    }
+
+    a > p span.more-info {
+        font-family: Foco, Open Sans, sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+        color: #21B8DD;
     }
     
     @media (max-width:767px) {
@@ -4591,7 +4593,7 @@
                         </div>
                     </div>
                     <div class="card-buttons">
-                        <a href="https://www.panvel.com/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572"><button
+                        <a href="/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572"><button
                                 class="button"> Comprar </button></a>
                         <button class="button-modal panvel-btn"> Lojas onde realizar </button>
                     </div>
@@ -4626,7 +4628,7 @@
                         </div>
                     </div>
                     <div class="card-buttons">
-                        <a href="https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034"><button
+                        <a href="/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034"><button
                                 class="button"> Comprar </button></a>
                         <button class="button-modal panvel-btn"> Lojas onde realizar </button>
                     </div>
@@ -4664,7 +4666,7 @@
                         </div>
                     </div>
                     <div class="card-buttons">
-                        <a href="https://www.panvel.com/panvel/teste-rapido-covid-19-iggigm-da-ecodiagnostica-avulso/p-110879"><button
+                        <a href="/panvel/teste-rapido-covid-19-iggigm-da-ecodiagnostica-avulso/p-110879"><button
                                 class="button"> Comprar </button></a>
                         <button class="button-modal panvel-btn"> Lojas onde realizar </button>
                     </div>
@@ -4707,12 +4709,14 @@
                         <div class="card-desc-texto">
 
                             <p><b>Quando fazer:</b>A partir do 3º ao 14º dia de início dos sintomas ou de possível contato com casos suspeitos ou confirmados.</p>
-                            <!-- <p><span class="more-info">+ mais informações</span></p> -->
+			    <a href="/panvel/infos-rt-pcr.do?">
+                              <p><span class="more-info">+ mais informações</span></p>
+                            </a>
                         </div>
                     </div>
                     <div class="card-buttons">
-                        <a href="https://www.panvel.com/panvel/teste-covid--19-rt--pcr-grupo-exame/p-111502"><button
-                                class="button">
+                        <a href="/panvel/teste-covid--19-rt--pcr-grupo-exame/p-111502"><button
+                                class="button button-infos">
                                 Comprar </button></a>
                         <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
@@ -4748,11 +4752,13 @@
                             <p><b>Quando fazer:</b> A partir do 8 a 14 dias do início dos sintomas ou contato com casos suspeitos ou confirmados.
                             </p>
                         </div>
-                        <!-- <p><span class="more-info">+ mais informações</span></p> -->
+			<a href="/panvel/infos-igg-igm.do?">
+                            <p><span class="more-info">+ mais informações</span></p>
+                        </a>
                     </div>
-                    <div class="card-buttons">
-                        <a href="https://www.panvel.com/panvel/teste-covid-19-igg-igm-grupo-exame/p-111829"><button
-                                class="button">
+                    <div class="card-buttons button-infos">
+                        <a href="/panvel/teste-covid-19-igg-igm-grupo-exame/p-111829"><button
+                                class="button button-infos">
                                 Comprar </button></a>
                         <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
@@ -4789,8 +4795,8 @@
                             <!-- <p><span class="more-info">+ mais informações</span></p> -->
                         </div>
                     </div>
-                    <div class="card-buttons">
-                        <a href="https://www.panvel.com/panvel/teste-covid-19-igg-grupo-exame/p-112288"><button
+                    <div class="card-buttons button-infos">
+                        <a href="/panvel/teste-covid-19-igg-grupo-exame/p-112288"><button
                                 class="button">
                                 Comprar </button></a>
                         <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
@@ -4829,8 +4835,8 @@
                         <!-- <p><span class="more-info">+ mais informações</span></p> -->
                     </div>
                     <div class="card-buttons">
-                        <a href="https://www.panvel.com/panvel/teste-covid--19-rt--pcr-urgencia-24h-grupo-exame/p-111503"><button
-                                class="button"> Comprar </button></a>
+                        <a href="/panvel/teste-covid--19-rt--pcr-urgencia-24h-grupo-exame/p-111503"><button
+                                class="button button-infos"> Comprar </button></a>
                         <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
                 </div>
@@ -4876,7 +4882,9 @@
                     <td>A partir do <b>3° ao 14° dia de início dos sintomas</b> ou de possível contato com casos suspeitos ou confirmados.
                     </td>
                     <td>Verifica a presença de antígeno (proteinas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.
-                        <!-- <p><span class="more-info">+ mais informações</span></p> -->
+			<a href="/panvel/infos-rt-pcr.do?">
+                           <p><span class="more-info">+ mais informações</span></p>
+                        </a>
                     </td>
                 </tr>
                 <tr>
@@ -4890,8 +4898,10 @@
                 <tr>
                     <td> <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Seringa@2x.svg"> Teste sorológico IGG+IGM</td>
                     <td>De <b>8 a 14 dias do início dos sintomas</b> ou contato com casos suspeitos ou confirmados.</td>
-                    <td>Verifica a presença de anticorpos de fase aguda e de memória, ou seja, veridica se a pessoa está com infecção ativa e se entrou em contato com o vírus.
-                        <!-- <p><span class="more-info">+ mais informações</span></p> -->
+                    <td>Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está com infecção ativa e se entrou em contato com o vírus.
+			    <a href="/panvel/infos-igg-igm.do?">
+		               <p><span class="more-info">+ mais informações</span></p>
+		            </a>
                     </td>
                 </tr>
             </tbody>
@@ -5056,7 +5066,7 @@
         <div id="LHModal" class="LHmodal-content">
             <span id="modalCloseAgendamento" class="close">&times;</span>
             <div id="LHmodal-form" class="LHmodal-body">
-                <iframe id="iframe-container" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/info.html"></iframe>
+                <iframe id="iframe-container" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/info.html"></iframe>
             </div>
         </div>
     </div>
