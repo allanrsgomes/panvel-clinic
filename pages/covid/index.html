@@ -1,5 +1,6 @@
 <style>
     @import url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonts/fonts.css");
+
     body {
         scroll-behavior: smooth;
         background: #E4E9F2;
@@ -7,17 +8,17 @@
         -webkit-text-size-adjust: none;
         font-family: Foco, Open Sans, sans-serif;
     }
-    
+
     a {
         text-decoration: none;
         font-size: 14px;
     }
-    
+
     h1 {
         font-size: 28px;
     }
-    
-     :root {
+
+    :root {
         --color-orange-title: #ff9c16;
         --color-background-lightblue: #00bcde;
         --color-background-blue: #0a3383;
@@ -26,20 +27,22 @@
         --color-text-gray-dark: #757575;
         --color-background-dimgray: #696969;
     }
+
     /* Tirei o padding de 15px pra encaixar todo conteúod no topo absoluto */
-    
+
     .center {
         display: block;
         margin: 0 auto;
         max-width: 1200px;
     }
+
     /* Cabeçalho */
-    
+
     .center:first-of-type {
-        background-color: white;
+        background-color: #E4E9F2;
         max-width: 100%;
     }
-    
+
     .link {
         position: relative;
         width: 12.57%;
@@ -52,17 +55,17 @@
         color: #9E9E9E;
         padding-left: 5%;
     }
-    
+
     .link-b {
         padding-left: 0;
     }
-    
+
     .flex-between {
         justify-content: space-between;
         letter-spacing: -0.03em;
         margin-bottom: 24px
     }
-    
+
     .primary-title {
         position: relative;
         color: #183D8E;
@@ -72,17 +75,17 @@
         line-height: 24px;
         padding-left: 5%;
     }
-    
+
     .banner {
         width: 100%;
         position: relative;
         border-radius: 8px;
     }
-    
+
     .banner img {
         width: 100%;
     }
-    
+
     .banner h1 {
         position: relative;
         margin: 0;
@@ -95,43 +98,44 @@
         font-size: 3.6em;
         line-height: 18px;
     }
-    
+
     .banner-title {
         width: 100%;
         display: block;
         margin: 2rem auto 0rem auto;
     }
-    
+
     .banner-title span {
         display: block;
         font-size: 15px;
         line-height: 24px;
     }
-    
+
     .banner-title div:last-child {
         margin-top: 10px;
     }
+
     /* Cabeçalho dos testes */
-    
+
     .card-container .card-exame,
     .card-container .card-panvel {
         height: 100%;
         border: 0;
         margin-right: unset
     }
-    
+
     .card-container .card-exame {
         background: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/exame.png) no-repeat center center
     }
-    
+
     .card-container .card-panvel {
         background: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/panvel.png) no-repeat center center
     }
-    
+
     .card-container .card-desc {
         padding: 5px 0;
     }
-    
+
     .card-container .card-desc span {
         font-family: Foco, Open Sans, sans-serif;
         font-weight: normal;
@@ -141,7 +145,7 @@
         letter-spacing: -0.03em;
         margin-left: 25px;
     }
-    
+
     .card-container .card-exame p {
         position: absolute;
         width: 85%;
@@ -154,59 +158,32 @@
         font-size: 14px;
         line-height: 18px
     }
-    
+
     .card-container .card img {
         width: 100%;
         opacity: 0
     }
-    
+
     @media screen and (max-width:768px) {
         .cards>.card-div:last-of-type {
             margin-top: 30px
         }
     }
-    
-    @media screen and (max-width:330px) {
-        .card-container {
-            height: max-content
-        }
-        .card-container .card-panvel,
-        .card-container .card-exame {
-            height: 36px
-        }
-    }
-    
-    @media screen and (max-width:568px) and (min-width:330px) {
-        .card-container {
-            height: max-content
-        }
-        .card-container .card-panvel,
-        .card-container .card-exame {
-            height: 36px
-        }
-    }
-    
-    @media screen and (max-width:48em) and (min-width:35.5em) {
-        .card-container {
-            height: max-content
-        }
-        .card-container .card-panvel,
-        .card-container .card-exame {
-            height: 36px
-        }
-    }
-    
+
     @media screen and (min-width:48em) {
         .cards {
             padding-bottom: 50px
         }
+
         .card-title h1 {
             font-size: 34px
         }
+
         .banner h1 {
             line-height: 48px;
             margin-left: 48px
         }
+
         .card-container .card-exame,
         .card-container .card-panvel {
             border-right: 1px solid rgba(151, 151, 151, 1);
@@ -214,20 +191,23 @@
             margin-right: -1px
         }
     }
-    
+
     @media screen and (min-width:64em) {
         .banner h1 {
             line-height: 48px;
             border-radius: 8px;
             margin-left: 48px
         }
+
         .banner p {
             margin-left: 48px
         }
+
         img.banner {
             width: 100%;
             height: auto
         }
+
         .card-container .card-exame,
         .card-container .card-panvel {
             border-right: 1px solid rgba(151, 151, 151, 1);
@@ -235,26 +215,17 @@
             margin-right: -1px
         }
     }
-    /* .texto-covid p {
-    position: relative;
-    padding-top: 24px;
-    color: #757575;  
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
-  } */
-    
+
     .cards {
         position: relative;
         margin: 0;
     }
-    
+
     .cards,
     .card-container:first-of-type {
         margin-top: unset;
     }
-    
+
     .card-container {
         margin: 30px 0;
         padding: 13px 0;
@@ -264,22 +235,22 @@
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
         border-radius: 12px;
     }
-    
+
     .card-container>.container {
         height: 100%;
     }
-    
+
     .LHmodal-body .cards>.card-info {
         margin-top: 15px;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-    
+
     .LHmodal-body .cards>.card-header {
         text-align: center;
     }
-    
+
     .card-form {
         background-color: rgba(255, 255, 255, 1);
         border-radius: 8px;
@@ -290,23 +261,23 @@
         line-height: 26px;
         width: 100%;
     }
-    
+
     .cards .card-header .card-title h1 {
         font-family: Foco, Open Sans, sans-serif;
         /* Foco italic */
         font-style: italic !important;
         font-weight: normal;
     }
-    
+
     .button-infos {
-       	margin-top: 10px;
+        margin-top: 10px;
     }
 
     .buttons-aside {
         text-align: center;
         margin: 27px 0;
     }
-    
+
     .buttons-aside a {
         font-family: Foco, Open Sans, sans-serif;
         font-style: normal;
@@ -317,20 +288,20 @@
         text-decoration: underline;
         margin: 0 30px;
     }
-    
+
     .card>img {
         display: block;
         margin: 0 auto;
     }
-    
+
     .card-img {
         position: relative;
     }
-    
+
     .card-preco {
         margin: 15px 0;
     }
-    
+
     .card-preco {
         position: absolute;
         left: 0;
@@ -340,22 +311,22 @@
         bottom: 0;
         width: 237px;
     }
-    
+
     .card-desc {
         padding: 7px 0;
     }
-    
+
     .card-desc p {
         margin: 10px 0;
     }
-    
+
     .card-desc span {
         font-family: Foco, Open Sans, sans-serif;
         font-weight: bolder;
         font-size: 16px;
         letter-spacing: -0.03em;
     }
-    
+
     #preco {
         text-align: center;
         margin: unset;
@@ -365,7 +336,7 @@
         font-style: italic;
         color: rgba(255, 255, 255, 1)
     }
-    
+
     #parcela {
         text-align: center;
         margin: unset;
@@ -373,15 +344,15 @@
         font-size: 16px;
         color: rgba(255, 255, 255, 1)
     }
-    
+
     .card-form .card-header {
         text-align: center;
     }
-    
+
     .card-form .card-header .card-title {
         margin: 48 20px 30px;
     }
-    
+
     .card-form .card-header .card-desc {
         padding: 15px;
         margin: 0 auto;
@@ -391,17 +362,17 @@
         letter-spacing: -0.03em;
         line-height: 19px;
     }
-    
+
     .card-form .form-container {
         margin-top: 25px;
     }
-    
+
     .form-container .dropdown-card {
         padding: 0 10px;
         max-width: 500px;
         margin: 0 auto;
     }
-    
+
     .dropdown-card select {
         font-weight: bold;
         font-size: 1rem;
@@ -416,7 +387,7 @@
         background: #fafafa;
         color: #757575;
     }
-    
+
     .card-adress,
     .card-nome {
         font-family: Foco, Open Sans, sans-serif;
@@ -427,27 +398,27 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    
+
     .card-nome {
         text-transform: uppercase;
     }
-    
+
     .card-adress span,
     .card-end span {
         margin-bottom: 3px;
     }
-    
+
     .card-adress span:first-child,
     .card-end span:first-child {
         margin-bottom: 5px;
     }
-    
+
     .card-end {
         margin-left: 12px;
         padding-bottom: 17px;
         box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
     }
-    
+
     #items-container {
         overflow-y: auto;
         max-height: 580px;
@@ -456,7 +427,7 @@
         border-radius: 6px;
         margin-bottom: 25px;
     }
-    
+
     .text-dropwdown {
         text-transform: uppercase;
         font-family: Foco, Open Sans, sans-serif;
@@ -464,15 +435,15 @@
         color: rgba(158, 158, 158, 1);
         letter-spacing: 0.01em;
     }
-    
+
     .dropdown-card .button-div {
         margin: 20px 0;
     }
-    
+
     .custom-breadcrumb {
         text-align: left;
     }
-    
+
     .custom-breadcrumb a {
         font-size: 15px;
         color: #828282;
@@ -483,12 +454,12 @@
         font-family: Foco, Open Sans, sans-serif;
         font-weight: 400;
     }
-    
+
     .custom-breadcrumb a+a::before {
         padding: 0 5px;
         color: #828282;
     }
-    
+
     .custom-breadcrumb span {
         display: block;
         font-family: Foco, Open Sans, sans-serif;
@@ -500,8 +471,9 @@
         text-transform: uppercase;
         margin-top: 5px;
     }
+
     /* Margem de 15px do antigo padding superior */
-    
+
     .sub-header {
         margin: 0 auto;
         width: 100%;
@@ -524,8 +496,9 @@
         justify-content: space-between;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        background: #E4E9F2;
     }
-    
+
     .sub-header .breadcrumb {
         -webkit-box-flex: 0 0 auto;
         -moz-box-flex: 0 0 auto;
@@ -533,11 +506,11 @@
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     }
-    
+
     .sub-header a {
         text-decoration: none;
     }
-    
+
     .sub-header .btn-back {
         -webkit-box-flex: 0 0 auto;
         -moz-box-flex: 0 0 auto;
@@ -560,19 +533,20 @@
         text-transform: uppercase;
         text-decoration: none;
     }
-    
+
     .sub-header .btn-back:hover {
         background: #143c8d;
         color: #fff;
     }
+
     /* Divs de cabeçalho dos cards */
-    
+
     .cards-lab {
         position: relative;
         margin: 0;
         margin-top: 46px
     }
-    
+
     .card-div-lab {
         background-color: #fff;
         color: rgba(20, 60, 141, 1);
@@ -580,7 +554,7 @@
         letter-spacing: -0.03em;
         border-radius: 8px
     }
-    
+
     .card-div-lab h1 {
         font-size: 25;
         font-weight: bold;
@@ -588,69 +562,78 @@
         text-align: center;
         line-height: 38px
     }
-    
+
     .card-img-lab {
         width: 100%;
         margin: 15px 0
     }
-    
+
     .card-img-lab img {
         width: 100%
     }
-    
+
     @media screen and (max-width: 768px) {
+
         .card-exame,
         .card-panvel {
             border: none;
             margin-right: unset;
         }
+
         .card-desc {
             text-align: center;
         }
     }
-    
+
     @media screen and (max-width: 330px) {
         .card-container {
             height: max-content;
         }
+
         .card-panvel,
         .card-exame {
             height: 36px;
         }
     }
-    
+
     @media screen and (max-width: 568px) and (min-width:330px) {
         .card-container {
             height: max-content;
         }
+
         .card-panvel,
         .card-exame {
             height: 36px;
         }
     }
+
     /* ≥ 568px < 768 */
-    
+
     @media screen and (max-width: 48em) and (min-width: 35.5em) {
+
         /* .banner {
       height: 380px;
     } */
         .card-container {
             height: max-content;
         }
+
         .card-panvel,
         .card-exame {
             height: 36px;
         }
+
         /* .texto-covid p {
       margin-left: 5px;
     } */
     }
+
     /* Botões */
-    
+
     .pic-container {
         position: relative;
     }
-    
+
     .pic-container picture button {
         padding: unset;
         position: absolute;
@@ -664,7 +647,7 @@
         height: 36px;
         width: 146px;
     }
-    
+
     @media screen and (max-width:1200px) and (min-width:750px) {
         .pic-container picture button {
             bottom: calc(-15px + 0.9vw);
@@ -675,7 +658,7 @@
             /* base 160*/
         }
     }
-    
+
     @media screen and (max-width:750px) and (min-width:480px) {
         .pic-container picture button {
             top: calc(61% - 1px);
@@ -688,7 +671,7 @@
             font-size: 15px;
         }
     }
-    
+
     @media screen and (max-width:480px) {
         .pic-container picture button {
             bottom: calc(0px - 3vw);
@@ -700,76 +683,36 @@
             height: 11%;
             font-size: 15px;
         }
+
         .buttons-aside a {
             margin: unset;
         }
+
         .buttons-aside a:first-of-type {
             margin-right: 10px;
         }
+
         .card-container .container {
             margin-bottom: unset;
         }
+
         .card-desc {
             padding-top: 10px !important;
         }
+
         .card-desc span {
             margin-top: 10px;
             margin-left: unset !important;
         }
     }
-    
-    .servicoSaudeC19 .pic-container .button {
-        padding: unset;
-        position: absolute;
-        left: 795px;
-        width: 75px;
-        height: 25px;
-    }
-    
-    .servicoSaudeC19 .pic-container #btn1 {
-        top: 179px;
-    }
-    
-    .servicoSaudeC19 .pic-container #btn2 {
-        top: 269px;
-    }
-    
-    .servicoSaudeC19 .pic-container #btn3 {
-        top: 365px;
-    }
-    
-    .servicoSaudeC19 .pic-container #btn4 {
-        bottom: 114px;
-    }
-    
-    @media screen and (max-width: 1200px) {
-        .servicoSaudeC19 .pic-container .button {
-            padding: unset;
-            left: 795px;
-            width: 75px;
-            height: 25px;
-        }
-        .servicoSaudeC19 .pic-container #btn1 {
-            top: 179px;
-        }
-        .servicoSaudeC19 .pic-container #btn2 {
-            top: 269px;
-        }
-        .servicoSaudeC19 .pic-container #btn3 {
-            top: 365px;
-        }
-        .servicoSaudeC19 .pic-container #btn4 {
-            bottom: 114px;
-        }
-    }
-    
+
     h1,
     h2,
     h3 {
         font-family: Foco, Open Sans, sans-serif;
         color: rgba(36, 63, 140, 1);
     }
-    
+
     .card-header-detalhe,
     .card-detalhe-body-mobile .img-header {
         background-image: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/covid/Grupo\ de\ máscara\ 32.png');
@@ -779,14 +722,14 @@
         height: 343px;
         margin-top: 22px;
     }
-    
+
     .card-detalhe-body {
         display: flex;
         flex-direction: column;
         height: 100%;
         justify-content: center;
     }
-    
+
     .card-detalhe-body .img-card,
     .card-detalhe-body-mobile .img-card {
         font-family: Foco Bold, Open Sans, sans-serif;
@@ -796,14 +739,14 @@
         width: 100%;
         /*max-width: 279px;*/
     }
-    
+
     .card-detalhe-body .img-card img,
     .card-detalhe-body-mobile .img-card img {
         max-width: 120px;
         float: left;
         margin-right: 5px;
     }
-    
+
     .tarja {
         background-color: rgba(237, 161, 64, 1);
         margin-left: unset;
@@ -813,7 +756,7 @@
         border-radius: 0px 15px;
         margin-top: 41px
     }
-    
+
     .tarja h3 {
         color: var(--color-background-blue);
         font-size: 34px;
@@ -823,7 +766,7 @@
         padding: 0 15px;
         line-height: 0;
     }
-    
+
     .card-detalhe-body p,
     .card-detalhe-body-mobile p {
         color: #003986;
@@ -832,15 +775,16 @@
         font-size: 22px;
         margin: 21px 15px;
     }
-    
+
     .card-detalhe-body-mobile {
         display: none;
     }
-    
+
     @media (max-width:767px) {
         .card-header-detalhe {
             display: none;
         }
+
         .card-detalhe-body-mobile .img-header {
             background-position: center;
             background-size: contain;
@@ -852,6 +796,7 @@
             height: 53vw;
             margin-bottom: 25px;
         }
+
         .card-detalhe-body-mobile>img {
             width: 50%;
             margin-bottom: -50px;
@@ -860,72 +805,81 @@
             top: 75vw;
             right: 0;
         }
+
         .card-detalhe-body {
             display: none;
         }
+
         .card-detalhe-body-mobile {
             margin-top: 22px;
             display: flex;
             flex-direction: column;
         }
+
         .card-detalhe-body-mobile>.img-card {
             font-size: 48px;
         }
+
         .tarja {
             width: 100%;
             margin-top: unset;
             z-index: 3;
         }
+
         .tarja h3 {
             text-align: center;
             font-size: 34px;
             padding: 6x 15px;
             z-index: 3;
         }
+
         .card-detalhe-body-mobile p {
             text-align: center;
             font-size: 24px;
             z-index: 3;
         }
     }
-    
+
     @media (max-width:620px) {
         .card-detalhe-body-mobile>img {
             top: 82vw;
         }
     }
-    
+
     @media (max-width:550px) {
         .tarja h3 {
             font-size: 20px;
         }
+
         .card-detalhe-body-mobile p {
             font-size: 18px;
         }
     }
-    
+
     @media (max-width: 440px) {
         .card-detalhe-body-mobile>img {
             top: 90vw;
         }
     }
-    
+
     @media (max-width: 380px) {
         .card-detalhe-body-mobile>img {
             top: 110vw;
         }
     }
-    
+
     @media (max-width: 340px) {
         .tarja h3 {
             font-size: 18px;
         }
+
         .card-detalhe-body-mobile>img {
             top: 120vw;
         }
     }
+
     /* Cards */
-    
+
     .card-mini {
         padding: 20px;
         background-color: rgba(255, 255, 255, 1);
@@ -937,24 +891,24 @@
         font-size: 18px;
         color: rgba(36, 63, 140, 1);
     }
-    
+
     .card-mini-container {
         z-index: 1;
     }
-    
+
     @media only screen and (min-width: 768px) and (max-width:1040px) {
         .card-mini {
             height: 100%;
         }
     }
-    
+
     @media (max-width: 768px) {
         .card-mini {
             margin: 20px auto;
             max-width: unset;
         }
     }
-    
+
     .card-mini div.mini-title {
         font-family: Foco, Open Sans, sans-serif;
         font-style: italic;
@@ -962,48 +916,49 @@
         font-size: 24px;
         margin-bottom: 15px;
     }
-    
+
     @media (max-width:767px) {
         .pure-g>.hover-icon {
             display: none;
         }
     }
-    
+
     .steps-container {
         font-family: Foco, Open Sans, sans-serif;
         font-size: 22px;
         justify-content: space-evenly;
     }
-    
+
     @media (max-width:768px) {
         .steps-container {
             margin: 0 20px;
         }
     }
-    
+
     .step-div {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
+
     .step-index {
         font-family: Foco, Open Sans, sans-serif;
         font-style: italic;
         font-size: 80px;
         color: #003986;
     }
-    
+
     @media (max-width: 767px) {
         .step-div {
             margin-top: 15px;
             justify-content: left;
         }
+
         .step-index {
             margin-left: 5vh;
         }
     }
-    
+
     .step-text {
         font-family: Foco, Open Sans, sans-serif;
         font-style: italic;
@@ -1013,55 +968,79 @@
         color: #21B8DD;
         line-height: 1.4;
     }
-    
+
     .step-symbol {
         color: white;
         background-image: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/arrow.svg');
         background-position: center;
         background-repeat: no-repeat;
     }
-    
+
     @media (max-width: 767px) {
         .step-symbol {
             display: none;
         }
     }
-    
+
     @media only screen and (min-width: 768px) and (max-width:960px) {
         .step-index {
             font-size: 60px;
         }
+
         .step-text {
             margin-left: 5px;
             font-size: 16px;
         }
     }
-    
+
     @media only screen and (min-width: 960px) {
         .step-text {
             margin-left: 5px;
             font-size: 20px;
         }
     }
-    
+
     @media only screen and (min-width: 1200) {
         .step-text {
             margin-left: 18px;
         }
     }
-    
+
     @media (min-width: 1100px) {
         .step-div:nth-child(5)>.step-index {
             margin-left: -40px;
         }
     }
-    
+
+    .teste-panvel, .teste-exame {
+        padding: 0 20px;
+        padding-bottom: 20px;
+    }
+
+    #maior {
+        height: max-content;
+    }
+
+    #maior .card-header .card-thumbnail img{
+        border: 2px solid #D0DCEC;
+        border-radius: 8px;
+    }
+
     .card-teste {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        position: relative;
+
+        height: 100%;
         max-width: 570px;
-        height: 90%;
+
+        padding-top: 45px;
+        padding-bottom: calc(134px + 34px);
+
         margin: 0 auto;
-        margin-bottom: 66px;
-        padding: 45px 50px;
+
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 5px 3px 30px #00000029;
         border-radius: 8px;
@@ -1070,57 +1049,90 @@
         color: rgba(36, 63, 140, 1);
         letter-spacing: -0.03em;
         line-height: 26px;
-        width: calc(85% - 25px);
+
+
     }
-    
+
+    .card-teste .card-header, .card-teste .card-desc , .card-teste .card-buttons {
+        margin: 0 34px;
+    }
+
     .card-teste .card-header {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+
+        justify-content: flex-start;
         box-sizing: border-box;
     }
-    
+
     .card-teste .card-header .card-title h2 {
         font-family: Foco, Open Sans, sans-serif;
         font-weight: bold;
         font-style: italic;
         font-size: 28px;
     }
-    
+
     .card-teste .card-buttons {
-        position: relative;
-        bottom: 0;
+        width: 80%;
+        position: absolute;
+        bottom: 34px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
-    .card-teste .card-header .card-thumbnail {
-        margin-right: 20px;
-    }
-    
+
+
     .card-info-result {
         display: flex;
         justify-content: center;
-        margin-bottom: 5px;
     }
-    
+
+    @media screen and (min-width:1000px){
+        .card-teste .card-header .card-thumbnail {
+            margin-right: 45px;
+        }
+
+        .card-teste .card-header .card-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card-teste .card-header .card-info .card-title , .card-teste .card-header .card-info  .card-info-result {
+            width: 100%;
+        }
+
+        .card-teste .card-header .card-info h2{
+            margin: unset;
+            text-align: left;
+        }
+    }
+
     @media screen and (min-width:768px) and (max-width:1000px) {
         .card-info-result {
             flex-direction: column;
         }
     }
-    
+
     .card-teste .card-desc {
         margin-bottom: 20px;
     }
-    
+
     .card-teste .button-div {
         margin-top: 30px;
     }
-    
+
     .card-teste .button-div a {
         text-decoration: none;
     }
-    
+
+    .card-teste .card-thumbnail img {
+        max-width: 178px;
+        max-height: 178px;
+        margin: 0 auto;
+    }
+
     div.header-before {
         margin-top: 100px;
         font-family: Foco, Open Sans, sans-serif;
@@ -1128,25 +1140,25 @@
         text-align: center;
         font-size: 20px;
     }
-    
+
     div.header-before>img {
         margin-bottom: 42px;
     }
-    
+
     div.header-before.header-steps {
         font-family: Foco, Open Sans, sans-serif;
         font-style: italic;
         font-size: 24px;
         margin-bottom: 60px;
     }
-    
+
     div.header-before h1 {
         font-family: Foco, Open Sans, sans-serif;
         font-weight: bold;
         font-style: italic;
         font-size: 36px;
     }
-    
+
     .orange-separator {
         margin: 0 auto;
         width: 60px;
@@ -1161,7 +1173,7 @@
         width: 15%;
         float: left;
     }
-    
+
     div.more-info {
         width: 85%;
         float: left;
@@ -1171,57 +1183,34 @@
         text-align: left;
     }
 
-    a > p span.more-info {
+    a>p span.more-info {
         font-family: Foco, Open Sans, sans-serif;
         font-size: 16px;
         font-style: italic;
         font-weight: bold;
         color: #21B8DD;
     }
-    
+
     @media (max-width:767px) {
         div.more-info {
             width: 50%;
         }
     }
-    
+
     @media (min-width:940px) {
         .card-teste .card-header {
             flex-direction: row;
         }
 
-        .card-teste .card-header {
-            height: 40%;
-        }
-
-        .teste-exame .card-header {
-            height: 46%;
-        }
-
-        .teste-panvel .card-teste>.card-desc {
-            height: 36%;
-        }
-
-        .teste-panvel:last-of-type .card-teste>.card-desc {
-            height: 39%;
-        }
-
-        .teste-exame .card-teste>.card-desc {
-            height: 38%;
-        }
     }
-    
-    @media screen and (min-width:768px) and (max-width:940px) {
+
+    @media screen and (max-width:1000px) {
         .card-teste .card-header {
             flex-direction: column;
         }
 
-        .card-teste .card-header {
-            height: 40%;
-        }
-
-        .teste-panvel:last-of-type .card-header, .teste-exame .card-header{
-            height: 47%;
+        .card-teste .card-header .card-thumbnail {
+            display: flex;
         }
 
         .card-teste .card-info {
@@ -1235,47 +1224,31 @@
         .card-teste .card-info .card-info-result .more-info {
             text-align: center;
         }
-
-        .teste-panvel .card-teste>.card-desc {
-            height: 43%;
-        }
-
-        .teste-panvel:last-of-type .card-teste>.card-desc {
-            height: 34%;
-        }
-
-        .teste-exame .card-teste>.card-desc {
-            height: 43%;
-        }
     }
-    
+
     @media (max-width:768px) {
-        .card-teste .card-header {
-            flex-direction: column;
-        }
+
         .card-teste .card-header .card-title h2 {
             text-align: center;
         }
-        .card-teste .card-desc {
-            margin: unset;
-            height: auto;
-            max-height: unset;
-        }
+
         .step-index {
             font-size: 40px;
         }
     }
-    
+
     @media (max-width:968px) {
         .card-teste .card-header .card-title h2 {
             font-size: 24px;
         }
+
         .card-teste .card-header .card-info-result .more-info span {
             font-size: 16px;
         }
     }
+
     /* Botões */
-    
+
     button {
         width: 100%;
         height: 55px;
@@ -1290,20 +1263,20 @@
         text-transform: uppercase;
         margin-bottom: 12px;
     }
-    
+
     button.button-modal {
         color: #4BAC89;
         background-color: transparent;
         border: 1px solid #4BAC89;
         text-transform: uppercase;
     }
-    
+
     .button-orange {
         background: #FA9D1A 0% 0% no-repeat padding-box;
         border-radius: 8px;
         margin: 0 auto;
     }
-    
+
     .card-mini a button.button-orange {
         position: relative;
         background: #FA9D1A 0% 0% no-repeat padding-box;
@@ -1314,8 +1287,9 @@
         transform: translateX(-50%);
         bottom: -45px;
     }
+
     /* Tabela */
-    
+
     .pure-table {
         margin: 0 auto;
         border: unset;
@@ -1326,7 +1300,7 @@
         border-collapse: separate;
         width: 100%;
     }
-    
+
     .pure-table thead th {
         text-transform: uppercase;
         border: none;
@@ -1338,13 +1312,14 @@
         font-style: italic;
         font-weight: bold;
     }
-    
+
     .pure-table tbody td {
         border: none;
         background-color: #E4E9F2;
     }
+
     /* Img lado do nome */
-    
+
     .pure-table tbody tr>td:first-of-type {
         display: flex;
         font-size: 24px;
@@ -1354,26 +1329,26 @@
         max-width: 204px;
         padding-top: 50px;
     }
-    
+
     .pure-table tbody tr td:nth-child(2) {
         max-width: 256px;
         font-size: 16px;
     }
-    
+
     .pure-table tbody tr td:nth-child(3) {
         max-width: 291px;
         font-size: 16px;
     }
-    
+
     .pure-table tbody td img {
         margin-right: 30px;
     }
-    
-    
+
+
     div.pure-u-1-12 img {
         margin-top: 5px;
     }
-    
+
     div.table-info {
         display: flex;
         margin: 0 auto;
@@ -1389,14 +1364,14 @@
         color: #193D8D;
         align-items: center;
     }
-    
+
     div.table-info>div {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         text-align: center;
     }
-    
+
     @media (max-width:768px) {
         div.table-info {
             height: max-content;
@@ -1406,35 +1381,40 @@
         div.table-info img {
             margin-right: 10px;
         }
-        
+
         .pure-table {
             font-size: 14px;
             color: #193D8D;
             border-spacing: unset;
             border-spacing: 5px 0px;
         }
+
         .pure-table thead th {
             font-size: 20px;
         }
+
         .pure-table td,
         .pure-table th {
             padding: unset !important;
         }
+
         /* Img lado do nome */
         .pure-table tbody tr>td:first-of-type {
             font-size: 18px;
             padding-top: unset;
             margin: calc(50% - 15px) 0;
         }
+
         .pure-table tbody tr td:nth-child(2) {
             font-size: 14px;
         }
+
         .pure-table tbody tr td:nth-child(3) {
             padding-top: unset;
             font-size: 14px;
         }
     }
-    
+
     @media screen and (max-width: 768px) and (min-width:590px) {
         div.table-info>div {
             margin: 20px 0;
@@ -1442,7 +1422,7 @@
             margin-left: 70vw;
         }
     }
-    
+
     @media screen and (max-width: 590px) and (min-width:410px) {
         div.table-info>div {
             margin: 20px 0;
@@ -1450,7 +1430,7 @@
             margin-left: 55vw;
         }
     }
-    
+
     @media screen and (max-width: 410px) and (min-width:320px) {
         div.table-info>div {
             margin: 20px 0;
@@ -1458,27 +1438,31 @@
             margin-left: 35vw;
         }
     }
+
     /* Controle de visualização das tabelas */
-    
+
     @media (min-width:760px) {
         table.pure-table {
             display: table;
         }
+
         .table-test-mobile {
             display: none;
         }
     }
-    
+
     @media (max-width:760px) {
         table.pure-table {
             display: none;
         }
+
         .table-test-mobile {
             display: block;
         }
     }
+
     /* Tabela mobile */
-    
+
     .table-test-mobile {
         margin: 20px auto;
         max-width: 85%;
@@ -1487,11 +1471,11 @@
         color: rgba(36, 63, 140, 1);
         text-align: center;
     }
-    
+
     .table-test-container {
         margin: 40px auto;
     }
-    
+
     .table-test-mobile .cell-header {
         margin: 0 auto;
         margin: 15px auto;
@@ -1501,11 +1485,11 @@
         font-style: italic;
         font-size: 24px;
     }
-    
+
     .table-test-mobile .test-cell .cell-header {
         display: none;
     }
-    
+
     .table-test-mobile .test-cell .cell-value {
         display: flex;
         font-size: 24px;
@@ -1513,14 +1497,15 @@
         font-weight: bold;
         font-style: italic;
     }
-    
+
     .table-test-mobile .test-cell .cell-value img {
         margin-right: 15px;
     }
-    
+
     .table-test-mobile .test-cell {}
+
     /* The Modal (background) */
-    
+
     .LHModalContainer,
     .LHModalContainerExame,
     .LHModalContainerPanvel {
@@ -1548,8 +1533,9 @@
         animation-name: fadeIn;
         animation-duration: 0.4s
     }
+
     /* Modal Content */
-    
+
     .LHmodal-content {
         margin: 2%;
         height: 100%;
@@ -1565,7 +1551,7 @@
         background-color: #fefefe;
         max-height: 80vh;
     }
-    
+
     .LHmodal-form {
         height: 100%;
         max-width: 763px;
@@ -1575,17 +1561,18 @@
         overflow: auto;
         max-height: 80vh;
     }
-    
+
     #LHmodal-form {
         overflow: auto;
         height: 100%;
     }
-    
+
     iframe {
         border: none;
     }
+
     /* The Close Button */
-    
+
     .close {
         position: absolute;
         top: 10%;
@@ -1596,2214 +1583,79 @@
         transition: 0.3s;
         z-index: 99;
     }
-    
+
     .close:hover,
     .close:focus {
         color: #000;
         text-decoration: none;
         cursor: pointer;
     }
-    
+
     #iframe-container {
         width: 100%;
         height: 100%;
     }
+
     /* Add Animation */
-    
+
     @-webkit-keyframes slideIn {
         from {
             bottom: -300px;
             opacity: 0
         }
+
         to {
             bottom: 0;
             opacity: 1
         }
     }
-    
+
     @keyframes slideIn {
         from {
             bottom: -300px;
             opacity: 0
         }
+
         to {
             bottom: 0;
             opacity: 1
         }
     }
-    
+
     @-webkit-keyframes fadeIn {
         from {
             opacity: 0
         }
+
         to {
             opacity: 1
         }
     }
-    
+
     @keyframes fadeIn {
         from {
             opacity: 0
         }
+
         to {
             opacity: 1
         }
     }
 </style>
-
-<script>
-    var dataExame = [{
-        "Filial": "102",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Alegrete",
-        "Endereço": "Praça Presidente Getúlio Vargas, 360 ",
-        "Bairro": "Centro",
-        "Telefone": "51-998500986"
-    }, {
-        "Filial": "753",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Alegrete",
-        "Endereço": "Rua Dr Lauro Dornelles n° 1",
-        "Bairro": "Centro"
-    }, {
-        "Filial": "315",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Atlantida Sul - Osório",
-        "Endereço": "Av. Paraguassú, 444 ",
-        "Bairro": "Centro",
-        "Telefone": "51-997828588"
-    }, {
-        "Filial": "743",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Bento Gonçalves",
-        "Endereço": "Rua General Osorio ,235",
-        "Bairro": "Centro",
-        "Telefone": "51-997596980"
-    }, {
-        "Filial": "380",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Blumenau",
-        "Endereço": "Rua São Paulo, nº 85, loja 2",
-        "Bairro": "Centro",
-        "Telefone": "48-991883864"
-    }, {
-        "Filial": "720",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Brusque",
-        "Endereço": "Rua Felipe Schmidt, nº 115, sala 1, ",
-        "Bairro": "São Luiz",
-        "Telefone": "48-991895970"
-    }, {
-        "Filial": "703",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Cachoeirinha",
-        "Endereço": "Av. General Flores da Cunha, 1233 loja 2",
-        "Bairro": "Vila Imbui",
-        "Telefone": "51-998960476"
-    }, {
-        "Filial": "750",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Camaquã",
-        "Endereço": "Rua Bento Gonçalves, 1032",
-        "Bairro": "Centro",
-        "Telefone": "51-980116380"
-    }, {
-        "Filial": "573",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Campo Mourão",
-        "Endereço": "Av. Capitao Indio Bandeira, 1690",
-        "Bairro": "Centro",
-        "Telefone": "44-35234524"
-    }, {
-        "Filial": "181",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Canoas",
-        "Endereço": "Rua Tiradentes, 290, loja 01 ",
-        "Bairro": "Centro",
-        "Telefone": "51-999594102"
-    }, {
-        "Filial": "476",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Capão da Canoa",
-        "Endereço": "Av. Paraguassú, 2043",
-        "Bairro": "Centro",
-        "Telefone": "51-998429348"
-    }, {
-        "Filial": "341",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Capão da Canoa",
-        "Endereço": "Av. Paraguassú, 2786 ",
-        "Bairro": "Centro",
-        "Telefone": "51-996262255"
-    }, {
-        "Filial": "555",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Cascavel",
-        "Endereço": "Rua Paraná, n° 2962",
-        "Bairro": "Centro",
-        "Telefone": "41-991692543"
-    }, {
-        "Filial": "569",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Cascavel",
-        "Endereço": "Rua Sete de Setembro, 2704 - Sala 01",
-        "Bairro": "Centro",
-        "Telefone": "41-992176692"
-    }, {
-        "Filial": "710",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Chapecó",
-        "Endereço": "Rua Rui Barbosa, n° 230 e, loja 1,",
-        "Bairro": "Centro",
-        "Telefone": "48-991337096"
-    }, {
-        "Filial": "559",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Cianorte",
-        "Endereço": "Avenida Souza Naves, nº 316, bairro Zona 1",
-        "Bairro": "Zona 1",
-        "Telefone": "41-991065971"
-    }, {
-        "Filial": "194",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Cidreira",
-        "Endereço": "Av. Mostardeiros, 3213 – Salas 1 e 2",
-        "Bairro": "Centro",
-        "Telefone": "51-996676053"
-    }, {
-        "Filial": "381",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Criciúma",
-        "Endereço": "Rua Marechal Deodoro, nº 177",
-        "Bairro": "Centro",
-        "Telefone": "48-991581195"
-    }, {
-        "Filial": "712",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Cruz Alta",
-        "Endereço": "Rua Barão do Rio Branco, 1484",
-        "Bairro": "Centro",
-        "Telefone": "51-995387614"
-    }, {
-        "Filial": "503",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Marechal Deodoro, 261, Loja 02 ",
-        "Bairro": "Centro",
-        "Telefone": "41-991122661"
-    }, {
-        "Filial": "508",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Nilo Peçanha, 1167 ",
-        "Bairro": "Bom Retiro",
-        "Telefone": "41-991150628"
-    }, {
-        "Filial": "545",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Fernando de Noronha, nº 317",
-        "Bairro": "Boa Vista",
-        "Telefone": "41-992730298"
-    }, {
-        "Filial": "548",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Avenida Água Verde, nº 568",
-        "Bairro": "Água Verde",
-        "Telefone": "41-992596328"
-    }, {
-        "Filial": "551",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Avenida Anita Garibaldi, nº 2.132",
-        "Bairro": "Boa Vista",
-        "Telefone": "41-991114388"
-    }, {
-        "Filial": "552",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Avenida Nossa Senhora da Luz, nº 2.341",
-        "Bairro": "Jardim Social",
-        "Telefone": "41-992869148"
-    }, {
-        "Filial": "554",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Itupava, 753 loja 2",
-        "Bairro": "Juvevê",
-        "Telefone": "41-992475705"
-    }, {
-        "Filial": "566",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Professor Pedro Viriato Parigot de Souza, nº 600",
-        "Bairro": "Mossunguê",
-        "Telefone": "41-991797809"
-    }, {
-        "Filial": "519",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba  ",
-        "Endereço": "Rua Benjamin Lins, 680 - Loja 01",
-        "Bairro": "Batel",
-        "Telefone": "41-992685207"
-    }, {
-        "Filial": "522",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba  ",
-        "Endereço": "Rua Cel. Luiz José dos Santos, 2506 - Loja 01",
-        "Bairro": "Boqueirão",
-        "Telefone": "41-992277368"
-    }, {
-        "Filial": "534",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba  ",
-        "Endereço": "Avenida Prefeito Erasto Gaertner, 1678 ",
-        "Bairro": "Bacacheri",
-        "Telefone": "41-991655992"
-    }, {
-        "Filial": "362",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Esteio ",
-        "Endereço": "Avenida Presidente Vargas, 2358 - Lojas 1 e 2 ",
-        "Bairro": "Centro",
-        "Telefone": "51-997184971"
-    }, {
-        "Filial": "428",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Estreito",
-        "Endereço": "Rua Coronel Pedro Demoro, 1814",
-        "Bairro": "Estreito",
-        "Telefone": "48-991596844"
-    }, {
-        "Filial": "736",
-        "UF": "RS",
-        "Estado": "Santa Catarina",
-        "Cidade": "Farroupilha",
-        "Endereço": "Rua Treze de Maio, 585",
-        "Bairro": "Centro",
-        "Telefone": "51-980241918"
-    }, {
-        "Filial": "379",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Flores da Cunha",
-        "Endereço": "Rua Borges de Medeiros, nº 1.461, salas 01 e 02",
-        "Bairro": "Centro",
-        "Telefone": "51-996536494"
-    }, {
-        "Filial": "104",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Praça XV de Novembro, 23 A ",
-        "Bairro": "Centro",
-        "Telefone": "48-991625841"
-    }, {
-        "Filial": "191",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Avenida das Nações, nº 342 ",
-        "Bairro": "Canasvieiras",
-        "Telefone": "48-991277716"
-    }, {
-        "Filial": "424",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Rua Dom João Becker, 14",
-        "Bairro": "Ingleses do Rio Vermelho",
-        "Telefone": "48-991935082"
-    }, {
-        "Filial": "474",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Avenida Madre Benvenuta, 1260",
-        "Bairro": "Santa Mônica",
-        "Telefone": "48-991883856"
-    }, {
-        "Filial": "475",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Rodovia Doutor Antônio Luiz Moura, 2765",
-        "Bairro": "Rio Tavares",
-        "Telefone": "48-991845195"
-    }, {
-        "Filial": "430",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Garibaldi",
-        "Endereço": "Avenida Independência, nº 195, sala comercial 1",
-        "Bairro": "Centro",
-        "Telefone": "51-980603594"
-    }, {
-        "Filial": "189",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Garopaba",
-        "Endereço": "Rua Prefeito João Araújo, 601 – sala 02",
-        "Bairro": "Centro ",
-        "Telefone": "48-991626077"
-    }, {
-        "Filial": "391",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Garopaba",
-        "Endereço": "Rua João Orestes de Araújo, nº 1.253",
-        "Bairro": "Pinguirito",
-        "Telefone": "48-991883926"
-    }, {
-        "Filial": "366",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Gramado",
-        "Endereço": "Av. das Hortênsias, 1929 - Loja 101",
-        "Bairro": "Centro",
-        "Telefone": "51-996021666"
-    }, {
-        "Filial": "382",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Gravataí",
-        "Endereço": "Avenida Dorival Cândido Luz de Oliveira, nº 680",
-        "Bairro": "COHAB C",
-        "Telefone": "51-996216021"
-    }, {
-        "Filial": "356",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Ijuí",
-        "Endereço": "Rua  Doutor Pestana, 20",
-        "Bairro": "Centro",
-        "Telefone": "51-995799467"
-    }, {
-        "Filial": "756",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Ijuí",
-        "Endereço": "Rua Mato Grosso, 17 ",
-        "Bairro": "Centro",
-        "Telefone": "51-3332-2381"
-    }, {
-        "Filial": "749",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Imbé ",
-        "Endereço": "Avenida Paraguassu, nº 3002",
-        "Bairro": "Centro",
-        "Telefone": "51-999303448"
-    }, {
-        "Filial": "107",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Itajaí",
-        "Endereço": "Rua Olímpio Miranda Júnior, 300",
-        "Bairro": "Centro",
-        "Telefone": "48-991348985"
-    }, {
-        "Filial": "754",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Járagua do Sul",
-        "Endereço": "Rua Expedicionário Gumercindo da Silva",
-        "Bairro": "Centro"
-    }, {
-        "Filial": "466",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Joinville",
-        "Endereço": "Rua Paraná, n° 27",
-        "Bairro": "Anita Garibaldi",
-        "Telefone": "48-991296627"
-    }, {
-        "Filial": "375",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Lajeado",
-        "Endereço": "Avenida Benjamin Constant, nº 1.707",
-        "Bairro": "Florestal",
-        "Telefone": "51-997285741"
-    }, {
-        "Filial": "62",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Livramento",
-        "Endereço": "Rua dos Andradas, 51",
-        "Bairro": "Centro",
-        "Telefone": "51-996794288"
-    }, {
-        "Filial": "531",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Londrina  ",
-        "Endereço": "Avenida Madre Leonia Milito, 914 ",
-        "Bairro": "Bela Suíça",
-        "Telefone": "41-991077068"
-    }, {
-        "Filial": "535",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Londrina  ",
-        "Endereço": "Rua Espírito Santo, 1340 ",
-        "Bairro": "Centro",
-        "Telefone": "41-991637462"
-    }, {
-        "Filial": "536",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Maringá",
-        "Endereço": "Praça Pioneiro Jacinto Ferreira Branco, 38 - Loja 1",
-        "Bairro": "Zona 07",
-        "Telefone": "41-991369185"
-    }, {
-        "Filial": "564",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Maringá",
-        "Endereço": "Avenida Paraná, 385",
-        "Bairro": "Zona 1",
-        "Telefone": "41-991225783"
-    }, {
-        "Filial": "393",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Montenegro",
-        "Endereço": "Rua José Luiz, nº 1.485,",
-        "Bairro": "Centro",
-        "Telefone": "51-995005857"
-    }, {
-        "Filial": "495",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Novo Hamburgo ",
-        "Endereço": "Avenida Doutor Maurício Cardoso, 1670, lojas 1, 2 e 3 ",
-        "Bairro": "Hamburgo Velho",
-        "Telefone": "51-996348309"
-    }, {
-        "Filial": "450",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Palhoça",
-        "Endereço": "Avenida Barão do Rio Branco, 509 - Loja 1 ",
-        "Bairro": "Centro",
-        "Telefone": "48-991271242"
-    }, {
-        "Filial": "562",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Paranavaí",
-        "Endereço": "Rua Pernambuco, 964",
-        "Bairro": "Centro",
-        "Telefone": "41-991993745"
-    }, {
-        "Filial": "338",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Passo Fundo",
-        "Endereço": "Rua Quinze de Novembro, 318",
-        "Bairro": "Centro",
-        "Telefone": "51-995661229"
-    }, {
-        "Filial": "751",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Passo Fundo",
-        "Endereço": "Avenida Presidente Vargas, 75 ",
-        "Bairro": "Vila Rodrigues",
-        "Telefone": "51-998929269"
-    }, {
-        "Filial": "93",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Pelotas",
-        "Endereço": "Rua Santos Dumont, 487",
-        "Bairro": "Centro",
-        "Telefone": "51-996744795"
-    }, {
-        "Filial": "546",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Ponta Grossa",
-        "Endereço": "Rua Balduíno Taques, nº 431",
-        "Bairro": "Estrela",
-        "Telefone": "41-992590922"
-    }, {
-        "Filial": "5",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Azenha, 693",
-        "Bairro": "Azenha",
-        "Telefone": "51-995949390"
-    }, {
-        "Filial": "28",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Getúlio Vargas, n° 480",
-        "Bairro": "Menino Deus",
-        "Telefone": "51-998197432"
-    }, {
-        "Filial": "15",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Borges de Medeiros,  255",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-997837845"
-    }, {
-        "Filial": "19",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida São Pedro, 577",
-        "Bairro": "São Geraldo",
-        "Telefone": "51-980586848"
-    }, {
-        "Filial": "22",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Otávio Rocha, 48",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-995419002"
-    }, {
-        "Filial": "25",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. São Pedro, 878 – São Geraldo",
-        "Bairro": "São Geraldo",
-        "Telefone": "51-995140926"
-    }, {
-        "Filial": "323",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Cristóvão Colombo, 2999",
-        "Bairro": "Higienópolis",
-        "Telefone": "51-996702826"
-    }, {
-        "Filial": "344",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Plínio Brasil Milano, 1689 - Loja 101 H",
-        "Bairro": "Higienópolis",
-        "Telefone": "51-995623405"
-    }, {
-        "Filial": "182",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Cristóvão Colombo, 545 – Lj 1224 – Sh Total",
-        "Bairro": "Floresta",
-        "Telefone": "51-999506579"
-    }, {
-        "Filial": "185",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Serevo Dullius, 90010 - T1.N2.057 - Aeroporto Salgado Filho ",
-        "Bairro": "Anchieta",
-        "Telefone": "51-998067276"
-    }, {
-        "Filial": "383",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Vinte e Quatro de Outubro, 1.465",
-        "Bairro": "Auxiliadora",
-        "Telefone": "51-980386228"
-    }, {
-        "Filial": "322",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Guaporé, nº 324",
-        "Bairro": "Petrópolis",
-        "Telefone": "51-996921824"
-    }, {
-        "Filial": "324",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Protásio Alves, 2121",
-        "Bairro": "Rio Branco ",
-        "Telefone": "51-997415452"
-    }, {
-        "Filial": "374",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Santana, nº 1.501, loja 1",
-        "Bairro": "Farroupilha",
-        "Telefone": "51-998280236"
-    }, {
-        "Filial": "726",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Assis Brasil, 5431",
-        "Bairro": "Sarandi",
-        "Telefone": "51-999736347"
-    }, {
-        "Filial": "7",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Azenha, 1.401",
-        "Bairro": "Azenha",
-        "Telefone": "51-998879142"
-    }, {
-        "Filial": "13",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua João Wallig, 1800 Lj. JW 13-Iguatemi ",
-        "Bairro": "Passo D’areia",
-        "Telefone": "51-996915283"
-    }, {
-        "Filial": "48",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Zeca Neto, 38",
-        "Bairro": "Cristo Redentor",
-        "Telefone": "51-996500557"
-    }, {
-        "Filial": "168",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Mostardeiro, 287 ",
-        "Bairro": "Independência",
-        "Telefone": "51-996565629"
-    }, {
-        "Filial": "192",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Wenceslau Escobar, 2857 Lj 04",
-        "Bairro": "Cristal",
-        "Telefone": "51-997770130"
-    }, {
-        "Filial": "311",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Casemiro de Abreu, 1755 e 1775",
-        "Bairro": "Boa Vista",
-        "Telefone": "51-997126605"
-    }, {
-        "Filial": "339",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Eduardo Prado, 1901, 1911, 1921 - Ljs. 2, 3 e 4 ",
-        "Bairro": "Cavalhada",
-        "Telefone": "51-980168063"
-    }, {
-        "Filial": "731",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Professor Annes Dias, 135- Térreo - Hospital Santa Clara ",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-996883716"
-    }, {
-        "Filial": "349",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Doutor Nilo Peçanha, 690",
-        "Bairro": "Bela Vista",
-        "Telefone": "51-995008685"
-    }, {
-        "Filial": "10",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua dos Andradas, 1238",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-998839693"
-    }, {
-        "Filial": "376",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Cavalhada, nº 2351, 2369 e 2373",
-        "Bairro": "Cavalhada",
-        "Telefone": "51-998258972"
-    }, {
-        "Filial": "29",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Ramiro Barcelos, 1115",
-        "Bairro": "Independência",
-        "Telefone": "51-996054860"
-    }, {
-        "Filial": "129",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua dos Andradas, 1320 ",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-997749244"
-    }, {
-        "Filial": "397",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Sarmento Leite n°876, ljs 880 e 882 ",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-999157468"
-    }, {
-        "Filial": "442",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Osvaldo Aranha, 1370 ",
-        "Bairro": "Bom Fim",
-        "Telefone": "51 - 996481178"
-    }, {
-        "Filial": "455",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Vinte e Quatro de Outubro, 722 ",
-        "Bairro": "Moinhos de Vento",
-        "Telefone": "51-980101329"
-    }, {
-        "Filial": "165",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Ipiranga, 6690 - Bl 02/Prédio 60/Térreo",
-        "Bairro": "Petrópolis",
-        "Telefone": "51-996358912"
-    }, {
-        "Filial": "343",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Valparaíso, 698 ",
-        "Bairro": "Jardim Botânico",
-        "Telefone": "51-980189521"
-    }, {
-        "Filial": "456",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Diário de Notícias, 300 - Lj 1004",
-        "Bairro": "Cristal",
-        "Telefone": "51-999590409"
-    }, {
-        "Filial": "702",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Anita Garibaldi, 2099 – Lj 02",
-        "Bairro": "Mont Serrat",
-        "Telefone": "51-995049688"
-    }, {
-        "Filial": "440",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Ipiranga, 6681  Prédio 12B - Térreo",
-        "Bairro": "Partenon",
-        "Telefone": "51-995539747"
-    }, {
-        "Filial": "733",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Silveiro, 181",
-        "Bairro": "Menino Deus",
-        "Telefone": "51-999190442"
-    }, {
-        "Filial": "741",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Dona Adda Mascarenhas de Moraes, nº 57, ",
-        "Bairro": "Jardim Itu",
-        "Telefone": "51-997579237"
-    }, {
-        "Filial": "748",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Goethe, 210",
-        "Bairro": "Rio Branco",
-        "Telefone": "51-980208314"
-    }, {
-        "Filial": "302",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Rio Grande",
-        "Endereço": "Av. Rio Grande, 251 ",
-        "Bairro": "Cassino",
-        "Telefone": "51-997171571"
-    }, {
-        "Filial": "304",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Rio Grande",
-        "Endereço": "Rua Doutor Nascimento, 389, 391 e 399",
-        "Bairro": "Centro",
-        "Telefone": "51-998791508"
-    }, {
-        "Filial": "149",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Rio Pardo",
-        "Endereço": "Rua Andrade Neves, 626",
-        "Bairro": "Centro",
-        "Telefone": "51-995218163"
-    }, {
-        "Filial": "738",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Cruz do Sul",
-        "Endereço": "Rua Vinte e Oito de Setembro, 585",
-        "Bairro": "Centro",
-        "Telefone": "51-998675693"
-    }, {
-        "Filial": "359",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Maria",
-        "Endereço": "Avenida Nossa Senhora Medianeira, 1318 ",
-        "Bairro": "Centro",
-        "Telefone": "51-997280969"
-    }, {
-        "Filial": "84",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Rosa",
-        "Endereço": "Av. Rio Branco, 447 ",
-        "Bairro": "Centro",
-        "Telefone": "51-998639756"
-    }, {
-        "Filial": "354",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Rosa",
-        "Endereço": "Avenida Expedicionário Weber, 805 ",
-        "Bairro": "Centro",
-        "Telefone": "51-995715729"
-    }, {
-        "Filial": "70",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santiago",
-        "Endereço": "Rua Getúlio Vargas, 1851 ",
-        "Bairro": "Centro",
-        "Telefone": "51-980367091"
-    }, {
-        "Filial": "396",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Borja",
-        "Endereço": "Rua General Marques, nº 902, Loja 1, ",
-        "Bairro": "Centro",
-        "Telefone": "51-999006290"
-    }, {
-        "Filial": "118",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Gabriel ",
-        "Endereço": "Rua General Mallet, 456 terreo",
-        "Bairro": "Centro",
-        "Telefone": "51-997022093"
-    }, {
-        "Filial": "538",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "São José dos Pinhais",
-        "Endereço": "Rua Izabel A. Redentora, 2270",
-        "Bairro": "Centro",
-        "Telefone": "41-992806441"
-    }, {
-        "Filial": "73",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Luiz Gonzaga",
-        "Endereço": "Av. Sen. Pinheiro Machado, 2476",
-        "Bairro": "Centro",
-        "Telefone": "51-998517871"
-    }, {
-        "Filial": "800",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Avenida Giovanni Gronchi, 5930 - Lojas 5 e 6 ",
-        "Bairro": "Vila Andrade",
-        "Telefone": "11-961959826"
-    }, {
-        "Filial": "801",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Avenida República do Líbano, nº 1.882",
-        "Bairro": "Ibirapuera",
-        "Telefone": "11-964178679"
-    }, {
-        "Filial": "802",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Avenida Europa, nº 352",
-        "Bairro": "Jardim Europa",
-        "Telefone": "11-964100451"
-    }, {
-        "Filial": "803",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Rua Doutor Homem de Melo",
-        "Bairro": "Perdizes",
-        "Telefone": "11-964097248"
-    }, {
-        "Filial": "30",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Sebastião do caí",
-        "Endereço": "Avenida Egidio Michaelsen, 477",
-        "Bairro": "Centro",
-        "Telefone": "51-995638939"
-    }, {
-        "Filial": "130",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Sapucaia do Sul",
-        "Endereço": "Avenida Sapucaia, nº 2.096, sala 2102",
-        "Bairro": "Primor",
-        "Telefone": "51-998183362"
-    }, {
-        "Filial": "713",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Taquara",
-        "Endereço": "Rua General Frota, 2580, loja 02",
-        "Bairro": "Centro",
-        "Telefone": "51-998182148"
-    }, {
-        "Filial": "721",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Teutônia",
-        "Endereço": "Rua Três de Outubro, nº 371, ",
-        "Bairro": "Languiru",
-        "Telefone": "51-999925626"
-    }, {
-        "Filial": "121",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Torres",
-        "Endereço": "Av. Barão do Rio Branco, 52",
-        "Bairro": "Centro",
-        "Telefone": "51-999909560"
-    }, {
-        "Filial": "355",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Torres",
-        "Endereço": "Rua Bento Gonçalves, 81",
-        "Bairro": "Centro",
-        "Telefone": "51-995020316"
-    }, {
-        "Filial": "193",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Tramandaí",
-        "Endereço": "Av. Emancipação, 898 – Lj ¾ - Praia",
-        "Bairro": "Centro",
-        "Telefone": "51-997654643"
-    }, {
-        "Filial": "561",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Umuarama",
-        "Endereço": "Avenida Paraná, 5264",
-        "Bairro": "Zona III",
-        "Telefone": "41-992099263"
-    }, {
-        "Filial": "40",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Uruguaiana",
-        "Endereço": "Rua Duque de Caxias, 1625",
-        "Bairro": "Centro",
-        "Telefone": "51-999930823"
-    }, {
-        "Filial": "373",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Vacaria",
-        "Endereço": "Rua Julio de Castilhos, nº 1.063",
-        "Bairro": "Centro",
-        "Telefone": "51-997893869"
-    }, {
-        "Filial": "708",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Venâncio Aires",
-        "Endereço": "Rua Osvaldo Aranha, nº 1.477",
-        "Bairro": "Centro",
-        "Telefone": "51-997532973"
-    }, {
-        "Filial": "718",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Veranópolis",
-        "Endereço": "Rua Júlio de Castilhos, 818 loja 03",
-        "Bairro": "Centro",
-        "Telefone": "51-999523272"
-    }, {
-        "Filial": "124",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Xangri-la",
-        "Endereço": "Av. Paraguassú, 4530 – Lj 02",
-        "Bairro": "Centro",
-        "Telefone": "51-996895541"
-    }, {
-        "Filial": "306",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Xangri-la",
-        "Endereço": "Av. Paraguassú, 1214, Loja 1",
-        "Bairro": "Centro",
-        "Telefone": "51-998353406"
-    }, {
-        "Filial": "723",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Xangri-la (Rainha do mar)",
-        "Endereço": "Rua Água Marinha, nº 1.421",
-        "Bairro": "Centro",
-        "Telefone": "51-997428146"
-    }]
-
-    var dataPanvel = [{
-        "Filial": "102",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Alegrete",
-        "Endereço": "Praça Presidente Getúlio Vargas, 360 ",
-        "Bairro": "Centro",
-        "Telefone": "51-998500986"
-    }, {
-        "Filial": "753",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Alegrete",
-        "Endereço": "Rua Dr Lauro Dornelles n° 1",
-        "Bairro": "Centro"
-    }, {
-        "Filial": "315",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Atlantida Sul - Osório",
-        "Endereço": "Av. Paraguassú, 444 ",
-        "Bairro": "Centro",
-        "Telefone": "51-997828588"
-    }, {
-        "Filial": "743",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Bento Gonçalves",
-        "Endereço": "Rua General Osorio ,235",
-        "Bairro": "Centro",
-        "Telefone": "51-997596980"
-    }, {
-        "Filial": "380",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Blumenau",
-        "Endereço": "Rua São Paulo, nº 85, loja 2",
-        "Bairro": "Centro",
-        "Telefone": "48-991883864"
-    }, {
-        "Filial": "720",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Brusque",
-        "Endereço": "Rua Felipe Schmidt, nº 115, sala 1, ",
-        "Bairro": "São Luiz",
-        "Telefone": "48-991895970"
-    }, {
-        "Filial": "703",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Cachoeirinha",
-        "Endereço": "Av. General Flores da Cunha, 1233 loja 2",
-        "Bairro": "Vila Imbui",
-        "Telefone": "51-998960476"
-    }, {
-        "Filial": "750",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Camaquã",
-        "Endereço": "Rua Bento Gonçalves, 1032",
-        "Bairro": "Centro",
-        "Telefone": "51-980116380"
-    }, {
-        "Filial": "573",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Campo Mourão",
-        "Endereço": "Av. Capitao Indio Bandeira, 1690",
-        "Bairro": "Centro",
-        "Telefone": "44-35234524"
-    }, {
-        "Filial": "181",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Canoas",
-        "Endereço": "Rua Tiradentes, 290, loja 01 ",
-        "Bairro": "Centro",
-        "Telefone": "51-999594102"
-    }, {
-        "Filial": "476",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Capão da Canoa",
-        "Endereço": "Av. Paraguassú, 2043",
-        "Bairro": "Centro",
-        "Telefone": "51-998429348"
-    }, {
-        "Filial": "341",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Capão da Canoa",
-        "Endereço": "Av. Paraguassú, 2786 ",
-        "Bairro": "Centro",
-        "Telefone": "51-996262255"
-    }, {
-        "Filial": "555",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Cascavel",
-        "Endereço": "Rua Paraná, n° 2962",
-        "Bairro": "Centro",
-        "Telefone": "41-991692543"
-    }, {
-        "Filial": "569",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Cascavel",
-        "Endereço": "Rua Sete de Setembro, 2704 - Sala 01",
-        "Bairro": "Centro",
-        "Telefone": "41-992176692"
-    }, {
-        "Filial": "710",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Chapecó",
-        "Endereço": "Rua Rui Barbosa, n° 230 e, loja 1,",
-        "Bairro": "Centro",
-        "Telefone": "48-991337096"
-    }, {
-        "Filial": "559",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Cianorte",
-        "Endereço": "Avenida Souza Naves, nº 316, bairro Zona 1",
-        "Bairro": "Zona 1",
-        "Telefone": "41-991065971"
-    }, {
-        "Filial": "194",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Cidreira",
-        "Endereço": "Av. Mostardeiros, 3213 – Salas 1 e 2",
-        "Bairro": "Centro",
-        "Telefone": "51-996676053"
-    }, {
-        "Filial": "381",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Criciúma",
-        "Endereço": "Rua Marechal Deodoro, nº 177",
-        "Bairro": "Centro",
-        "Telefone": "48-991581195"
-    }, {
-        "Filial": "712",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Cruz Alta",
-        "Endereço": "Rua Barão do Rio Branco, 1484",
-        "Bairro": "Centro",
-        "Telefone": "51-995387614"
-    }, {
-        "Filial": "503",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Marechal Deodoro, 261, Loja 02 ",
-        "Bairro": "Centro",
-        "Telefone": "41-991122661"
-    }, {
-        "Filial": "508",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Nilo Peçanha, 1167 ",
-        "Bairro": "Bom Retiro",
-        "Telefone": "41-991150628"
-    }, {
-        "Filial": "545",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Fernando de Noronha, nº 317",
-        "Bairro": "Boa Vista",
-        "Telefone": "41-992730298"
-    }, {
-        "Filial": "548",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Avenida Água Verde, nº 568",
-        "Bairro": "Água Verde",
-        "Telefone": "41-992596328"
-    }, {
-        "Filial": "551",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Avenida Anita Garibaldi, nº 2.132",
-        "Bairro": "Boa Vista",
-        "Telefone": "41-991114388"
-    }, {
-        "Filial": "552",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Avenida Nossa Senhora da Luz, nº 2.341",
-        "Bairro": "Jardim Social",
-        "Telefone": "41-992869148"
-    }, {
-        "Filial": "554",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Itupava, 753 loja 2",
-        "Bairro": "Juvevê",
-        "Telefone": "41-992475705"
-    }, {
-        "Filial": "566",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Professor Pedro Viriato Parigot de Souza, nº 600",
-        "Bairro": "Mossunguê",
-        "Telefone": "41-991797809"
-    }, {
-        "Filial": "519",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba  ",
-        "Endereço": "Rua Benjamin Lins, 680 - Loja 01",
-        "Bairro": "Batel",
-        "Telefone": "41-992685207"
-    }, {
-        "Filial": "522",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba  ",
-        "Endereço": "Rua Cel. Luiz José dos Santos, 2506 - Loja 01",
-        "Bairro": "Boqueirão",
-        "Telefone": "41-992277368"
-    }, {
-        "Filial": "534",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Curitiba  ",
-        "Endereço": "Avenida Prefeito Erasto Gaertner, 1678 ",
-        "Bairro": "Bacacheri",
-        "Telefone": "41-991655992"
-    }, {
-        "Filial": "362",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Esteio ",
-        "Endereço": "Avenida Presidente Vargas, 2358 - Lojas 1 e 2 ",
-        "Bairro": "Centro",
-        "Telefone": "51-997184971"
-    }, {
-        "Filial": "428",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Estreito",
-        "Endereço": "Rua Coronel Pedro Demoro, 1814",
-        "Bairro": "Estreito",
-        "Telefone": "48-991596844"
-    }, {
-        "Filial": "736",
-        "UF": "RS",
-        "Estado": "Santa Catarina",
-        "Cidade": "Farroupilha",
-        "Endereço": "Rua Treze de Maio, 585",
-        "Bairro": "Centro",
-        "Telefone": "51-980241918"
-    }, {
-        "Filial": "379",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Flores da Cunha",
-        "Endereço": "Rua Borges de Medeiros, nº 1.461, salas 01 e 02",
-        "Bairro": "Centro",
-        "Telefone": "51-996536494"
-    }, {
-        "Filial": "104",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Praça XV de Novembro, 23 A ",
-        "Bairro": "Centro",
-        "Telefone": "48-991625841"
-    }, {
-        "Filial": "191",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Avenida das Nações, nº 342 ",
-        "Bairro": "Canasvieiras",
-        "Telefone": "48-991277716"
-    }, {
-        "Filial": "424",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Rua Dom João Becker, 14",
-        "Bairro": "Ingleses do Rio Vermelho",
-        "Telefone": "48-991935082"
-    }, {
-        "Filial": "474",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Avenida Madre Benvenuta, 1260",
-        "Bairro": "Santa Mônica",
-        "Telefone": "48-991883856"
-    }, {
-        "Filial": "475",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Florianópolis",
-        "Endereço": "Rodovia Doutor Antônio Luiz Moura, 2765",
-        "Bairro": "Rio Tavares",
-        "Telefone": "48-991845195"
-    }, {
-        "Filial": "430",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Garibaldi",
-        "Endereço": "Avenida Independência, nº 195, sala comercial 1",
-        "Bairro": "Centro",
-        "Telefone": "51-980603594"
-    }, {
-        "Filial": "189",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Garopaba",
-        "Endereço": "Rua Prefeito João Araújo, 601 – sala 02",
-        "Bairro": "Centro ",
-        "Telefone": "48-991626077"
-    }, {
-        "Filial": "391",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Garopaba",
-        "Endereço": "Rua João Orestes de Araújo, nº 1.253",
-        "Bairro": "Pinguirito",
-        "Telefone": "48-991883926"
-    }, {
-        "Filial": "366",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Gramado",
-        "Endereço": "Av. das Hortênsias, 1929 - Loja 101",
-        "Bairro": "Centro",
-        "Telefone": "51-996021666"
-    }, {
-        "Filial": "382",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Gravataí",
-        "Endereço": "Avenida Dorival Cândido Luz de Oliveira, nº 680",
-        "Bairro": "COHAB C",
-        "Telefone": "51-996216021"
-    }, {
-        "Filial": "356",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Ijuí",
-        "Endereço": "Rua  Doutor Pestana, 20",
-        "Bairro": "Centro",
-        "Telefone": "51-995799467"
-    }, {
-        "Filial": "756",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Ijuí",
-        "Endereço": "Rua Mato Grosso, 17 ",
-        "Bairro": "Centro",
-        "Telefone": "51-3332-2381"
-    }, {
-        "Filial": "749",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Imbé ",
-        "Endereço": "Avenida Paraguassu, nº 3002",
-        "Bairro": "Centro",
-        "Telefone": "51-999303448"
-    }, {
-        "Filial": "107",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Itajaí",
-        "Endereço": "Rua Olímpio Miranda Júnior, 300",
-        "Bairro": "Centro",
-        "Telefone": "48-991348985"
-    }, {
-        "Filial": "754",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Járagua do Sul",
-        "Endereço": "Rua Expedicionário Gumercindo da Silva",
-        "Bairro": "Centro"
-    }, {
-        "Filial": "466",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Joinville",
-        "Endereço": "Rua Paraná, n° 27",
-        "Bairro": "Anita Garibaldi",
-        "Telefone": "48-991296627"
-    }, {
-        "Filial": "375",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Lajeado",
-        "Endereço": "Avenida Benjamin Constant, nº 1.707",
-        "Bairro": "Florestal",
-        "Telefone": "51-997285741"
-    }, {
-        "Filial": "62",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Livramento",
-        "Endereço": "Rua dos Andradas, 51",
-        "Bairro": "Centro",
-        "Telefone": "51-996794288"
-    }, {
-        "Filial": "531",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Londrina  ",
-        "Endereço": "Avenida Madre Leonia Milito, 914 ",
-        "Bairro": "Bela Suíça",
-        "Telefone": "41-991077068"
-    }, {
-        "Filial": "535",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Londrina  ",
-        "Endereço": "Rua Espírito Santo, 1340 ",
-        "Bairro": "Centro",
-        "Telefone": "41-991637462"
-    }, {
-        "Filial": "536",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Maringá",
-        "Endereço": "Praça Pioneiro Jacinto Ferreira Branco, 38 - Loja 1",
-        "Bairro": "Zona 07",
-        "Telefone": "41-991369185"
-    }, {
-        "Filial": "564",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Maringá",
-        "Endereço": "Avenida Paraná, 385",
-        "Bairro": "Zona 1",
-        "Telefone": "41-991225783"
-    }, {
-        "Filial": "393",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Montenegro",
-        "Endereço": "Rua José Luiz, nº 1.485,",
-        "Bairro": "Centro",
-        "Telefone": "51-995005857"
-    }, {
-        "Filial": "495",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Novo Hamburgo ",
-        "Endereço": "Avenida Doutor Maurício Cardoso, 1670, lojas 1, 2 e 3 ",
-        "Bairro": "Hamburgo Velho",
-        "Telefone": "51-996348309"
-    }, {
-        "Filial": "450",
-        "UF": "SC",
-        "Estado": "Santa Catarina",
-        "Cidade": "Palhoça",
-        "Endereço": "Avenida Barão do Rio Branco, 509 - Loja 1 ",
-        "Bairro": "Centro",
-        "Telefone": "48-991271242"
-    }, {
-        "Filial": "562",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Paranavaí",
-        "Endereço": "Rua Pernambuco, 964",
-        "Bairro": "Centro",
-        "Telefone": "41-991993745"
-    }, {
-        "Filial": "338",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Passo Fundo",
-        "Endereço": "Rua Quinze de Novembro, 318",
-        "Bairro": "Centro",
-        "Telefone": "51-995661229"
-    }, {
-        "Filial": "751",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Passo Fundo",
-        "Endereço": "Avenida Presidente Vargas, 75 ",
-        "Bairro": "Vila Rodrigues",
-        "Telefone": "51-998929269"
-    }, {
-        "Filial": "93",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Pelotas",
-        "Endereço": "Rua Santos Dumont, 487",
-        "Bairro": "Centro",
-        "Telefone": "51-996744795"
-    }, {
-        "Filial": "546",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Ponta Grossa",
-        "Endereço": "Rua Balduíno Taques, nº 431",
-        "Bairro": "Estrela",
-        "Telefone": "41-992590922"
-    }, {
-        "Filial": "5",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Azenha, 693",
-        "Bairro": "Azenha",
-        "Telefone": "51-995949390"
-    }, {
-        "Filial": "28",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Getúlio Vargas, n° 480",
-        "Bairro": "Menino Deus",
-        "Telefone": "51-998197432"
-    }, {
-        "Filial": "15",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Borges de Medeiros,  255",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-997837845"
-    }, {
-        "Filial": "19",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida São Pedro, 577",
-        "Bairro": "São Geraldo",
-        "Telefone": "51-980586848"
-    }, {
-        "Filial": "22",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Otávio Rocha, 48",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-995419002"
-    }, {
-        "Filial": "25",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. São Pedro, 878 – São Geraldo",
-        "Bairro": "São Geraldo",
-        "Telefone": "51-995140926"
-    }, {
-        "Filial": "323",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Cristóvão Colombo, 2999",
-        "Bairro": "Higienópolis",
-        "Telefone": "51-996702826"
-    }, {
-        "Filial": "344",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Plínio Brasil Milano, 1689 - Loja 101 H",
-        "Bairro": "Higienópolis",
-        "Telefone": "51-995623405"
-    }, {
-        "Filial": "182",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Cristóvão Colombo, 545 – Lj 1224 – Sh Total",
-        "Bairro": "Floresta",
-        "Telefone": "51-999506579"
-    }, {
-        "Filial": "185",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Serevo Dullius, 90010 - T1.N2.057 - Aeroporto Salgado Filho ",
-        "Bairro": "Anchieta",
-        "Telefone": "51-998067276"
-    }, {
-        "Filial": "383",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Vinte e Quatro de Outubro, 1.465",
-        "Bairro": "Auxiliadora",
-        "Telefone": "51-980386228"
-    }, {
-        "Filial": "322",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Guaporé, nº 324",
-        "Bairro": "Petrópolis",
-        "Telefone": "51-996921824"
-    }, {
-        "Filial": "324",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Protásio Alves, 2121",
-        "Bairro": "Rio Branco ",
-        "Telefone": "51-997415452"
-    }, {
-        "Filial": "374",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Santana, nº 1.501, loja 1",
-        "Bairro": "Farroupilha",
-        "Telefone": "51-998280236"
-    }, {
-        "Filial": "726",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Assis Brasil, 5431",
-        "Bairro": "Sarandi",
-        "Telefone": "51-999736347"
-    }, {
-        "Filial": "7",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Azenha, 1.401",
-        "Bairro": "Azenha",
-        "Telefone": "51-998879142"
-    }, {
-        "Filial": "13",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua João Wallig, 1800 Lj. JW 13-Iguatemi ",
-        "Bairro": "Passo D’areia",
-        "Telefone": "51-996915283"
-    }, {
-        "Filial": "48",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Zeca Neto, 38",
-        "Bairro": "Cristo Redentor",
-        "Telefone": "51-996500557"
-    }, {
-        "Filial": "168",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Mostardeiro, 287 ",
-        "Bairro": "Independência",
-        "Telefone": "51-996565629"
-    }, {
-        "Filial": "192",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Wenceslau Escobar, 2857 Lj 04",
-        "Bairro": "Cristal",
-        "Telefone": "51-997770130"
-    }, {
-        "Filial": "311",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Casemiro de Abreu, 1755 e 1775",
-        "Bairro": "Boa Vista",
-        "Telefone": "51-997126605"
-    }, {
-        "Filial": "339",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Eduardo Prado, 1901, 1911, 1921 - Ljs. 2, 3 e 4 ",
-        "Bairro": "Cavalhada",
-        "Telefone": "51-980168063"
-    }, {
-        "Filial": "731",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Professor Annes Dias, 135- Térreo - Hospital Santa Clara ",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-996883716"
-    }, {
-        "Filial": "349",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Doutor Nilo Peçanha, 690",
-        "Bairro": "Bela Vista",
-        "Telefone": "51-995008685"
-    }, {
-        "Filial": "10",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua dos Andradas, 1238",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-998839693"
-    }, {
-        "Filial": "376",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Cavalhada, nº 2351, 2369 e 2373",
-        "Bairro": "Cavalhada",
-        "Telefone": "51-998258972"
-    }, {
-        "Filial": "29",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Ramiro Barcelos, 1115",
-        "Bairro": "Independência",
-        "Telefone": "51-996054860"
-    }, {
-        "Filial": "129",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua dos Andradas, 1320 ",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-997749244"
-    }, {
-        "Filial": "397",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Sarmento Leite n°876, ljs 880 e 882 ",
-        "Bairro": "Centro Histórico",
-        "Telefone": "51-999157468"
-    }, {
-        "Filial": "442",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Osvaldo Aranha, 1370 ",
-        "Bairro": "Bom Fim",
-        "Telefone": "51 - 996481178"
-    }, {
-        "Filial": "455",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Vinte e Quatro de Outubro, 722 ",
-        "Bairro": "Moinhos de Vento",
-        "Telefone": "51-980101329"
-    }, {
-        "Filial": "165",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Ipiranga, 6690 - Bl 02/Prédio 60/Térreo",
-        "Bairro": "Petrópolis",
-        "Telefone": "51-996358912"
-    }, {
-        "Filial": "343",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Valparaíso, 698 ",
-        "Bairro": "Jardim Botânico",
-        "Telefone": "51-980189521"
-    }, {
-        "Filial": "456",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Diário de Notícias, 300 - Lj 1004",
-        "Bairro": "Cristal",
-        "Telefone": "51-999590409"
-    }, {
-        "Filial": "702",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Anita Garibaldi, 2099 – Lj 02",
-        "Bairro": "Mont Serrat",
-        "Telefone": "51-995049688"
-    }, {
-        "Filial": "440",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Av. Ipiranga, 6681  Prédio 12B - Térreo",
-        "Bairro": "Partenon",
-        "Telefone": "51-995539747"
-    }, {
-        "Filial": "733",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Silveiro, 181",
-        "Bairro": "Menino Deus",
-        "Telefone": "51-999190442"
-    }, {
-        "Filial": "741",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Dona Adda Mascarenhas de Moraes, nº 57, ",
-        "Bairro": "Jardim Itu",
-        "Telefone": "51-997579237"
-    }, {
-        "Filial": "748",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Goethe, 210",
-        "Bairro": "Rio Branco",
-        "Telefone": "51-980208314"
-    }, {
-        "Filial": "302",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Rio Grande",
-        "Endereço": "Av. Rio Grande, 251 ",
-        "Bairro": "Cassino",
-        "Telefone": "51-997171571"
-    }, {
-        "Filial": "304",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Rio Grande",
-        "Endereço": "Rua Doutor Nascimento, 389, 391 e 399",
-        "Bairro": "Centro",
-        "Telefone": "51-998791508"
-    }, {
-        "Filial": "149",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Rio Pardo",
-        "Endereço": "Rua Andrade Neves, 626",
-        "Bairro": "Centro",
-        "Telefone": "51-995218163"
-    }, {
-        "Filial": "738",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Cruz do Sul",
-        "Endereço": "Rua Vinte e Oito de Setembro, 585",
-        "Bairro": "Centro",
-        "Telefone": "51-998675693"
-    }, {
-        "Filial": "359",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Maria",
-        "Endereço": "Avenida Nossa Senhora Medianeira, 1318 ",
-        "Bairro": "Centro",
-        "Telefone": "51-997280969"
-    }, {
-        "Filial": "84",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Rosa",
-        "Endereço": "Av. Rio Branco, 447 ",
-        "Bairro": "Centro",
-        "Telefone": "51-998639756"
-    }, {
-        "Filial": "354",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santa Rosa",
-        "Endereço": "Avenida Expedicionário Weber, 805 ",
-        "Bairro": "Centro",
-        "Telefone": "51-995715729"
-    }, {
-        "Filial": "70",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Santiago",
-        "Endereço": "Rua Getúlio Vargas, 1851 ",
-        "Bairro": "Centro",
-        "Telefone": "51-980367091"
-    }, {
-        "Filial": "396",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Borja",
-        "Endereço": "Rua General Marques, nº 902, Loja 1, ",
-        "Bairro": "Centro",
-        "Telefone": "51-999006290"
-    }, {
-        "Filial": "118",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Gabriel ",
-        "Endereço": "Rua General Mallet, 456 terreo",
-        "Bairro": "Centro",
-        "Telefone": "51-997022093"
-    }, {
-        "Filial": "538",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "São José dos Pinhais",
-        "Endereço": "Rua Izabel A. Redentora, 2270",
-        "Bairro": "Centro",
-        "Telefone": "41-992806441"
-    }, {
-        "Filial": "73",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Luiz Gonzaga",
-        "Endereço": "Av. Sen. Pinheiro Machado, 2476",
-        "Bairro": "Centro",
-        "Telefone": "51-998517871"
-    }, {
-        "Filial": "800",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Avenida Giovanni Gronchi, 5930 - Lojas 5 e 6 ",
-        "Bairro": "Vila Andrade",
-        "Telefone": "11-961959826"
-    }, {
-        "Filial": "801",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Avenida República do Líbano, nº 1.882",
-        "Bairro": "Ibirapuera",
-        "Telefone": "11-964178679"
-    }, {
-        "Filial": "802",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Avenida Europa, nº 352",
-        "Bairro": "Jardim Europa",
-        "Telefone": "11-964100451"
-    }, {
-        "Filial": "803",
-        "UF": "SP",
-        "Estado": "São Paulo",
-        "Cidade": "São Paulo",
-        "Endereço": "Rua Doutor Homem de Melo",
-        "Bairro": "Perdizes",
-        "Telefone": "11-964097248"
-    }, {
-        "Filial": "30",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "São Sebastião do caí",
-        "Endereço": "Avenida Egidio Michaelsen, 477",
-        "Bairro": "Centro",
-        "Telefone": "51-995638939"
-    }, {
-        "Filial": "130",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Sapucaia do Sul",
-        "Endereço": "Avenida Sapucaia, nº 2.096, sala 2102",
-        "Bairro": "Primor",
-        "Telefone": "51-998183362"
-    }, {
-        "Filial": "713",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Taquara",
-        "Endereço": "Rua General Frota, 2580, loja 02",
-        "Bairro": "Centro",
-        "Telefone": "51-998182148"
-    }, {
-        "Filial": "721",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Teutônia",
-        "Endereço": "Rua Três de Outubro, nº 371, ",
-        "Bairro": "Languiru",
-        "Telefone": "51-999925626"
-    }, {
-        "Filial": "121",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Torres",
-        "Endereço": "Av. Barão do Rio Branco, 52",
-        "Bairro": "Centro",
-        "Telefone": "51-999909560"
-    }, {
-        "Filial": "355",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Torres",
-        "Endereço": "Rua Bento Gonçalves, 81",
-        "Bairro": "Centro",
-        "Telefone": "51-995020316"
-    }, {
-        "Filial": "193",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Tramandaí",
-        "Endereço": "Av. Emancipação, 898 – Lj ¾ - Praia",
-        "Bairro": "Centro",
-        "Telefone": "51-997654643"
-    }, {
-        "Filial": "561",
-        "UF": "PR",
-        "Estado": "Paraná",
-        "Cidade": "Umuarama",
-        "Endereço": "Avenida Paraná, 5264",
-        "Bairro": "Zona III",
-        "Telefone": "41-992099263"
-    }, {
-        "Filial": "40",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Uruguaiana",
-        "Endereço": "Rua Duque de Caxias, 1625",
-        "Bairro": "Centro",
-        "Telefone": "51-999930823"
-    }, {
-        "Filial": "373",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Vacaria",
-        "Endereço": "Rua Julio de Castilhos, nº 1.063",
-        "Bairro": "Centro",
-        "Telefone": "51-997893869"
-    }, {
-        "Filial": "708",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Venâncio Aires",
-        "Endereço": "Rua Osvaldo Aranha, nº 1.477",
-        "Bairro": "Centro",
-        "Telefone": "51-997532973"
-    }, {
-        "Filial": "718",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Veranópolis",
-        "Endereço": "Rua Júlio de Castilhos, 818 loja 03",
-        "Bairro": "Centro",
-        "Telefone": "51-999523272"
-    }, {
-        "Filial": "124",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Xangri-la",
-        "Endereço": "Av. Paraguassú, 4530 – Lj 02",
-        "Bairro": "Centro",
-        "Telefone": "51-996895541"
-    }, {
-        "Filial": "306",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Xangri-la",
-        "Endereço": "Av. Paraguassú, 1214, Loja 1",
-        "Bairro": "Centro",
-        "Telefone": "51-998353406"
-    }, {
-        "Filial": "723",
-        "UF": "RS",
-        "Estado": "Rio Grande do Sul",
-        "Cidade": "Xangri-la (Rainha do mar)",
-        "Endereço": "Rua Água Marinha, nº 1.421",
-        "Bairro": "Centro",
-        "Telefone": "51-997428146"
-    }]
-</script>
-
+<script type="text/javascript"
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais.js"></script>
 <script>
     window.addEventListener('load', LHevents);
 
     function LHevents() {
 
-        orderDataAlphabetically(dataExame);
-        orderDataAlphabetically(dataPanvel);
+        var maiorCard = document.getElementById("maior"); 
+        //maiorCard.addEventListener("click", displayDate); 
+
+        filtrarDadosPanvel();
+        //orderDataAlphabetically(dataExame);
+        dadosPanvel = orderDataAlphabetically(dataPanvel);
+
         // Get the modal
         var modalAgendamento = document.getElementById("LHModalContainer");
         var modalContainer = document.getElementById("LHModal");
@@ -3817,7 +1669,7 @@
         // Get the button that opens the modal
         var btnAgendamento = document.getElementById("agendar-btn");
 
-        var btnsExame = document.getElementsByClassName('exame-btn');
+        //var btnsExame = document.getElementsByClassName('exame-btn');
 
         var btnsPanvel = document.getElementsByClassName("panvel-btn");
 
@@ -3831,27 +1683,28 @@
 
 
         // When the user clicks on <span> (x), close the modal
-        btnModalAgendamento.onclick = function() {
+        btnModalAgendamento.onclick = function () {
             modalAgendamento.style.display = "none";
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
         }
 
-        btnModalExame.onclick = function() {
+        btnModalExame.onclick = function () {
             modalExame.style.display = "none";
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
         }
 
-        btnModalPanvel.onclick = function() {
+        btnModalPanvel.onclick = function () {
             modalPanvel.style.display = "none";
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
         }
 
         // When the user clicks the button, open the modal 
-        btnAgendamento.onclick = function() {
+        btnAgendamento.onclick = function () {
             modalAgendamento.style.display = "block";
             document.getElementsByTagName('body')[0].style.overflow = 'hidden';
         }
 
+        /*
         for (let num = 0; num < btnsExame.length; num++) {
             btnsExame[num].onclick = function() {
                 modalExame.style.display = "block";
@@ -3859,9 +1712,10 @@
                 createSelectionsNovaExame();
             }
         }
+        */
 
         for (let num = 0; num < btnsPanvel.length; num++) {
-            btnsPanvel[num].onclick = function() {
+            btnsPanvel[num].onclick = function () {
                 modalPanvel.style.display = "block";
                 document.getElementsByTagName('body')[0].style.overflow = 'hidden';
                 createSelectionsNovaPanvel();
@@ -3869,7 +1723,7 @@
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.addEventListener('click', function(event) {
+        window.addEventListener('click', function (event) {
             if (event.target == modalAgendamento || event.target == modalContainer) {
                 modalAgendamento.style.display = "none";
                 document.getElementsByTagName('body')[0].style.overflow = 'auto';
@@ -3882,17 +1736,6 @@
             }
         });
 
-    }
-
-    function orderDataAlphabetically(data) {
-        const orderedData = data.sort(
-            (valueA, valueB) =>
-            valueA.Estado.localeCompare(valueB.Estado) ||
-            valueA.Cidade.localeCompare(valueB.Cidade) ||
-            valueA.Bairro.localeCompare(valueB.Bairro),
-        )
-
-        return orderedData;
     }
 
     function onChangeStateNovaExame(sel) {
@@ -4450,7 +2293,7 @@
                 cardTelefone.className = "card-adress";
 
                 let telefone = document.createElement("span");
-                telefone.textContent = ((typeof dataExame[i].WhatsApp !== 'undefined') ? dataExame[i].WhatsApp + ' / ' : '') + ((typeof dataExame[i].Telefone !== 'undefined') ? dataExame[i].Telefone : '');
+                telefone.textContent = ((typeof dataPanvel[i].WhatsApp !== 'undefined') ? dataPanvel[i].WhatsApp + ' / ' : '') + ((typeof dataPanvel[i].Telefone !== 'undefined') ? dataPanvel[i].Telefone : '');
                 cardTelefone.appendChild(telefone);
 
                 items.appendChild(cardTelefone);
@@ -4484,7 +2327,8 @@
             <div class="pure-u-1">
                 <div class="card-header-detalhe">
                     <div class="card-detalhe-body">
-                        <div class="img-card"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.svg">Panvel<br />Clinic
+                        <div class="img-card"><img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.svg">Panvel<br />Clinic
                         </div>
                         <div class="tarja">
                             <h3 class="tarja-nome">Serviços de saúde para COVID-19</h3>
@@ -4495,11 +2339,13 @@
                 </div>
                 <div class="card-detalhe-body-mobile">
                     <div class="img-card">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.svg">Panvel<br />Clinic
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.svg">Panvel<br />Clinic
                     </div>
                     <div class="img-header">
                     </div>
-                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/clinic-symbol.svg">
+                    <img
+                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/clinic-symbol.svg">
                     <div class="tarja">
                         <h3 class="tarja-nome">Serviços de saúde para COVID-19</h3>
                     </div>
@@ -4509,7 +2355,8 @@
             <div class="pure-u-1 pure-u-md-1-3 card-mini-container">
                 <div class="card-mini">
                     <div class="mini-title">Testes Rápidos</div>
-                    <div><b>Lojas Panvel Clinic</b> com serviços farmacêuticos realizam testes rápidos para detecção da Covid-19.
+                    <div><b>Lojas Panvel Clinic</b> com serviços farmacêuticos realizam testes rápidos para detecção da
+                        Covid-19.
                     </div>
                     <a href="#panvel-clinic"> <button class="button-orange">Confira</button></a>
                 </div>
@@ -4517,13 +2364,15 @@
             <div class="pure-u-1 pure-u-md-1-3">
                 <div class="card-mini">
                     <div class="mini-title">Exames Laboratoriais</div>
-                    <div>A Panvel comercializa testes para detecção da Covid-19, <b>em parceria com laboratórios</b> de análises clínicas.
+                    <div>A Panvel comercializa testes para detecção da Covid-19, <b>em parceria com laboratórios</b> de
+                        análises clínicas.
                     </div>
                     <a href="#panvel-exame"> <button class="button-orange">Confira</button></a>
                 </div>
             </div>
             <div class="pure-u-1 pure-u-md-1-3 hover-icon">
-                <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/clinic-symbol.svg">
+                <img
+                    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/clinic-symbol.svg">
             </div>
         </div>
 
@@ -4565,14 +2414,16 @@
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/rapido-ag-oral.png">
+                            <img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/rapido-ag-oral.png">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
                                 <h2>Teste rápido<br /> ANTÍGENO (Oral)</h2>
                             </div>
                             <div class="card-info-result">
-                                <div class="card-clock"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
                                 </div>
                                 <div class="more-info">
                                     <span class="more-info">Resultado em:
@@ -4584,11 +2435,13 @@
                     <div class="card-desc">
                         <div class="card-desc-texto">
 
-                            <p><b>O que é:</b> Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.</p>
+                            <p><b>O que é:</b> Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a
+                                pessoa está com o vírus no momento da coleta.</p>
                         </div>
                         <div class="card-desc-texto">
 
-                            <p><b>Quando fazer:</b> Mínimo de <b>24 horas</b> ao <b>7° dia</b> de sintomas. Indicado para pessoas sintomáticas.
+                            <p><b>Quando fazer:</b> Mínimo de <b>24 horas</b> ao <b>7° dia</b> de sintomas. Indicado
+                                para pessoas sintomáticas.
                             </p>
                         </div>
                     </div>
@@ -4603,14 +2456,16 @@
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-panvel-nasal.png">
+                            <img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-panvel-nasal.png">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
                                 <h2>Teste rápido<br /> ANTÍGENO (Nasal)</h2>
                             </div>
                             <div class="card-info-result">
-                                <div class="card-clock"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
                                 </div>
                                 <div class="more-info">
                                     <span class="more-info">Resultado em:
@@ -4621,10 +2476,12 @@
                     </div>
                     <div class="card-desc">
                         <div class="card-desc-texto">
-                            <p><b>O que é:</b> Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.</p>
+                            <p><b>O que é:</b> Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a
+                                pessoa está com o vírus no momento da coleta.</p>
                         </div>
                         <div class="card-desc-texto">
-                            <p><b> Quando fazer: </b> A partir de <b>48h completas</b> de início dos sintomas ou de possível contato com casos suspeitos ou confirmados até o <b>7º dia.</b></p>
+                            <p><b> Quando fazer: </b> A partir de <b>48h completas</b> de início dos sintomas ou de
+                                possível contato com casos suspeitos ou confirmados até o <b>7º dia.</b></p>
                         </div>
                     </div>
                     <div class="card-buttons">
@@ -4634,7 +2491,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 teste-panvel">
+            <div class="pure-u-1 pure-u-md-1-2 teste-panvel">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -4672,6 +2529,51 @@
                     </div>
                 </div>
             </div>
+            <div class="pure-u-1 pure-u-md-1-2 teste-panvel" id="maior">
+                <div class="card-teste">
+                    <div class="card-header">
+                        <div class="card-thumbnail">
+                            <img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-panvel-pos-vacina.png">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-title">
+                                <h2>Teste rápido<br /> Anticorpo Pós-vacinal e infecção natural </h2>
+                            </div>
+                            <div class="card-info-result">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                </div>
+                                <div class="more-info">
+                                    <span class="more-info">Resultado :
+                                        permanece em até 15 minutos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-desc-texto">
+
+                            <p><b>O que é:</b> Verifica a presença de anticorpo de fase aguda (IgM), ou seja, se a
+                                pessoa está com infecção ativa. E anticorpos de memória (IgG) provenientes de infecção
+                                natural ou pós-vacinal (proteína N e S).</p>
+                        </div>
+                        <div class="card-desc-texto">
+
+                            <p><b>Quando fazer: </b>Mínimo <b>14 dias</b> do início dos sintomas ou <br /> <b>20
+                                    dias</b> após contato com casos confirmados ou <br /> <b>30 dias</b> após a
+                                aplicação da primeira dose da vacina ou <br /> <b>14 dias</b> após a aplicação da
+                                segunda dose da vacina.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="/panvel/teste-rapido-covid-pos-vacinal-e-infeccao-natural-avulso-ecodiagnostica/p-109300"><button
+                                class="button"> Comprar </button></a>
+                        <button class="button-modal panvel-btn"> Lojas onde realizar </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="header-before" id="panvel-exame">
@@ -4686,14 +2588,16 @@
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-rt-pcr.png">
+                            <img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-rt-pcr.png">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
                                 <h2>Teste Covid - 19 <br /> RT-PCR Grupo Exame</h2>
                             </div>
                             <div class="card-info-result">
-                                <div class="card-clock"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
                                 </div>
                                 <div class="more-info">
                                     <span class="more-info">Resultado em:
@@ -4704,13 +2608,15 @@
                     </div>
                     <div class="card-desc">
                         <div class="card-desc-texto">
-                            <p><b>O que é:</b> Verifica a presença de material genético do vírus, ou seja, verifica se a pessoa está com o vírus ativo no momento da coleta.</p>
+                            <p><b>O que é:</b> Verifica a presença de material genético do vírus, ou seja, verifica se a
+                                pessoa está com o vírus ativo no momento da coleta.</p>
                         </div>
                         <div class="card-desc-texto">
 
-                            <p><b>Quando fazer:</b>A partir do 3º ao 14º dia de início dos sintomas ou de possível contato com casos suspeitos ou confirmados.</p>
-			    <a href="/panvel/infos-rt-pcr.do?">
-                              <p><span class="more-info">+ mais informações</span></p>
+                            <p><b>Quando fazer:</b>A partir do 3º ao 14º dia de início dos sintomas ou de possível
+                                contato com casos suspeitos ou confirmados.</p>
+                            <a href="https://www.panvel.com/panvel/infos-rt-pcr.do?"> <!-- URGENTE -->
+                                <p><span class="more-info">+ mais informações</span></p>
                             </a>
                         </div>
                     </div>
@@ -4726,14 +2632,16 @@
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-igg-igm.png">
+                            <img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-igg-igm.png">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
                                 <h2>Teste Covid-19 <br /> IGG+IGM Grupo Exame</h2>
                             </div>
                             <div class="card-info-result">
-                                <div class="card-clock"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
                                 </div>
                                 <div class="more-info">
                                     <span class="more-info">Resultado em:
@@ -4745,14 +2653,16 @@
                     <div class="card-desc">
                         <div class="card-desc-texto">
 
-                            <p><b>O que é:</b> Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está com infecção ativa e se entrou em contato com o vírus.</p>
+                            <p><b>O que é:</b> Verifica a presença de anticorpos de fase aguda e de memória, ou seja,
+                                verifica se a pessoa está com infecção ativa e se entrou em contato com o vírus.</p>
                         </div>
                         <div class="card-desc-texto">
 
-                            <p><b>Quando fazer:</b> A partir do 8 a 14 dias do início dos sintomas ou contato com casos suspeitos ou confirmados.
+                            <p><b>Quando fazer:</b> A partir do 8 a 14 dias do início dos sintomas ou contato com casos
+                                suspeitos ou confirmados.
                             </p>
                         </div>
-			<a href="/panvel/infos-igg-igm.do?">
+                        <a href="https://www.panvel.com/panvel/infos-igg-igm.do?"> <!-- URGENTE -->
                             <p><span class="more-info">+ mais informações</span></p>
                         </a>
                     </div>
@@ -4768,14 +2678,16 @@
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-igg.png">
+                            <img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-igg.png">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
                                 <h2>Teste Covid-19 <br /> IGG Grupo Exame</h2>
                             </div>
                             <div class="card-info-result">
-                                <div class="card-clock"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
                                 </div>
                                 <div class="more-info">
                                     <span class="more-info">Resultado em:
@@ -4787,17 +2699,18 @@
                     <div class="card-desc">
                         <div class="card-desc-texto">
 
-                            <p><b>O que é:</b> Com o teste de detecção de anticorpos IgG, é possível identificar se o paciente já teve contato com o covid-19, doença causada pelo novo coronavírus.</p>
+                            <p><b>O que é:</b> Com o teste de detecção de anticorpos IgG, é possível identificar se o
+                                paciente já teve contato com o covid-19, doença causada pelo novo coronavírus.</p>
                         </div>
                         <div class="card-desc-texto">
 
-                            <p><b>Quando fazer:</b> É recomendado que o Teste IgG seja feito após oito dias dos sintomas, preferencialmente 14 dias.</p>
+                            <p><b>Quando fazer:</b> É recomendado que o Teste IgG seja feito após oito dias dos
+                                sintomas, preferencialmente 14 dias.</p>
                             <!-- <p><span class="more-info">+ mais informações</span></p> -->
                         </div>
                     </div>
                     <div class="card-buttons button-infos">
-                        <a href="/panvel/teste-covid-19-igg-grupo-exame/p-112288"><button
-                                class="button">
+                        <a href="/panvel/teste-covid-19-igg-grupo-exame/p-112288"><button class="button">
                                 Comprar </button></a>
                         <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
                     </div>
@@ -4807,14 +2720,16 @@
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-rt-pcr-urg.png">
+                            <img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-rt-pcr-urg.png">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
                                 <h2>Teste Covid - 19 <br /> RT-PCR Urgência 24h Grupo Exame</h2>
                             </div>
                             <div class="card-info-result">
-                                <div class="card-clock"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
                                 </div>
                                 <div class="more-info">
                                     <span class="more-info">Resultado em:
@@ -4826,11 +2741,13 @@
                     <div class="card-desc">
                         <div class="card-desc-texto">
 
-                            <p><b>O que é:</b> Verifica a presença de material genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus no momento da coleta.</p>
+                            <p><b>O que é:</b> Verifica a presença de material genético do vírus medindo a carga viral,
+                                ou seja, verifica se a pessoa está com o vírus no momento da coleta.</p>
                         </div>
                         <div class="card-desc-texto">
 
-                            <p><b>Quando fazer:</b> Após 3 dias do início dos sintomas ou possível contato com vírus. Pode ser feito até 7 dias, após reduz a eficácia </p>
+                            <p><b>Quando fazer:</b> Após 3 dias do início dos sintomas ou possível contato com vírus.
+                                Pode ser feito até 7 dias, após reduz a eficácia </p>
                         </div>
                         <!-- <p><span class="more-info">+ mais informações</span></p> -->
                     </div>
@@ -4857,51 +2774,67 @@
             </thead>
             <tbody>
                 <tr>
-                    <td> <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Boca@2x.svg">
+                    <td> <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Boca@2x.svg">
                         <p>Teste rápido ANTÍGENO (Oral)</p>
                     </td>
                     <td>Mínimo de
                         <B>24 horas</B> ao
                         <B>7° dia de sintomas</B>. Indicado para pessoas sintomáticas.
                     </td>
-                    <td>Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.
+                    <td>Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o
+                        vírus no momento da coleta.
                         <!-- <p><span class="more-info">+ mais informações</span></p> -->
                     </td>
                 </tr>
                 <tr>
-                    <td> <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg"> Teste rápido ANTÍGENO (Nasal)</td>
+                    <td> <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg">
+                        Teste rápido ANTÍGENO (Nasal)</td>
                     <td>A partir de
-                        <B>48h completas de início dos sintomas</B> ou de possível contato com os casos suspeitos ou confirmados até o 7 dia.
+                        <B>48h completas de início dos sintomas</B> ou de possível contato com os casos suspeitos ou
+                        confirmados até o 7 dia.
                     </td>
-                    <td>Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.
+                    <td>Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o
+                        vírus no momento da coleta.
                         <!-- <p><span class="more-info">+ mais informações</span></p> -->
                     </td>
                 </tr>
                 <tr>
-                    <td> <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg"> Teste RT-PCR</td>
-                    <td>A partir do <b>3° ao 14° dia de início dos sintomas</b> ou de possível contato com casos suspeitos ou confirmados.
+                    <td> <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg">
+                        Teste RT-PCR</td>
+                    <td>A partir do <b>3° ao 14° dia de início dos sintomas</b> ou de possível contato com casos
+                        suspeitos ou confirmados.
                     </td>
-                    <td>Verifica a presença de antígeno (proteinas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.
-			<a href="/panvel/infos-rt-pcr.do?">
-                           <p><span class="more-info">+ mais informações</span></p>
+                    <td>Verifica a presença de antígeno (proteinas virais) ou seja, verifica se a pessoa está com o
+                        vírus no momento da coleta.
+                        <a href="/panvel/infos-rt-pcr.do?">
+                            <p><span class="more-info">+ mais informações</span></p>
                         </a>
                     </td>
                 </tr>
                 <tr>
-                    <td> <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Gota@2x.svg"> Teste rápido Anticorpo (IGG/IGM)</td>
+                    <td> <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Gota@2x.svg">
+                        Teste rápido Anticorpo (IGG/IGM)</td>
                     <td>Mínimo <b>8 dias do início dos sintomas</b> ou 20 dias após contato com os casos confirmados.
                     </td>
-                    <td>Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está com infecção ativa e se entrou em contato com o vírus.
+                    <td>Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está
+                        com infecção ativa e se entrou em contato com o vírus.
                         <!-- <p><span class="more-info">+ mais informações</span></p> -->
                     </td>
                 </tr>
                 <tr>
-                    <td> <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Seringa@2x.svg"> Teste sorológico IGG+IGM</td>
+                    <td> <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Seringa@2x.svg">
+                        Teste sorológico IGG+IGM</td>
                     <td>De <b>8 a 14 dias do início dos sintomas</b> ou contato com casos suspeitos ou confirmados.</td>
-                    <td>Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está com infecção ativa e se entrou em contato com o vírus.
-			    <a href="/panvel/infos-igg-igm.do?">
-		               <p><span class="more-info">+ mais informações</span></p>
-		            </a>
+                    <td>Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está
+                        com infecção ativa e se entrou em contato com o vírus.
+                        <a href="/panvel/infos-igg-igm.do?">
+                            <p><span class="more-info">+ mais informações</span></p>
+                        </a>
                     </td>
                 </tr>
             </tbody>
@@ -4915,7 +2848,8 @@
                         Teste
                     </div>
                     <div class="cell-value">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Boca@2x.svg">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Boca@2x.svg">
                         <p>Teste rápido ANTÍGENO (Oral)</p>
                     </div>
                 </div>
@@ -4934,7 +2868,8 @@
                         O que é
                     </div>
                     <div class="cell-value">
-                        Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.
+                        Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o
+                        vírus no momento da coleta.
                     </div>
                 </div>
             </div>
@@ -4945,7 +2880,9 @@
                         Teste
                     </div>
                     <div class="cell-value">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg"> Teste rápido ANTÍGENO (Nasal)
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg">
+                        Teste rápido ANTÍGENO (Nasal)
                     </div>
                 </div>
                 <div class="time-cell">
@@ -4954,7 +2891,8 @@
                     </div>
                     <div class="cell-value">
                         A partir de
-                        <B>48h completas de início dos sintomas</B> ou de possível contato com os casos suspeitos ou confirmados até o 7 dia.
+                        <B>48h completas de início dos sintomas</B> ou de possível contato com os casos suspeitos ou
+                        confirmados até o 7 dia.
                     </div>
                 </div>
                 <div class="desc-cell">
@@ -4962,7 +2900,8 @@
                         O que é
                     </div>
                     <div class="cell-value">
-                        Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.
+                        Verifica a presença de antígeno (proteínas virais) ou seja, verifica se a pessoa está com o
+                        vírus no momento da coleta.
                     </div>
                 </div>
             </div>
@@ -4973,7 +2912,9 @@
                         Teste
                     </div>
                     <div class="cell-value">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg"> Teste RT-PCR
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz@2x.svg">
+                        Teste RT-PCR
                     </div>
                 </div>
                 <div class="time-cell">
@@ -4981,14 +2922,16 @@
                         Quando fazer?
                     </div>
                     <div class="cell-value">
-                        A partir do <b>3° ao 14° dia de início dos sintomas</b> ou de possível contato com casos suspeitos ou confirmados. </div>
+                        A partir do <b>3° ao 14° dia de início dos sintomas</b> ou de possível contato com casos
+                        suspeitos ou confirmados. </div>
                 </div>
                 <div class="desc-cell">
                     <div class="cell-header">
                         O que é
                     </div>
                     <div class="cell-value">
-                        Verifica a presença de antígeno (proteinas virais) ou seja, verifica se a pessoa está com o vírus no momento da coleta.
+                        Verifica a presença de antígeno (proteinas virais) ou seja, verifica se a pessoa está com o
+                        vírus no momento da coleta.
                     </div>
                 </div>
             </div>
@@ -4999,7 +2942,9 @@
                         Teste
                     </div>
                     <div class="cell-value">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Gota@2x.svg"> Teste rápido Anticorpo (IGG/IGM)
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Gota@2x.svg">
+                        Teste rápido Anticorpo (IGG/IGM)
                     </div>
                 </div>
                 <div class="time-cell">
@@ -5015,7 +2960,8 @@
                         O que é
                     </div>
                     <div class="cell-value">
-                        Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está com infecção ativa e se entrou em contato com o vírus.
+                        Verifica a presença de anticorpos de fase aguda e de memória, ou seja, verifica se a pessoa está
+                        com infecção ativa e se entrou em contato com o vírus.
                     </div>
                 </div>
             </div>
@@ -5026,7 +2972,9 @@
                         Teste
                     </div>
                     <div class="cell-value">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Seringa@2x.svg"> Teste sorológico IGG+IGM
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Seringa@2x.svg">
+                        Teste sorológico IGG+IGM
                     </div>
                 </div>
                 <div class="time-cell">
@@ -5041,7 +2989,8 @@
                             O que é
                         </div>
                         <div class="cell-value">
-                            Verifica a presença de anticorpos de fase aguda e de memória, ou seja, veridica se a pessoa está com infecção ativa e se entrou em contato com o vírus.
+                            Verifica a presença de anticorpos de fase aguda e de memória, ou seja, veridica se a pessoa
+                            está com infecção ativa e se entrou em contato com o vírus.
                         </div>
                     </div>
                 </div>
@@ -5049,13 +2998,21 @@
         </div>
 
         <div class="table-info flex-between">
-            <div class="pure-u-1 pure-u-md-1-4"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Boca.svg"> Coleta oral
+            <div class="pure-u-1 pure-u-md-1-4"><img
+                    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Boca.svg">
+                Coleta oral
             </div>
-            <div class="pure-u-1 pure-u-md-1-4"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz.svg"> Coleta feita por swab<br /> nasal ou nasofaríngeo
+            <div class="pure-u-1 pure-u-md-1-4"><img
+                    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Nariz.svg">
+                Coleta feita por swab<br /> nasal ou nasofaríngeo
             </div>
-            <div class="pure-u-1 pure-u-md-1-4"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Seringa.svg"> Coleta sangue tradicional
+            <div class="pure-u-1 pure-u-md-1-4"><img
+                    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Seringa.svg">
+                Coleta sangue tradicional
             </div>
-            <div class="pure-u-1 pure-u-md-1-4"><img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Gota.svg"> Coleta gota de sangue</div>
+            <div class="pure-u-1 pure-u-md-1-4"><img
+                    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Icon-Gota.svg">
+                Coleta gota de sangue</div>
 
         </div>
     </div>
@@ -5066,7 +3023,8 @@
         <div id="LHModal" class="LHmodal-content">
             <span id="modalCloseAgendamento" class="close">&times;</span>
             <div id="LHmodal-form" class="LHmodal-body">
-                <iframe id="iframe-container" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/info.html"></iframe>
+                <iframe id="iframe-container"
+                    src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/info.html"></iframe>
             </div>
         </div>
     </div>
@@ -5091,19 +3049,22 @@
                             <div class="dropdown-card">
                                 <span class="text-dropwdown">Estado</span>
                                 <div class="button-div">
-                                    <select name="select-estado" id="estado-exame" onchange="onChangeStateNovaExame(this)">
+                                    <select name="select-estado" id="estado-exame"
+                                        onchange="onChangeStateNovaExame(this)">
                                     </select>
                                 </div>
 
                                 <span class="text-dropwdown">Cidade</span>
                                 <div class="button-div">
-                                    <select name="select-cidade" id="cidade-exame" onchange="onChangeCityNovaExame(this)">
+                                    <select name="select-cidade" id="cidade-exame"
+                                        onchange="onChangeCityNovaExame(this)">
                                     </select>
                                 </div>
 
                                 <span class="text-dropwdown">Bairro</span>
                                 <div class="button-div">
-                                    <select name="select-bairro" id="bairro-exame" onchange="onChangeDistrictNovaExame(this)">
+                                    <select name="select-bairro" id="bairro-exame"
+                                        onchange="onChangeDistrictNovaExame(this)">
                                     </select>
                                 </div>
 
@@ -5115,7 +3076,8 @@
                     </div>
 
                     <div class="card-info pure-u-1">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
                     </div>
 
                 </div>
@@ -5144,19 +3106,22 @@
                             <div class="dropdown-card">
                                 <span class="text-dropwdown">Estado</span>
                                 <div class="button-div">
-                                    <select name="select-estado" id="estado-panvel" onchange="onChangeStateNovaPanvel(this)">
+                                    <select name="select-estado" id="estado-panvel"
+                                        onchange="onChangeStateNovaPanvel(this)">
                                     </select>
                                 </div>
 
                                 <span class="text-dropwdown">Cidade</span>
                                 <div class="button-div">
-                                    <select name="select-cidade" id="cidade-panvel" onchange="onChangeCityNovaPanvel(this)">
+                                    <select name="select-cidade" id="cidade-panvel"
+                                        onchange="onChangeCityNovaPanvel(this)">
                                     </select>
                                 </div>
 
                                 <span class="text-dropwdown">Bairro</span>
                                 <div class="button-div">
-                                    <select name="select-bairro" id="bairro-panvel" onchange="onChangeDistrictNovaPanvel(this)">
+                                    <select name="select-bairro" id="bairro-panvel"
+                                        onchange="onChangeDistrictNovaPanvel(this)">
                                     </select>
                                 </div>
 
@@ -5169,7 +3134,8 @@
                     </div>
 
                     <div class="card-info pure-u-1 pure-u-md-2-5">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
                     </div>
                 </div>
             </div>
