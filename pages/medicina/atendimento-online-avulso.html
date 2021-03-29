@@ -1341,8 +1341,8 @@
         <div class="banner-panvel-clinic">
             <div class="banner-panvel-clinic-content">
                 <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/group_8.png" alt="Panvel Clinic" />
-                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Médico Online</a>
-                <p>Momentos delicados exigem atenção especial</p>
+                <a class="button banner-panvel-clinic-button" href="#tele-link">Consultas Médicas Online</a>
+                <!-- <p>Momentos delicados exigem atenção especial</p> -->
             </div>
             <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/Mask_group_54.png" class="banner" alt="" />
         </div>
@@ -1350,22 +1350,21 @@
         <nav class="line-menu line-menu-telemedicina">
             <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">Consultas Médicas
                 Presenciais</a>
-            <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online.do">Atendimento Médico
+            <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online.do">Consultas Médicas
                 Online</a>
             <hr class=guide-bar />
         </nav>
 
         <header class="sub-header-telemedicina">
-            <p>Nossos médicos parceiros, cuidam da sua saúde com toda a tecnologia disponível de forma ágil e segura.
-            </p>
+            <!-- <p>Nossos médicos parceiros, cuidam da sua saúde com toda a tecnologia disponível de forma ágil e segura.</p> -->
+            <h2>Nossos médicos parceiros, cuidam da sua saúde com toda a tecnologia disponível de forma ágil e segura.</h2>
         </header>
 
 
         <section class="telemedicina-qual-servico">
             <h3>Qual serviço você está procurando?</h3>
             <nav class="button-bar-qual-servico">
-                <a class="button" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online-pacotes.do">Pacotes
-                    Especiais</a>
+                <a class="button" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online-pacotes.do">Pacotes Especiais</a>
                 <a class="button active" onclick="handleAnyButtonClick(this);"
                     href="https://www.panvel.com/panvel/atendimento-online-avulso.do">Consulta Avulsa</a>
             </nav>
@@ -1408,14 +1407,14 @@
         }
     }
 
-    function onChangeSelectEspecialidade(element) {
+    function onChangeSelectEspecialidade(element){
         const opcaoSelecionada = especialidade[element.value];
 
         var container = document.getElementById("precos-avulsos");
 
         var descricao = document.getElementById("desc-especialidade");
         descricao.textContent = opcaoSelecionada.desc;
-
+        
         container.innerHTML = "";
         getCardDiv(container, opcaoSelecionada.data);
     }
@@ -1425,9 +1424,9 @@
         for (let i = 0; i < data.length; i++) {
 
             let containerCard = document.createElement("div");
-
+            
             //Verif temporaria enquanto finalizo a função
-            if (data.length == 2) {
+            if (data.length == 2 ){
                 containerCard.classList = "header-parceiro-detalhes pure-u-1 pure-u-md-1-2";
             } else if (data.length == 3) {
                 containerCard.classList = "header-parceiro-detalhes pure-u-1 pure-u-md-1-3";
@@ -1440,7 +1439,7 @@
             divLogo.className = "logo-parceiro-md-wrapper";
 
             let imgLogo = document.createElement("img");
-            imgLogo.src = 'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/logo/' + data[i].logo;
+            imgLogo.src = 'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/logo/'+data[i].logo;
             imgLogo.alt = "Logo do parceiro";
 
             divLogo.appendChild(imgLogo);
@@ -1449,11 +1448,11 @@
             containerCard.appendChild(divLogo);
 
             //Monta o separador
-            let separator = document.createElement("hr");
-            separator.className = "orange-separator";
+            //let separator = document.createElement("hr");
+            //separator.className = "orange-separator";
 
             //Adiciona no card
-            containerCard.appendChild(separator);
+            //containerCard.appendChild(separator);
 
             //Monta a área do preco
             let sectionPreco = document.createElement("section");
@@ -1467,8 +1466,8 @@
 
             paragrafoPreco.appendChild(spanPreco);
 
-            var descPreco = document.createTextNode(data[i].descPreco);
-
+            var descPreco = document.createTextNode(data[i].descPreco);         
+            
             paragrafoPreco.appendChild(descPreco);
 
             //Adiciona o paragrafo do preço na área do preço
@@ -1477,6 +1476,7 @@
             let botaoPreco = document.createElement("a");
             botaoPreco.className = "button";
             botaoPreco.textContent = "Agendar Consulta";
+            botaoPreco.href = data[i].link;
 
             //Adiciona o botão do preço na área do preço
             sectionPreco.appendChild(botaoPreco);

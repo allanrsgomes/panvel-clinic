@@ -5,9 +5,10 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/alergia-e-imunologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=telemedicina&utm_campaign=voucher-desconto",
+                    "preco": "R$48,00"
                 }
             ]
         },
@@ -17,15 +18,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/cardsiologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$49,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -35,9 +38,10 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/clinica-geral-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$51,00"
                 }
             ]
         },
@@ -47,15 +51,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/dermatologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -65,15 +71,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/endocrinologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -83,27 +91,30 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/endocrinologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
         {
             "nome": "GERIATRA",
-            "desc": "O Gastroenterologista é o médico que faz o diagnóstico e tratamento das doenças do aparelho digestivo, como gastrite, prisão de ventre, úlcera péptica e doenças intestinais.",
+            "desc": "O Geriatra é o médico que trata de pacientes idosos, acompanhando as mudanças naturais referentes ao processo de envelhecimento.",
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/geriatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 }
             ]
         },
@@ -113,15 +124,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/ginecologia-e-obstetricia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -131,9 +144,10 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/infectologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 }
             ]
         },
@@ -143,15 +157,18 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/nefrologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
+
                 }
             ]
         },
@@ -161,9 +178,10 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/nutricionista-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 }
             ]
         },
@@ -173,33 +191,37 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/oftalmologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
         {
             "nome": "ORTOPEDIA",
-            "desc": "O Otorrinolaringologista é o médico que faz diagnóstico e tratamento dos problemas de ouvido, nariz e garganta. Cuida de doenças como otite, sinusite e faringite.",
+            "desc": "Médico que cuida de questões de saúde relacionadas aos elementos do aparelho locomotor, como ossos, músculos, ligamentos e articulações.",
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/ortopedia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -209,15 +231,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/otorrinolaringologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -227,27 +251,30 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/pediatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
         {
             "nome": "PNEUMOLOGIA PEDIATRICA",
-            "desc": "O Pneumologista é o médico que cuida das doenças pulmonares e respiratórias, como gripe, asma e pneumonia.",
+            "desc": "O Pneumologista Pediátrico é o médico que cuida das doenças pulmonares e respiratórias, como gripe, asma e pneumonia em crianças.",
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/pneumologia-pediatrica-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 }
             ]
         },
@@ -257,15 +284,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/pneumologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -275,9 +304,10 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/psicologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 }
             ]
         },
@@ -287,15 +317,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/psiquiatria-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -305,15 +337,17 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/reumatologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
@@ -323,28 +357,310 @@ const especialidade = [
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/agendamento/consultas/urologia-online/telemed/?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 },
                 {
                     "parceiro": "docpass",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-docpass-tele.png"
+                    "logo": "logo-docpass-tele.png",
+                    "link": "https://docpass.com.br/?id=5084&utm_campaign=5084",
+                    "preco": "R$49,00"
                 }
             ]
         },
         {
             "nome": "TELEORIENTAÇÃO COVID-19",
-            "desc": "Médicos clínico geral, pneumologistas e infectoligistas com preparo para atendimento,  com objetivo de diminuir o risco de contato com outras pessoas, minimizando as demandas de emergências e outros serviços de saúde em sua região.",
+            "desc": "Médicos clínico geral, pneumologistas e infectologistas com preparo para atendimento, com objetivo de diminuir o risco de contato com outras pessoas, minimizando as demandas de emergências e outros serviços de saúde em sua região.",
             "data": [
                 {
                     "parceiro": "dr-consulta",
-                    "preco": "R$ 269,00 ",
                     "descPreco": "ou 10x de R$ 26,90 sem juros",
-                    "logo": "logo-dr-consulta-footer.svg"
+                    "logo": "logo-dr-consulta-footer.svg",
+                    "link": "https://www.drconsulta.com/servicos/consultas/orientacao-medica-gripe-ou-resfriado?utm_source=panvel&utm_medium=lp&utm_content=&utm_campaign=voucher-desconto",
+                    "preco": "R$50,00"
                 }
             ]
         }
+    ]
+
+    var data = [
+        {
+            "name": "ALERGOLOGIA",
+            "sigla": 0,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },
+        {
+            "name": "CARDIOLOGIA",
+            "sigla": 1,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ] 
+        },
+        {
+            "name": "CLINICO GERAL",
+            "sigla": 2,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },
+        {
+            "name": "DERMATOLOGIA",
+            "sigla": 3,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "ENDOCRINOLOGIA",
+            "sigla": 4,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "GASTROENTEROLOGIA",
+            "sigla": 5,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "GERIATRA",
+            "sigla": 6,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },
+        {
+            "name": "GINECOLOGIA/OBSTETRÍCIA",
+            "sigla": 7,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "INFECTOLOGIA",
+            "sigla": 8,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },
+        {
+            "name": "NEFROLOGIA",
+            "sigla": 9,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "NUTRICIONISTA",
+            "sigla": 10,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },
+        {
+            "name": "OFTALMOLOGIA",
+            "sigla": 11,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "ORTOPEDIA",
+            "sigla": 12,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "OTORRINOLARINGOLOGIA",
+            "sigla": 13,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "PEDIATRIA",
+            "sigla": 14,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "PNEUMOLOGIA PEDIATRICA",
+            "sigla": 15,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },
+        {
+            "name": "PNEUMOLOGIA",
+            "sigla": 16,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "PSICOLOGIA",
+            "sigla": 17,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },
+        {
+            "name": "PSIQUIATRIA",
+            "sigla": 18,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "REUMATOLOGIA",
+            "sigla": 19,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "UROLOGIA",
+            "sigla": 20,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                },
+                {
+                    "partner": "conexa",
+
+                }
+            ]
+        },
+        {
+            "name": "TELEORIENTAÇÃO COVID-19",
+            "sigla": 21,
+            "partners": [
+                {
+                    "partner": "drconsulta",
+
+                }
+            ]
+        },  
     ]

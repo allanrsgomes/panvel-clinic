@@ -320,7 +320,7 @@
     }
 
     .sub-header-with-arrow h2:after {
-        content: url('assets/icons/telemedicina/right-arrow.svg');
+        content: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/right-arrow.svg');
         color: white;
         font-style: normal;
         margin-left: var(--xsSpace);
@@ -383,7 +383,7 @@
     /* coloca "check" nos serviços que não estão desabilitados */
 
     .telemedicina-pacotes>.card li:not(.telemedicina-li-disabled)::after {
-        content: url('assets/icons/telemedicina/check.png');
+        content: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/check.png');
         position: absolute;
         right: 0;
         top: 25%;
@@ -1323,29 +1323,23 @@
     <main>
         <div class="banner-panvel-clinic">
             <div class="banner-panvel-clinic-content">
-                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/group_8.png" alt="Panvel Clinic" />
+                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/group_8.png"
+                    alt="Panvel Clinic" />
                 <a class="button banner-panvel-clinic-button" href="#tele-link">Consultas Médicas Presenciais</a>
-                <p>Momentos delicados exigem atenção especial</p>
+                <!-- <p>Momentos delicados exigem atenção especial</p> -->
             </div>
             <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/Mask_group_53.png" class="banner" alt="" />
         </div>
 
-        <div class="scroll-menu-wrapper">
-            <div class="arrow-left">&#60;</div>
-            <div class="scroll-menu">
-                <nav class="line-menu line-menu-telemedicina">
-                    <a class="active" onclick="handleAnyButtonClick(this);"
-                        href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">Consultas Médicas Presenciais</a>
-                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online.do">Atendimento Médico
-                        Online</a>
-                    <hr class=guide-bar />
-                </nav>
-            </div>
-        </div>
+        <nav class="line-menu line-menu-telemedicina">
+            <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">Consultas Médicas Presenciais</a>
+            <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online.do">Consultas Médicas Online</a>
+            <hr class=guide-bar />
+        </nav>
 
         <header class="sub-header-telemedicina">
-            <p>Um time de profissionais especializados em diversas áreas da medicina para pra cuidar bem da sua saúde.
-                Todo o cuidado e qualidade que você merece.</p>
+            <!-- <p>Um time de profissionais especializados em diversas áreas da medicina para pra cuidar bem da sua saúde. Todo o cuidado e qualidade que você merece.</p> -->
+            <h2 class="sub-header-desc">Um time de profissionais especializados em diversas áreas da medicina para pra cuidar bem da sua saúde. Todo o cuidado e qualidade que você merece.</h2>
             <h2>Pacotes Especiais</h2>
             <hr class="orange-separator">
         </header>
@@ -1365,10 +1359,8 @@
                             <nav id="menu-planos" class="line-menu line-menu-telemedicina">
                                 <a class="active" onclick="handleAnyButtonClick(this);"
                                     href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">SAÚDE DO HOMEM</a>
-                                <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-feminino.do">SAÚDE
-                                    DA MULHER</a>
-                                <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-empresa.do">Sobre
-                                    a
+                                <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-feminino.do">SAÚDE DA MULHER</a>
+                                <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-empresa.do">Sobre a
                                     empresa</a>
                                 <hr class=guide-bar />
                             </nav>
@@ -1379,8 +1371,7 @@
 
                 <section class="parceiro-detalhes-content">
                     <header class="sub-header-telemedicina">
-                        <p>Para seguir cuidando da saúde sem sair de casa, conte com nossos profissionais especializados
-                            na tela do seu computador, tablet ou smartphone. Agende uma consulta com o CCG Saúde.</p>
+                        <p>O cuidado com a saúde do homem é essencial para prevenir possíveis doenças, como o câncer de próstata, por exemplo. Contrate o pacote ideal para você e mantenha sua saúde em dia.</p>
                         </div>
                     </header>
 
@@ -1390,8 +1381,7 @@
                             <ul>
                                 <li>Consulta Urologista</li>
                                 <li>PSA TOTAL</li>
-                                <li class="telemedicina-li-disabled" aria-hidden="true">Ecografia do Aparelho Urinário
-                                </li>
+                                <li class="telemedicina-li-disabled" aria-hidden="true">Ecografia do Aparelho Urinário </li>
                             </ul>
                             <!-- 
                             <p class="telemedicina-pacotes-condicao">a partir de<span>R$<em>129</em>,90</span></p>
@@ -1403,7 +1393,7 @@
                         <li class="pure-u-1 pure-u-md-1-2 card" onclick="handleAccordionClick(this);">
                             <h3>Pacote 2</h3>
                             <ul>
-                                <li>Consulta Urologista</li>
+                                <li >Consulta Urologista</li>
                                 <li>PSA TOTAL</li>
                                 <li>Ecografia do Aparelho Urinário</li>
                             </ul>
