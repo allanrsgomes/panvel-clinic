@@ -1,0 +1,1492 @@
+<style>
+    @import url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonts/fonts.css");
+
+    :root {
+        --color-orange-title: #ff9c16;
+        --color-lightblue: #00bcde;
+        --color-blue: #0a3383;
+        --color-white-gray: #E4E9F2;
+        --color-gray: #9e9e9e;
+        --color-gray-dark: #757575;
+        --color-background-dimgray: #696969;
+        --color-yale-blue: #1d3780;
+        --color-yale-blue-disabled: rgba(29, 55, 128, 0.20);
+        --color-st-patrick-blue: #243f8c;
+        --color-medium-turquoise: #4fc0e0;
+        --color-medium-turquoise-10: rgba(80, 190, 224, 0.3);
+        --color-acqua: #4BAC89;
+        --boxShadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12);
+    }
+
+    body {
+        background: var(--color-white-gray);
+        color: var(--color-yale-blue);
+        font-size: 18px;
+    }
+
+    /* RESET WORKSPACE */
+
+    .LHContent * {
+        font-family: Foco, "Open Sans", sans-serif;
+        box-sizing: border-box;
+        outline: none;
+        color: var(--color-yale-blue);
+    }
+
+    .LHContent {
+        /* padronização das medidas utilizadas */
+        --xxsSpace: 0.3em;
+        --xsSpace: 0.5em;
+        --smSpace: 0.8em;
+        --mdSpace: 1em;
+        --lgSpace: 1.5em;
+        --xlSpace: 2em;
+        --xxlSpace: 3.5em;
+        /* tamanhos para fontes (precisamos definir) */
+        --xxxsFontSize: 0.7em;
+        --xxsFontSize: 0.8em;
+        --xsFontSize: 1em;
+        --smFontSize: 1.17em;
+        --mdFontSize: 1.5em;
+        --lgFontSize: 2em;
+        --xlFontSize: 3em;
+        --pSize: var(--xsFontSize);
+        --h1Size: var(--lgFontSize);
+        --h2Size: var(--mdFontSize);
+        --h3Size: var(--smFontSize);
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 1080px;
+        padding: var(--mdSpace);
+    }
+
+    .LHContent select {
+        margin: var(--smSpace) 0;
+        padding: var(--xsSpace);
+        border: none;
+        border-radius: 8px;
+        font-size: var(--xsFontSize);
+        font-weight: 700;
+        color: var(--color-yale-blue);
+    }
+
+    main {
+        width: 100%;
+        padding-bottom: var(--xxlSpace);
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        font-size: var(--pSize);
+    }
+
+    h1 {
+        font-size: var(--h1Size);
+    }
+
+    h2 {
+        font-size: var(--h2Size);
+    }
+
+    h3 {
+        font-size: var(--h3Size);
+        margin-bottom: var(--smSpace);
+    }
+
+    .custom-breadcrumb {
+        text-align: left;
+    }
+
+    .custom-breadcrumb a {
+        font-size: var(--xsFontSize);
+        color: #828282;
+        letter-spacing: -0.02em;
+        display: inline-block;
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .custom-breadcrumb a::after {
+        content: "/";
+        padding: 0 3px;
+        color: #828282;
+    }
+
+    .custom-breadcrumb span {
+        display: block;
+        font-weight: 700;
+        font-size: var(--mdFontSize);
+        line-height: var(--smSpace);
+        color: #143c8d;
+        letter-spacing: -0.03em;
+    }
+
+    .sub-header-wrapper {
+        width: 100%;
+        max-width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+
+    /* Header que contém o Breadcrumb e o Botão Back */
+
+    .sub-header-crumback {
+        width: 100%;
+        max-width: 1080px;
+        margin-bottom: var(--mdSpace);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        z-index: 99999;
+    }
+
+    .sub-header-crumback .breadcrumb {
+        flex: 0 0 auto;
+    }
+
+    .sub-header-crumback .btn-back {
+        flex: 0 0 auto;
+        padding: 6px 41px 7px;
+        width: auto;
+        display: block;
+        font-weight: 700;
+        font-size: var(--smFontSize);
+        color: #143c8d;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: -0.03em;
+        border: 1px solid #143c8d;
+        border-radius: 18px;
+    }
+
+    .sub-header-crumback .btn-back:hover {
+        background: #143c8d;
+        color: #fff;
+    }
+
+    .main-banner {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-banner img {
+        width: 100%;
+    }
+
+    .main-banner+.scroll-menu-wrapper {
+        margin-top: 2px;
+    }
+
+    .flex-between {
+        justify-content: space-between;
+    }
+
+    /* Direciona para colunas e centraliza verticalmente */
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .section-banner .flex-column {
+        padding-right: 136px;
+    }
+
+    .section-banner .flex-column p {
+        padding-left: var(--xsSpace);
+    }
+
+    /* Cards e containers */
+
+    section {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #lower-section>header {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #lower-section header .logo-parceiro-md {
+        padding: var(--mdSpace);
+        width: 150px;
+        min-height: 150px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
+    }
+
+    #lower-section header .logo-parceiro-md img {
+        width: 100%;
+        height: auto;
+    }
+
+    #lower-section .inner-content {
+        padding-left: var(--mdSpace);
+        padding-right: var(--mdSpace);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* TELEMEDICINA -----------------------------------*/
+
+    .sub-header-telemedicina,
+    .sub-header-vacinas {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: var(--lgSpace);
+        align-items: center;
+    }
+
+    .sub-header-telemedicina h2,
+    .sub-header-vacinas h2 {
+        font-size: var(--lgFontSize);
+        text-align: center;
+        margin-bottom: var(--xsSpace);
+    }
+
+
+    .sub-header-telemedicina p,
+    .sub-header-vacinas p {
+        flex: 0.8;
+        text-align: center;
+        font-style: italic;
+        margin: var(--lgSpace) 0;
+    }
+
+    .parceiro-detalhes-content .sub-header-telemedicina p {
+        width: 70%;
+    }
+
+    .orange-separator {
+        width: 60px;
+        height: 5px;
+        border-style: none;
+        border-radius: 8px;
+        background-color: var(--color-orange-title);
+        margin: var(--mdSpace) auto;
+    }
+
+    .sub-header-with-arrow {
+        flex-direction: row;
+        margin: var(--xxlSpace) 0;
+        padding: 0;
+    }
+
+    .sub-header-with-arrow h2 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .sub-header-with-arrow p {
+        text-align: left;
+        font-style: normal;
+    }
+
+    .sub-header-with-arrow h2:after {
+        content: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/right-arrow.svg');
+        color: white;
+        font-style: normal;
+        margin-left: var(--xsSpace);
+        margin-right: var(--xsSpace);
+        font-size: calc(var(--mdFontSize)*2);
+    }
+
+    .telemedicina-pacotes {
+        justify-content: center;
+        padding: 0 var(--mdSpace);
+        margin-top: var(--smSpace);
+        margin-bottom: 31px;
+    }
+
+    /*
+.telemedicina-pacotes>li:nth-child(2) {
+    margin: 0 var(--lgSpace);
+}
+*/
+
+    .telemedicina-pacotes>li {
+        flex: 0.22;
+        margin-left: var(--smSpace);
+        margin-right: var(--smSpace);
+    }
+
+    section#precos-avulsos {
+        margin-top: 82px;
+    }
+
+    p#desc-especialidade {
+        margin-top: 75px;
+        text-align: center;
+    }
+
+    /*Listas internas aos cards dos Pacotes, possuem bullets com padding customizado. */
+
+    .telemedicina-pacotes>.card ul {
+        font-size: var(--xxsFontSize);
+        list-style: none;
+        position: relative;
+    }
+
+    .telemedicina-pacotes>.card li {
+        padding: var(--smSpace) var(--lgSpace) var(--smSpace) var(--smSpace);
+        border-bottom: 1px solid var(--color-yale-blue-disabled);
+        position: relative;
+    }
+
+    .telemedicina-pacotes>.card li.telemedicina-li-disabled {
+        color: var(--color-yale-blue-disabled);
+    }
+
+    .telemedicina-pacotes>.card li::before {
+        content: '\2022';
+        position: absolute;
+        left: 0;
+    }
+
+    /* coloca "check" nos serviços que não estão desabilitados */
+
+    .telemedicina-pacotes>.card li:not(.telemedicina-li-disabled)::after {
+        content: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/check.png');
+        position: absolute;
+        right: 0;
+        top: 25%;
+    }
+
+    .telemedicina-pacotes-condicao {
+        text-align: center;
+        margin-top: var(--mdSpace);
+    }
+
+    .telemedicina-pacotes-condicao span {
+        display: block;
+        font-size: var(--smFontSize);
+        font-weight: 700;
+    }
+
+    .telemedicina-pacotes-condicao span em {
+        font-style: normal;
+        font-size: var(--mdFontSize);
+    }
+
+    .telemedicina-pacotes-desconto {
+        text-align: center;
+        font-size: calc(var(--xxsFontSize));
+        font-weight: 700;
+        font-style: italic;
+        text-transform: uppercase;
+        color: var(--color-medium-turquoise);
+        margin: var(--mdSpace) 0;
+    }
+
+    a.bt-telemedicina-pacotes-contratar {
+        margin: 0;
+        width: 100%;
+        text-transform: uppercase;
+        background-color: var(--color-acqua);
+    }
+
+
+
+    .parceiro-detalhes label {
+        text-transform: uppercase;
+        font-size: var(--xxsFontSize);
+        font-weight: 700;
+        color: var(--color-gray-dark);
+    }
+
+    .parceiro-content-especialidade {
+        margin: 0 auto;
+    }
+
+    .parceiro-content-plano-preco {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: var(--mdSpace);
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        max-width: 245px;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa,
+    .banner-vacinas {
+        position: relative;
+        margin-top: var(--xlSpace);
+        padding-bottom: var(--xlSpace);
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .parceiro-detalhe-sobre-a-empresa h2,
+    .banner-vacinas h2 {
+        font-size: var(--mdFontSize);
+        margin-bottom: var(--smSpace);
+        letter-spacing: -0.5;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa h3,
+    .banner-vacinas h3 {
+        letter-spacing: -0.5;
+        margin-top: var(--xlSpace);
+    }
+
+    .parceiro-detalhe-sobre-a-empresa p,
+    .banner-vacinas p {
+        margin-bottom: var(--xxlSpace);
+        line-height: var(--lgSpace);
+        font-style: italic;
+    }
+
+    .banner-vacinas h2 {
+        font-size: var(--lgFontSize);
+        margin-bottom: var(--smSpace);
+        letter-spacing: -0.5;
+    }
+
+    .banner-vacinas p {
+        margin-bottom: var(--mdSpace);
+        line-height: var(--lgSpace);
+        font-style: normal;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa div,
+    .banner-vacinas-content {
+        padding: var(--lgSpace) calc(var(--lgSpace));
+        background-image: radial-gradient(circle at left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+        width: 75%;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        margin-top: var(--xlSpace);
+        z-index: 1;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa>img,
+    .banner-vacinas img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 286px;
+        width: auto;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa ul {
+        justify-content: space-between;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa li {
+        text-align: center;
+        font-size: var(--xxxsFontSize);
+        flex: 0.2;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa li p {
+        font-style: normal;
+    }
+
+    .parceiro-content-plano-preco span {
+        display: block;
+        font-size: var(--mdFontSize);
+    }
+
+    .parceiro-content-plano-preco p {
+        margin-bottom: var(--lgSpace);
+        font-size: var(--xsFontSize);
+    }
+
+    .parceiro-content-plano-preco a.button {
+        width: 100%;
+        background-color: var(--color-acqua);
+        font-style: normal;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .parceiro-content-plano-preco span+a.button {
+        margin-top: var(--mdSpace);
+    }
+
+    .telemedicina-qual-servico {
+        margin: var(--xxlSpace) 0;
+    }
+
+    .telemedicina-selecione-parceiro h3,
+    .telemedicina-qual-servico h3 {
+        text-align: center;
+    }
+
+    /* --------------------------------------------------------------------*/
+
+    .card {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 12px;
+        box-shadow: var(--boxShadow);
+        color: var(--color-yale-blue);
+        padding: var(--mdSpace);
+        overflow: hidden;
+    }
+
+    .card-content {
+        padding-left: 65px;
+        padding-right: 65px;
+        align-self: center;
+    }
+
+    /* card especial que contém texto e um botão deslocado para fora */
+
+    .telemedicina-card-list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    .telemedicina-card-list li {
+        flex: 0.31;
+        position: relative;
+        padding: var(--lgSpace) var(--lgSpace);
+        overflow: visible;
+    }
+
+    .telemedicina-card-list li.card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: var(--boxShadow);
+        color: var(--color-yale-blue);
+    }
+
+    .telemedicina-card-list li .button {
+        position: absolute;
+        left: calc(50% - 75px);
+        bottom: -15px;
+        height: 50px;
+        width: 150px;
+    }
+
+    .telemedicina-card-list li p {
+        margin-top: var(--mdSpace);
+        margin-bottom: var(--lgSpace);
+        font-size: var(--xxsFontSize);
+    }
+
+    .telemedicina-card-deco img {
+        position: absolute;
+        height: calc(100% + var(--lgSpace));
+        right: 10%;
+        top: calc(var(--lgSpace) * -1);
+    }
+
+    /* special-card com opção de imagem no topo que sai para cima */
+
+    .outer-top-img {
+        margin-top: 37px;
+    }
+
+    .outer-top-img li {
+        padding-top: var(--xxlSpace);
+    }
+
+    .outer-top-img .telemedicina-thumb {
+        position: absolute;
+        left: calc(50% - 80px);
+        top: -40px;
+    }
+
+    .outer-top-img .telemedicina-card-deco img {
+        top: -64px;
+        right: 10%;
+    }
+
+    /* ----------------------------------------------- */
+
+    .pure-u-md-1-3.card {
+        max-width: 31%;
+    }
+
+    iframe#card-video {
+        width: 100%;
+        min-height: 486px;
+        border: none;
+    }
+
+    /* UI Elements */
+
+    .button {
+        /* Centraliza label no botão sem precisar de paddings diferentes acima e abaixo*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ---------------- */
+        background-color: var(--color-orange-title);
+        color: white;
+        padding: 10px 20px;
+        font-weight: 700;
+        font-size: var(--pFontSize);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: -webkit-fit-content;
+        width: fit-content;
+        width: -moz-fit-content;
+        letter-spacing: 1px;
+    }
+
+    .section-banner .flex-column .button {
+        width: auto;
+    }
+
+    /* NAVEGAÇÃO */
+
+    .line-menu {
+        position: relative;
+        width: 100%;
+        min-width: -webkit-fit-content;
+        min-width: fit-content;
+        min-width: -moz-fit-content;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .line-menu a {
+        position: relative;
+        padding: var(--xsSpace) 0;
+        margin-bottom: var(--xsSpace);
+        border-bottom: 4px ridge transparent;
+        z-index: 1;
+        text-decoration: none;
+        transition: border-bottom 0.3s, color 0.4s;
+        font-weight: 700;
+        color: var(--color-yale-blue);
+        opacity: 0.4;
+        text-transform: uppercase;
+    }
+
+    .line-menu a.active {
+        color: var(--color-orange-title);
+        opacity: 1;
+        border-bottom: 4px solid;
+    }
+
+    .line-menu a:not(:last-of-type) {
+        margin-right: var(--lgSpace);
+    }
+
+    .line-menu-telemedicina a:not(:last-of-type) {
+        margin-right: var(--xxlSpace);
+    }
+
+    .line-menu .guide-bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        height: 1px;
+        border-style: none;
+        background-color: var(--color-yale-blue);
+        opacity: 0.4;
+    }
+
+    /* Button Bar Qual Serviço*/
+
+    .button-bar-qual-servico {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-bar-qual-servico a.button {
+        transition: opacity 0.3s;
+        opacity: 0.5;
+        max-width: 31%;
+        text-transform: uppercase;
+    }
+
+    .button-bar-qual-servico a.active {
+        opacity: 1;
+    }
+
+    .button-bar-qual-servico a:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .button-bar-qual-servico a:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+
+    .button-bar-qual-servico a:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .button-bar-qual-servico a:not(:last-child) {
+        margin-right: 2px;
+    }
+
+    /* Menu Logo Parceiro */
+
+    .scroll-menu-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        display: none;
+    }
+
+    .scroll-menu {
+        width: 100%;
+    }
+
+    .logo-parceiro-bar {
+        display: flex;
+        align-self: stretch;
+        justify-content: space-between;
+    }
+
+    .logo-parceiro-bar a {
+        max-height: 50px;
+        min-width: 120px;
+        flex: 0.12;
+        border-radius: 80px;
+        opacity: 0.4;
+        transition: opacity 0.3s;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .logo-parceiro-bar .active {
+        opacity: 1;
+    }
+
+    .logo-parceiro-bar a img {
+        width: 80%;
+    }
+
+    /* TELEMEDICINA */
+
+    .telemedicina h3 {
+        text-align: center;
+    }
+
+    .banner-panvel-clinic {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: var(--xlSpace);
+        margin-bottom: var(--lgSpace);
+    }
+
+    .banner-panvel-clinic img {
+        max-width: 50%;
+    }
+
+    .banner-panvel-clinic p {
+        font-style: italic;
+        margin: 0;
+        text-align: center;
+    }
+
+    .banner-panvel-clinic-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 28px;
+    }
+
+    .banner-panvel-clinic-button {
+        border-radius: 0 15px 0 15px;
+        width: auto;
+        align-self: stretch;
+        margin: var(--mdSpace) 0;
+        color: var(--color-yale-blue);
+        font-style: italic;
+        font-weight: 700;
+        font-size: var(--mdFontSize);
+    }
+
+    .header-parceiro-detalhes .logo-parceiro-md {
+        width: 100px;
+        height: auto;
+    }
+
+    .parceiro-detalhes-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-parceiro-detalhes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-parceiro-md-wrapper {
+        width: 192px;
+        height: 155px;
+        box-shadow: var(--boxShadow);
+        background-color: white;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-parceiro-md-wrapper+.scroll-menu-wrapper {
+        margin-top: var(--lgSpace);
+    }
+
+    /*------------------------*/
+
+    /* LISTS */
+
+    .list-3-flex-col {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin-top: var(--xlSpace);
+        text-align: center;
+        width: 100%;
+    }
+
+    .list-3-flex-col li {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 0.29;
+    }
+
+    .list-3-flex-col li.onde-vacinar-col {
+        flex: 0.50;
+    }
+
+    .list-3-flex-col h3 {
+        margin-top: var(--mdSpace);
+        margin-bottom: 0;
+    }
+
+    .list-3-flex-col h3+p {
+        margin-top: var(--mdSpace);
+    }
+
+    .list-3-flex-col-info-button {
+        color: white;
+        font-size: var(--xxsFontSize);
+        margin-top: var(--xlSpace);
+    }
+
+    .logo-panvel-clinic {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 10px;
+    }
+
+    .logo-panvel-clinic p {
+        margin: 0;
+        padding-top: 10px;
+        margin-left: 10px;
+    }
+
+    .logo-panvel-clinic span {
+        display: block;
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .logo-panvel-clinic img {
+        width: auto;
+        height: 70px;
+    }
+ 
+    /* RESPONSIVIDADE */
+
+    @media screen and (max-width:768px) {
+        .LHContent {
+            padding: 15px 0;
+        }
+
+        .sub-header-crumback {
+            padding: 0 var(--mdSpace);
+        }
+
+        /* LISTS */
+        .list-3-flex-col {
+            flex-direction: column;
+        }
+
+        .list-3-flex-col li {
+            padding: 0 var(--mdSpace);
+        }
+
+        .list-3-flex-col li+li {
+            margin-top: var(--xlSpace);
+        }
+
+        .center {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* Coloca padding lateral apenas no que não for a*/
+        .inner-center {
+            padding: 0 15px;
+        }
+
+        .accordion-item h3::after {
+            right: -20px;
+        }
+
+        .accordion-item.active p {
+            max-height: 280px;
+            padding-right: var(--xsSpace);
+        }
+
+        .inner-sub-header {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        .inner-sub-header,
+        #lower-section .parceiro-content-plano-preco {
+            display: flex;
+            max-width: 100%;
+            justify-content: center;
+        }
+
+        .inner-sub-header h2 {
+            position: relative;
+            /* reduz a fonte em 20% */
+            font-size: calc(var(--lgFontSize));
+        }
+
+        .inner-sub-header h2:after {
+            position: absolute;
+            left: calc(50% - var(--smFontSize));
+            transform: rotate(90deg);
+            bottom: -30px;
+        }
+
+        .inner-sub-header p {
+            max-width: 100%;
+        }
+
+        .section-banner {
+            margin-top: var(--mdSpace);
+        }
+
+        /* RESPONSIVIDADE: TELEMEDICINA */
+        .banner-panvel-clinic {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-top: 0;
+            padding: 0 var(--smSpace);
+        }
+
+        .banner-panvel-clinic-content {
+            margin-right: 0;
+            margin-top: var(--lgSpace);
+            width: 100%;
+            align-items: center;
+        }
+
+        .banner-panvel-clinic p {
+            text-align: center;
+        }
+
+        .banner-panvel-clinic .banner {
+            max-width: 100%;
+        }
+
+        .sub-header-telemedicina {
+            flex-direction: column;
+            padding: 0 var(--mdSpace);
+            margin: var(--xlSpace) 0;
+
+        }
+
+        .sub-header-telemedicina p {
+            margin: 0;
+            max-width: 100%;
+            text-align: center;
+            margin: var(--mdSpace) 0;
+        }
+
+        .sub-header-telemedicina h2 {
+            flex-direction: column;
+        }
+
+        .sub-header-with-arrow h2:after {
+            transform: rotate(90deg);
+        }
+
+        .telemedicina-qual-servico {
+            padding: 0 var(--mdSpace);
+        }
+
+        .button-bar-qual-servico {
+            flex-direction: column;
+        }
+
+        .telemedicina-card-list {
+            flex-direction: column;
+            padding: 0 var(--mdSpace);
+        }
+
+        .telemedicina-card-list li.telemedicina-card-deco {
+            display: none;
+        }
+
+        .telemedicina-card-list li+li {
+            margin-top: var(--xlSpace);
+        }
+
+        .outer-top-img li:first-child {
+            margin-top: 40px;
+        }
+
+        .outer-top-img li+li {
+            margin-top: calc(var(--xxlSpace) + 40px);
+        }
+
+        .telemedicina-pacotes>li {
+            flex: auto;
+            margin: 0;
+        }
+
+        .telemedicina-pacotes>li:nth-child(2) {
+            margin: var(--lgSpace) 0;
+        }
+
+        .parceiro-detalhe-sobre-a-empresa div {
+            width: 100%;
+            margin-top: 160px;
+        }
+
+        .parceiro-detalhe-sobre-a-empresa>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .parceiro-detalhe-sobre-a-empresa li {
+            font-size: var(--xxsFontSize);
+            min-width: 48%;
+        }
+
+        /*-------------------------------------------------*/
+        .pure-u-md-1-3.card {
+            max-width: none;
+        }
+
+        /* Detalhe do logo desaparece no mobile */
+        .pure-u-md-1-3.card-logo-deco-bg {
+            display: none;
+        }
+
+        .button-bar-qual-servico>* {
+            width: 100%;
+            border-radius: 8px !important;
+        }
+
+        .button-bar-qual-servico a+a {
+            margin-top: var(--smSpace);
+        }
+
+        .button-bar-qual-servico a.button {
+            max-width: 100%;
+        }
+
+        /* Menu com scroll horizontal */
+        .scroll-menu-wrapper div[class^="arrow-"] {
+            position: absolute;
+            -webkit-animation: arrowPulse 1s infinite;
+            animation: arrowPulse 1s infinite;
+            color: var(--color-medium-turquoise);
+            background-color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .scroll-menu-wrapper .arrow-left {
+            top: calc(50% - 10px);
+            left: 5px;
+            display: none;
+        }
+
+        .scroll-menu-wrapper .arrow-right {
+            top: calc(50% - 10px);
+            right: 5px;
+            display: flex;
+        }
+
+        @-webkit-keyframes arrowPulse {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes arrowPulse {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .scroll-menu {
+            overflow-x: hidden;
+        }
+
+        .scroll-menu nav {
+            width: 100%;
+            padding: 0 var(--xsSpace);
+        }
+
+        /*------------------------------------*/
+        .logo-parceiro-bar a:not(:last-of-type) {
+            margin-right: var(--xsSpace);
+        }
+
+        .logo-parceiro-bar a::after {
+            content: ".";
+            display: block;
+        }
+
+        .special-card {
+            margin-bottom: var(--lgSpace);
+        }
+    }
+</style>
+<script>
+
+    window.onload = () => {
+        /* Verifica se há algum menu responsivo com scroll horizontal na página e o(s) inicializa. */
+        const hasHorizontalScrollMenu = [...document.getElementsByClassName('scroll-menu-wrapper')].length > 0;
+
+        if (hasHorizontalScrollMenu) {
+            initHorizontalScrollMenus();
+        }
+
+    };
+
+    /* COMPORTAMENTO DOS BOTÕES E MENUS */
+
+    const handleAnyButtonClick = (button) => {
+        // desativa todos os botões da barra de navegação
+        let buttonList = button.parentNode.getElementsByTagName('a');
+        [...buttonList].forEach(item => item.classList.remove("active"));
+        // ativa somente o clicado
+        button.classList.add("active");
+    }
+
+    const initHorizontalScrollMenus = () => {
+        /* captura todos os elementos que vc deseja que tenham scroll horizontal arrastável */
+        const slider_array = document.querySelectorAll('.scroll-menu');
+
+        /* Drag stuff */
+        let mouseDown = false;
+        let startX, scrollLeft;
+        let startDragging = function (e, slider) {
+            mouseDown = true;
+            //desktop or mobile
+            if (e.pageX) {
+                startX = e.pageX - slider.offsetLeft;
+            } else {
+                startX = e.changedTouches[0].pageX - slider.offsetLeft;
+            }
+            scrollLeft = slider.scrollLeft;
+        };
+
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        let mouseMoving = (e, slider) => {
+            e.preventDefault();
+            const arrow_wrapper = slider.parentNode;
+
+            if (!mouseDown) { return; }
+
+            let x = 0;
+            if (e.pageX) {
+                x = e.pageX - slider.offsetLeft;
+            } else {
+                x = e.changedTouches[0].pageX - slider.offsetLeft;
+            }
+
+            const scroll = x - startX;
+            slider.scrollLeft = scrollLeft - scroll;
+
+            if (slider.scrollLeft > 0) {
+                arrow_wrapper.querySelector(".arrow-left").style.display = "flex";
+            } else {
+                arrow_wrapper.querySelector(".arrow-left").style.display = "none";
+            }
+
+            if (slider.scrollLeft >= slider.scrollWidth - arrow_wrapper.scrollWidth) {
+                arrow_wrapper.querySelector(".arrow-right").style.display = "none";
+            } else {
+                arrow_wrapper.querySelector(".arrow-right").style.display = "flex";
+            }
+        }
+
+        // Add the event listeners
+        [...slider_array].forEach(slider => {
+            slider.addEventListener('mousemove', (e) => mouseMoving(e, slider));
+            slider.addEventListener('touchmove', (e) => mouseMoving(e, slider));
+            slider.addEventListener('mousedown', (e) => startDragging(e, slider));
+            slider.addEventListener('touchstart', (e) => startDragging(e, slider));
+            slider.addEventListener('mouseup', stopDragging);
+            slider.addEventListener('mouseleave', stopDragging);
+            slider.addEventListener('touchend', stopDragging);
+        })
+    }
+
+</script>
+
+<style>
+    .banner-panvel-clinic-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 100px;
+    }
+
+    .header-parceiro-detalhes {
+        margin-bottom: var(--mdSpace);
+    }
+
+    .header-parceiro-detalhes .orange-separator {
+        margin-top: var(--xlSpace);
+    }
+</style>
+
+<body class="LHContent telemedicina-wrapper">
+    <!-- Header que contém o Breadcrumb e o Botão Back -->
+    <header class="sub-header-crumback">
+        <div class="custom-breadcrumb">
+            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+            <span>Clinic</span>
+        </div>
+        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+    </header>
+
+    <main>
+        <div class="banner-panvel-clinic">
+            <div class="banner-panvel-clinic-content">
+                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/group_8.png" alt="Panvel Clinic" />
+                <a class="button banner-panvel-clinic-button" href="#tele-link">Consultas Médicas Online</a>
+                <!-- <p>Momentos delicados exigem atenção especial</p> -->
+            </div>
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/Mask_group_54.png" class="banner" alt="" />
+        </div>
+
+        <nav class="line-menu line-menu-telemedicina">
+            <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">Consultas Médicas
+                Presenciais</a>
+            <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online.do">Consultas Médicas
+                Online</a>
+            <hr class=guide-bar />
+        </nav>
+
+        <header class="sub-header-telemedicina">
+            <!-- <p>Nossos médicos parceiros, cuidam da sua saúde com toda a tecnologia disponível de forma ágil e segura.</p> -->
+            <h2>Nossos médicos parceiros, cuidam da sua saúde com toda a tecnologia disponível de forma ágil e segura.</h2>
+        </header>
+
+
+        <section class="telemedicina-qual-servico">
+            <h3>Qual serviço você está procurando?</h3>
+            <nav class="button-bar-qual-servico">
+                <a class="button" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online-pacotes.do">Pacotes Especiais</a>
+                <a class="button active" onclick="handleAnyButtonClick(this);"
+                    href="https://www.panvel.com/panvel/atendimento-online-avulso.do">Consulta Avulsa</a>
+            </nav>
+        </section>
+
+        <section class="parceiro-content-especialidade">
+            <label for="select-parceiro-especialidade">Selecione uma especialidade</label>
+            <select id="select-parceiro-especialidade" onchange="onChangeSelectEspecialidade(this)">
+            </select>
+
+            <p id="desc-especialidade">
+
+            </p>
+        </section>
+
+        <section id="precos-avulsos" class="pure-g">
+        </section>
+
+    </main>
+</body>
+<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/medicina/avulsos.js"></script>
+<script>
+    LHEvents();
+    function LHEvents() {
+
+        var selector = document.getElementById("select-parceiro-especialidade");
+
+        makeDropdown(selector, especialidade);
+        onChangeSelectEspecialidade(selector);
+    }
+
+    function makeDropdown(element, options) {
+
+        for (var i = 0; i < options.length; i++) {
+            var dados = options[i];
+            var opcao = document.createElement("option");
+            opcao.textContent = dados.nome;
+            opcao.value = i;
+            element.appendChild(opcao);
+        }
+    }
+
+    function onChangeSelectEspecialidade(element){
+        const opcaoSelecionada = especialidade[element.value];
+
+        var container = document.getElementById("precos-avulsos");
+
+        var descricao = document.getElementById("desc-especialidade");
+        descricao.textContent = opcaoSelecionada.desc;
+        
+        container.innerHTML = "";
+        getCardDiv(container, opcaoSelecionada.data);
+    }
+
+    function getCardDiv(container, data) {
+
+        for (let i = 0; i < data.length; i++) {
+
+            let containerCard = document.createElement("div");
+            
+            //Verif temporaria enquanto finalizo a função
+            if (data.length == 2 ){
+                containerCard.classList = "header-parceiro-detalhes pure-u-1 pure-u-md-1-2";
+            } else if (data.length == 3) {
+                containerCard.classList = "header-parceiro-detalhes pure-u-1 pure-u-md-1-3";
+            } else if (data.length == 1) {
+                containerCard.classList = "header-parceiro-detalhes pure-u-1";
+            }
+
+            //Monta a parte do logo
+            let divLogo = document.createElement("div");
+            divLogo.className = "logo-parceiro-md-wrapper";
+
+            let imgLogo = document.createElement("img");
+            imgLogo.src = 'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/logo/'+data[i].logo;
+            imgLogo.alt = "Logo do parceiro";
+
+            divLogo.appendChild(imgLogo);
+
+            //Adiciona no card
+            containerCard.appendChild(divLogo);
+
+            //Monta o separador
+            //let separator = document.createElement("hr");
+            //separator.className = "orange-separator";
+
+            //Adiciona no card
+            //containerCard.appendChild(separator);
+
+            //Monta a área do preco
+            let sectionPreco = document.createElement("section");
+            sectionPreco.className = "parceiro-content-plano-preco";
+
+            //Monta o parágrafo com os dados do preço
+            let paragrafoPreco = document.createElement("p");
+
+            let spanPreco = document.createElement("span");
+            spanPreco.textContent = data[i].preco;
+
+            paragrafoPreco.appendChild(spanPreco);
+
+            var descPreco = document.createTextNode(data[i].descPreco);         
+            
+            paragrafoPreco.appendChild(descPreco);
+
+            //Adiciona o paragrafo do preço na área do preço
+            //sectionPreco.appendChild(paragrafoPreco);
+
+            let botaoPreco = document.createElement("a");
+            botaoPreco.className = "button";
+            botaoPreco.textContent = "Agendar Consulta";
+            botaoPreco.href = data[i].link;
+
+            //Adiciona o botão do preço na área do preço
+            sectionPreco.appendChild(botaoPreco);
+
+            //Adiciona a áera do preço no card
+            containerCard.appendChild(sectionPreco);
+
+            //Adiciona o card montado
+            container.appendChild(containerCard);
+        }
+
+    }
+</script>
