@@ -1847,6 +1847,7 @@
       border-radius: 12px;
       overflow-y: auto;
       background-color: #E4E9F2;
+      overflow: auto;
     }
 
     .LHmodalAviso[open=true] {
@@ -2021,6 +2022,13 @@
       align-items: center;
     }
 
+    @media screen and (max-width: 768px) {
+      #LHModalAvisoCovid {
+        justify-content: flex-start;
+
+      }
+    }
+
     .avisoCovid__mais_info {
       margin-top: var(--lgSpace);
     }
@@ -2099,8 +2107,6 @@
       }
     }
 
-
-
     const avisoModal = document.querySelector('#LHModalAvisoCovid');
 
     if (avisoModal) {
@@ -2142,7 +2148,7 @@
 
     //LHModal.show();
     LHModal.scrollTo({ top: 0, behavior: 'smooth' })
-    LHModal.setAttribute('open', 'true')
+    LHModal.setAttribute('display', 'flex')
   }
 
   function closeModal(LHModal) {
