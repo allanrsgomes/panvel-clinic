@@ -437,5 +437,46 @@ lojas = [
         "Telefone": "51-34744840",
         "WhatsApp": "51-995617441",
         "CEP": "93220-680"
+    },
+    /* Adições feitas em 30/03 */
+    {
+        "Filial": "435",
+        "Estado": "Santa Catarina",
+        "UF": "SC",
+        "Cidade": "Joinville",
+        "Endereço": "Rua do Principe, 177",
+        "Bairro": "Centro",
+        "Telefone": " 47-3422-4590",
+        "WhatsApp": "48-991883678"
+    },
+    {
+        "Filial": "355",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Torres",
+        "Endereço": "Rua Bento Gonçalves, 81",
+        "Bairro": "Centro",
+        "Telefone": "51-3664-1475",
+        "WhatsApp": "51-995020316"
+    },
+    {
+        "Filial": "381",
+        "Estado": "Santa Catarina",
+        "UF": "SC",
+        "Cidade": "Criciúma",
+        "Endereço": "Rua Marechal Deodoro, nº 177",
+        "Bairro": "Centro",
+        "Telefone": "48-34336884",
+        "WhatsApp": "48-991581195"
+    },
+    {
+        "Filial": "748",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Porto Alegre",
+        "Endereço": "Avenida Goethe, 210",
+        "Bairro": "Rio Branco",
+        "Telefone": "51- 3333-2135",
+        "WhatsApp": "51-980208314"
     }
 ]
