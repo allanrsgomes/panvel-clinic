@@ -72,40 +72,40 @@
         color: var(--color-yale-blue);
     }
 
-    main {
+    .LHContent.telemedicina-wrapper main {
         width: 100%;
         padding-bottom: var(--xxlSpace);
     }
 
-    h1,
-    h2,
-    h3 {
+    .LHContent.telemedicina-wrapper h1,
+    .LHContent.telemedicina-wrapper h2,
+    .LHContent.telemedicina-wrapper h3 {
         font-style: italic;
         font-weight: 700;
     }
 
-    h1,
-    h2,
-    h3,
-    p,
-    ul {
+    .LHContent.telemedicina-wrapper h1,
+    .LHContent.telemedicina-wrapper h2,
+    .LHContent.telemedicina-wrapper h3,
+    .LHContent.telemedicina-wrapper p,
+    .LHContent.telemedicina-wrapper ul {
         margin: 0;
         padding: 0;
     }
 
-    p {
+    .LHContent.telemedicina-wrapper p {
         font-size: var(--pSize);
     }
 
-    h1 {
+    .LHContent.telemedicina-wrapper h1 {
         font-size: var(--h1Size);
     }
 
-    h2 {
+    .LHContent.telemedicina-wrapper h2 {
         font-size: var(--h2Size);
     }
 
-    h3 {
+    .LHContent.telemedicina-wrapper h3 {
         font-size: var(--h3Size);
         margin-bottom: var(--smSpace);
     }
@@ -160,7 +160,7 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: nowrap;
-        z-index: 99999;
+        z-index: 5;
     }
 
     .sub-header-crumback .breadcrumb {
@@ -333,6 +333,9 @@
         padding: 0 var(--mdSpace);
         margin-top: var(--smSpace);
         margin-bottom: 31px;
+
+        /* Temp */
+        display:flex;
     }
 
     /*
@@ -1314,8 +1317,9 @@
     <!-- Header que contém o Breadcrumb e o Botão Back -->
     <header class="sub-header-crumback">
         <div class="custom-breadcrumb">
-            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
-            <span>Clinic</span>
+            <a href="/panvel/main.do">Página Inicial</a>
+            <a href="/panvel/main.do">\ Clinic</a>
+            <span>Consultas Presenciais</span>
         </div>
         <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
     </header>
@@ -1371,7 +1375,6 @@
                 <section class="parceiro-detalhes-content">
                     <header class="sub-header-telemedicina">
                         <p>Mantenha a sua revisão ginecológica em dia, tanto para prevenção quanto para identificação e diagnóstico precoce de alterações e patologias. Escolha o pacote ideal e agende seus exames.</p>
-                        </div>
                     </header>
 
                     <ul class="pure-g telemedicina-pacotes">
