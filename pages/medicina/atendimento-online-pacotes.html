@@ -125,12 +125,6 @@
         text-decoration: none;
     }
 
-    .custom-breadcrumb a::after {
-        content: "/";
-        padding: 0 3px;
-        color: #828282;
-    }
-
     .custom-breadcrumb span {
         display: block;
         font-weight: 700;
@@ -333,6 +327,18 @@
         padding: 0 var(--mdSpace);
         margin-top: var(--smSpace);
         margin-bottom: 31px;
+
+        /* Temp */
+        display:flex;
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: 768px) {
+        .telemedicina-pacotes {
+            display:flex;
+            flex-direction: column;
+        }
+        
     }
 
     /*
@@ -1049,6 +1055,8 @@
             padding: 0 var(--mdSpace);
             margin: var(--xlSpace) 0;
 
+            /*Sobreescrever regra geral */
+            z-index: 5;
         }
 
         .sub-header-telemedicina p {
@@ -1388,7 +1396,6 @@
                 <section class="parceiro-detalhes-content">
                     <header class="sub-header-telemedicina">
                         <p>Para seguir cuidando da sua saúde sem sair de casa, conta com os profissionais do CCG Saúde. Agende já sua consulta.</p>
-                        </div>
                     </header>
 
                     <ul class="pure-g telemedicina-pacotes">
