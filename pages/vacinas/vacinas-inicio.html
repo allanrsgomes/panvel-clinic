@@ -17,6 +17,42 @@
       --yale-blue: #1d3780;
       --st-patrick-blue: #243f8c;
       --medium-turquoise: #4fc0e0;
+
+
+      /* Definição Temporária */
+      --lgBorderRadius: 12px;
+      --color-gray-light: #E4E9F2;
+      --color-gray: #9e9e9e;
+      --color-gray-medium: #9e9e9e;
+      --color-gray-dark: #757575;
+      --color-yale-blue: #1d3780;
+      --boxShadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12);
+      /* padronização das medidas utilizadas */
+      --xxxsSpace: 0.1em;
+      --xxsSpace: 0.3em;
+      --xsSpace: 0.5em;
+      --smSpace: 0.8em;
+      --mdSpace: 1em;
+      --lgSpace: 1.5em;
+      --xlSpace: 2em;
+      --xxlSpace: 3.5em;
+      /* tamanhos para fontes (precisamos definir) */
+      --xxlFontSize: 2.2em;
+      --xlFontSize: 2em;
+      --lgFontSize: 1.5em;
+      --mdFontSize: 1.2em;
+      --smFontSize: 1.05em;
+      --xsFontSize: .8em;
+      --h1Size: var(--xxlFontSize);
+      --h2Size: var(--xlFontSize);
+      --h3Size: var(--lgFontSize);
+      --h4Size: var(--mdFontSize);
+      --pSize: var(--smFontSize);
+      --color-orange: #ff9c16;
+      --smBorderRadius: 8px;
+      --mdBorderRadius: 8px;
+      --lgBorderRadius: 12px;
+      --xlBorderRadius: 36px;
     }
 
     /*-----------------
@@ -1766,6 +1802,269 @@
         font-size: 15px;
       }
     }
+
+    /* Modal Aviso */
+
+    /* MODAL  */
+
+    .LHModalOverlay {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 70px;
+      align-items: flex-start;
+      -webkit-animation: hideOverlay 0.8s ease forwards;
+      animation: hideOverlay 0.8s ease forwards;
+    }
+
+    .LHModalOverlay * {
+      box-sizing: border-box;
+    }
+
+    .LHModalOverlay.LHModalOpen {
+      -webkit-animation: showOverlay 0.8s ease backwards;
+      animation: showOverlay 0.8s ease backwards;
+    }
+
+    /* Modal Content */
+
+    .LHModalAviso {
+      display: none;
+      flex-direction: column;
+      width: 90%;
+      max-width: 1080px;
+      height: 70%;
+      padding: 0;
+      margin-top: 70px;
+      border: none;
+      border-radius: 12px;
+      overflow-y: auto;
+      background-color: #E4E9F2;
+    }
+
+    .LHmodalAviso[open=true] {
+      display: flex;
+      -webkit-animation: showDialog .8s backwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: showDialog .8s backwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @-webkit-keyframes showDialog {
+      from {
+        opacity: 0.8;
+        transform: scale(0.9) translateY(50%);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0%);
+      }
+    }
+
+    @keyframes showDialog {
+      from {
+        opacity: 0.8;
+        transform: scale(0.9) translateY(50%);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes hideDialog {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    @keyframes hideDialog {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    @-webkit-keyframes showOverlay {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+        border-radius: 50%;
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 0;
+      }
+    }
+
+    @keyframes showOverlay {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+        border-radius: 50%;
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 0;
+      }
+    }
+
+    @-webkit-keyframes hideOverlay {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    @keyframes hideOverlay {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    .btnCloseModalAviso {
+      position: absolute;
+      display: block;
+      width: 40px;
+      min-height: 40px;
+      align-self: flex-end;
+      margin: var(--xsSpace);
+      background-color: transparent;
+      background: url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/vacinas/bt_close_modal.png) no-repeat center;
+      border: none;
+      outline: none;
+      z-index: 2;
+      cursor: pointer;
+      top: 0;
+      right: 0;
+    }
+
+    /* Dialog label: Only for screen readers */
+
+    .LHModalTitle {
+      position: absolute;
+      height: 0;
+      width: 0;
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    .LHModalTitleAviso {
+      position: absolute;
+      height: 0;
+      width: 0;
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    .LHModalContentAviso {
+      position: relative;
+      z-index: 0;
+    }
+
+    .LHModalContentAviso select {
+      margin: var(--smSpace) 0;
+      padding: var(--xsSpace);
+      border: none;
+      border-radius: var(--mdBorderRadius);
+      font-size: var(--xsFontSize);
+      font-weight: 600;
+      color: var(--color-yale-blue);
+    }
+
+    /* MODAIS GERAIS */
+
+    #LHModalImage {
+      flex-direction: column;
+      overflow: auto;
+      max-width: 95%;
+      height: auto;
+      max-height: 70%;
+    }
+
+    #LHModalImage .btnCloseModalAviso {
+      transition: .5s ease-in-out;
+      top: var(--lgSpace);
+      right: var(--lgSpace);
+    }
+
+    /* Vacinas: Modal Comunicado Covid */
+
+    #LHModalAvisoCovid {
+      padding: 0 var(--lgSpace);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avisoCovid__mais_info {
+      margin-top: var(--lgSpace);
+    }
+
+    .LHContent__p {
+      font-size: var(--pSize);
+      margin-top: 0;
+      color: var(--color-yale-blue);
+    }
+
+
+    .LHContent__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 var(--mdSpace);
+      border: 0;
+      border-radius: var(--smBorderRadius);
+      box-shadow: var(--boxShadow);
+      background-color: rgba(75, 172, 138, 1);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+      cursor: pointer
+    }
+
+    .LHContent__orange-separator {
+      width: 60px;
+      height: 5px;
+      border-style: none;
+      border-radius: var(--mdBorderRadius);
+      background-color: var(--color-orange);
+      margin: var(--mdSpace) auto;
+    }
+
+    .vacinas__subheader {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: var(--lgSpace);
+      align-items: center;
+    }
   </style>
 </head>
 <script>
@@ -1799,6 +2098,75 @@
         document.getElementsByTagName('body')[0].style.overflow = 'auto';
       }
     }
+
+
+
+    const avisoModal = document.querySelector('#LHModalAvisoCovid');
+
+    if (avisoModal) {
+      openModalAvisoCovid();
+    }
+
+    window.addEventListener('click', event => {
+      let LHModalOverlay = document.querySelector('.LHModalOverlay')
+      if (event.target == LHModalOverlay) {
+        console.log(event.target)
+        closeModal(LHActiveModal)
+      }
+    })
+  }
+
+  function openModalAvisoCovid() {
+    let LHModal = document.querySelector('#LHModalAvisoCovid');
+    let LHModalCloseBtn = LHModal.querySelector('.btnCloseModalAviso');
+
+    document.querySelector('.fecharAviso').addEventListener('click', () => {
+      closeModal(LHModal)
+    })
+
+    LHActiveModal = LHModal
+
+    LHModalCloseBtn.addEventListener('click', () => {
+      closeModal(LHModal)
+    })
+
+    showModal(LHModal)
+  }
+
+  function showModal(LHModal) {
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+
+    let LHModalOverlay = document.querySelector('.LHModalOverlay')
+    LHModalOverlay.style.display = 'flex'
+    LHModalOverlay.classList.add('LHModalOpen')
+
+    //LHModal.show();
+    LHModal.scrollTo({ top: 0, behavior: 'smooth' })
+    LHModal.setAttribute('open', 'true')
+  }
+
+  function closeModal(LHModal) {
+    let LHModalOverlay = document.querySelector('.LHModalOverlay')
+    const listener = event => onBtnCloseModalClick(event, listener)
+    //LHModal.close();
+    LHModal.setAttribute('open', 'false')
+    LHModalOverlay.classList.remove('LHModalOpen')
+    LHModalOverlay.addEventListener('animationend', listener)
+
+    document.getElementsByTagName('body')[0].style.overflow = 'auto';
+  }
+
+  document.addEventListener('keyup', event => {
+    /* Fecha modal com tecla Esc */
+    if (event.code == 'Escape') {
+      closeModal(LHActiveModal)
+    }
+  })
+
+  function onBtnCloseModalClick(event, listener) {
+    event.target.removeEventListener('animationend', listener)
+    //console.log("listener overlay removido");
+    event.target.style.display = 'none'
   }
 
   function createSelections() {
@@ -2286,5 +2654,27 @@
           src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/simplyBook.html"></iframe>
       </div>
     </div>
+  </div>
+
+  <div class="LHModalOverlay">
+    <dialog id="LHModalAvisoCovid" class="LHModalAviso" aria-labelledby="LHModalTitle">
+      <h2 class="LHModalTitle">Comunicado</h2>
+      <button class="btnCloseModalAviso" aria-labelledby="Fechar"></button>
+      <section class="LHModalContentAviso">
+        <header class="vacinas__subheader">
+          <h2 class="LHContent__h2">Comunicado importante:</h2>
+          <p class="LHContent__p">
+            A Panvel reforça que não comercializa vacina para Covid-19.
+            A empresa apoia o setor público na campanha de vacinação da população, disponibilizando seus profissionais
+            para auxiliar neste momento, de acordo com o calendário estabelecido pelos municípios.
+            Panvel, Bem Você.
+          </p>
+          <hr class="LHContent__orange-separator">
+          <button class="LHContent__button fecharAviso">Fechar aviso</button>
+          <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png"
+            class="avisoCovid__mais_info" />
+        </header>
+      </section>
+    </dialog>
   </div>
 </body>
