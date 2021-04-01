@@ -1890,7 +1890,7 @@
       }
     }
 
-    #img01 {
+    #modalImgVacinas {
       position: absolute;
       left: 50%;
       top: 50%;
@@ -1908,7 +1908,7 @@
           <a href="/panvel/panvelClinic.do">\ Clinic</a>
           <span>Vacinas</span>
         </div>
-        <a class="btn-back" href="#" onclick="history.back()">Voltar</a>
+        <a class="btn-back" href="https://www.panvel.com/panvel/calendario-vacinal.do" onclick="history.back()">Voltar</a>
       </div>
 
       <!--<a href="calendario-detalhe.html">-->
@@ -2024,10 +2024,10 @@
             <picture>
               <source media="(max-width: 480px)"
                 srcset="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/calendario-mobile.png"
-                class="banner" id="myImgMob">
+                class="banner" id="imgExplicativaVacinasMob">
               <img
                 src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/vacinas/calendario.png"
-                style="width: 100%" id="myImg" />
+                style="width: 100%" id="imgExplicativaVacinas" />
             </picture>
 
             <div class="footer-calendario">
@@ -2085,18 +2085,23 @@
 
       var modalImg = document.getElementById("imgModal");
 
-      var img = document.getElementById("myImg");
+      var img = document.getElementById("imgExplicativaVacinas");
 
-      var modalPic = document.getElementById("img01");
+      var modalPic = document.getElementById("modalImgVacinas");
 
       img.onclick = function () {
         modalImg.style.display = "block";
 
         if (window.innerWidth < 480) {
-          modalPic.src = document.getElementById("myImgMob").srcset;
+          modalPic.src = document.getElementById("imgExplicativaVacinasMob").srcset;
         } else {
           modalPic.src = this.src;
         }
+      }
+
+      var btnCloseImg = document.getElementById('closeBtnImgVacinas');
+      btnCloseImg.onclick = function () {
+        modalImg.style.display = "none";
       }
 
       // Get the <span> element that closes the modal
@@ -2112,6 +2117,8 @@
         if (event.target == modal) {
           modal.style.display = "none";
           document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        } else if (event.target == modalImg) {
+          modalImg.style.display = "none";
         }
       }
 
@@ -2495,7 +2502,7 @@
   </div>
 
   <div id="imgModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
+    <span class="close" id="closeBtnImgVacinas">&times;</span>
+    <img class="modal-content" id="modalImgVacinas">
   </div>
 </body>
