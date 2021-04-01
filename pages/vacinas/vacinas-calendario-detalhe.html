@@ -1908,7 +1908,7 @@
           <a href="/panvel/panvelClinic.do">\ Clinic</a>
           <span>Vacinas</span>
         </div>
-        <a class="btn-back" href="http://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+        <a class="btn-back" href="#" onclick="history.back()">Voltar</a>
       </div>
 
       <!--<a href="calendario-detalhe.html">-->
@@ -2057,7 +2057,7 @@
               </a>
             </div>
             <div class="orientacoes-calendario">
-              <a href="vacinas-detalhe.html">
+              <a href="#">
                 <span>
                   08/09/2020 • Orientações, esquemas de doses e comentários devem
                   ser consultados nos Calendários de vacinação SBIm 2020/2021 e
@@ -2429,8 +2429,8 @@
         subVacinas => subVacinas.grupo.includes(parseInt(idSelect)))
       ).map((item, i) => {
         return `<div class="vacina-calendario">
-                  <a href="vacinas-detalhe.html?id=${item.id}"><h3>${item.nome}</h3></a>
-                  <a class="vacina-item-link" href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-detalhe.html?id=${item.id}">
+                  <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
+                  <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
                     Mais Informações
                   </a>
                   <button class="vacina-item-btn">Agendar vacina</button>
@@ -2443,8 +2443,8 @@
     } else {
       const vacinasDiv = vacinas.map((item, i) => {
         return `<div class="vacina-calendario">
-                <a href="vacinas-detalhe.html?id=${item.id}"><h3>${item.nome}</h3></a>
-                <a class="vacina-item-link" href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-detalhe.html?id=${item.id}">
+                <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
+                <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
                   Mais Informações
                 </a>
                 <button class="vacina-item-btn">Agendar vacina</button>

@@ -1794,7 +1794,7 @@
           <a href="/panvel/panvelClinic.do">\ Clinic</a>
           <span>Vacinas</span>
         </div>
-        <a class="btn-back" href="http://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do?secao=vacina" onclick="history.back()">Voltar</a>
       </div>
 
       <!--<a href="https://panvel.zendesk.com/hc/pt-br/categories/360003406173-VACINA%C3%87%C3%83O">-->
@@ -2229,7 +2229,7 @@
     const vacinasDiv = vacinas.map((item, i) => {
       return `<div class="vacina-item">
                       <div class="vacina-item-nome-mob">
-                          <a href="vacinas-detalhe.html?id=${item.id}"><h3>${item.nome
+                          <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome
         }</h3></a>
                           <span>
                             ${item.preco.toLocaleString("pt-BR", {
@@ -2252,7 +2252,7 @@
           currency: "BRL",
         })}
                       </div>-->
-                      <a class="vacina-item-link" href="http://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas-detalhe.html?id=${item.id
+                      <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id
         }">
                         Mais Informações
                       </a>
