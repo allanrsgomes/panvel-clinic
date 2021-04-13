@@ -478,5 +478,42 @@ lojas = [
         "Bairro": "Rio Branco",
         "Telefone": "51- 3333-2135",
         "WhatsApp": "51-980208314"
+    }, //Inclusão dia 12/04/2021, solicitada por Priscila
+    {
+        "Filial": "354",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Santa Rosa",
+        "Endereço": "Avenida Expedicionário Weber, 805 ",
+        "Bairro": "Centro",
+        "Telefone": "55-3512-8846",
+        "WhatsApp": "51-995715729"
+    },
+    {
+        "Filial": "498",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Canoas",
+        "Endereço": "Avenida Santos Ferreira, 1400",
+        "Bairro": "Marechal Rondon",
+        "Telefone": "51-3476-0587",
+        "WhatsApp": "51-997690416"
+    },
+    {
+        "Filial": "743",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Bento Gonçalves",
+        "Endereço": "Rua General Osorio ,235",
+        "Bairro": "Centro",
+        "WhatsApp": "51-997596980"
+    },
+    {
+        "Filial": "753",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Alegrete",
+        "Endereço": "Rua Dr Lauro Dornelles n° 1",
+        "Bairro": "Centro"
     }
 ]
