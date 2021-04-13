@@ -1,12 +1,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet" />
     <style>
         @import url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonts/fonts.css);
-
-        :root {
+         :root {
             --color-orange-title: #ff9c16;
             --color-lightblue: #00bcde;
             --color-blue: #0a3383;
@@ -23,22 +21,21 @@
             --color-acqua: #4BAC89;
             --boxShadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12);
         }
-
+        
         body {
             background: var(--color-white-gray);
             color: var(--color-yale-blue);
             font-size: 18px;
         }
-
         /* RESET WORKSPACE */
-
+        
         .LHContent * {
             font-family: Foco, "Open Sans", sans-serif;
             box-sizing: border-box;
             outline: none;
             color: var(--color-yale-blue);
         }
-
+        
         .LHContent {
             /* padronização das medidas utilizadas */
             --xxxsSpace: 0.1em;
@@ -68,7 +65,7 @@
             max-width: 1080px;
             padding: var(--mdSpace);
         }
-
+        
         .LHContent select {
             margin: var(--smSpace) 0;
             padding: var(--xsSpace);
@@ -78,19 +75,19 @@
             font-weight: 700;
             color: var(--color-yale-blue);
         }
-
+        
         main {
             width: 100%;
             padding-bottom: var(--xxlSpace);
         }
-
+        
         h1,
         h2,
         h3 {
             font-style: italic;
             font-weight: 700;
         }
-
+        
         h1,
         h2,
         h3,
@@ -99,28 +96,28 @@
             margin: 0;
             padding: 0;
         }
-
+        
         p {
             font-size: var(--pSize);
         }
-
+        
         h1 {
             font-size: var(--h1Size);
         }
-
+        
         h2 {
             font-size: var(--h2Size);
         }
-
+        
         h3 {
             font-size: var(--h3Size);
             margin-bottom: var(--smSpace);
         }
-
+        
         .custom-breadcrumb {
             text-align: left;
         }
-
+        
         .custom-breadcrumb a {
             font-size: var(--xsFontSize);
             color: #828282;
@@ -131,13 +128,13 @@
             font-weight: 400;
             text-decoration: none;
         }
-
+        
         .custom-breadcrumb a::after {
             content: "/";
             padding: 0 3px;
             color: #828282;
         }
-
+        
         .custom-breadcrumb span {
             display: block;
             font-weight: 700;
@@ -146,7 +143,7 @@
             color: #143c8d;
             letter-spacing: -0.03em;
         }
-
+        
         .sub-header-wrapper {
             width: 100%;
             max-width: 100%;
@@ -156,9 +153,8 @@
             justify-content: center;
             height: 60px;
         }
-
         /* Header que contém o Breadcrumb e o Botão Back */
-
+        
         .sub-header-crumback {
             width: 100%;
             max-width: 1080px;
@@ -169,11 +165,11 @@
             flex-wrap: nowrap;
             z-index: 3;
         }
-
+        
         .sub-header-crumback .breadcrumb {
             flex: 0 0 auto;
         }
-
+        
         .sub-header-crumback .btn-back {
             flex: 0 0 auto;
             padding: 6px 41px 7px;
@@ -188,35 +184,33 @@
             border: 1px solid #143c8d;
             border-radius: 18px;
         }
-
+        
         .sub-header-crumback .btn-back:hover {
             background: #143c8d;
             color: #fff;
         }
-
+        
         .flex-between {
             justify-content: space-between;
         }
-
         /* Direciona para colunas e centraliza verticalmente */
-
+        
         .flex-column {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
         }
-
+        
         .section-banner .flex-column {
             padding-right: 136px;
         }
-
+        
         .section-banner .flex-column p {
             padding-left: var(--xsSpace);
         }
-
         /* Cards e containers */
-
+        
         section {
             width: 100%;
             align-items: center;
@@ -224,14 +218,14 @@
             flex-direction: column;
             align-items: stretch;
         }
-
+        
         #lower-section>header {
             align-self: stretch;
             display: flex;
             align-items: center;
             flex-direction: column;
         }
-
+        
         #lower-section header .logo-parceiro-md {
             padding: var(--mdSpace);
             width: 150px;
@@ -242,12 +236,12 @@
             align-items: center;
             box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
         }
-
+        
         #lower-section header .logo-parceiro-md img {
             width: 100%;
             height: auto;
         }
-
+        
         #lower-section .inner-content {
             padding-left: var(--mdSpace);
             padding-right: var(--mdSpace);
@@ -255,9 +249,8 @@
             align-items: center;
             flex-direction: column;
         }
-
         /* UI Elements */
-
+        
         .button,
         button {
             /* Centraliza label no botão sem precisar de paddings diferentes acima e abaixo*/
@@ -279,13 +272,12 @@
             width: -moz-fit-content;
             letter-spacing: 1px;
         }
-
+        
         .section-banner .flex-column .button {
             width: auto;
         }
-
         /* NAVEGAÇÃO */
-
+        
         .line-menu {
             position: relative;
             width: 100%;
@@ -298,9 +290,8 @@
             align-items: center;
             white-space: nowrap;
             font-size: 18px;
-
         }
-
+        
         .line-menu a {
             position: relative;
             padding: var(--xsSpace) 0;
@@ -314,21 +305,21 @@
             opacity: 0.4;
             text-transform: uppercase;
         }
-
+        
         .line-menu a.active {
             color: var(--color-orange-title);
             opacity: 1;
             border-bottom: 4px solid;
         }
-
+        
         .line-menu a:not(:last-of-type) {
             margin-right: var(--lgSpace);
         }
-
+        
         .line-menu-telemedicina a:not(:last-of-type) {
             margin-right: var(--xxlSpace);
         }
-
+        
         .line-menu .guide-bar {
             position: absolute;
             left: 0;
@@ -340,9 +331,8 @@
             background-color: var(--color-yale-blue);
             opacity: 0.4;
         }
-
         /* TELEMEDICINA -----------------------------------*/
-
+        
         .sub-header-telemedicina,
         .sub-header-vacinas {
             display: flex;
@@ -351,21 +341,21 @@
             padding-top: var(--lgSpace);
             align-items: center;
         }
-
+        
         .sub-header-telemedicina h2,
         .sub-header-vacinas h2 {
             font-size: var(--lgFontSize);
             text-align: center;
             margin-bottom: var(--xsSpace);
         }
-
+        
         .sub-header-telemedicina p,
         .sub-header-vacinas p {
             flex: 0.8;
             text-align: center;
             font-style: italic;
         }
-
+        
         .orange-separator {
             width: 60px;
             height: 5px;
@@ -374,7 +364,7 @@
             background-color: var(--color-orange-title);
             margin: var(--mdSpace) auto;
         }
-
+        
         .blue-separator {
             width: 60px;
             height: 5px;
@@ -383,24 +373,24 @@
             background-color: var(--color-medium-turquoise);
             margin: var(--mdSpace) auto;
         }
-
+        
         .sub-header-with-arrow {
             flex-direction: row;
             margin: var(--xxlSpace) 0;
             padding: 0;
         }
-
+        
         .sub-header-with-arrow h2 {
             display: flex;
             align-items: center;
             margin-bottom: 0;
         }
-
+        
         .sub-header-with-arrow p {
             text-align: left;
             font-style: normal;
         }
-
+        
         .sub-header-with-arrow h2:after {
             content: url('https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/right-arrow.svg');
             color: var(--color-white);
@@ -411,69 +401,67 @@
             width: 100%;
             height: auto;
         }
-
+        
         .telemedicina-pacotes {
             justify-content: center;
             padding: 0 var(--mdSpace);
         }
-
+        
         .telemedicina-pacotes>li:nth-child(2) {
             margin: 0 var(--lgSpace);
         }
-
+        
         .telemedicina-pacotes>li {
             flex: 0.22;
         }
-
         /*Listas internas aos cards dos Pacotes, possuem bullets com padding customizado. */
-
+        
         .telemedicina-pacotes>.card ul {
             font-size: var(--xxsFontSize);
             list-style: none;
             position: relative;
         }
-
+        
         .telemedicina-pacotes>.card li {
             padding: var(--smSpace) var(--lgSpace) var(--smSpace) var(--smSpace);
             border-bottom: 1px solid var(--color-yale-blue-disabled);
             position: relative;
         }
-
+        
         .telemedicina-pacotes>.card li.telemedicina-li-disabled {
             color: var(--color-yale-blue-disabled);
         }
-
+        
         .telemedicina-pacotes>.card li::before {
             content: '\2022';
             position: absolute;
             left: 0;
         }
-
         /* coloca "check" nos serviços que não estão desabilitados */
-
+        
         .telemedicina-pacotes>.card li:not(.telemedicina-li-disabled)::after {
             content: url('https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/check.png');
             position: absolute;
             right: 0;
             top: 25%;
         }
-
+        
         .telemedicina-pacotes-condicao {
             text-align: center;
             margin-top: var(--mdSpace);
         }
-
+        
         .telemedicina-pacotes-condicao span {
             display: block;
             font-size: var(--smFontSize);
             font-weight: 700;
         }
-
+        
         .telemedicina-pacotes-condicao span em {
             font-style: normal;
             font-size: var(--mdFontSize);
         }
-
+        
         .telemedicina-pacotes-desconto {
             text-align: center;
             font-size: calc(var(--xxsFontSize));
@@ -483,30 +471,30 @@
             color: var(--color-medium-turquoise);
             margin: var(--mdSpace) 0;
         }
-
+        
         a.bt-telemedicina-pacotes-contratar {
             margin: 0;
             width: 100%;
             text-transform: uppercase;
             background-color: var(--color-acqua);
         }
-
+        
         .parceiro-detalhes {
             padding-top: var(--xxlSpace);
         }
-
+        
         .parceiro-detalhes label {
             text-transform: uppercase;
             font-size: var(--xxsFontSize);
             font-weight: 700;
             color: var(--color-gray-dark);
         }
-
+        
         .parceiro-content-especialidade {
             width: 50%;
             margin: 0 auto;
         }
-
+        
         .parceiro-content-plano-preco {
             display: flex;
             flex-direction: column;
@@ -517,7 +505,7 @@
             font-style: italic;
             text-align: center;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa,
         .banner-vacinas {
             position: relative;
@@ -526,39 +514,39 @@
             display: flex;
             justify-content: flex-end;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa h2,
         .banner-vacinas h2 {
             font-size: var(--mdFontSize);
             margin-bottom: var(--smSpace);
             letter-spacing: -0.5;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa h3,
         .banner-vacinas h3 {
             letter-spacing: -0.5;
             margin-top: var(--xlSpace);
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa p,
         .banner-vacinas p {
             margin-bottom: var(--xxlSpace);
             line-height: var(--lgSpace);
             font-style: italic;
         }
-
+        
         .banner-vacinas h2 {
             font-size: var(--lgFontSize);
             margin-bottom: var(--smSpace);
             letter-spacing: -0.5;
         }
-
+        
         .banner-vacinas p {
             margin-bottom: var(--mdSpace);
             line-height: var(--lgSpace);
             font-style: normal;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa div,
         .banner-vacinas-content {
             padding: var(--lgSpace) calc(var(--lgSpace));
@@ -570,16 +558,16 @@
             min-height: 286px;
             z-index: 2;
         }
-
+        
         .banner-vacinas-content-md {
             width: 55%;
             border-radius: 8px;
         }
-
+        
         .banner-vacinas .banner-vacinas-content b {
             font-weight: 900;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa>img,
         .banner-vacinas img {
             position: absolute;
@@ -589,31 +577,31 @@
             width: auto;
             border-radius: 8px;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa ul {
             justify-content: space-between;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa li {
             text-align: center;
             font-size: var(--xxxsFontSize);
             flex: 0.2;
         }
-
+        
         .parceiro-detalhe-sobre-a-empresa li p {
             font-style: normal;
         }
-
+        
         .parceiro-content-plano-preco span {
             display: block;
             font-size: var(--mdFontSize);
         }
-
+        
         .parceiro-content-plano-preco p {
             margin-bottom: var(--lgSpace);
             font-size: var(--mdFontSize);
         }
-
+        
         .parceiro-content-plano-preco a.button {
             width: 70%;
             background-color: var(--color-acqua);
@@ -621,22 +609,21 @@
             text-decoration: none;
             text-transform: uppercase;
         }
-
+        
         .parceiro-content-plano-preco span+a.button {
             margin-top: var(--mdSpace);
         }
-
+        
         .telemedicina-selecione-parceiro {
             margin-top: var(--xxlSpace);
         }
-
+        
         .telemedicina-selecione-parceiro h3,
         .telemedicina-qual-servico h3 {
             text-align: center;
         }
-
         /* --------------------------------------------------------------------*/
-
+        
         .card {
             background-color: rgba(255, 255, 255, 1);
             border-radius: 12px;
@@ -645,35 +632,34 @@
             padding: var(--mdSpace);
             overflow: hidden;
         }
-
+        
         .card-content {
             padding-left: 65px;
             padding-right: 65px;
             align-self: center;
         }
-
         /* card especial que contém texto e um botão deslocado para fora */
-
+        
         .telemedicina-card-list {
             display: flex;
             justify-content: space-between;
             list-style: none;
         }
-
+        
         .telemedicina-card-list li {
             flex: 0.31;
             position: relative;
             padding: var(--lgSpace) var(--lgSpace);
             overflow: visible;
         }
-
+        
         .telemedicina-card-list li.card {
             background-color: var(--color-white);
             border-radius: 12px;
             box-shadow: var(--boxShadow);
             color: var(--color-yale-blue);
         }
-
+        
         .telemedicina-card-list li .button {
             position: absolute;
             left: calc(50% - 75px);
@@ -681,110 +667,106 @@
             height: 50px;
             width: 150px;
         }
-
+        
         .telemedicina-card-list li p {
             margin-top: var(--mdSpace);
             margin-bottom: var(--lgSpace);
             font-size: var(--xxsFontSize);
         }
-
+        
         .telemedicina-card-deco img {
             position: absolute;
             height: calc(100% + var(--lgSpace));
             right: 10%;
             top: calc(var(--lgSpace) * -1);
         }
-
         /* special-card com opção de imagem no topo que sai para cima */
-
+        
         .outer-top-img {
             margin-top: 37px;
         }
-
+        
         .outer-top-img li {
             padding-top: var(--xxlSpace);
         }
-
+        
         .outer-top-img .telemedicina-thumb {
             position: absolute;
             left: calc(50% - 80px);
             top: -40px;
         }
-
+        
         .outer-top-img .telemedicina-card-deco img {
             top: -64px;
             right: 10%;
         }
-
         /* ----------------------------------------------- */
-
+        
         .pure-u-md-1-3.card {
             max-width: 31%;
         }
-
+        
         iframe#card-video {
             width: 100%;
             min-height: 486px;
             border: none;
         }
-
         /* Button Bar Qual Serviço*/
-
+        
         .button-bar-qual-servico {
             width: 100%;
             display: flex;
             justify-content: center;
         }
-
+        
         .button-bar-qual-servico a.button {
             transition: opacity 0.3s;
             opacity: 0.5;
             max-width: 31%;
             text-transform: uppercase;
         }
-
+        
         .button-bar-qual-servico a.active {
             opacity: 1;
         }
-
+        
         .button-bar-qual-servico a:first-child {
             border-radius: 8px 0 0 8px;
         }
-
+        
         .button-bar-qual-servico a:not(:first-child):not(:last-child) {
             border-radius: 0;
         }
-
+        
         .button-bar-qual-servico a:last-child {
             border-radius: 0 8px 8px 0;
         }
-
+        
         .button-bar-qual-servico a:not(:last-child) {
             margin-right: 2px;
         }
-
         /* Menu Logo Parceiro */
-
+        
         .scroll-menu-wrapper {
             width: 100%;
             position: relative;
         }
-
+        
         .arrow-left,
         .arrow-right {
             display: none;
         }
-
+        
         .scroll-menu {
             width: 100%;
         }
-
+        
         .logo-parceiro-bar {
             display: flex;
             align-self: stretch;
             justify-content: space-between;
         }
-
+        
         .logo-parceiro-bar a {
             max-height: 50px;
             min-width: 120px;
@@ -795,21 +777,20 @@
             background-color: var(--color-white);
             overflow: hidden;
         }
-
+        
         .logo-parceiro-bar .active {
             opacity: 1;
         }
-
+        
         .logo-parceiro-bar a img {
             width: 80%;
         }
-
         /* TELEMEDICINA */
-
+        
         .telemedicina h3 {
             text-align: center;
         }
-
+        
         .banner-panvel-clinic {
             width: 100%;
             display: flex;
@@ -818,23 +799,23 @@
             margin-top: var(--xlSpace);
             margin-bottom: var(--lgSpace);
         }
-
+        
         .banner-panvel-clinic img {
             max-width: 50%;
         }
-
+        
         .banner-panvel-clinic p {
             font-style: italic;
             margin: 0;
         }
-
+        
         .banner-panvel-clinic-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             margin-right: 136px;
         }
-
+        
         .banner-panvel-clinic-title {
             display: flex;
             justify-content: center;
@@ -849,36 +830,34 @@
             font-weight: 700;
             font-size: var(--mdFontSize);
         }
-
-
+        
         .main-banner {
             margin: 0;
             padding: 0;
             position: relative;
-
         }
-
+        
         .main-banner img {
             width: 100%;
         }
-
+        
         .main-banner .banner-panvel-clinic-title {
             border-radius: 0;
             padding: var(--xxxsSpace) 0;
             margin: var(--xsSpace) 0;
         }
-
+        
         .banner-panvel-clinic.main-banner .banner {
             width: 100%;
             max-width: 1080px;
         }
-
+        
         .main-banner .button {
             color: var(--color-yale-blue);
             font-style: italic;
             margin-top: var(--smSpace);
         }
-
+        
         .main-banner .banner-panvel-clinic-content {
             position: absolute;
             background: var(--color-white);
@@ -892,28 +871,26 @@
             align-items: center;
             padding: var(--lgSpace) 0 0;
         }
-
+        
         .main-banner .banner-panvel-clinic-logo {
             width: 180px;
             height: auto;
         }
-
+        
         .main-banner .banner-panvel-clinic-content h2 {
             font-size: var(--pSize);
             font-weight: 400;
         }
-
+        
         .main-banner+.scroll-menu-wrapper {
             margin-top: 2px;
         }
-
+        
         .header-parceiro-detalhes .logo-parceiro-md {
             width: 100px;
             height: auto;
         }
-
         /* VACINAS */
-
         /*
 .banner-vacinas {
     width: 100%;
@@ -948,40 +925,40 @@
 .banner-vacinas-content h1 {
     margin: 0 0 var(--mdSpace);
 }*/
-
+        
         .simplyBookContainer {
             width: 100%;
             margin: 0 auto;
         }
-
+        
         .simplyBookContainer h2 {
             margin: var(--xlSpace) 0 var(--xsSpace);
         }
-
+        
         .simplyBookContainer iframe {
             height: 310;
         }
-
+        
         #simplyBookLoadingMessage,
         #simplyBookErrorMessage {
             display: none;
             margin-bottom: var(--mdSpace);
             font-size: var(--xxsFontSize);
         }
-
+        
         #simplyBookLoadingMessage>i {
             font-family: fontAwesome;
             font-style: normal;
             text-align: center;
             display: inline-block;
         }
-
+        
         .vacina-como-agendar-list {
             text-align: center;
             padding: 0;
             justify-content: space-between;
         }
-
+        
         .vacina-como-agendar-list li {
             flex: 0.23;
             display: flex;
@@ -989,7 +966,7 @@
             align-items: center;
             margin: var(--xlSpace);
         }
-
+        
         .vacina-como-agendar-list li::before {
             content: "";
             display: block;
@@ -1000,36 +977,36 @@
             height: 60px;
             margin: var(--mdSpace) auto;
         }
-
+        
         .vacina-como-agendar-list li:nth-child(1)::before {
             background-image: url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/vacinas/Shape.svg);
         }
-
+        
         .vacina-como-agendar-list li:nth-child(2)::before {
             background-image: url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/vacinas/shop.svg);
         }
-
+        
         .vacina-como-agendar-list li:nth-child(3)::before {
             background-image: url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/vacinas/Group_5.svg);
         }
-
+        
         .vacina-como-agendar-list li:nth-child(4)::before {
             background-image: url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/vacinas/Group_4.svg);
         }
-
+        
         .vacina-como-agendar-list p,
         .vacina-como-agendar-list p+.button {
             margin-top: var(--mdSpace);
         }
-
+        
         .vacina-como-agendar-list p {
             font-size: var(--xxsFontSize);
         }
-
+        
         .vacina-como-agendar-list .button {
             font-size: var(--xxxsFontSize);
         }
-
+        
         .banner-vacinas-deco {
             width: 100px;
             height: 100px;
@@ -1043,44 +1020,44 @@
             background-position: right center;
             background-repeat: no-repeat;
         }
-
+        
         .scroll-menu-wrapper-vacinas {
             box-shadow: var(--boxShadow);
             background-color: var(--color-white);
             border-radius: 0 0 8px 8px;
         }
-
+        
         .line-menu-vacinas {
             margin: 0;
         }
-
+        
         .line-menu-vacinas a.active {
             color: var(--color-medium-turquoise);
             opacity: 1;
             border-bottom: 4px solid var(--color-medium-turquoise);
         }
-
+        
         .line-menu-vacinas a {
             margin-bottom: 0;
             padding-top: calc(var(--xsSpace) + 4px);
             color: var(--color-medium-turquoise);
         }
-
+        
         .line-menu-vacinas>nav {
             margin-top: 0;
         }
-
+        
         .parceiro-detalhes-content {
             display: flex;
             flex-direction: column;
         }
-
+        
         .header-parceiro-detalhes {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
+        
         .logo-parceiro-md-wrapper {
             width: 150px;
             height: 100px;
@@ -1091,15 +1068,13 @@
             justify-content: center;
             align-items: center;
         }
-
+        
         .logo-parceiro-md-wrapper+.scroll-menu-wrapper {
             margin-top: var(--lgSpace);
         }
-
         /*------------------------*/
-
         /* LISTS */
-
+        
         .list-3-flex-col {
             display: flex;
             justify-content: space-between;
@@ -1108,7 +1083,7 @@
             text-align: center;
             width: 100%;
         }
-
+        
         .list-3-flex-col li {
             display: flex;
             flex-direction: column;
@@ -1116,7 +1091,7 @@
             align-items: center;
             flex: 0.29;
         }
-
+        
         .list-3-flex-col li.item-vacina {
             display: flex;
             flex-direction: column;
@@ -1124,34 +1099,33 @@
             align-items: center;
             flex: 0.26;
         }
-
+        
         .list-3-flex-col li.onde-vacinar-col {
             flex: 0.50;
         }
-
+        
         .list-3-flex-col h3 {
             margin-top: var(--mdSpace);
             margin-bottom: 0;
         }
-
+        
         .list-3-flex-col h3+p {
             margin-top: var(--mdSpace);
         }
-
+        
         .vacina-como-agendar-list-info-button {
             color: var(--color-white);
             font-size: var(--xxxsFontSize);
             margin-top: var(--xlSpace);
         }
-
         /* accordion LIST */
-
+        
         .accordion-list {
             text-align: left;
             list-style: none;
             padding-left: 0;
         }
-
+        
         .accordion-item {
             position: relative;
             background-color: var(--color-white);
@@ -1161,18 +1135,18 @@
             cursor: pointer;
             max-height: 500px;
         }
-
+        
         .accordion-item:not(:last-child) {
             margin-bottom: var(--mdSpace);
         }
-
+        
         .accordion-item h3 {
             position: relative;
             margin-bottom: 0;
             padding-right: var(--lgSpace);
             text-align: left;
         }
-
+        
         .accordion-item .hidden-content {
             max-height: 0;
             opacity: 0;
@@ -1181,18 +1155,18 @@
             transform-origin: top;
             transition: all 0.5s ease-in-out;
         }
-
+        
         .accordion-item.active {
             box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
             max-height: 100vh;
         }
-
+        
         .accordion-item.active .hidden-content {
             margin-top: var(--xsSpace);
             max-height: 100px;
             opacity: 1;
         }
-
+        
         .accordion-item .accordionActivator {
             display: block;
             transform: scaleY(1);
@@ -1201,27 +1175,26 @@
             height: auto;
             opacity: 1;
         }
-
+        
         .accordion-item.active .accordionActivator {
             transform: scaleY(0);
             height: 0;
             opacity: 0;
         }
-
+        
         .accordion-item.active {
             box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
             max-height: 100vh;
         }
-
+        
         .accordion-item h3::before {
             content: "•";
             position: absolute;
             left: calc(var(--smSpace)*-1);
             font-style: normal;
         }
-
         /* seta do accordion */
-
+        
         .accordion-item h3::after {
             content: '';
             width: 40px;
@@ -1238,52 +1211,51 @@
             border-radius: 50%;
             box-sizing: border-box;
         }
-
+        
         .accordion-list-vacinas {
             margin-top: var(--xxlSpace);
         }
-
+        
         .accordion-item.active h3::after {
             transform: rotate(180deg);
         }
-
+        
         .accordion-item-vacina {
             display: flex;
             flex-direction: column;
             cursor: default;
         }
-
+        
         .accordion-item-vacina h3 {
             font-size: var(--h2Size);
         }
-
+        
         .accordion-item-vacina h3::after {
             opacity: 0;
             width: 0;
             height: 0;
         }
-
+        
         .accordion-item-vacina .bt-agendar-vacina {
             position: absolute;
             right: var(--xlSpace);
             bottom: var(--xlSpace);
         }
-
+        
         .accordion-item-vacina .vacina-item-desc {
             margin-bottom: var(--mdSpace);
         }
-
+        
         .accordion-item-vacina .hidden-content {
             font-size: var(--xxsFontSize);
         }
-
+        
         .accordion-item-vacina .hidden-content ul {
             padding: 0;
             list-style: none;
         }
-
         /* ASSISTENTE VIRTUAL */
-
+        
         .modal-assistente-virtual-demo {
             width: 100%;
             height: 100%;
@@ -1294,7 +1266,7 @@
             justify-content: center;
             align-items: center;
         }
-
+        
         .assistVirtualContent {
             width: 100%;
             height: 100%;
@@ -1305,18 +1277,18 @@
             overflow: hidden;
             position: relative;
         }
-
+        
         .assistVirtualModal #LHModal {
             background: url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/assistente-virtual-vacinas/modal_bg.png);
             background-size: cover;
             background-position: center;
             overflow: hidden;
         }
-
+        
         .assistVirtualModal * {
             color: var(--color-white);
         }
-
+        
         .assistVirtualModal #modalHeader {
             position: absolute;
             top: 0;
@@ -1326,12 +1298,12 @@
             justify-content: center;
             padding-top: var(--xlSpace);
         }
-
+        
         .assistVirtualModal #modalHeader svg {
             transform: scaleY(0);
             transition: all 1s ease-in-out;
         }
-
+        
         #modalHeader::after {
             content: "";
             position: absolute;
@@ -1344,52 +1316,52 @@
             background: var(--color-orange-title);
             transition: all 1s ease-in-out;
         }
-
+        
         #modalHeader.assistantStarted::after {
             width: calc(100% - var(--xlSpace) * 2);
         }
-
+        
         #modalHeader #logoModalMain {
             transform: scaleY(1);
             position: relative;
             top: 0;
             width: 160px;
         }
-
+        
         #modalHeader #logoModalLeft {
             left: var(--xlSpace);
         }
-
+        
         #modalHeader #logoModalRight {
             right: var(--xlSpace);
         }
-
+        
         #modalHeader #logoModalLeft,
         #modalHeader #logoModalRight {
             position: absolute;
             opacity: 0;
             top: -100%;
         }
-
+        
         #modalHeader.assistantStarted #logoModalRight {
             top: var(--xlSpace);
         }
-
+        
         #modalHeader.assistantStarted #logoModalLeft {
             top: var(--lgSpace);
         }
-
+        
         #modalHeader.assistantStarted #logoModalLeft,
         #modalHeader.assistantStarted #logoModalRight {
             transform: scaleY(1);
             opacity: 1;
         }
-
+        
         #modalHeader.assistantStarted #logoModalMain {
             top: -100px;
             opacity: 0;
         }
-
+        
         [id^="assistVirtual-wrapper-"] {
             flex: 1;
             width: 100%;
@@ -1400,40 +1372,40 @@
             left: 100%;
             opacity: 0;
         }
-
+        
         [id^="assistVirtual-wrapper-"] .options {
             display: flex;
             justify-content: center;
             margin-top: var(--xxlSpace);
         }
-
+        
         [id^="assistVirtual-wrapper-"] button {
             margin-bottom: var(--mdSpace);
         }
-
+        
         [id^="assistVirtual-wrapper-"].active {
             left: 0;
             opacity: 1;
             transition: left 1.5s ease-in-out, opacity 1.5s;
         }
-
+        
         [id^="assistVirtual-wrapper-"].completed {
             left: -100%;
             opacity: 0;
             transition: left 1.5s ease-in-out, opacity 0.5s;
         }
-
+        
         [id^="assistVirtual-wrapper-"] h2 {
             margin-top: 10%;
             margin-bottom: var(--xxsSpace);
             font-size: var(--lgFontSize);
         }
-
+        
         [id^="assistVirtual-wrapper-"] h3 {
             margin: 0;
             font-size: var(--h2Size);
         }
-
+        
         [id^="assistVirtual-wrapper-"] button {
             border: none;
             outline: none;
@@ -1446,35 +1418,35 @@
             transition: background-color 0.5s;
             cursor: pointer;
         }
-
+        
         [id^="assistVirtual-wrapper-"] button.active {
             background-color: var(--color-white);
         }
-
+        
         [id^="assistVirtual-wrapper-"] button.questOption:first-of-type {
             margin-right: var(--smSpace);
         }
-
+        
         [id^="assistVirtual-wrapper-"] .note {
             font-size: var(--smFontSize);
             font-weight: 700;
             font-style: italic;
             margin-top: var(--mdSpace);
         }
-
+        
         [id^="assistVirtual-wrapper-"] .note+.recommended-exam {
             margin-top: var(--mdSpace);
         }
-
+        
         [id^="assistVirtual-wrapper-"] .recommended-exam+.options,
         [id^="assistVirtual-wrapper-"] .note+.options {
             margin-top: var(--xlSpace);
         }
-
+        
         [id^="assistVirtual-wrapper-"] .bt-agendar-vacina {
             background: var(--color-acqua);
         }
-
+        
         [id^="assistVirtual-wrapper-"] .recommended-exam {
             font-size: var(--mdFontSize);
             font-weight: 700;
@@ -1485,27 +1457,25 @@
             padding: var(--mdSpace);
             border-radius: 8px;
         }
-
+        
         [id^="assistVirtual-wrapper-"] .recommended-exam p+p {
             margin-top: var(--xsSpace);
         }
-
+        
         [id^="assistVirtual-wrapper-"] .recommended-exam span {
             display: block;
             font-size: var(--smFontSize);
             color: var(--color-yale-blue);
             margin: var(--xsSpace) 0;
         }
-
         /* LOGOTIPOS */
-
         /*
 <div class="logo-panvel-clinic">
 <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.png" alt="">
 <p><span>Panvel<br>Clinic</span>Tudo para cuidar<br>da sua saúde.</p>
 </div>
 */
-
+        
         .logo-panvel-clinic {
             display: flex;
             align-items: flex-start;
@@ -1513,27 +1483,26 @@
             font-style: italic;
             font-size: 10px;
         }
-
+        
         .logo-panvel-clinic p {
             margin: 0;
             padding-top: 10px;
             margin-left: 10px;
         }
-
+        
         .logo-panvel-clinic span {
             display: block;
             font-size: 30px;
             line-height: 30px;
             margin-bottom: 5px;
         }
-
+        
         .logo-panvel-clinic img {
             width: auto;
             height: 70px;
         }
-
         /* Modal Content */
-
+        
         #LHModalOverlay {
             position: fixed;
             width: 100%;
@@ -1564,12 +1533,12 @@
             animation-name: fadeIn;
             animation-duration: 0.4s
         }
-
+        
         #LHModalContent {
             width: 100%;
             height: 100%;
         }
-
+        
         #LHModal {
             flex: 0.9;
             flex-direction: column;
@@ -1598,16 +1567,15 @@
             margin-top: 70px;
             max-height: 80vh;
         }
-
         /* ACESSIBILIDADE: modal title*/
-
+        
         #LHModalTitle {
             position: absolute;
             height: 1;
             width: 1;
             opacity: 0;
         }
-
+        
         #LHModal iframe {
             opacity: 1;
             transition: all 1s 4s;
@@ -1615,7 +1583,7 @@
             height: 100%;
             border-top: 1px dotted #009cff;
         }
-
+        
         #LHmodal-form {
             height: 100%;
             max-width: 763px;
@@ -1625,18 +1593,17 @@
             overflow: auto;
             max-height: 80vh;
         }
-
+        
         #LHmodal-form {
             overflow: auto;
             height: 100%;
         }
-
+        
         iframe {
             border: none;
         }
-
         /* The Close Button */
-
+        
         .close,
         #btCloseModal {
             position: absolute;
@@ -1650,7 +1617,7 @@
             border: none;
             background-color: transparent;
         }
-
+        
         #btCloseModal:before {
             content: url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/bt_close_modal.png);
             display: flex;
@@ -1658,11 +1625,11 @@
             align-items: center;
             transition: 0.3s;
         }
-
+        
         #btCloseModal:hover:before {
             opacity: 0.5;
         }
-
+        
         .close:hover,
         .close:focus,
         #btCloseModal:hover,
@@ -1670,22 +1637,22 @@
             color: #000;
             text-decoration: none;
         }
-
+        
         #iframe-container {
             width: 100%;
             height: 100%;
         }
-
+        
         .card-form .form-container {
             margin-top: 25px;
         }
-
+        
         .form-container .dropdown-card {
             padding: 0 10px;
             max-width: 500px;
             margin: 0 auto;
         }
-
+        
         .dropdown-card select {
             font-weight: bold;
             font-size: 1rem;
@@ -1700,7 +1667,7 @@
             background: #fafafa;
             color: #757575;
         }
-
+        
         .card-adress,
         .card-nome {
             font-family: Foco, Open Sans, sans-serif;
@@ -1711,27 +1678,27 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-
+        
         .card-nome {
             text-transform: uppercase;
         }
-
+        
         .card-adress span,
         .card-end span {
             margin-bottom: 3px;
         }
-
+        
         .card-adress span:first-child,
         .card-end span:first-child {
             margin-bottom: 5px;
         }
-
+        
         .card-end {
             margin-left: 12px;
             padding-bottom: 17px;
             box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
         }
-
+        
         #items-container {
             overflow-y: auto;
             max-height: 580px;
@@ -1740,84 +1707,68 @@
             border-radius: 6px;
             margin-bottom: 25px;
         }
-
         /* RESPONSIVIDADE */
-
+        
         @media screen and (max-width:768px) {
             .LHContent {
                 padding: 15px 0;
             }
-
             .sub-header-crumback {
                 padding: 0 var(--mdSpace);
             }
-
             /* LISTS */
             .list-3-flex-col {
                 flex-direction: column;
                 margin-top: 0;
             }
-
             .list-3-flex-col li {
                 padding: 0 var(--mdSpace);
             }
-
             .list-3-flex-col li+li {
                 margin-top: var(--xlSpace);
             }
-
             .center {
                 padding-left: 0;
                 padding-right: 0;
             }
-
             /* Coloca padding lateral apenas no que não for a*/
             .inner-center {
                 padding: 0 15px;
             }
-
             .accordion-item h3::after {
                 right: -20px;
             }
-
             .accordion-item.active p {
                 max-height: 280px;
                 padding-right: var(--xsSpace);
             }
-
             .inner-sub-header {
                 flex-direction: column;
                 margin-bottom: 0;
             }
-
             .inner-sub-header,
             #lower-section .parceiro-content-plano-preco {
                 display: flex;
                 max-width: 100%;
                 justify-content: center;
             }
-
             .inner-sub-header h2 {
                 position: relative;
                 /* reduz a fonte em 20% */
                 font-size: calc(var(--lgFontSize));
             }
-
             .inner-sub-header h2:after {
                 position: absolute;
                 left: calc(50% - var(--smFontSize));
                 transform: rotate(90deg);
                 bottom: -30px;
             }
-
             .inner-sub-header p {
                 max-width: 100%;
             }
-
             .section-banner {
                 margin-top: var(--mdSpace);
             }
-
             /* RESPONSIVIDADE: TELEMEDICINA */
             .banner-panvel-clinic {
                 flex-direction: column-reverse;
@@ -1825,104 +1776,83 @@
                 margin-top: 0;
                 padding: 0 var(--smSpace);
             }
-
             .banner-panvel-clinic-content {
                 margin-right: 0;
                 margin-top: var(--lgSpace);
                 width: 100%;
                 align-items: center;
             }
-
             .banner-panvel-clinic p {
                 text-align: center;
             }
-
             .banner-panvel-clinic .banner {
                 max-width: 100%;
             }
-
             .sub-header-telemedicina {
                 flex-direction: column;
                 padding: 0 var(--mdSpace);
                 margin: var(--xlSpace) 0;
             }
-
             .sub-header-telemedicina p {
                 margin: 0;
                 max-width: 100%;
                 text-align: center;
             }
-
             .sub-header-telemedicina h2 {
                 flex-direction: column;
             }
-
             .sub-header-with-arrow h2:after {
                 transform: rotate(90deg);
             }
-
             .telemedicina-qual-servico {
                 padding: 0 var(--mdSpace);
             }
-
             .button-bar-qual-servico {
                 flex-direction: column;
             }
-
             .telemedicina-card-list {
                 flex-direction: column;
                 padding: 0 var(--mdSpace);
             }
-
             .telemedicina-card-list li.telemedicina-card-deco {
                 display: none;
             }
-
             .telemedicina-card-list li+li {
                 margin-top: var(--xlSpace);
             }
-
             .outer-top-img li:first-child {
                 margin-top: 40px;
             }
-
             .outer-top-img li+li {
                 margin-top: calc(var(--xxlSpace) + 40px);
             }
-
             .telemedicina-pacotes>li {
                 flex: auto;
                 margin: 0;
             }
-
             .telemedicina-pacotes>li:nth-child(2) {
                 margin: var(--lgSpace) 0;
             }
-
             .parceiro-detalhe-sobre-a-empresa div {
                 width: 100%;
                 margin-top: 160px;
             }
-
             .parceiro-detalhe-sobre-a-empresa>img {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
             }
-
             .parceiro-detalhe-sobre-a-empresa li {
                 font-size: var(--xxsFontSize);
                 min-width: 48%;
             }
-
             /* RESPONSIVIDADE: VACINAS */
             .banner-vacinas {
                 flex-direction: column;
                 margin-bottom: var(--smSpace);
                 padding-bottom: var(--smSpace);
             }
-
             .banner-vacinas .banner-vacinas-content {
                 position: relative;
                 top: -80px;
@@ -1935,25 +1865,20 @@
                 align-items: center;
                 min-height: auto;
             }
-
             .banner-vacinas img {
                 width: 100%;
                 height: auto;
                 position: relative;
             }
-
             .banner-vacinas-deco {
                 display: none;
             }
-
             .main-banner {
                 padding: 0;
             }
-
             .main-banner .banner {
                 display: none;
             }
-
             .main-banner .banner-panvel-clinic-content {
                 position: relative;
                 top: 0;
@@ -1963,64 +1888,51 @@
                 min-height: 215px;
                 margin-top: 0;
             }
-
             .sub-header-vacinas {
                 padding: var(--mdSpace);
             }
-
             .vacina-como-agendar-list {
                 padding: 0 var(--mdSpace);
                 margin: 0;
             }
-
             .vacina-como-agendar-list li {
                 flex: auto;
             }
-
             .parceiro-content-especialidade {
                 width: 90%;
                 margin: 0 auto;
             }
-
             .simplyBookContainer {
                 padding: 0 var(--smSpace);
                 width: 100%;
             }
-
             .simplyBookContainer h2 {
                 margin-top: var(--mdSpace);
             }
-
             .accordion-item-vacina .bt-agendar-vacina {
                 position: relative;
                 left: 0;
                 top: 0;
                 margin: var(--mdSpace) auto 0;
             }
-
             /*-------------------------------------------------*/
             .pure-u-md-1-3.card {
                 max-width: none;
             }
-
             /* Detalhe do logo desaparece no mobile */
             .pure-u-md-1-3.card-logo-deco-bg {
                 display: none;
             }
-
             .button-bar-qual-servico>* {
                 width: 100%;
                 border-radius: 8px !important;
             }
-
             .button-bar-qual-servico a+a {
                 margin-top: var(--smSpace);
             }
-
             .button-bar-qual-servico a.button {
                 max-width: 100%;
             }
-
             /* Menu com scroll horizontal */
             .scroll-menu-wrapper div[class^="arrow-"] {
                 position: absolute;
@@ -2035,95 +1947,76 @@
                 align-items: center;
                 z-index: 2;
             }
-
             .scroll-menu-wrapper .arrow-left {
                 top: calc(50% - 10px);
                 left: 5px;
                 display: none;
             }
-
             .scroll-menu-wrapper .arrow-right {
                 top: calc(50% - 10px);
                 right: 5px;
                 display: flex;
             }
-
             @-webkit-keyframes arrowPulse {
                 0% {
                     opacity: 0;
                 }
-
                 50% {
                     opacity: 0.8;
                 }
-
                 100% {
                     opacity: 0;
                 }
             }
-
             @keyframes arrowPulse {
                 0% {
                     opacity: 0;
                 }
-
                 50% {
                     opacity: 0.8;
                 }
-
                 100% {
                     opacity: 0;
                 }
             }
-
             .scroll-menu {
                 overflow-x: hidden;
             }
-
             .scroll-menu nav {
                 width: 100%;
                 padding: 0 var(--xsSpace);
             }
-
             /*------------------------------------*/
             .logo-parceiro-bar a:not(:last-of-type) {
                 margin-right: var(--xsSpace);
             }
-
             .logo-parceiro-bar a::after {
                 content: ".";
                 display: block;
             }
-
             .special-card {
                 margin-bottom: var(--lgSpace);
             }
-
             /* RESPONSIVIDADE: Assistente Virtual---------------------------*/
             .modalAssistVirtual {
                 background: url(https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/assistente-virtual-vacinas/modal_bg.png) var(--color-yale-blue);
                 color: var(--color-white);
             }
-
             .assistVirtual-modal-logo {
                 height: 80px;
                 width: auto;
             }
-
             #modalHeader #logoModalMain {
                 position: relative;
                 height: 100px;
             }
-
             #modalHeader.assistantStarted #logoModalRight {
                 top: var(--xlSpace);
             }
-
             #modalHeader.assistantStarted #logoModalLeft {
                 top: var(--lgSpace);
                 opacity: 0;
             }
-
             #modalHeader.assistantStarted #logoModalRight {
                 transform: scaleY(1);
                 opacity: 1;
@@ -2131,121 +2024,99 @@
                 height: auto;
                 top: 40%;
             }
-
             #modalHeader.assistantStarted #logoModalMain {
                 top: -100px;
                 opacity: 0;
                 height: 60px;
             }
-
-
-
             [id^="assistVirtual-wrapper-"] {
                 padding: 0 var(--xsSpace);
             }
-
             [id^="assistVirtual-wrapper-"].active {
                 left: 0;
                 opacity: 1;
                 transition: left 1s ease-in-out, opacity 1s;
             }
-
             [id^="assistVirtual-wrapper-"].completed {
                 left: -100%;
                 opacity: 0;
                 transition: left 1s ease-in-out, opacity 0.5s;
             }
-
             [id^="assistVirtual-wrapper-"] h2 {
                 font-size: var(--mdFontSize);
             }
-
             [id^="assistVirtual-wrapper-"] .options {
                 flex-direction: column;
                 width: 100%;
                 margin-top: 0;
             }
-
             [id^="assistVirtual-wrapper-"] button.questOption {
                 width: 100%;
                 margin: var(--xsSpace) 0;
             }
-
             [id^="assistVirtual-wrapper-"] button.questOption:first-of-type {
                 margin-right: 0;
             }
-
             [id^="assistVirtual-wrapper-"] .recommended-exam {
                 font-size: var(--smFontSize);
                 max-width: 100%;
                 margin: var(--mdSpace) 0;
             }
-
             /* ACCORDION -------------------------------- */
             .accordion-list {
                 padding: 0 var(--mdSpace);
             }
-
             .accordion-item {
                 padding: var(--lgSpace) var(--xlSpace);
             }
-
             .accordion-item h3::after {
                 width: 30px;
                 height: 30px;
             }
         }
-
         /* Add Animation */
-
+        
         @-webkit-keyframes slideIn {
             from {
                 bottom: -300px;
                 opacity: 0
             }
-
             to {
                 bottom: 0;
                 opacity: 1
             }
         }
-
+        
         @keyframes slideIn {
             from {
                 bottom: -300px;
                 opacity: 0
             }
-
             to {
                 bottom: 0;
                 opacity: 1
             }
         }
-
+        
         @-webkit-keyframes fadeIn {
             from {
                 opacity: 0
             }
-
             to {
                 opacity: 1
             }
         }
-
+        
         @keyframes fadeIn {
             from {
                 opacity: 0
             }
-
             to {
                 opacity: 1
             }
         }
-
-
-
         /* Formulário de pesquisa */
-
+        
         .card-form {
             background-color: rgba(255, 255, 255, 1);
             border-radius: 8px;
@@ -2256,15 +2127,15 @@
             line-height: 26px;
             width: 100%;
         }
-
+        
         .card-form .card-header {
             text-align: center;
         }
-
+        
         .card-form .card-header .card-title {
             margin: 48 20px 30px;
         }
-
+        
         .card-form .card-header .card-desc {
             padding: 15px;
             margin: 0 auto;
@@ -2274,16 +2145,16 @@
             letter-spacing: -0.03em;
             line-height: 19px;
         }
-
+        
         .card-form .form-container {
             margin-top: 25px;
         }
-
+        
         .form-container .dropdown-card {
             max-width: 500px;
             margin: 0 auto;
         }
-
+        
         .dropdown-card select {
             font-weight: bold;
             font-size: 1rem;
@@ -2298,7 +2169,7 @@
             background: #fafafa;
             color: #757575;
         }
-
+        
         .card-adress,
         .card-nome {
             font-family: Foco, Open Sans, sans-serif;
@@ -2309,27 +2180,27 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-
+        
         .card-nome {
             text-transform: uppercase;
         }
-
+        
         .card-adress span,
         .card-end span {
             margin-bottom: 3px;
         }
-
+        
         .card-adress span:first-child,
         .card-end span:first-child {
             margin-bottom: 5px;
         }
-
+        
         .card-end {
             margin-left: 12px;
             padding-bottom: 17px;
             box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
         }
-
+        
         #items-container {
             overflow-y: auto;
             max-height: 580px;
@@ -2338,7 +2209,7 @@
             border-radius: 6px;
             margin-bottom: 25px;
         }
-
+        
         .text-dropwdown {
             text-transform: uppercase;
             font-family: Foco, Open Sans, sans-serif;
@@ -2346,15 +2217,15 @@
             color: rgba(158, 158, 158, 1);
             letter-spacing: 0.01em;
         }
-
+        
         .dropdown-card .button-div {
             margin: 20px 0;
         }
-
+        
         .filiaisContent {
             overflow: auto;
         }
-
+        
         .filiaisJSON .filiaisContent>.card-info {
             margin-top: 15px;
             display: flex;
@@ -2386,15 +2257,12 @@
 
         <div class="banner-panvel-clinic main-banner">
             <div class="banner-panvel-clinic-content">
-                <img class="banner-panvel-clinic-logo"
-                    src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/vacinas/group_8.png"
-                    alt="Panvel Clinic" />
+                <img class="banner-panvel-clinic-logo" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/vacinas/group_8.png" alt="Panvel Clinic" />
                 <h1 class="banner-panvel-clinic-title" href="#tele-link">Vacina da Gripe</h1>
                 <h2>Você bem protegido.</h2>
                 <!--<a class="button" aria-label="Saiba mais sobre a vacina da gripe">Saiba mais</a>-->
             </div>
-            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/1394_-_Home_Vacina_Gripe_1080x293_ALT.png"
-                class="banner" alt>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/1394_-_Home_Vacina_Gripe_1080x293_ALT.png" class="banner" alt>
         </div>
 
         <div class="scroll-menu-wrapper">
@@ -2413,8 +2281,7 @@
         </div>
 
         <div class="banner-vacinas">
-            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/banner_vacinas.jpg"
-                class="banner" alt>
+            <img src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/vacinas/banner_vacinas.jpg" class="banner" alt>
             <div class="banner-vacinas-content banner-vacinas-content-md">
                 <div class="banner-vacinas-deco"></div>
                 <h2><b>Vacina da Gripe.</b><br>Proteja-se na Panvel.</h2>
@@ -2429,25 +2296,24 @@
                 <ol class="pure-g vacina-como-agendar-list">
                     <li class="pure-u-1 pure-u-md-1-4">
                         <h3>Quem deve se vacinar?</h3>
-                        <p>Todas as pessoas podem se vacinar contra a gripe, exceto crianças com menos de 6 meses de
-                            idade
-                            e/ou pessoas alérgicas aos componentes do produto e à proteína do ovo.</p>
+                        <p>Todas as pessoas podem se vacinar contra a gripe, exceto crianças com menos de 6 meses de idade e/ou pessoas alérgicas aos componentes do produto e à proteína do ovo.</p>
                     </li>
                     <li class="pure-u-1 pure-u-md-1-4">
                         <h3>Onde se vacinar</h3>
                         <p>Confira os endereços das lojas que possuem o serviço.</p>
-                        <a class="button btn-modal" href="#"
-                            aria-label="Saiba mais sobre os endereços e horários de vacinação.">Saiba
+                        <a class="button btn-modal" href="#" aria-label="Saiba mais sobre os endereços e horários de vacinação.">Saiba
                             mais</a>
                     </li>
                     <li class="pure-u-1 pure-u-md-1-4">
                         <h3>Preço</h3>
-                        <p><h2>R$ 89,00</h2></p>
+                        <p>
+                            <h2>R$ 89,00</h2>
+                        </p>
                     </li>
                     <li class="pure-u-1 pure-u-md-1-4">
                         <h3>Dica Panvel</h3>
-                        <p>Fale com nossos gerentes pelo Whatsapp antes de ir até a loja para garantir que há estoque
-                            disponível.</p>
+                        <p>Fale com nossos gerentes pelo Whatsapp antes de ir até a loja para garantir que há estoque disponível.
+                        </p>
                         <a class="button btn-modal" href="#">Confira o telefone de cada loja</a>
                     </li>
                 </ol>
@@ -2489,8 +2355,7 @@
                     </div>
 
                     <div class="card-info pure-u-1 pure-u-md-2-5">
-                        <img
-                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
                     </div>
                 </section>
             </dialog>
@@ -2499,7 +2364,6 @@
 </body>
 
 <script>
-
     window.onload = () => {
         /* Verifica se há algum menu responsivo com scroll horizontal na página e o(s) inicializa. */
         const hasHorizontalScrollMenu = [...document.getElementsByClassName('scroll-menu-wrapper')].length > 0;
@@ -2559,7 +2423,7 @@
             const btCloseModal = document.getElementById('btCloseModal');
 
             /* Fecha modal caso ocorra clique fora de sua área */
-            btCloseModal.onclick = function () {
+            btCloseModal.onclick = function() {
                 modalOverlay.style.display = "none";
                 document.getElementsByTagName('body')[0].style.overflow = 'auto';
             }
@@ -2573,7 +2437,7 @@
             }
 
             // When the user clicks anywhere outside of the modal, close it
-            window.addEventListener('click', function (event) {
+            window.addEventListener('click', function(event) {
                 if (event.target == modalOverlay) {
                     closeModal();
                 }
@@ -2757,7 +2621,7 @@
                     questContainer.innerHTML += '<p class="note">' + note + '</p>';
                 }
                 if (note || recommendedExam) {
-                    questContainer.innerHTML += '<div class="options"><button id="restart-test-button" class="questOption">Refazer o teste</button>' + /*<button class="questOption bt-agendar-vacina">Agendar exame</button>*/'</div>';
+                    questContainer.innerHTML += '<div class="options"><button id="restart-test-button" class="questOption">Refazer o teste</button>' + /*<button class="questOption bt-agendar-vacina">Agendar exame</button>*/ '</div>';
                     document.getElementById('restart-test-button').onclick = (e) => restartTest(questContainer);
                 }
             }
@@ -2798,7 +2662,7 @@
         /* Drag stuff */
         let mouseDown = false;
         let startX, scrollLeft;
-        let startDragging = function (e, slider) {
+        let startDragging = function(e, slider) {
             mouseDown = true;
             //desktop or mobile
             if (e.pageX) {
@@ -2809,7 +2673,7 @@
             scrollLeft = slider.scrollLeft;
         };
 
-        let stopDragging = function (event) {
+        let stopDragging = function(event) {
             mouseDown = false;
         };
 
@@ -2817,7 +2681,9 @@
             e.preventDefault();
             const arrow_wrapper = slider.parentNode;
 
-            if (!mouseDown) { return; }
+            if (!mouseDown) {
+                return;
+            }
 
             let x = 0;
             if (e.pageX) {
@@ -2918,7 +2784,9 @@
             const getMelhorPreco = (priceArray) => {
                 return priceArray.reduce((a, b) => {
                     if (a && b) {
-                        return { preco: Math.min(a.preco, b.preco) }
+                        return {
+                            preco: Math.min(a.preco, b.preco)
+                        }
                     }
                 });
             }
@@ -2926,7 +2794,10 @@
             const getPriceList = (priceArray) => {
                 let priceListHTML = '';
                 priceArray.map((price) => {
-                    priceListHTML += '<li>' + price.distribuidor + ' - ' + price.preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }) + '</li>';
+                    priceListHTML += '<li>' + price.distribuidor + ' - ' + price.preco.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL"
+                    }) + '</li>';
                 })
                 return priceListHTML;
             }
@@ -3010,16 +2881,16 @@
 
             const orderedFiliais = filiais.sort(
                 (valueA, valueB) =>
-                    valueA.Estado.localeCompare(valueB.Estado) ||
-                    valueA.Cidade.localeCompare(valueB.Cidade) ||
-                    valueA.Bairro.localeCompare(valueB.Bairro),
+                valueA.Estado.localeCompare(valueB.Estado) ||
+                valueA.Cidade.localeCompare(valueB.Cidade) ||
+                valueA.Bairro.localeCompare(valueB.Bairro),
             )
 
             return orderedFiliais;
 
         }
 
-        return loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/filiais-gripe-2.JSON').then(data => {
+        return loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/filiais-gripe-3.JSON').then(data => {
             var dadosFiltrados = handleFiliaisJSON(data);
 
             LHevents(dadosFiltrados);
@@ -3030,7 +2901,6 @@
 </script>
 
 <script>
-
     let lojas = [];
 
     function LHevents(data) {
@@ -3044,7 +2914,7 @@
         var btn = document.getElementsByClassName("btn-modal");
 
         for (let i = 0; i < btn.length; i++) {
-            btn[i].onclick = function () {
+            btn[i].onclick = function() {
                 modal.style.display = "flex";
                 document.getElementsByTagName('body')[0].style.overflow = 'hidden';
             };
@@ -3053,13 +2923,13 @@
         // Get the <span> element that closes the modal
         var btnModalPanvel = document.getElementById('modalClosePanvel');
 
-        btnModalPanvel.onclick = function () {
+        btnModalPanvel.onclick = function() {
             modal.style.display = "none";
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
         }
 
         // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 document.getElementsByTagName('body')[0].style.overflow = 'auto';
@@ -3351,5 +3221,4 @@
         }
 
     }
-
 </script>
