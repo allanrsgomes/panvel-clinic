@@ -9,10 +9,14 @@ function orderDataAlphabetically(data) {
     return orderedData;
 }
 
-function filtrarDadosPanvel() { 
+function filtrarDadosPanvel() {     
+    const capitalizarLetra = str => str.replace(/^(.)|\s+(.)/g, c => c.toUpperCase());
+
     for(i=0; i < dataPanvel.length;i++){
         dataPanvel[i].Bairro = dataPanvel[i].Bairro.trim();
         dataPanvel[i].Cidade = dataPanvel[i].Cidade.trim();
+        dataPanvel[i].Cidade = capitalizarLetra(dataPanvel[i].Cidade);
+
         if (dataPanvel[i].Cidade == "Porto Alegre" && dataPanvel[i].Bairro == "Centro"){
           dataPanvel[i].Bairro = "Centro Histórico";
         }
