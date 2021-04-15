@@ -1095,335 +1095,6 @@ var dataExame = [{
 
 dataPanvel = [
     {
-        "Filial": "570",
-        "Cidade": "Curitiba",
-        "Estado": "Paraná",
-        "UF": "PR",
-        "Endereço": "Avenida Iguaçu, 2536, Sala 01",
-        "Bairro": "Água Verde",
-        "WhatsApp": "41-991816995"
-    },
-    {
-        "Filial": "532",
-        "Cidade": "Curitiba",
-        "Estado": "Paraná",
-        "UF": "PR",
-        "Endereço": "Rua Professor Brandão, 25",
-        "Bairro": "Alto da Rua XV",
-        "WhatsApp": "41-991214557"
-    },
-    {
-        "Filial": "515",
-        "Cidade": "Curitiba",
-        "Estado": "Paraná",
-        "UF": "PR",
-        "Endereço": "Avenida do Batel, 1868 - Loja 334 e 335 - Shopping Pátio Batel",
-        "Bairro": "Batel",
-        "WhatsApp": "41-992631424"
-    },
-    {
-        "Filial": "537",
-        "Cidade": "Londrina",
-        "Estado": "Paraná",
-        "UF": "PR",
-        "Endereço": "Rodovia Mabio Gonçalves Palhano, 758",
-        "Bairro": "Gleba Fazenda Palhano",
-        "WhatsApp": "41-991231219"
-    },
-    {
-        "Filial": "533",
-        "Cidade": "Maringá",
-        "Estado": "Paraná",
-        "UF": "PR",
-        "Endereço": "Avenida Curitiba, 357",
-        "Bairro": "Zona 4",
-        "WhatsApp": "41-991918849"
-    },
-    {
-        "Filial": "341",
-        "Cidade": "Capão da Canoa",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Av. Paraguassú, 2786 ",
-        "Bairro": "Centro",
-        "WhatsApp": "51-996262255"
-    },
-    {
-        "Filial": "173",
-        "Cidade": "Caxias do Sul",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Avenida Júlio de Castilhos, nº 2.234, loja 1",
-        "Bairro": "Centro",
-        "WhatsApp": "51-996556208"
-    },
-    {
-        "Filial": "712",
-        "Cidade": "Cruz Alta",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Barão do Rio Branco, 1484",
-        "Bairro": "Centro",
-        "WhatsApp": "51-995387614"
-    },
-    {
-        "Filial": "362",
-        "Cidade": "Esteio",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Avenida Presidente Vargas, 2358 - Lojas 1 e 2 ",
-        "Bairro": "Centro",
-        "WhatsApp": "51-997184971"
-    },
-    {
-        "Filial": "736",
-        "Cidade": "Farroupilha",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Treze de Maio, 585",
-        "Bairro": "Centro",
-        "WhatsApp": "51-980241918"
-    },
-    {
-        "Filial": "400",
-        "Cidade": "Novo Hamburgo",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Av. Dr. Maurício Cardoso, 833 - Sl 102 - Hosp. Regina",
-        "Bairro": "Hamburgo Velho",
-        "WhatsApp": "51-999568711"
-    },
-    {
-        "Filial": "338",
-        "Cidade": "Passo Fundo",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Quinze de Novembro, 318",
-        "Bairro": "Centro",
-        "WhatsApp": "51-995661229"
-    },
-    {
-        "Filial": "345",
-        "Cidade": "Pelotas",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Gonçalves Chaves, 2920 ",
-        "Bairro": "Centro",
-        "WhatsApp": "51-995945873"
-    },
-    {
-        "Filial": "192",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Av. Wenceslau Escobar, 2857 Lj 04",
-        "Bairro": "Cristal",
-        "WhatsApp": "51-997770130"
-    },
-    {
-        "Filial": "349",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Avenida Doutor Nilo Peçanha, 690",
-        "Bairro": "Bela Vista",
-        "WhatsApp": "51-995008685"
-    },
-    {
-        "Filial": "702",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Anita Garibaldi, 2099 – Lj 02",
-        "Bairro": "Mont Serrat",
-        "WhatsApp": "51-995049688"
-    },
-    {
-        "Filial": "311",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Casemiro de Abreu, 1755 e 1775",
-        "Bairro": "Boa Vista",
-        "WhatsApp": "51-997126605"
-    },
-    {
-        "Filial": "455",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Vinte e Quatro de Outubro, 722 ",
-        "Bairro": "Moinhos de Vento",
-        "WhatsApp": "51-980101329"
-    },
-    {
-        "Filial": "129",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua dos Andradas, 1320 ",
-        "Bairro": "Centro Histórico",
-        "WhatsApp": "51-997749244"
-    },
-    {
-        "Filial": "343",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Valparaíso, 698 ",
-        "Bairro": "Jardim Botânico",
-        "WhatsApp": "51-980189521"
-    },
-    {
-        "Filial": "442",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Avenida Osvaldo Aranha, 1370 ",
-        "Bairro": "Bom Fim",
-        "WhatsApp": "51 -996481178"
-    },
-    {
-        "Filial": "733",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Silveiro, 181",
-        "Bairro": "Menino Deus",
-        "WhatsApp": "51-999190442"
-    },
-    {
-        "Filial": "440",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Av. Ipiranga, 6681  Prédio 12B - Térreo",
-        "Bairro": "Partenon",
-        "WhatsApp": "51-995539747"
-    },
-    {
-        "Filial": "13",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua João Wallig, 1800 Lj. JW 13-Iguatemi ",
-        "Bairro": "Passo D’areia",
-        "WhatsApp": "51-996915283"
-    },
-    {
-        "Filial": "304",
-        "Cidade": "Rio Grande",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Doutor Nascimento, 389, 391 e 399",
-        "Bairro": "Centro",
-        "WhatsApp": "51-998791508"
-    },
-    {
-        "Filial": "359",
-        "Cidade": "Santa Maria",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Avenida Nossa Senhora Medianeira, 1318 ",
-        "Bairro": "Centro",
-        "WhatsApp": "51-997280969"
-    },
-    {
-        "Filial": "118",
-        "Cidade": "São Gabriel",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua General Mallet, 456 terreo",
-        "Bairro": "Centro",
-        "WhatsApp": "51-997022093"
-    },
-    {
-        "Filial": "40",
-        "Cidade": "Uruguaiana",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Duque de Caxias, 1625",
-        "Bairro": "Centro",
-        "WhatsApp": "51-999930823"
-    },
-    {
-        "Filial": "715",
-        "Cidade": "Chapecó",
-        "Estado": "Santa Catarina",
-        "UF": "SC",
-        "Endereço": "Avenida Getúlio Vargas, nº 888",
-        "Bairro": "Centro",
-        "WhatsApp": "48-991592957"
-    },
-    {
-        "Filial": "428",
-        "Cidade": "Florianópolis",
-        "Estado": "Santa Catarina",
-        "UF": "SC",
-        "Endereço": "Rua Coronel Pedro Demoro, 1814 - Estreito",
-        "Bairro": "Estreito",
-        "WhatsApp": "48-991596844"
-    },
-    {
-        "Filial": "802",
-        "Cidade": "São Paulo",
-        "Estado": "São Paulo",
-        "UF": "SP",
-        "Endereço": "Avenida Europa, nº 352",
-        "Bairro": "Jardim Europa",
-        "WhatsApp": "11-964100451"
-    },
-    {
-        "Filial": "800",
-        "Cidade": "São Paulo",
-        "Estado": "São Paulo",
-        "UF": "SP",
-        "Endereço": "Avenida Giovanni Gronchi, 5930 - Lojas 5 e 6 - Shopping Morumbi Town",
-        "Bairro": "Vila Andrade",
-        "WhatsApp": "11-961959826"
-    },
-    {
-        "Filial ": "386",
-        "Cidade": "Caxias do Sul",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua General Malett, 56",
-        "Bairro": "Rio Branco",
-        "Telefone": "54-32204991",
-        "Cep": "95099-190"
-    },
-    {
-        "Filial ": "713",
-        "Cidade": "Taquara",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua General Frota, 2580, loja 02",
-        "Bairro": "Centro",
-        "Cep": "95600-072",
-        "Telefone": "51-35415730"
-    },
-    {
-        "Filial ": "735",
-        "Cidade": "Blumenau",
-        "Estado": "Santa Catarina",
-        "UF": "SC",
-        "Endereço": "Rua Almirante Barroso, nº 1.158",
-        "Bairro": "Vila Nova",
-        "Cep": "89.035-402",
-        "Telefone": "47-33233278"
-    },
-    {
-        "Filial ": "741",
-        "Cidade": "Porto Alegre",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Endereço": "Rua Dona Adda Mascarenhas de Moraes, nº 57, ",
-        "Bairro": "Jardim Itu",
-        "Cep": "91.220-140",
-        "Telefone": "51-33445847"
-    },
-    /* Adição 03/03/2021 */
-    {
         "Filial": "4",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -1577,6 +1248,15 @@ dataPanvel = [
         "Telefone": "51-995638939"
     },
     {
+        "Filial": "36",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Bagé",
+        "Endereço": "Av. Sete de Setembro, 1121",
+        "Bairro": "Centro",
+        "Telefone": "51-995746732"
+    },
+    {
         "Filial": "38",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -1602,6 +1282,15 @@ dataPanvel = [
         "Endereço": "Rua Zeca Neto, 38",
         "Bairro": "Cristo Redentor",
         "Telefone": "51-996500557"
+    },
+    {
+        "Filial": "53",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Cachoeira do Sul",
+        "Endereço": "Rua Júlio de Castilhos, 102 ",
+        "Bairro": "Centro",
+        "Telefone": "51-996098809"
     },
     {
         "Filial": "62",
@@ -1656,6 +1345,15 @@ dataPanvel = [
         "Endereço": "Rua Santos Dumont, 487",
         "Bairro": "Centro",
         "Telefone": "51-996744795"
+    },
+    {
+        "Filial": "95",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Rio Grande",
+        "Endereço": "Rua 24 de Maio, 400/402",
+        "Bairro": "Centro",
+        "Telefone": "51-998958824"
     },
     {
         "Filial": "102",
@@ -1757,6 +1455,15 @@ dataPanvel = [
         "Telefone": "51-995218163"
     },
     {
+        "Filial": "150",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Porto Alegre",
+        "Endereço": "Av. Ipiranga, 2495 – Lj 01",
+        "Bairro": "Santana ",
+        "Telefone": "51-999050760"
+    },
+    {
         "Filial": "164",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -1810,15 +1517,6 @@ dataPanvel = [
         "Bairro": "Floresta",
         "Telefone": "51-999506579"
     },
-    /* Remoção solicitada 09/03/2021 {
-        "Filial": "185",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Avenida Serevo Dullius, 90010 - T1.N2.057 - Aeroporto Salgado Filho ",
-        "Bairro": "Anchieta",
-        "Telefone": "51-998067276"
-    }, */ 
     {
         "Filial": "189",
         "Estado": "Santa Catarina",
@@ -1914,7 +1612,7 @@ dataPanvel = [
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
         "Cidade": "Atlantida Sul",
-        "Endereço": "Av. Paraguassú, 444",
+        "Endereço": "Av. Paraguassú, 444 ",
         "Bairro": "Centro",
         "Telefone": "51-997828588"
     },
@@ -2000,6 +1698,15 @@ dataPanvel = [
         "Telefone": "51-995623405"
     },
     {
+        "Filial": "347",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Porto Alegre",
+        "Endereço": "Avenida Edgar Pires de Castro, 1395 ",
+        "Bairro": "Aberta dos Morros",
+        "Telefone": "51-996103844"
+    },
+    {
         "Filial": "349",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -2072,6 +1779,15 @@ dataPanvel = [
         "Telefone": "51-996021666"
     },
     {
+        "Filial": "367",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Pelotas",
+        "Endereço": "Avenida Ferreira Viana, nº 476",
+        "Bairro": "Areal",
+        "Telefone": "51-995845840"
+    },
+    {
         "Filial": "368",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -2080,15 +1796,6 @@ dataPanvel = [
         "Bairro": "Centro",
         "Telefone": "51-997409445"
     },
-    /* Retirado mediante solicitação em 10/03 {
-        "Filial": "370",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Cidade": "Guaíba",
-        "Endereço": "Rua Sete de Setembro, 360",
-        "Bairro": "Centro",
-        "Telefone": "51-996186578"
-    },*/
     {
         "Filial": "371",
         "Estado": "Rio Grande do Sul",
@@ -2133,6 +1840,24 @@ dataPanvel = [
         "Endereço": "Avenida Cavalhada, nº 2351, 2369 e 2373",
         "Bairro": "Cavalhada",
         "Telefone": "51-998258972"
+    },
+    {
+        "Filial": "377",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Porto Alegre",
+        "Endereço": "Rua Voluntários da Pátria, 423 e 429, lojas 1, 2, 3 e 4",
+        "Bairro": "Centrp",
+        "Telefone": "51-998356134"
+    },
+    {
+        "Filial": "378",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Porto Alegre",
+        "Endereço": "Av. Teresópolis, 3487",
+        "Bairro": "Teresópolis",
+        "Telefone": "51-998290613"
     },
     {
         "Filial": "379",
@@ -2207,6 +1932,15 @@ dataPanvel = [
         "Telefone": "51-980338013"
     },
     {
+        "Filial": "390",
+        "Estado": "Santa Catarina",
+        "UF": "SC",
+        "Cidade": "Lagoa vermelha",
+        "Endereço": "Av. Afonso Pena, 630 sala 14",
+        "Bairro": "Centro",
+        "Telefone": "51-980473698"
+    },
+    {
         "Filial": "391",
         "Estado": "Santa Catarina",
         "UF": "SC",
@@ -2232,6 +1966,15 @@ dataPanvel = [
         "Endereço": "Rua José Luiz, nº 1.485,",
         "Bairro": "Centro",
         "Telefone": "51-995005857"
+    },
+    {
+        "Filial": "394",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Ibiruba",
+        "Endereço": "Rua General Osório, nº 878, sala 01, ",
+        "Bairro": "Centro",
+        "Telefone": "51-999489665"
     },
     {
         "Filial": "396",
@@ -2441,6 +2184,15 @@ dataPanvel = [
         "Telefone": "51-997121246"
     },
     {
+        "Filial": "498",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Canoas",
+        "Endereço": "Avenida Santos Ferreira, 1400",
+        "Bairro": "Marechal Rondon",
+        "Telefone": "51-997690416"
+    },
+    {
         "Filial": "501",
         "Estado": "Paraná",
         "UF": "PR",
@@ -2450,6 +2202,15 @@ dataPanvel = [
         "Telefone": "41-992093987"
     },
     {
+        "Filial": "502",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua José Izidoro Biazetto, 1120 - Loja 1",
+        "Bairro": "Mossunguê",
+        "Telefone": "41-991283287"
+    },
+    {
         "Filial": "503",
         "Estado": "Paraná",
         "UF": "PR",
@@ -2457,6 +2218,15 @@ dataPanvel = [
         "Endereço": "Rua Marechal Deodoro, 261, Loja 02 ",
         "Bairro": "Centro",
         "Telefone": "41-991122661"
+    },
+    {
+        "Filial": "505",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Desembargador Costa Carvalho, 605",
+        "Bairro": "Batel",
+        "Telefone": "41-991653123"
     },
     {
         "Filial": "506",
@@ -2477,6 +2247,15 @@ dataPanvel = [
         "Telefone": "41-991150628"
     },
     {
+        "Filial": "509",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Alberto Folloni, 1572",
+        "Bairro": "Ahú",
+        "Telefone": "41-991154581"
+    },
+    {
         "Filial": "512",
         "Estado": "Paraná",
         "UF": "PR",
@@ -2484,6 +2263,24 @@ dataPanvel = [
         "Endereço": "Avenida Senador Souza Naves, 1772 ",
         "Bairro": "Cristo Rei",
         "Telefone": "41-992465462"
+    },
+    {
+        "Filial": "513",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Rocha Pombo, 346",
+        "Bairro": "Juvevê",
+        "Telefone": "41-992387889"
+    },
+    {
+        "Filial": "517",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Professor Pedro Viriato Parigot de Souza, 1572",
+        "Bairro": "Mossungue",
+        "Telefone": "41-992461669"
     },
     {
         "Filial": "519",
@@ -2502,6 +2299,33 @@ dataPanvel = [
         "Endereço": "Rua Cel. Luiz José dos Santos, 2506 - Loja 01",
         "Bairro": "Boqueirão",
         "Telefone": "41-992277368"
+    },
+    {
+        "Filial": "526",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Mateus Leme, 2.690",
+        "Bairro": "Centro",
+        "Telefone": "41-991151821"
+    },
+    {
+        "Filial": "527",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Francisco Rocha, 2195",
+        "Bairro": "Bigorrilho",
+        "Telefone": "41-992467305"
+    },
+    {
+        "Filial": "530",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Londrina  ",
+        "Endereço": "Avenida Bandeirantes, 903",
+        "Bairro": "Vila Ipiranga",
+        "Telefone": "41-992865804"
     },
     {
         "Filial": "531",
@@ -2549,6 +2373,15 @@ dataPanvel = [
         "Telefone": "41-992806441"
     },
     {
+        "Filial": "543",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Avenida Presidente Kennedy, nº 4.121, lojas 1.104, 1.105 e 1.106",
+        "Bairro": "Portão",
+        "Telefone": "41-992841799"
+    },
+    {
         "Filial": "542",
         "Estado": "Paraná",
         "UF": "PR",
@@ -2583,6 +2416,15 @@ dataPanvel = [
         "Endereço": "Avenida Água Verde, nº 568",
         "Bairro": "Água Verde",
         "Telefone": "41-992596328"
+    },
+    {
+        "Filial": "550",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Doutor João Tobias Pinto Rebelo, nº 3.539",
+        "Bairro": "Portão",
+        "Telefone": "41-992219023"
     },
     {
         "Filial": "551",
@@ -2630,6 +2472,15 @@ dataPanvel = [
         "Telefone": "41-991535985"
     },
     {
+        "Filial": "558",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Alcino Guanabara, n° 907",
+        "Bairro": "Hauer",
+        "Telefone": "41-992826545"
+    },
+    {
         "Filial": "559",
         "Estado": "Paraná",
         "UF": "PR",
@@ -2657,6 +2508,15 @@ dataPanvel = [
         "Telefone": "41-991993745"
     },
     {
+        "Filial": "563",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Londrina  ",
+        "Endereço": "Avenida Ayrton Senna da Silva, nº 760 - 6-KJ/1- 2-B",
+        "Bairro": "Gleba Fazenda Palhano",
+        "Telefone": "41-992641856"
+    },
+    {
         "Filial": "564",
         "Estado": "Paraná",
         "UF": "PR",
@@ -2673,6 +2533,14 @@ dataPanvel = [
         "Endereço": "Rua Professor Pedro Viriato Parigot de Souza, nº 600",
         "Bairro": "Mossunguê",
         "Telefone": "41-991797809"
+    },
+    {
+        "Filial": "568",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Paranaguá",
+        "Endereço": "Largo Cônego Alcindino, 78",
+        "Bairro": "Centro"
     },
     {
         "Filial": "569",
@@ -2747,6 +2615,15 @@ dataPanvel = [
         "Telefone": "48-991337096"
     },
     {
+        "Filial": "711",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Novo Hamburgo",
+        "Endereço": "Rua Bento Gonçalves, 2154",
+        "Bairro": "Centro",
+        "Telefone": "51-996714289"
+    },
+    {
         "Filial": "712",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -2763,6 +2640,15 @@ dataPanvel = [
         "Endereço": "Rua General Frota, 2580, loja 02",
         "Bairro": "Centro",
         "Telefone": "51-998182148"
+    },
+    {
+        "Filial": "716",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Caxias do Sul",
+        "Endereço": "Rua Visconde de Pelotas, 819",
+        "Bairro": "Centro",
+        "Telefone": "51-998225608"
     },
     {
         "Filial": "718",
@@ -2795,10 +2681,19 @@ dataPanvel = [
         "Filial": "723",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
-        "Cidade": "Rainha do Mar",
+        "Cidade": "Xangri-la",
         "Endereço": "Rua Água Marinha, nº 1.421",
         "Bairro": "Centro",
         "Telefone": "51-997428146"
+    },
+    {
+        "Filial": "725",
+        "Estado": "Santa Catarina",
+        "UF": "SC",
+        "Cidade": "Lages",
+        "Endereço": "Rua Governador Jorge Lacerda, 154",
+        "Bairro": "Centro",
+        "Telefone": "48-991600336"
     },
     {
         "Filial": "726",
@@ -2808,6 +2703,15 @@ dataPanvel = [
         "Endereço": "Avenida Assis Brasil, 5431",
         "Bairro": "Sarandi",
         "Telefone": "51-999736347"
+    },
+    {
+        "Filial": "728",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Soledade",
+        "Endereço": "Avenida Marechal Floriano Peixoto, 965",
+        "Bairro": "Centro",
+        "Telefone": "51-999604140"
     },
     {
         "Filial": "731",
@@ -2862,6 +2766,15 @@ dataPanvel = [
         "Endereço": "Rua Dona Adda Mascarenhas de Moraes, nº 57, ",
         "Bairro": "Jardim Itu",
         "Telefone": "51-997579237"
+    },
+    {
+        "Filial": "742",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Chapecó",
+        "Endereço": "Rua Marechal Deodoro da Fonseca, nº 182-E",
+        "Bairro": "Centro",
+        "Telefone": "48-991136054"
     },
     {
         "Filial": "743",
@@ -2932,6 +2845,14 @@ dataPanvel = [
         "Endereço": "Rua Mato Grosso, 17 ",
         "Bairro": "Centro",
         "Telefone": "51-3332-2381"
+    },
+    {
+        "Filial": "760",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Campo Bom",
+        "Endereço": "Avenida Brasil, 2630",
+        "Bairro": "Centro"
     },
     {
         "Filial": "800",
