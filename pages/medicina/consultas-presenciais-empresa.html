@@ -72,7 +72,7 @@
         color: var(--color-yale-blue);
     }
 
-    .LHContent.telemedicina-wrapper main {
+    .LHContent.telemedicina-wrapper .LHmain {
         width: 100%;
         padding-bottom: var(--xxlSpace);
     }
@@ -154,7 +154,7 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: nowrap;
-        z-index: 5;
+        z-index: 99999;
     }
 
     .sub-header-crumback .breadcrumb {
@@ -266,7 +266,7 @@
     .sub-header-vacinas {
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column; 
         padding-top: var(--lgSpace);
         align-items: center;
     }
@@ -545,6 +545,10 @@
 
     .telemedicina-qual-servico {
         margin: var(--xxlSpace) 0;
+    }
+
+    .telemedicina-selecione-parceiro {
+        z-index: 5;
     }
 
     .telemedicina-selecione-parceiro h3,
@@ -1319,10 +1323,10 @@
             <a href="/panvel/panvelClinic.do">\ Clinic</a>
             <span>Consultas Presenciais</span>
         </div>
-        <a class="btn-back" href='/panvel/panvelClinic.do'></a>
+        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
     </header>
 
-    <main>
+    <section class="LHmain">
         <div class="banner-panvel-clinic">
             <div class="banner-panvel-clinic-content">
                 <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/group_8.png"
@@ -1339,18 +1343,18 @@
             <hr class=guide-bar />
         </nav>
 
-        <div class="sub-header-telemedicina">
+        <header class="sub-header-telemedicina">
             <!-- <p>Um time de profissionais especializados em diversas áreas da medicina para pra cuidar bem da sua saúde. Todo o cuidado e qualidade que você merece.</p> -->
             <h2 class="sub-header-desc">Um time de profissionais especializados em diversas áreas da medicina para pra cuidar bem da sua saúde. Todo o cuidado e qualidade que você merece.</h2>
             <h2>Pacotes Especiais</h2>
             <hr class="orange-separator">
-        </div>
+        </header>
 
         <section class="telemedicina-selecione-parceiro">
 
             <section class="parceiro-detalhes">
 
-                <div class="header-parceiro-detalhes">
+                <header class="header-parceiro-detalhes">
                     <div class="logo-parceiro-md-wrapper">
                         <img class="" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/img_logo_topo.png"
                             alt="Logo do parceiro selecionado" />
@@ -1368,7 +1372,7 @@
                         </div>
                         <div class="arrow-right">&#62;</div>
                     </div>
-                </div>
+                </header>
 
                 <section class="parceiro-detalhes-content">
                     <main class="parceiro-detalhe-sobre-a-empresa">
@@ -1411,5 +1415,5 @@
                 </section>
             </section>
         </section>
-    </main>
+    </section>
 </div>
