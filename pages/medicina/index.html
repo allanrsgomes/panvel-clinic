@@ -1228,10 +1228,11 @@
 
     window.onload = () => {
         /* Verifica se há algum menu responsivo com scroll horizontal na página e o(s) inicializa. */
-        const hasHorizontalScrollMenu = [...document.getElementsByClassName('scroll-menu-wrapper')].length > 0;
 
-        if (hasHorizontalScrollMenu) {
-            initHorizontalScrollMenus();
+        const hasBackButton = !!document.getElementById('LH-btn-back');
+
+        if(hasBackButton) {
+            handleBackButton();
         }
 
     };
@@ -1245,6 +1246,25 @@
         // ativa somente o clicado
         button.classList.add("active");
     }
+
+    const handleBackButton = () => {
+        debugger;
+        var button = document.getElementById('LH-btn-back');
+
+        if(!!(document.referrer)){
+            button.setAttribute('href', document.referrer);
+        } else {
+            button.setAttribute('href', '/panvel/panvelClinic.do');
+        }
+
+        button.onclick = function () {
+            if(!!(document.referrer)){
+                history.back();
+                return false;
+            }
+        }
+    }
+
 
     const initHorizontalScrollMenus = () => {
         /* captura todos os elementos que vc deseja que tenham scroll horizontal arrastável */
@@ -1330,7 +1350,7 @@
             <a href="/panvel/panvelClinic.do">\ Clinic</a>
             <span>Teleorientação</span>
         </div>
-        <a class="btn-back" href="#" onclick="history.back()">Voltar</a>
+        <a class="btn-back" id="LH-btn-back">Voltar</a>
     </header>
 
     <main>

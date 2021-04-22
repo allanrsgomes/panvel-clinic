@@ -1406,6 +1406,24 @@
 </style>
 
 <script>
+    const handleBackButton = () => {
+        debugger;
+        var button = document.getElementById('LH-btn-back');
+
+        if(!!(document.referrer)){
+            button.setAttribute('href', document.referrer);
+        } else {
+            button.setAttribute('href', '/panvel/panvelClinic.do');
+        }
+
+        button.onclick = function () {
+            if(!!(document.referrer)){
+                history.back();
+                return false;
+            }
+        }
+    }
+
     const handleAnyButtonClick = (button) => {
         // desativa todos os botões da barra de navegação
         let buttonList = button.parentNode.getElementsByTagName('a');
@@ -1428,6 +1446,13 @@
         /* captura todos os elementos que vc deseja que tenham scroll horizontal arrastável */
         const slider_array = document.querySelectorAll('.scroll-menu-wrapper');
 
+
+        /* Define comportamento do botão de voltar */
+        const hasBackButton = !!document.getElementById('LH-btn-back');
+
+        if (hasBackButton) {
+            handleBackButton();
+        }
 
         /* Drag stuff */
         let mouseDown = false;
@@ -1827,7 +1852,7 @@
                 <a href="/panvel/main.do">Página Inicial</a>
                 <span>Clinic</span>
             </div>
-            <a class="btn-back" href="/panvel/panvelClinic.do">Voltar</a>
+            <a class="btn-back" id="LH-btn-back">Voltar</a>
         </div>
 
         <!-- Banner -->

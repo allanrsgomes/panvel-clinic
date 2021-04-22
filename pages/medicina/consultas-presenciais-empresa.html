@@ -266,7 +266,7 @@
     .sub-header-vacinas {
         display: flex;
         justify-content: center;
-        flex-direction: column; 
+        flex-direction: column;
         padding-top: var(--lgSpace);
         align-items: center;
     }
@@ -947,7 +947,7 @@
         width: auto;
         height: 70px;
     }
- 
+
     /* RESPONSIVIDADE */
 
     @media screen and (max-width:768px) {
@@ -1238,9 +1238,31 @@
             initHorizontalScrollMenus();
         }
 
+        const hasBackButton = !!document.getElementById('LH-btn-back');
+
+        if (hasBackButton) {
+            handleBackButton();
+        }
     };
 
     /* COMPORTAMENTO DOS BOTÕES E MENUS */
+    const handleBackButton = () => {
+        debugger;
+        var button = document.getElementById('LH-btn-back');
+
+        if(!!(document.referrer)){
+            button.setAttribute('href', document.referrer);
+        } else {
+            button.setAttribute('href', '/panvel/panvelClinic.do');
+        }
+
+        button.onclick = function () {
+            if(!!(document.referrer)){
+                history.back();
+                return false;
+            }
+        }
+    }
 
     const handleAnyButtonClick = (button) => {
         // desativa todos os botões da barra de navegação
@@ -1323,29 +1345,35 @@
             <a href="/panvel/panvelClinic.do">\ Clinic</a>
             <span>Consultas Presenciais</span>
         </div>
-        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+        <a class="btn-back" id="LH-btn-back">Voltar</a>
     </header>
 
     <section class="LHmain">
         <div class="banner-panvel-clinic">
             <div class="banner-panvel-clinic-content">
-                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/group_8.png"
+                <img id="banner-panvel-clinic-logo"
+                    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/group_8.png"
                     alt="Panvel Clinic" />
                 <a class="button banner-panvel-clinic-button" href="#tele-link">Consultas Médicas Presenciais</a>
                 <!-- <p>Momentos delicados exigem atenção especial</p> -->
             </div>
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/Mask_group_53.png" class="banner" alt="" />
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/Mask_group_53.png"
+                class="banner" alt="" />
         </div>
 
         <nav class="line-menu line-menu-telemedicina">
-            <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">Consultas Médicas Presenciais</a>
-            <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-online.do">Consultas Médicas Online</a>
+            <a class="active" onclick="handleAnyButtonClick(this);"
+                href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">Consultas Médicas
+                Presenciais</a>
+            <a onclick="handleAnyButtonClick(this);"
+                href="https://www.panvel.com/panvel/atendimento-online.do">Consultas Médicas Online</a>
             <hr class=guide-bar />
         </nav>
 
         <header class="sub-header-telemedicina">
             <!-- <p>Um time de profissionais especializados em diversas áreas da medicina para pra cuidar bem da sua saúde. Todo o cuidado e qualidade que você merece.</p> -->
-            <h2 class="sub-header-desc">Um time de profissionais especializados em diversas áreas da medicina para pra cuidar bem da sua saúde. Todo o cuidado e qualidade que você merece.</h2>
+            <h2 class="sub-header-desc">Um time de profissionais especializados em diversas áreas da medicina para pra
+                cuidar bem da sua saúde. Todo o cuidado e qualidade que você merece.</h2>
             <h2>Pacotes Especiais</h2>
             <hr class="orange-separator">
         </header>
@@ -1356,16 +1384,22 @@
 
                 <header class="header-parceiro-detalhes">
                     <div class="logo-parceiro-md-wrapper">
-                        <img class="" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/img_logo_topo.png"
+                        <img class=""
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/img_logo_topo.png"
                             alt="Logo do parceiro selecionado" />
                     </div>
                     <div class="scroll-menu-wrapper">
                         <div class="arrow-left">&#60;</div>
                         <div class="scroll-menu">
                             <nav id="menu-planos" class="line-menu line-menu-telemedicina">
-                                <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">SAÚDE DO HOMEM</a>
-                                <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-presencial-feminino.do">SAÚDE DA MULHER</a>
-                                <a class="active" onclick="handleAnyButtonClick(this);" href="consultas-presenciais-empresa">Sobre a
+                                <a onclick="handleAnyButtonClick(this);"
+                                    href="https://www.panvel.com/panvel/atendimento-presencial-masculino.do">SAÚDE DO
+                                    HOMEM</a>
+                                <a onclick="handleAnyButtonClick(this);"
+                                    href="https://www.panvel.com/panvel/atendimento-presencial-feminino.do">SAÚDE DA
+                                    MULHER</a>
+                                <a class="active" onclick="handleAnyButtonClick(this);"
+                                    href="consultas-presenciais-empresa">Sobre a
                                     empresa</a>
                                 <hr class=guide-bar />
                             </nav>
@@ -1376,7 +1410,8 @@
 
                 <section class="parceiro-detalhes-content">
                     <main class="parceiro-detalhe-sobre-a-empresa">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/Bitmap.png">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/telemedicina/Bitmap.png">
                         <div>
                             <h2>Ampla estrutura de atendimento e diversidade de serviços</h2>
                             <p>
@@ -1386,25 +1421,29 @@
                             </p>
                             <ul class="pure-g">
                                 <li class="pure-u-1-4">
-                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-1.png" alt="">
+                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-1.png"
+                                        alt="">
                                     <h3>+20 clínicas próprias para atender você</h3>
                                     <p>Presente em diversas cidades do Rio Grande do Sul, equipadas com alta tecnologia
                                         e equipes especializadas.</p>
                                 </li>
                                 <li class="pure-u-1-4">
-                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-2.png" alt="">
+                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-2.png"
+                                        alt="">
                                     <h3>Teleorientação em saúde 24 horas</h3>
                                     <p>Um canal de orientação de saúde por telefone, gratuito e exclusivo para clientes
                                         dos planos CCG e disponível 24 horas por dia.</p>
                                 </li>
                                 <li class="pure-u-1-4">
-                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-3.png" alt="">
+                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-3.png"
+                                        alt="">
                                     <h3>PAD: Programa de Atendimento Domiciliar</h3>
                                     <p>O PAD oferece profissionais preparados para atendimentos residenciais especiais,
                                         oferecendo mais conforto e atenção individual para quem mais precisa.</p>
                                 </li>
                                 <li class="pure-u-1-4">
-                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-4.png" alt="">
+                                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/beneficios-4.png"
+                                        alt="">
                                     <h3>Pronto-atendimento adulto e pediátrico</h3>
                                     <p>Em todas as clínicas CCG você recebe atendimento rápido e resolutivo, além de
                                         contar com diversas opções 24h.</p>
