@@ -515,5 +515,16 @@ lojas = [
         "Cidade": "Alegrete",
         "Endereço": "Rua Dr Lauro Dornelles n° 1",
         "Bairro": "Centro"
+    },
+    //Inclusão solicitada em 19/04/21 por Priscila
+    {
+        "Filial": "375",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Lajeado",
+        "Endereço": "Avenida Benjamin Constant, nº 1.707",
+        "Bairro": "Florestal",
+        "Telefone": "51-37486491",
+        "WhatsApp": "51-997285741"
     }
 ]

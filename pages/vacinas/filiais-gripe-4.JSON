@@ -481,16 +481,6 @@
             "WhatsApp": "51-980208314"
         },
         {
-            "Filial": "48",
-            "Estado": "Rio Grande do Sul",
-            "UF": "RS",
-            "Cidade": "Porto Alegre",
-            "Endereço": "Rua Zeca Neto, 38",
-            "Bairro": "Cristo Redentor",
-            "Telefone": "51-33413776",
-            "WhatsApp": "51-996500557"
-        },
-        {
             "Filial": "354",
             "Estado": "Rio Grande do Sul",
             "UF": "RS",
@@ -526,6 +516,16 @@
             "Cidade": "Alegrete",
             "Endereço": "Rua Dr Lauro Dornelles n° 1",
             "Bairro": "Centro"
+        },
+        {
+            "Filial": "375",
+            "Estado": "Rio Grande do Sul",
+            "UF": "RS",
+            "Cidade": "Lajeado",
+            "Endereço": "Avenida Benjamin Constant, nº 1.707",
+            "Bairro": "Florestal",
+            "Telefone": "51-37486491",
+            "WhatsApp": "51-997285741"
         }
     ]
 }
