@@ -527,4 +527,25 @@ lojas = [
         "Telefone": "51-37486491",
         "WhatsApp": "51-997285741"
     }
+    //Inclusão solicitada em 22/04/2021 por Priscila
+    {
+        "Filial": "555",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Cascavel",
+        "Endereço": "Rua Paraná, n° 2962",
+        "Bairro": "Centro",
+        "Telefone": "45-3224-8138",
+        "WhatsApp": "41-991692543"
+    },
+    {
+        "Filial": "720",
+        "Estado": "Santa Catarina",
+        "UF": "SC",
+        "Cidade": "Brusque",
+        "Endereço": "Rua Felipe Schmidt, nº 115, sala 1, ",
+        "Bairro": "São Luiz",
+        "Telefone": "47-33555215",
+        "WhatsApp": "48-991895970"
+    }
 ]
