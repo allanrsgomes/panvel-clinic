@@ -214,7 +214,7 @@ const vacinas = [
   },
   {
     id: 16,
-    grupo: [12, 14, 15, 16, 18],
+    grupo: [12, 14, 15, 16, 17, 18],
     nome: "Tríplice Bacteriana Acelular do Tipo Adulto – dTpa",
     sobre: "Trata-se de vacina inativada, portanto, não tem como causar a doença.<br/><br/>Contém os toxoides diftérico e tetânico (derivados das toxinas produzidas pelas bactérias causadoras das doenças), e componentes da cápsula da bactéria da coqueluche (<span class='italico'>Bordetella pertussis</span>), sal de alumínio como adjuvante, fenoxietanol, cloreto de sódio e água para injeção.<br/><br/>A quantidade de toxoide diftérico e de componentes <span class='italico'>pertussis</span> é menor que na vacina infantil (DTPa).",
     prevencao: "Difteria, tétano e coqueluche.",
@@ -267,7 +267,7 @@ const vacinas = [
   {
     id: 20,
     grupo: [2, 4, 6, 9, 10, 12, 14, 15, 16],
-    nome: "Tríplice Bacteriana Acelular do Tipo Adulto com Poliomielite – dTpa-VIP ",
+    nome: "Tríplice Bacteriana Acelular do Tipo Adulto com Poliomielite – dTpa-VIP",
     sobre: "Trata-se de vacina inativada, portanto, não tem como causar a doença. <br/><br/> Contém os toxoides diftérico e tetânico (derivados das toxinas produzidas pelas bactérias causadoras das doenças), componentes da cápsula da bactéria da coqueluche (<span class='italico'>Bordetella pertussis</span>), vírus da poliomielite inativados (mortos) tipos 1, 2 e 3, sal de alumínio como adjuvante, 2-fenoxietanol, polissorbato 80, cloreto de sódio e água para injeção.<br/><br/>Pode conter ainda traços de formaldeído, neomicina e polimixina B usados no processo de fabricação.",
     prevencao: "Difteria, tétano, coqueluche e poliomielite.",
     posologia: "<a href='https://familia.sbim.org.br/vacinas/vacinas-disponiveis/vacina-triplice-bacteriana-acelular-do-tipo-adulto-dtpa'>Pode substituir qualquer dose de dTpa. Em caso de viagens a locais de risco para a poliomielite, pode ser aplicada mesmo em pessoas que estejam em dia com a dTpa.</a>",
