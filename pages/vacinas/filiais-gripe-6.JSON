@@ -164,9 +164,9 @@
             "Filial": "386",
             "Estado": "Rio Grande do Sul",
             "UF": "RS",
-            "Cidade": "Caxias do Sul ",
+            "Cidade": "Caxias do Sul",
             "Endereço": "Rua General Malett, 56",
-            "Bairro": "Rio Branco ",
+            "Bairro": "Rio Branco",
             "Telefone": "54-32204991",
             "WhatsApp": "51-997736171"
         },
@@ -217,14 +217,14 @@
             "Cidade": "Porto Alegre",
             "Endereço": "Farmácia Universitária - Av. Ipiranga, 6681  Prédio 12B - Térreo",
             "Bairro": "Partenon",
-            "Telefone": " 51-3384-2257",
+            "Telefone": "51-3384-2257",
             "WhatsApp": "51-995539747"
         },
         {
             "Filial": "442",
             "Estado": "Rio Grande do Sul",
             "UF": "RS",
-            "Cidade": "Porto Alegre ",
+            "Cidade": "Porto Alegre",
             "Endereço": "Avenida Osvaldo Aranha, 1370 ",
             "Bairro": "Bom Fim",
             "Telefone": "51-3346-1802",
@@ -244,8 +244,8 @@
             "Filial": "515",
             "Estado": "Paraná",
             "UF": "PR",
-            "Cidade": "Curitiba - Shopping Pátio Batel",
-            "Endereço": "Avenida do Batel, 1868 - Loja 334 e 335",
+            "Cidade": "Curitiba",
+            "Endereço": "Shopping Pátio Batel - Avenida do Batel, 1868 - Loja 334 e 335",
             "Bairro": "Batel",
             "Telefone": "41-3342-8570",
             "WhatsApp": "41-992631424"
@@ -354,7 +354,7 @@
             "Filial": "733",
             "Estado": "Rio Grande do Sul",
             "UF": "RS",
-            "Cidade": "Porto Alegre ",
+            "Cidade": "Porto Alegre",
             "Endereço": "Rua Silveiro, 181",
             "Bairro": "Menino Deus",
             "Telefone": "51-32329366",
@@ -384,7 +384,7 @@
             "Filial": "741",
             "Estado": "Rio Grande do Sul",
             "UF": "RS",
-            "Cidade": "Porto Alegre ",
+            "Cidade": "Porto Alegre",
             "Endereço": "Rua Dona Adda Mascarenhas de Moraes, nº 57, ",
             "Bairro": "Jardim Itu",
             "Telefone": "51-33445847",
@@ -421,33 +421,13 @@
             "WhatsApp": "51-996500557"
         },
         {
-            "Filial": "748",
-            "Estado": "Rio Grande do Sul",
-            "UF": "RS",
-            "Cidade": "Porto Alegre",
-            "Endereço": "Avenida Goethe, 210",
-            "Bairro": "Rio Branco",
-            "Telefone": "51- 3333-2135",
-            "WhatsApp": "51-980208314"
-        },
-        {
-            "Filial": "355",
-            "Estado": "Rio Grande do Sul",
-            "UF": "RS",
-            "Cidade": "Torres",
-            "Endereço": "Rua Bento Gonçalves, 81",
-            "Bairro": "Centro",
-            "Telefone": "51-3664-1475",
-            "WhatsApp": "51-995020316"
-        },
-        {
             "Filial": "435",
             "Estado": "Santa Catarina",
             "UF": "SC",
             "Cidade": "Joinville",
             "Endereço": "Rua do Principe, 177",
             "Bairro": "Centro",
-            "Telefone": " 47-3422-4590",
+            "Telefone": "47-3422-4590",
             "WhatsApp": "48-991883678"
         },
         {
@@ -546,6 +526,16 @@
             "Bairro": "São Luiz",
             "Telefone": "47-33555215",
             "WhatsApp": "48-991895970"
+        },
+        {
+            "Filial": "803",
+            "Estado": "São Paulo",
+            "UF": "SP",
+            "Cidade": "São Paulo",
+            "Endereço": "Rua Doutor Homem de Melo,494",
+            "Bairro": "Perdizes",
+            "Telefone": "11-3060-8365",
+            "WhatsApp": "11-964097248"
         }
     ]
 }
