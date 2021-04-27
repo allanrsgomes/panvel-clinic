@@ -526,7 +526,7 @@ lojas = [
         "Bairro": "Florestal",
         "Telefone": "51-37486491",
         "WhatsApp": "51-997285741"
-    }
+    },
     //Inclusão solicitada em 22/04/2021 por Priscila
     {
         "Filial": "555",
