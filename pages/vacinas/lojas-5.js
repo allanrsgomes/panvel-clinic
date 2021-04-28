@@ -547,5 +547,25 @@ lojas = [
         "Bairro": "São Luiz",
         "Telefone": "47-33555215",
         "WhatsApp": "48-991895970"
+    },
+    {
+        "Filial": "356",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Ijuí",
+        "Endereço": "Rua  Doutor Pestana, 20",
+        "Bairro": "Centro",
+        "Telefone": "55-3333-1235",
+        "WhatsApp": "51-995799467"
+    },
+    {
+        "Filial": "561",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Umuarama",
+        "Endereço": "Avenida Paraná, 5264",
+        "Bairro": "Zona III",
+        "Telefone": "44-3624-1643",
+        "WhatsApp": "41-992099263"
     }
 ]
