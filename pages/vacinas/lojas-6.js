@@ -567,5 +567,15 @@ lojas = [
         "Bairro": "Zona III",
         "Telefone": "44-3624-1643",
         "WhatsApp": "41-992099263"
+    },
+    {
+        "Filial": "738",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Santa Cruz do Sul",
+        "Endereço": "Rua Vinte e Oito de Setembro, 585",
+        "Bairro": "Centro",
+        "Telefone": "51-37174550",
+        "WhatsApp": "51-998675693"
     }
 ]
