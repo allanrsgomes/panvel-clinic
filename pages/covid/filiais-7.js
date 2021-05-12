@@ -1126,7 +1126,7 @@ const dataPanvel = [
         "Filial": "315",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
-        "Cidade": "Atlantida Sul - Osório",
+        "Cidade": "Atlantida Sul",
         "Endereço": "Av. Paraguassú, 444 ",
         "Bairro": "Centro",
         "Telefone": "51-997828588"
@@ -2271,8 +2271,7 @@ const dataPanvel = [
         "UF": "PR",
         "Cidade": "Campo Mourão",
         "Endereço": "Av. Capitao Indio Bandeira, 1690",
-        "Bairro": "Centro",
-        "Telefone": "0"
+        "Bairro": "Centro"
     },
     {
         "Filial": "702",
@@ -2431,7 +2430,7 @@ const dataPanvel = [
         "Filial": "723",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
-        "Cidade": "Xangri-la (Rainha do mar)",
+        "Cidade": "Xangri-la",
         "Endereço": "Rua Água Marinha, nº 1.421",
         "Bairro": "Centro",
         "Telefone": "51-997428146"
