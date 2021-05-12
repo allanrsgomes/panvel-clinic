@@ -1,0 +1,73 @@
+{
+    "questionario": {
+        "question": "<span class='questionario-titulo-inicio'></span> Bem-vindo ao Assistente Virtual Panvel Clinic",
+        "text": "<p>Ao final você poderá efetuar a compra dos testes através de nossa loja.</p>",
+        "data": [
+            {
+                "optionValue": "Iniciar",
+                "question": "Você apresenta sintomas?",
+                "data": [
+                    {
+                        "optionValue": "Sim",
+                        "question": "Início dos sintomas:",
+                        "data": [
+                            {
+                                "optionValue": "Há menos de 10 dias",
+                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034'>Teste Rápido ANTÍGENO (Nasal) <button class='button btn-teste-comprar'> Comprar </button> </a></p><p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572'>Teste Rápido ANTÍGENO (Oral) <button class='button btn-teste-comprar'> Comprar </button></a> </p>"
+                            },
+                            {
+                                "optionValue": "Há mais de 10 dias",
+                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-pos-vacinal-e-infeccao-natural-avulso-ecodiagnostica/p-109300'>Teste Rápido Anticorpo Pós-vacinal e Infecção Natural <button class='button btn-teste-comprar'> Comprar </button></a></p>"
+                            }
+                        ]
+                    },
+                    {
+                        "optionValue": "Não",
+                        "question": "Você foi vacinado?",
+                        "data": [
+                            {
+                                "optionValue": "Sim",
+                                "question": "Pelo menos 30 dias após a primeira dose?",
+                                "data": [
+                                    {
+                                        "optionValue": "Sim",
+                                        "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-pos-vacinal-e-infeccao-natural-avulso-ecodiagnostica/p-109300'>Teste Rápido Anticorpo Pós-vacinal e Infecção Natural <button class='button btn-teste-comprar'> Comprar </button></a></p>"
+                                    },
+                                    {
+                                        "optionValue": "Não",
+                                        "note": "Mesmo vacinado não exclui a possibilidade de você adquirir o vírus.",
+                                        "recommendedExam": "<p>Aguardar os 30 dias após vacina para realizar <br> <a href='https://www.panvel.com/panvel/teste-rapido-covid-pos-vacinal-e-infeccao-natural-avulso-ecodiagnostica/p-109300'>Teste Rápido Anticorpo Pós-vacinal e Infecção Natural <button class='button btn-teste-comprar'> Comprar </button> </a></p>"
+                                    }
+                                ]
+                            },
+                            {
+                                "optionValue": "Não",
+                                "question": "Você teve contato com caso confirmado?",
+                                "data": [
+                                    {
+                                        "optionValue": "Sim",
+                                        "question": "O contato ocorreu:",
+                                        "data": [
+                                            {
+                                                "optionValue": "Há menos de 7 dias",
+                                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034'>Teste Rápido ANTÍGENO (Nasal) <button class='button btn-teste-comprar'> Comprar </button> </a> </p><p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572'>Teste Rápido ANTÍGENO (Oral) <button class='button btn-teste-comprar'> Comprar </button></a> </p>"
+                                            },
+                                            {
+                                                "optionValue": "Há pelo menos de 14 dias da confirmação",
+                                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-pos-vacinal-e-infeccao-natural-avulso-ecodiagnostica/p-109300'>Teste Rápido Anticorpo Pós-vacinal e Infecção Natural <button class='button btn-teste-comprar'> Comprar </button></a></p>"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "optionValue": "Não",
+                                        "note": "Realizar por indicação médica ou por solicitação."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
