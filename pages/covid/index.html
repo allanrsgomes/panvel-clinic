@@ -1648,13 +1648,13 @@
         margin: 0 auto;
     }
 
-    .bt-abrir-assistVirtual img{
+    .bt-abrir-assistVirtual img {
         width: auto;
-height: 50;
-padding: unset;
-margin: unset;
-line-height: 0;
-margin-left: 10px;
+        height: 50px;
+        padding: unset;
+        margin: unset;
+        line-height: 0;
+        margin-left: 10px;
     }
 
     @media screen and (max-width:600px) {
@@ -1766,6 +1766,7 @@ margin-left: 10px;
         animation-name: slideIn;
         animation-duration: 0.4s;
         z-index: 9999;
+        margin-top: calc(62px + 2%);
     }
 
 
@@ -1983,7 +1984,8 @@ margin-left: 10px;
         margin: var(--xsSpace) 0;
     }
 </style>
-<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais-7.js"></script>
+<script type="text/javascript"
+    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais-8.js"></script>
 <script>
     window.addEventListener('load', LHevents);
 
@@ -2186,6 +2188,8 @@ margin-left: 10px;
         let questIndex = 0;
         let stepCounter = 0;
 
+        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+
         const modalHeader = document.getElementById('modalHeader');
 
         const handleClick = (e, nextNode, wrapper) => {
@@ -2237,7 +2241,9 @@ margin-left: 10px;
             updateQuestion(questStart);
         }
 
-        loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/assistente-virtual-vacinas.JSON').then(data => {
+        loadJSON(
+            'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/assistente-virtual-vacinas.JSON'
+            ).then(data => {
             clearTest();
             handleAssistVirtualModal(data);
             modal.style.display = "flex";
@@ -2652,9 +2658,9 @@ margin-left: 10px;
             </div>
         </div>
 
-        <!-- <div class="header-before">
+         <div class="header-before">
             <a class="buttonQuest bt-abrir-assistVirtual" href="javascript:;"> Preciso fazer o teste? <img src='https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/press.svg'> </a>
-        </div> -->
+        </div> 
 
         <div class="header-before header-steps">
             É muito fácil realizar os testes rápidos para Covid-19 nas lojas Panvel Clinic.
@@ -3049,7 +3055,8 @@ margin-left: 10px;
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-pcr-saliva.jpg" class="thumb-img-border">
+                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-pcr-saliva.jpg"
+                                class="thumb-img-border">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
@@ -3091,7 +3098,8 @@ margin-left: 10px;
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
-                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-anticorpos-neutralizantes.jpg" class="thumb-img-border">
+                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-exame-anticorpos-neutralizantes.jpg"
+                                class="thumb-img-border">
                         </div>
                         <div class="card-info">
                             <div class="card-title">
