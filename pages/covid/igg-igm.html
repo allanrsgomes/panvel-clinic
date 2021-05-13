@@ -1493,14 +1493,16 @@
         })
     };
 </script>
-<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais-4.js"></script>
+<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais-8.js"></script>
 <script>
     window.addEventListener('load', LHevents);
 
+    var dadosPanvel;
+
     function LHevents() {
 
-        dataPanvel = orderDataAlphabetically(dataPanvel);
-        filtrarDadosPanvel();
+        dadosPanvel = filtrarDadosPanvel(dataPanvel);
+        dadosPanvel = orderDataAlphabetically(dadosPanvel);
 
         // Get the modal
         var modalPanvel = document.getElementById("LHModalContainerPanvel");
@@ -1607,34 +1609,34 @@
 
         var lastEstate;
 
-        for (let i = 0; i < dataPanvel.length; i++) {
+        for (let i = 0; i < dadosPanvel.length; i++) {
 
             if (i === 0) {
-                lastEstate = dataPanvel[i].UF;
+                lastEstate = dadosPanvel[i].UF;
 
                 option = document.createElement("option");
-                option.text = dataPanvel[i].Estado;
-                option.value = dataPanvel[i].UF;
+                option.text = dadosPanvel[i].Estado;
+                option.value = dadosPanvel[i].UF;
                 estateSelection.add(option);
 
             } else {
 
-                if (dataPanvel[i].UF !== lastEstate) {
+                if (dadosPanvel[i].UF !== lastEstate) {
 
                     let verifState = 1;
 
                     for (let j = 0; j < estateSelection.options.length; j++) {
 
-                        if (dataPanvel[i].UF === estateSelection.options[j].value) {
+                        if (dadosPanvel[i].UF === estateSelection.options[j].value) {
                             verifState = 0;
                         }
                     }
 
                     if (verifState !== 0) {
-                        lastEstate = dataPanvel[i].UF;
+                        lastEstate = dadosPanvel[i].UF;
                         option = document.createElement("option");
-                        option.text = dataPanvel[i].Estado;
-                        option.value = dataPanvel[i].UF;
+                        option.text = dadosPanvel[i].Estado;
+                        option.value = dadosPanvel[i].UF;
                         estateSelection.add(option);
                     }
                 }
@@ -1655,38 +1657,38 @@
 
         var lastCity;
 
-        for (let i = 0; i < dataPanvel.length; i++) {
+        for (let i = 0; i < dadosPanvel.length; i++) {
 
-            if (dataPanvel[i].UF === sel) {
+            if (dadosPanvel[i].UF === sel) {
 
                 if (i === 0) {
-                    lastCity = dataPanvel[i].Cidade;
+                    lastCity = dadosPanvel[i].Cidade;
 
                     cityOption = document.createElement("option");
-                    cityOption.text = dataPanvel[i].Cidade;
-                    cityOption.value = `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`;
+                    cityOption.text = dadosPanvel[i].Cidade;
+                    cityOption.value = `${dadosPanvel[i].UF}%${dadosPanvel[i].Cidade}`;
                     cityOption.classList = `lista-cidades`;
                     citySelection.add(cityOption);
 
                 } else {
 
-                    if (dataPanvel[i].Cidade !== lastCity) {
+                    if (dadosPanvel[i].Cidade !== lastCity) {
 
                         let verifCity = 1;
 
                         for (let j = 0; j < citySelection.options.length; j++) {
 
-                            if (dataPanvel[i].Cidade === citySelection.options[j].innerHTML) {
+                            if (dadosPanvel[i].Cidade === citySelection.options[j].innerHTML) {
                                 verifCity = 0;
                             }
                         }
 
                         if (verifCity !== 0) {
-                            lastCity = dataPanvel[i].Cidade;
+                            lastCity = dadosPanvel[i].Cidade;
 
                             cityOption = document.createElement("option");
-                            cityOption.text = dataPanvel[i].Cidade;
-                            cityOption.value = `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`;
+                            cityOption.text = dadosPanvel[i].Cidade;
+                            cityOption.value = `${dadosPanvel[i].UF}%${dadosPanvel[i].Cidade}`;
                             cityOption.classList = `lista-cidades`;
                             citySelection.add(cityOption);
                         }
@@ -1712,38 +1714,38 @@
 
         districtSelection = document.getElementById('bairro-panvel');
 
-        for (let i = 0; i < dataPanvel.length; i++) {
+        for (let i = 0; i < dadosPanvel.length; i++) {
 
-            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city) {
+            if (dadosPanvel[i].UF === estate && dadosPanvel[i].Cidade === city) {
 
                 if (i === 0) {
-                    lastDistrict = dataPanvel[i].Bairro;
+                    lastDistrict = dadosPanvel[i].Bairro;
 
                     districtOption = document.createElement("option");
-                    districtOption.text = dataPanvel[i].Bairro;
-                    districtOption.value = `${estate}%${city}%${dataPanvel[i].Bairro}`;
+                    districtOption.text = dadosPanvel[i].Bairro;
+                    districtOption.value = `${estate}%${city}%${dadosPanvel[i].Bairro}`;
                     districtOption.classList = `lista-bairros`;
                     districtSelection.add(districtOption);
 
                 } else {
 
-                    if (dataPanvel[i].Bairro !== lastDistrict) {
+                    if (dadosPanvel[i].Bairro !== lastDistrict) {
 
                         let verifDistrict = 1;
 
                         for (let j = 0; j < districtSelection.options.length; j++) {
 
-                            if (dataPanvel[i].Bairro === districtSelection.options[j].innerText) {
+                            if (dadosPanvel[i].Bairro === districtSelection.options[j].innerText) {
                                 verifDistrict = 0;
                             }
                         }
 
                         if (verifDistrict !== 0) {
-                            lastDistrict = dataPanvel[i].Bairro;
+                            lastDistrict = dadosPanvel[i].Bairro;
 
                             districtOption = document.createElement("option");
-                            districtOption.text = dataPanvel[i].Bairro;
-                            districtOption.value = `${estate}%${city}%${dataPanvel[i].Bairro}`;
+                            districtOption.text = dadosPanvel[i].Bairro;
+                            districtOption.value = `${estate}%${city}%${dadosPanvel[i].Bairro}`;
                             districtOption.classList = `lista-bairros`;
                             districtSelection.add(districtOption);
                         }
@@ -1771,9 +1773,9 @@
         //adress = vetor com todos endereços
         // console.log(adresses);
 
-        for (let i = 0; i < dataPanvel.length; i++) {
+        for (let i = 0; i < dadosPanvel.length; i++) {
 
-            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city && dataPanvel[i].Bairro === district) {
+            if (dadosPanvel[i].UF === estate && dadosPanvel[i].Cidade === city && dadosPanvel[i].Bairro === district) {
 
                 itemsContainer = document.getElementById("items-container-panvel");
 
@@ -1784,7 +1786,7 @@
                 cardNome.className = "card-nome";
 
                 let nomeLabel = document.createElement("span");
-                nomeLabel.textContent = dataPanvel[i].Bairro;
+                nomeLabel.textContent = dadosPanvel[i].Bairro;
 
                 cardNome.appendChild(nomeLabel);
 
@@ -1794,7 +1796,7 @@
                 cardAdress.className = "card-adress";
 
                 let endereco = document.createElement("span");
-                endereco.textContent = dataPanvel[i].Endereço;
+                endereco.textContent = dadosPanvel[i].Endereço;
                 cardAdress.appendChild(endereco);
 
                 items.appendChild(cardAdress);
@@ -1806,7 +1808,7 @@
                 cardTelefone.className = "card-adress";
 
                 let telefone = document.createElement("span");
-                telefone.textContent = ((typeof dataPanvel[i].WhatsApp !== 'undefined') ? dataPanvel[i].WhatsApp + ' / ' : '') + ((typeof dataPanvel[i].Telefone !== 'undefined') ? dataPanvel[i].Telefone : '');
+                telefone.textContent = ((typeof dadosPanvel[i].WhatsApp !== 'undefined') ? dadosPanvel[i].WhatsApp + ' / ' : '') + ((typeof dadosPanvel[i].Telefone !== 'undefined') ? dadosPanvel[i].Telefone : '');
                 cardTelefone.appendChild(telefone);
 
                 items.appendChild(cardTelefone);

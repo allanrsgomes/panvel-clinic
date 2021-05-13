@@ -10,7 +10,6 @@ function orderDataAlphabetically(data) {
 }
 
 function filtrarDadosPanvel(data) {     
-    debugger;
     const capitalizarLetra = str => str.replace(/^(.)|\s+(.)/g, c => c.toUpperCase());
 
     for(endereço of data){
