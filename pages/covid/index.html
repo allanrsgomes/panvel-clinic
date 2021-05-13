@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" media="screen" href='https://cdn1.staticpanvel.com.br/static/site/ecommerce-app.css?ver=1616545243738%27/%3E'>
 <style>
     @import url(https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonts/fonts.css);
 
@@ -1754,7 +1755,7 @@
         border: none;
         border-radius: 10px;
         background-color: #fefefe;
-        max-height: 90vh;
+        max-height: 80vh;
         overflow: hidden;
         position: relative;
         display: flex;
@@ -1982,6 +1983,45 @@
         font-size: var(--smFontSize);
         color: var(--color-yale-blue);
         margin: var(--xsSpace) 0;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .assistVirtualModal #LHModalQuest {
+            overflow-y: auto;
+            padding-top: unset;
+        }
+
+        #modalHeader.assistantStarted #logoModalMain {
+            display: none;
+        }
+
+        #modalHeader::after {
+            display: none;
+        }
+
+        .assistVirtualModal #modalHeader {
+            position: relative;
+        }
+
+        #modalHeader.assistantStarted #logoModalLeft,
+        #modalHeader.assistantStarted #logoModalRight {
+            position: static;
+            margin: 0 20px;
+        }
+
+        .assistVirtualModal #modalHeader.assistantStarted {
+            flex-wrap: wrap;
+        }
+
+        #LHModalContent, .assistVirtualModa {
+            overflow: unset;
+        }
+
+        [id^="assistVirtual-wrapper-"]:not(.active){
+            width: unset;
+            padding: unset;
+        } 
     }
 </style>
 <script type="text/javascript"
@@ -2243,7 +2283,7 @@
 
         loadJSON(
             'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/assistente-virtual-vacinas.JSON'
-            ).then(data => {
+        ).then(data => {
             clearTest();
             handleAssistVirtualModal(data);
             modal.style.display = "flex";
@@ -2658,9 +2698,11 @@
             </div>
         </div>
 
-         <div class="header-before">
-            <a class="buttonQuest bt-abrir-assistVirtual" href="javascript:;"> Preciso fazer o teste? <img src='https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/press.svg'> </a>
-        </div> 
+        <div class="header-before">
+            <a class="buttonQuest bt-abrir-assistVirtual" href="javascript:;"> Preciso fazer o teste? <img
+                    src='https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/press.svg'>
+            </a>
+        </div>
 
         <div class="header-before header-steps">
             É muito fácil realizar os testes rápidos para Covid-19 nas lojas Panvel Clinic.
