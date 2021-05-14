@@ -2275,6 +2275,10 @@
           let cardEnd = document.createElement("div");
           cardEnd.className = "card-end";
 
+          let funcionamento = document.createElement("span");
+          funcionamento.innerText = ( lojas[i].Úteis ? 'Segunda à sexta: ' + lojas[i].Úteis + '\n': ' ') + ( lojas[i].Sábados ? 'Sábados: ' + lojas[i].Sábados + '\n': ' ') + ( lojas[i].Feriados ? 'Domingos e feriados: ' + lojas[i].Feriados + '\n': ' ')
+          cardEnd.appendChild(funcionamento);
+
           items.appendChild(cardEnd);
 
           itemsContainer.appendChild(items);
@@ -2286,7 +2290,7 @@
     }
 
   </script>
-  <script type="text/javascript" src="https://staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/lojas-6.js"></script>
+  <script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/lojas-7.js"></script>
   <script>
 
   </script>

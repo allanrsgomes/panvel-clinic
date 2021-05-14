@@ -2507,131 +2507,6 @@
         }
     }
 
-    // Quando o usuário clica em um botão do tipo ".bt-abrir-assistVirtual", handleOpenAssistVirtual é invocada.
-    const handleOpenAssistVirtual = (modal, modalContent) => {
-        let questStart = {};
-        let questIndex = 0;
-        let stepCounter = 0;
-
-        const modalHeader = document.getElementById('modalHeader');
-
-        const handleClick = (e, nextNode, wrapper) => {
-            updateQuestion(nextNode);
-            e.target.classList.add('active');
-            wrapper.classList.add('completed');
-            wrapper.classList.remove('active');
-
-            const movementCompleteListener = (e) => {
-                e.target.removeEventListener('transitionend', movementCompleteListener)
-                e.target.classList.remove('completed');
-                e.target.innerHTML = '';
-            }
-
-            wrapper.addEventListener('transitionend', movementCompleteListener)
-        }
-
-        const restartTest = (wrapper) => {
-            stepCounter = 0;
-            updateQuestion(questStart);
-            wrapper.classList.add('completed');
-            wrapper.classList.remove('active');
-            const movementCompleteListener = (e) => {
-                e.target.removeEventListener('transitionend', movementCompleteListener)
-                e.target.classList.remove('completed');
-                e.target.innerHTML = '';
-            }
-            wrapper.addEventListener('transitionend', movementCompleteListener)
-        }
-
-        const clearTest = () => {
-            let questWrappers = [document.getElementById('assistVirtual-wrapper-0'), document.getElementById('assistVirtual-wrapper-1')]
-            questWrappers.map(questWrapper => {
-                questWrapper.innerHTML = '';
-                questWrapper.classList.remove('completed');
-                questWrapper.classList.remove('active');
-            })
-        }
-
-        const resetTest = () => {
-            clearTest();
-            updateQuestion(questStart);
-        }
-
-        const handleAssistVirtualModal = data => {
-            //console.log(data.questionario);
-            questStart = data.questionario;
-            updateQuestion(questStart);
-        }
-
-        loadJSON('./assistente-virtual-vacinas.JSON').then(data => {
-            clearTest();
-            handleAssistVirtualModal(data);
-            modal.style.display = "flex";
-        })
-
-        const updateQuestion = node => {
-            const question = node.question;
-            const questionText = node.text;
-            const options = node.data;
-            const note = node.note;
-            const recommendedExam = node.recommendedExam;
-            const questContainer = document.getElementById('assistVirtual-wrapper-' + questIndex % 2);
-            console.log(questIndex);
-            if (stepCounter == 0) {
-                modalHeader.classList.remove('assistantStarted');
-            }
-
-            if (stepCounter == 1) {
-                modalHeader.classList.add('assistantStarted');
-            }
-
-            questContainer.innerHTML = '';
-
-            if (options && question) {
-                let nextNodeArray = [];
-                questContainer.innerHTML = '<h2 id="question">' + question + '</h2>';
-
-                if (questionText) {
-                    questContainer.innerHTML += '<p class="questionText">' + questionText + '</p>';
-                }
-
-                questContainer.innerHTML += '<hr class="blue-separator">';
-
-                let optionsWrapper = document.createElement('div');
-                optionsWrapper.classList.add('options');
-
-                options.map(option => {
-                    optionsWrapper.innerHTML += '<button name="questOption" class="questOption">' + option.optionValue + '</button>';
-                    nextNodeArray.push(option);
-                });
-
-
-                questContainer.appendChild(optionsWrapper);
-
-                [...document.querySelectorAll('#assistVirtual-wrapper-' + questIndex % 2 + ' .questOption')].map((element, index) => {
-                    element.onclick = (e) => handleClick(e, nextNodeArray[index], questContainer);
-                })
-            } else {
-                if (recommendedExam) {
-                    questContainer.innerHTML += '<h3>Resultado:</h3><hr class="blue-separator"/>';
-                    questContainer.innerHTML += '<p>Baseado nas suas respostas e recomendações medicas,<br>indicamos a realização dos seguintes exames para a detecção do Covid-19:</p>';
-                    questContainer.innerHTML += '<div class="recommended-exam">' + recommendedExam + '</div>';
-                }
-                if (note) {
-                    questContainer.innerHTML += '<p class="note">' + note + '</p>';
-                }
-                if (note || recommendedExam) {
-                    questContainer.innerHTML += '<div class="options"><button id="restart-test-button" class="questOption">Refazer o teste</button>' + /*<button class="questOption bt-agendar-vacina">Agendar exame</button>*/ '</div>';
-                    document.getElementById('restart-test-button').onclick = (e) => restartTest(questContainer);
-                }
-            }
-
-            questContainer.classList.add('active');
-            questIndex++;
-            stepCounter++;
-        }
-    }
-
     // Quando o usuário clica em um botão do tipo ".bt-agendar-vacina", handleAgendarVacina é invocada.
     const handleAgendarVacina = (modal, modalContent) => {
         //console.log('modal',modal);
@@ -2890,7 +2765,7 @@
 
         }
 
-        return loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/filiais-gripe-8.JSON').then(data => {
+        return loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/filiais-gripe-9.JSON').then(data => {
             var dadosFiltrados = handleFiliaisJSON(data);
 
             LHevents(dadosFiltrados);
@@ -3211,6 +3086,10 @@
 
                 let cardEnd = document.createElement("div");
                 cardEnd.className = "card-end";
+
+                let funcionamento = document.createElement("span");
+                funcionamento.innerText = ( lojas[i].Úteis ? 'Segunda à sexta: ' + lojas[i].Úteis + '\n': ' ') + ( lojas[i].Sábados ? 'Sábados: ' + lojas[i].Sábados + '\n': ' ') + ( lojas[i].Feriados ? 'Domingos e feriados: ' + lojas[i].Feriados + '\n': ' ')
+                cardEnd.appendChild(funcionamento);
 
                 items.appendChild(cardEnd);
 
