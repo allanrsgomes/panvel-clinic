@@ -2673,10 +2673,10 @@ const dataIggIgm = [{
         "Endereço": "R. Elpidio Correia da Silveira, nº 100 - Loja 08",
         "Bairro": "Bela Vista",
         "CEP": "94.801-970",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CACHOEIRINHA",
@@ -2686,10 +2686,10 @@ const dataIggIgm = [{
         "Endereço": "Av. General Flores da Cunha, nº843 - Loja 01 e 02",
         "Bairro": "Vila Veranópolis",
         "CEP": "94.910-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CAMPO BOM ",
@@ -2699,10 +2699,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Tiradentes, nº 109 - loja 104",
         "Bairro": "Centro",
         "CEP": "93700-970",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 10:30"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 10:30"
     },
     {
         "Unidade": "CANOAS CENTRO",
@@ -2712,10 +2712,10 @@ const dataIggIgm = [{
         "Endereço": "R. Tiradentes, nº 316 - Loja 13",
         "Bairro": "Centro",
         "CEP": "92.010-260",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "MATHIAS",
@@ -2725,10 +2725,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Rio Grande do Sul, nº 741 - Loja 01 e 02",
         "Bairro": "Mathias Velho",
         "CEP": "92.330-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 14:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 14:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CEC - Centro Especializado de Citologia",
@@ -2738,10 +2738,10 @@ const dataIggIgm = [{
         "Endereço": "R. Fioravante Milanez, nº 50Loja 01, nº 52 - Loja 02 nº 58, salas 304 e 307",
         "Bairro": "Centro",
         "CEP": "92.010-240",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:20",
-        "Coleta-Sábados": "08:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:20",
+        "ColetaSábados": "08:00 às 11:00"
     },
     {
         "Unidade": "ESTEIO CENTRO",
@@ -2751,10 +2751,10 @@ const dataIggIgm = [{
         "Endereço": "R. Padre Felipe - nº 69 - Loja 03",
         "Bairro": "Centro",
         "CEP": "93.265-157",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CLARET X",
@@ -2764,10 +2764,10 @@ const dataIggIgm = [{
         "Endereço": "R. dos Ferroviarios, nº 83",
         "Bairro": "Centro",
         "CEP": "93.265-150",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "IVOTI ",
@@ -2777,10 +2777,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Presidente Lucena, nº 3598",
         "Bairro": "Centro",
         "CEP": "93900-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:30 e das 14:00 às 15:30",
-        "Coleta-Sábados": "07:00 às 11:30 e das 14:00 às 15:31"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:30 e das 14:00 às 15:30",
+        "ColetaSábados": "07:00 às 11:30 e das 14:00 às 15:31"
     },
     {
         "Unidade": "MATRIZ",
@@ -2790,10 +2790,10 @@ const dataIggIgm = [{
         "Endereço": "R. Joaquim Nabuco, nº 1050 - Sala 01",
         "Bairro": "Centro",
         "CEP": "93310-002",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "TUPI ",
@@ -2803,10 +2803,10 @@ const dataIggIgm = [{
         "Endereço": "R. Tupi, nº 975 - Térreo",
         "Bairro": "Rio Branco",
         "CEP": "93320-050",
-        "Atendimento-Úteis": "07:00 às 19:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": " 07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 19:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": " 07:00 às 18:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "CINCO DE ABRIL ",
@@ -2816,10 +2816,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Cinco de Abril, 618 - sala 01",
         "Bairro": "Centro",
         "CEP": "93310-030",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "CANUDOS",
@@ -2829,10 +2829,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Bartolomeu de Gusmão, nº 279",
         "Bairro": "Canudos",
         "CEP": "93542-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "07:30 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "07:30 às 11:00"
     },
     {
         "Unidade": "MULTICLINICA",
@@ -2842,10 +2842,10 @@ const dataIggIgm = [{
         "Endereço": "Rua David Canabarro nº 28 - sala 51",
         "Bairro": "Centro",
         "CEP": "93510-020",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "ANTONELLO - PADRE ANCHIETA",
@@ -2855,10 +2855,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Padre Anchieta nº1620",
         "Bairro": "Centro",
         "CEP": "96.015-420",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 18:00",
+        "ColetaSábados": "07:00 às 10:00"
     },
     {
         "Unidade": "ANTONELLO - FERREIRA VIANA",
@@ -2868,10 +2868,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Ferreira Viana nº380",
         "Bairro": "Areal",
         "CEP": "96.085-000",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 18:00",
+        "ColetaSábados": "07:00 às 10:00"
     },
     {
         "Unidade": "ANITA GARIBALDI",
@@ -2881,10 +2881,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Anita Garibaldi, nº 637 ",
         "Bairro": "Mont Serrat",
         "CEP": "90.450-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "BELÉM NOVO",
@@ -2894,10 +2894,10 @@ const dataIggIgm = [{
         "Endereço": "R. Doutor Cecilio Monza, nº 10758 - Sala 01",
         "Bairro": "Belem Novo",
         "CEP": "91.780-060",
-        "Atendimento-Úteis": "08:00 às 12:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "08:00 às 10:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "08:00 às 12:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "08:00 às 10:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "BENTO",
@@ -2907,10 +2907,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Bento Golçalves, nº 2445 - Loja 03",
         "Bairro": "Partenon",
         "CEP": "90.650-003",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CAVALHADA",
@@ -2920,10 +2920,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Cavalhada, nº 3044 - Loja 03",
         "Bairro": "Cavalhada",
         "CEP": "91.740-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": " 07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": " 07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "DOM NOBEL",
@@ -2933,10 +2933,10 @@ const dataIggIgm = [{
         "Endereço": "Pç. Dom Feliciano, nº 78 - Sala 104 e 105 - Edificio Uaruma ",
         "Bairro": "Centro Historico",
         "CEP": "90.020-160",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "HBM",
@@ -2946,10 +2946,10 @@ const dataIggIgm = [{
         "Endereço": "R. Doutor Castro de Menezes, nº 155",
         "Bairro": "Vila Assunção",
         "CEP": "91.900-590",
-        "Atendimento-Úteis": "07:00 às 19:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 19:00",
-        "Coleta-Sábados": "08:00 às 12:00"
+        "AtendimentoÚteis": "07:00 às 19:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 19:00",
+        "ColetaSábados": "08:00 às 12:00"
     },
     {
         "Unidade": "IBCM MENINO DEUS",
@@ -2959,10 +2959,10 @@ const dataIggIgm = [{
         "Endereço": "R.Barão do Triunfo nº 175 - Salas: 101,102,103 e 104",
         "Bairro": "Menino Deus ",
         "CEP": "90130-101",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 15:30 ",
-        "Coleta-Sábados": "07:00 às 15:31"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 15:30 ",
+        "ColetaSábados": "07:00 às 15:31"
     },
     {
         "Unidade": "NILO PEÇANHA ",
@@ -2972,10 +2972,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Nilo Peçanha , nº 2606 e 2610",
         "Bairro": "Chácara das Pedras",
         "CEP": "91.330-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "OBIRICI",
@@ -2985,10 +2985,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Assis Brasil, nº 1858",
         "Bairro": "Passo da Areia",
         "CEP": "91.010-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "OTTO",
@@ -2998,10 +2998,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Otto Niemeyer, 2633",
         "Bairro": "Cavalhada",
         "CEP": "91910-200",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": " 07:00 às 16:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": " 07:00 às 16:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "RESTINGA",
@@ -3011,10 +3011,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Economista Nilo Wulff, nº 275 - Casa 911",
         "Bairro": "Restinga",
         "CEP": "91.790-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 14:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 14:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "STRIP CENTER",
@@ -3024,10 +3024,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Assis Brasil, nº 4320 - Loja 66",
         "Bairro": "São Sebastião",
         "CEP": "91.110-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:20",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:20",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "TREND ",
@@ -3037,10 +3037,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Ipiranga, nº 50 - Loja 20",
         "Bairro": "Praia de Belas",
         "CEP": "90.160-090",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "LUNAV MATRIZ",
@@ -3050,10 +3050,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Aquidaban, 697",
         "Bairro": "Centro",
         "CEP": "96200-480",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "07:00 às 11:00",
-        "Coleta-Úteis": "07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "07:00 às 11:00",
+        "ColetaÚteis": "07:00 às 18:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "SÃO JOSÉ DO HORTÊNCIO",
@@ -3063,10 +3063,10 @@ const dataIggIgm = [{
         "Endereço": "Av. Mathias Steffens, nº 3700 - apto. 01",
         "Bairro": "Centro",
         "CEP": "95755-000",
-        "Atendimento-Úteis": "06:30 às 11:15",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "06:30 às 09:00",
-        "Coleta-Sábados": "06:30 às 09:01"
+        "AtendimentoÚteis": "06:30 às 11:15",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "06:30 às 09:00",
+        "ColetaSábados": "06:30 às 09:01"
     },
     {
         "Unidade": "LUNAV NORTE",
@@ -3076,10 +3076,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Carlos Bulamarque, 253",
         "Bairro": "Centro",
         "CEP": "96225-000",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:00",
-        "Coleta-Sábados": "07:00 às 11:01"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:00",
+        "ColetaSábados": "07:00 às 11:01"
     },
     {
         "Unidade": "SÃO LEOPOLDO ",
@@ -3089,10 +3089,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Primeiro de Março, nº 703 - LOJA 02 CONJ 707 LOJA 01",
         "Bairro": "Centro",
         "CEP": "93010-210",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "SÃO JOÃO ",
@@ -3102,10 +3102,10 @@ const dataIggIgm = [{
         "Endereço": "Rua São João, nº 833",
         "Bairro": "Centro",
         "CEP": "93.010-250",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "SÃO SEBASTIÃO DO CAÍ ",
@@ -3115,10 +3115,10 @@ const dataIggIgm = [{
         "Endereço": "Rua Madre Regina Protmann, nº 567 - sala 02",
         "Bairro": "Centro",
         "CEP": "95760-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 17:00",
-        "Coleta-Sábados": "Não atende"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 17:00",
+        "ColetaSábados": "Não atende"
     },
     {
         "Unidade": "INNOVA SAPUCAIA",
@@ -3128,10 +3128,10 @@ const dataIggIgm = [{
         "Endereço": "Professor Francisco Brochado da Rocha nº 392 - sala 09",
         "Bairro": "Centro",
         "CEP": "93.220-680",
-        "Atendimento-Úteis": "08:00 às 12:00 e das 13:00 às 16:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "08:00 às 12:00 e das 13:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 12:00 e das 13:00 às 15:01"
+        "AtendimentoÚteis": "08:00 às 12:00 e das 13:00 às 16:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "08:00 às 12:00 e das 13:00 às 15:00",
+        "ColetaSábados": "08:00 às 12:00 e das 13:00 às 15:01"
     },
     {
         "Unidade": "SAPUCAIA CLINICAS",
@@ -3141,10 +3141,10 @@ const dataIggIgm = [{
         "Endereço": "Av. João Pereira de Vargas, nº 500 - Sala 20, 22 e 28",
         "Bairro": "Centro",
         "CEP": "93.220-190",
-        "Atendimento-Úteis": "07:30 às 17:45",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:30 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:30 às 17:45",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:30 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "SAPUCAIA CENTRO ",
@@ -3154,10 +3154,10 @@ const dataIggIgm = [{
         "Endereço": "R. Coronel Serafim Pereira, nº 144 - Loja 15 e 16",
         "Bairro": "Centro",
         "CEP": "93.220-110",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "SANTO ANTº PATRULHA",
@@ -3167,10 +3167,10 @@ const dataIggIgm = [{
         "Endereço": "R. Major João  Villar Verde, nº 44-",
         "Bairro": "Centro",
         "CEP": "95.500-000",
-        "Atendimento-Úteis": "07:00 às 11:30 e das 14:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:30 e das 14:00 às 15:30",
-        "Coleta-Sábados": "07:00 às 11:30 e das 14:00 às 15:31"
+        "AtendimentoÚteis": "07:00 às 11:30 e das 14:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:30 e das 14:00 às 15:30",
+        "ColetaSábados": "07:00 às 11:30 e das 14:00 às 15:31"
     }
 ]
 
@@ -3182,10 +3182,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Elpidio Correia da Silveira, nº 100 - Loja 08",
         "Bairro": "Bela Vista",
         "CEP": "94.801-970",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CACHOEIRINHA",
@@ -3195,10 +3195,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. General Flores da Cunha, nº843 - Loja 01 e 02",
         "Bairro": "Vila Veranópolis",
         "CEP": "94.910-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CAMPO BOM ",
@@ -3208,10 +3208,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Tiradentes, nº 109 - loja 104",
         "Bairro": "Centro",
         "CEP": "93700-970",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 10:30"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 10:30"
     },
     {
         "Unidade": "CANOAS CENTRO",
@@ -3221,10 +3221,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Tiradentes, nº 316 - Loja 13",
         "Bairro": "Centro",
         "CEP": "92.010-260",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "MATHIAS",
@@ -3234,10 +3234,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Rio Grande do Sul, nº 741 - Loja 01 e 02",
         "Bairro": "Mathias Velho",
         "CEP": "92.330-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 14:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 14:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CEC - Centro Especializado de Citologia",
@@ -3247,10 +3247,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Fioravante Milanez, nº 50Loja 01, nº 52 - Loja 02 nº 58, salas 304 e 307",
         "Bairro": "Centro",
         "CEP": "92.010-240",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:20",
-        "Coleta-Sábados": "08:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:20",
+        "ColetaSábados": "08:00 às 11:00"
     },
     {
         "Unidade": "ESTEIO CENTRO",
@@ -3260,10 +3260,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Padre Felipe - nº 69 - Loja 03",
         "Bairro": "Centro",
         "CEP": "93.265-157",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CLARET X",
@@ -3273,10 +3273,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. dos Ferroviarios, nº 83",
         "Bairro": "Centro",
         "CEP": "93.265-150",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "IVOTI ",
@@ -3286,10 +3286,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Presidente Lucena, nº 3598",
         "Bairro": "Centro",
         "CEP": "93900-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:30 e das 14:00 às 15:30",
-        "Coleta-Sábados": "07:00 às 11:30 e das 14:00 às 15:31"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:30 e das 14:00 às 15:30",
+        "ColetaSábados": "07:00 às 11:30 e das 14:00 às 15:31"
     },
     {
         "Unidade": "MATRIZ",
@@ -3299,10 +3299,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Joaquim Nabuco, nº 1050 - Sala 01",
         "Bairro": "Centro",
         "CEP": "93310-002",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "TUPI ",
@@ -3312,10 +3312,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Tupi, nº 975 - Térreo",
         "Bairro": "Rio Branco",
         "CEP": "93320-050",
-        "Atendimento-Úteis": "07:00 às 19:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": " 07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 19:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": " 07:00 às 18:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "CINCO DE ABRIL ",
@@ -3325,10 +3325,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Cinco de Abril, 618 - sala 01",
         "Bairro": "Centro",
         "CEP": "93310-030",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "CANUDOS",
@@ -3338,10 +3338,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Bartolomeu de Gusmão, nº 279",
         "Bairro": "Canudos",
         "CEP": "93542-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "07:30 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "07:30 às 11:00"
     },
     {
         "Unidade": "MULTICLINICA",
@@ -3351,10 +3351,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua David Canabarro nº 28 - sala 51",
         "Bairro": "Centro",
         "CEP": "93510-020",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "ANTONELLO - PADRE ANCHIETA",
@@ -3364,10 +3364,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Padre Anchieta nº1620",
         "Bairro": "Centro",
         "CEP": "96.015-420",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 18:00",
+        "ColetaSábados": "07:00 às 10:00"
     },
     {
         "Unidade": "ANTONELLO - FERREIRA VIANA",
@@ -3377,10 +3377,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Ferreira Viana nº380",
         "Bairro": "Areal",
         "CEP": "96.085-000",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 18:00",
+        "ColetaSábados": "07:00 às 10:00"
     },
     {
         "Unidade": "ANITA GARIBALDI",
@@ -3390,10 +3390,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Anita Garibaldi, nº 637 ",
         "Bairro": "Mont Serrat",
         "CEP": "90.450-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "BELÉM NOVO",
@@ -3403,10 +3403,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Doutor Cecilio Monza, nº 10758 - Sala 01",
         "Bairro": "Belem Novo",
         "CEP": "91.780-060",
-        "Atendimento-Úteis": "08:00 às 12:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "08:00 às 10:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "08:00 às 12:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "08:00 às 10:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "BENTO",
@@ -3416,10 +3416,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Bento Golçalves, nº 2445 - Loja 03",
         "Bairro": "Partenon",
         "CEP": "90.650-003",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CAVALHADA",
@@ -3429,10 +3429,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Cavalhada, nº 3044 - Loja 03",
         "Bairro": "Cavalhada",
         "CEP": "91.740-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": " 07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": " 07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "DOM NOBEL",
@@ -3442,10 +3442,10 @@ const filiaisRtPcr = [{
         "Endereço": "Pç. Dom Feliciano, nº 78 - Sala 104 e 105 - Edificio Uaruma ",
         "Bairro": "Centro Historico",
         "CEP": "90.020-160",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "HBM",
@@ -3455,10 +3455,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Doutor Castro de Menezes, nº 155",
         "Bairro": "Vila Assunção",
         "CEP": "91.900-590",
-        "Atendimento-Úteis": "07:00 às 19:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 19:00",
-        "Coleta-Sábados": "08:00 às 12:00"
+        "AtendimentoÚteis": "07:00 às 19:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 19:00",
+        "ColetaSábados": "08:00 às 12:00"
     },
     {
         "Unidade": "IBCM MENINO DEUS",
@@ -3468,10 +3468,10 @@ const filiaisRtPcr = [{
         "Endereço": "R.Barão do Triunfo nº 175 - Salas: 101,102,103 e 104",
         "Bairro": "Menino Deus ",
         "CEP": "90130-101",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 15:30 ",
-        "Coleta-Sábados": "07:00 às 15:31"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 15:30 ",
+        "ColetaSábados": "07:00 às 15:31"
     },
     {
         "Unidade": "NILO PEÇANHA ",
@@ -3481,10 +3481,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Nilo Peçanha , nº 2606 e 2610",
         "Bairro": "Chácara das Pedras",
         "CEP": "91.330-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "OBIRICI",
@@ -3494,10 +3494,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Assis Brasil, nº 1858",
         "Bairro": "Passo da Areia",
         "CEP": "91.010-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "OTTO",
@@ -3507,10 +3507,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Otto Niemeyer, 2633",
         "Bairro": "Cavalhada",
         "CEP": "91910-200",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": " 07:00 às 16:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": " 07:00 às 16:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "RESTINGA",
@@ -3520,10 +3520,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Economista Nilo Wulff, nº 275 - Casa 911",
         "Bairro": "Restinga",
         "CEP": "91.790-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 14:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 14:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "STRIP CENTER",
@@ -3533,10 +3533,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Assis Brasil, nº 4320 - Loja 66",
         "Bairro": "São Sebastião",
         "CEP": "91.110-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:20",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:20",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "TREND ",
@@ -3546,10 +3546,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Ipiranga, nº 50 - Loja 20",
         "Bairro": "Praia de Belas",
         "CEP": "90.160-090",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "LUNAV MATRIZ",
@@ -3559,10 +3559,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Aquidaban, 697",
         "Bairro": "Centro",
         "CEP": "96200-480",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "07:00 às 11:00",
-        "Coleta-Úteis": "07:00 às 18:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "07:00 às 11:00",
+        "ColetaÚteis": "07:00 às 18:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "SÃO JOSÉ DO HORTÊNCIO",
@@ -3572,10 +3572,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. Mathias Steffens, nº 3700 - apto. 01",
         "Bairro": "Centro",
         "CEP": "95755-000",
-        "Atendimento-Úteis": "06:30 às 11:15",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "06:30 às 09:00",
-        "Coleta-Sábados": "06:30 às 09:01"
+        "AtendimentoÚteis": "06:30 às 11:15",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "06:30 às 09:00",
+        "ColetaSábados": "06:30 às 09:01"
     },
     {
         "Unidade": "LUNAV NORTE",
@@ -3585,10 +3585,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Carlos Bulamarque, 253",
         "Bairro": "Centro",
         "CEP": "96225-000",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:00",
-        "Coleta-Sábados": "07:00 às 11:01"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:00",
+        "ColetaSábados": "07:00 às 11:01"
     },
     {
         "Unidade": "SÃO LEOPOLDO ",
@@ -3598,10 +3598,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Primeiro de Março, nº 703 - LOJA 02 CONJ 707 LOJA 01",
         "Bairro": "Centro",
         "CEP": "93010-210",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "SÃO JOÃO ",
@@ -3611,10 +3611,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua São João, nº 833",
         "Bairro": "Centro",
         "CEP": "93.010-250",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "07:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:00",
-        "Coleta-Sábados": "07:00 às 11:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "07:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:00",
+        "ColetaSábados": "07:00 às 11:00"
     },
     {
         "Unidade": "SÃO SEBASTIÃO DO CAÍ ",
@@ -3624,10 +3624,10 @@ const filiaisRtPcr = [{
         "Endereço": "Rua Madre Regina Protmann, nº 567 - sala 02",
         "Bairro": "Centro",
         "CEP": "95760-000",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 17:00",
-        "Coleta-Sábados": "Não atende"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 17:00",
+        "ColetaSábados": "Não atende"
     },
     {
         "Unidade": "INNOVA SAPUCAIA",
@@ -3637,10 +3637,10 @@ const filiaisRtPcr = [{
         "Endereço": "Professor Francisco Brochado da Rocha nº 392 - sala 09",
         "Bairro": "Centro",
         "CEP": "93.220-680",
-        "Atendimento-Úteis": "08:00 às 12:00 e das 13:00 às 16:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "08:00 às 12:00 e das 13:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 12:00 e das 13:00 às 15:01"
+        "AtendimentoÚteis": "08:00 às 12:00 e das 13:00 às 16:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "08:00 às 12:00 e das 13:00 às 15:00",
+        "ColetaSábados": "08:00 às 12:00 e das 13:00 às 15:01"
     },
     {
         "Unidade": "SAPUCAIA CLINICAS",
@@ -3650,10 +3650,10 @@ const filiaisRtPcr = [{
         "Endereço": "Av. João Pereira de Vargas, nº 500 - Sala 20, 22 e 28",
         "Bairro": "Centro",
         "CEP": "93.220-190",
-        "Atendimento-Úteis": "07:30 às 17:45",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:30 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:30 às 17:45",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:30 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "SAPUCAIA CENTRO ",
@@ -3663,10 +3663,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Coronel Serafim Pereira, nº 144 - Loja 15 e 16",
         "Bairro": "Centro",
         "CEP": "93.220-110",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:00",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:00",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "SANTO ANTº PATRULHA",
@@ -3676,10 +3676,10 @@ const filiaisRtPcr = [{
         "Endereço": "R. Major João  Villar Verde, nº 44-",
         "Bairro": "Centro",
         "CEP": "95.500-000",
-        "Atendimento-Úteis": "07:00 às 11:30 e das 14:00 às 17:00",
-        "Atendimento-Sábados": "Não atende",
-        "Coleta-Úteis": "07:00 às 11:30 e das 14:00 às 15:30",
-        "Coleta-Sábados": "07:00 às 11:30 e das 14:00 às 15:31"
+        "AtendimentoÚteis": "07:00 às 11:30 e das 14:00 às 17:00",
+        "AtendimentoSábados": "Não atende",
+        "ColetaÚteis": "07:00 às 11:30 e das 14:00 às 15:30",
+        "ColetaSábados": "07:00 às 11:30 e das 14:00 às 15:31"
     }
 ]
 
@@ -3691,10 +3691,10 @@ const dataRtPcrUrgente = [{
         "Endereço": "Av. General Flores da Cunha, nº843 - Loja 01 e 02",
         "Bairro": "Vila Veranópolis",
         "CEP": "94.910-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "CANOAS CENTRO",
@@ -3704,10 +3704,10 @@ const dataRtPcrUrgente = [{
         "Endereço": "R. Tiradentes, nº 316 - Loja 13",
         "Bairro": "Centro",
         "CEP": "92.010-260",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "ANTONELLO - FERREIRA VIANA",
@@ -3717,10 +3717,10 @@ const dataRtPcrUrgente = [{
         "Endereço": "Av. Ferreira Viana nº380",
         "Bairro": "Areal",
         "CEP": "96.085-000",
-        "Atendimento-Úteis": "07:00 às 18:00",
-        "Atendimento-Sábados": "7:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 18:00",
-        "Coleta-Sábados": " 7:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 18:00",
+        "AtendimentoSábados": "7:00 às 12:00",
+        "ColetaÚteis": "07:00 às 18:00",
+        "ColetaSábados": " 7:00 às 10:00"
     },
     {
         "Unidade": "NILO PEÇANHA ",
@@ -3730,10 +3730,10 @@ const dataRtPcrUrgente = [{
         "Endereço": "Av. Nilo Peçanha , nº 2606 e 2610",
         "Bairro": "Chácara das Pedras",
         "CEP": "91.330-001",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 16:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 16:30",
+        "ColetaSábados": "08:00 às 10:00"
     },
     {
         "Unidade": "TREND ",
@@ -3743,9 +3743,9 @@ const dataRtPcrUrgente = [{
         "Endereço": "Av. Ipiranga, nº 50 - Loja 20",
         "Bairro": "Praia de Belas",
         "CEP": "90.160-090",
-        "Atendimento-Úteis": "07:00 às 17:00",
-        "Atendimento-Sábados": "08:00 às 12:00",
-        "Coleta-Úteis": "07:00 às 15:30",
-        "Coleta-Sábados": "08:00 às 10:00"
+        "AtendimentoÚteis": "07:00 às 17:00",
+        "AtendimentoSábados": "08:00 às 12:00",
+        "ColetaÚteis": "07:00 às 15:30",
+        "ColetaSábados": "08:00 às 10:00"
     }
 ]
