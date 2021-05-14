@@ -2032,12 +2032,12 @@
 
 </style>
 <script type="text/javascript"
-    src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais-8.js"></script>
+    src="filiais-9.js"></script>
 <script>
     window.addEventListener('load', LHevents);
 
-    var dadosExameSaliva;
-    var dadosExameAnticorpos;
+
+    var dadosExameSaliva, dadosExameAnticorpos, dadosIggIgm, dadosRtPcr, dadosRtPcrUrgencia;
 
     function LHevents() {
 
@@ -2052,6 +2052,16 @@
         dadosExameAnticorpos = filtrarDadosPanvel(dataExameAnticorpos);
         dadosExameAnticorpos = orderDataAlphabetically(dadosExameAnticorpos);
 
+        dadosIggIgm = filtrarDadosPanvel(dataIggIgm);
+        dadosIggIgm = orderDataAlphabetically(dadosIggIgm);
+
+        dadosRtPcr = filtrarDadosPanvel(filiaisRtPcr);
+        dadosRtPcr = orderDataAlphabetically(dadosRtPcr);
+
+        dadosRtPcrUrgencia = filtrarDadosPanvel(dataRtPcrUrgente);
+        dadosRtPcrUrgencia = orderDataAlphabetically(dadosRtPcrUrgencia);
+
+
         // Get the modal
         var modalAgendamento = document.getElementById("LHModalContainer");
         var modalContainer = document.getElementById("LHModal");
@@ -2060,6 +2070,9 @@
 
         var exameContainerSaliva = document.getElementById("LHModalExameSaliva");
         var exameContainerAnticorpos = document.getElementById("LHModalExameAnticorpos");
+        var exameContainerRtPcr = document.getElementById("LHModalExameRtPcr");
+        var exameContainerRtPcrUrgencia = document.getElementById("LHModalExameRtPcrUrgencia");
+        var exameContainerIggIgm = document.getElementById("LHModalExameIggIgm");
 
         var modalPanvel = document.getElementById("LHModalContainerPanvel");
         var panvelContainer = document.getElementById("LHModalPanvel");
@@ -2069,6 +2082,9 @@
 
         var btnExameSaliva = document.getElementsByClassName('exame-btn-saliva');
         var btnExameAnticorpos = document.getElementsByClassName('exame-btn-anticorpos');
+        var btnExameRtPcr = document.getElementsByClassName('exame-btn-rtpcr');
+        var btnExameRtPcrUrgencia = document.getElementsByClassName('exame-btn-rtpcr-urgencia');
+        var btnExameIggIgm = document.getElementsByClassName('exame-btn-igg-igm');
 
         var btnsPanvel = document.getElementsByClassName("panvel-btn");
 
@@ -2078,7 +2094,9 @@
 
         var btnModalExameSaliva = document.getElementById('modalCloseExameSaliva');
         var btnModalExameAnticorpos = document.getElementById('modalCloseExameAnticorpos');
-
+        var btnModalExameRtPcr = document.getElementsByClassName('modalCloseExameRtpcr');
+        var btnModalExameRtPcrUrgencia = document.getElementsByClassName('modalCloseExameRtpcrUrgencia');
+        var btnModalExameIggIgm = document.getElementsByClassName('modalCloseExameIggIgm');
 
         var btnModalPanvel = document.getElementById('modalClosePanvel');
 
@@ -2099,10 +2117,26 @@
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
         }
 
+        btnModalExameRtPcr = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalExameRtPcrUrgencia = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalExameIggIgm = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
         btnModalPanvel.onclick = function () {
             modalPanvel.style.display = "none";
             document.getElementsByTagName('body')[0].style.overflow = 'auto';
         }
+
 
         // When the user clicks the button, open the modal 
         btnAgendamento.onclick = function () {
@@ -2114,6 +2148,9 @@
             btnExameAnticorpos[num].onclick = () => {
                 exameContainerAnticorpos.style.display = 'block';
                 exameContainerSaliva.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none;'
+                exameContainerRtPcrUrgencia.style.display = 'none'
+                exameContainerIggIgm.style.display = 'none'
                 modalExame.style.display = 'block';
                 document.getElementsByTagName('body')[0].style.overflow = 'hidden';
                 createSelectionsNovaExame(exameContainerAnticorpos);
@@ -2124,9 +2161,51 @@
             btnExameSaliva[num].onclick = () => {
                 exameContainerSaliva.style.display = 'block';
                 exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none'
+                exameContainerRtPcrUrgencia.style.display = 'none'
+                exameContainerIggIgm.style.display = 'none'
                 modalExame.style.display = 'block';
                 document.getElementsByTagName('body')[0].style.overflow = 'hidden';
                 createSelectionsNovaExame(exameContainerSaliva);
+            }
+        }
+
+        for (let num = 0; num < btnExameRtPcr.length; num++) {
+            btnExameRtPcr[num].onclick = () => {
+                exameContainerSaliva.style.display = 'none';
+                exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'block';
+                exameContainerRtPcrUrgencia.style.display = 'none';
+                exameContainerIggIgm.style.display = 'none';
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerRtPcr);
+            }
+        }
+
+        for (let num = 0; num < btnExameRtPcrUrgencia.length; num++) {
+            btnExameRtPcrUrgencia[num].onclick = () => {
+                exameContainerSaliva.style.display = 'none';
+                exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none';
+                exameContainerRtPcrUrgencia.style.display = 'block';
+                exameContainerIggIgm.style.display = 'none';
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerRtPcrUrgencia);
+            }
+        }
+
+        for (let num = 0; num < btnExameIggIgm.length; num++) {
+            btnExameIggIgm[num].onclick = () => {
+                exameContainerSaliva.style.display = 'none';
+                exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none';
+                exameContainerRtPcrUrgencia.style.display = 'none';
+                exameContainerIggIgm.style.display = 'block';
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerIggIgm);
             }
         }
 
@@ -2144,7 +2223,7 @@
                 modalAgendamento.style.display = "none";
                 document.getElementsByTagName('body')[0].style.overflow = 'auto';
             } else if (event.target == exameContainerSaliva || event.target == exameContainerAnticorpos || event
-                .target == modalExame) {
+                .target == modalExame || event.target == exameContainerIggIgm || event.target == exameContainerRtPcrUrgencia || event.target == exameContainerRtPcr) {
                 modalExame.style.display = "none";
                 document.getElementsByTagName('body')[0].style.overflow = 'auto';
             } else if (event.target == modalPanvel || event.target == panvelContainer) {
@@ -2498,7 +2577,7 @@
     function onChangeStateNovaExame(sel) {
         let formSelected = sel.closest(".LHmodal-content").id,
             dataExame;
-        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : dadosExameAnticorpos;
+        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ( "LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm )  ));
         let citiesSelection = document.querySelector("#" + formSelected + " #cidade-exame");
         var L = citiesSelection.length;
         for (i = L; i >= 0; i--) citiesSelection.remove(i);
@@ -2513,7 +2592,7 @@
     function onChangeCityNovaExame(sel) {
         let formSelected = sel.closest(".LHmodal-content").id,
             dataExame;
-        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : dadosExameAnticorpos;
+        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ( "LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm )  ));
         let districtSelection = document.querySelector("#" + formSelected + " #bairro-exame");
         var L = districtSelection.length;
         for (i = L; i >= 0; i--) districtSelection.remove(i);
@@ -2525,7 +2604,7 @@
     function onChangeDistrictNovaExame(sel) {
         let formSelected = sel.closest(".LHmodal-content").id,
             dataExame, items, district;
-        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : dadosExameAnticorpos, dataExame =
+        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ( "LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm )  )), dataExame =
             filtrarDadosPanvel(dataExame), districtSelection = document.querySelector("#" + formSelected +
                 " #bairro-exame"), document.querySelector("#" + formSelected + " #items-container-exame").textContent =
             "", getAdressesNovaExame(sel, formSelected, dataExame)
@@ -2965,7 +3044,7 @@
                         <a href="/panvel/teste-covid--19-rt--pcr-grupo-exame/p-111502"><button
                                 class="button button-infos">
                                 Comprar </button></a>
-                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
+                        <button class="button-modal exame-btn-rtpcr"> Lojas onde realizar </button>
                     </div>
                 </div>
             </div>
@@ -3012,7 +3091,7 @@
                         <a href="/panvel/teste-covid-19-igg-igm-grupo-exame/p-111829"><button
                                 class="button button-infos">
                                 Comprar </button></a>
-                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
+                        <button class="button-modal exame-btn-igg-igm"> Lojas onde realizar </button>
                     </div>
                 </div>
             </div>
@@ -3054,7 +3133,7 @@
                     <div class="card-buttons button-infos">
                         <a href="/panvel/teste-covid-19-igg-grupo-exame/p-112288"><button class="button">
                                 Comprar </button></a>
-                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
+                        <button class="button-modal exame-btn-igg-igm"> Lojas onde realizar </button>
                     </div>
                 </div>
             </div>
@@ -3096,7 +3175,7 @@
                     <div class="card-buttons">
                         <a href="/panvel/teste-covid--19-rt--pcr-urgencia-24h-grupo-exame/p-111503"><button
                                 class="button button-infos"> Comprar </button></a>
-                        <!-- <button class="button-modal exame-btn"> Lojas onde realizar </button> -->
+                        <button class="button-modal exame-btn-rtpcr-urgencia"> Lojas onde realizar </button>
                     </div>
                 </div>
             </div>
@@ -3647,6 +3726,165 @@
 
         <div id="LHModalExameAnticorpos" class="LHmodal-content">
             <span id="modalCloseExameAnticorpos" class="close-btn-modal">&times;</span>
+            <div id="LHmodal-form" class="LHmodal-body">
+                <div class="cards pure-g">
+                    <div class="card-form">
+                        <div class="card-header pure-u-1">
+                            <div class="card-title">
+                                <h1>Confira unidades para realização dos testes:</h1>
+                            </div>
+                            <div class="card-desc">
+                            </div>
+                        </div>
+
+                        <div class="form-container pure-u-1" id="form-filial">
+
+                            <div class="dropdown-card">
+                                <span class="text-dropwdown">Estado</span>
+                                <div class="button-div">
+                                    <select name="select-estado" id="estado-exame"
+                                        onchange="onChangeStateNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Cidade</span>
+                                <div class="button-div">
+                                    <select name="select-cidade" id="cidade-exame"
+                                        onchange="onChangeCityNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Bairro</span>
+                                <div class="button-div">
+                                    <select name="select-bairro" id="bairro-exame"
+                                        onchange="onChangeDistrictNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <div id="items-container-exame">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-info pure-u-1">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="LHModalExameRtPcr" class="LHmodal-content">
+            <span id="modalCloseExameRtpcr" class="close-btn-modal">&times;</span>
+            <div id="LHmodal-form" class="LHmodal-body">
+                <div class="cards pure-g">
+                    <div class="card-form">
+                        <div class="card-header pure-u-1">
+                            <div class="card-title">
+                                <h1>Confira unidades para realização dos testes:</h1>
+                            </div>
+                            <div class="card-desc">
+                            </div>
+                        </div>
+
+                        <div class="form-container pure-u-1" id="form-filial">
+
+                            <div class="dropdown-card">
+                                <span class="text-dropwdown">Estado</span>
+                                <div class="button-div">
+                                    <select name="select-estado" id="estado-exame"
+                                        onchange="onChangeStateNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Cidade</span>
+                                <div class="button-div">
+                                    <select name="select-cidade" id="cidade-exame"
+                                        onchange="onChangeCityNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Bairro</span>
+                                <div class="button-div">
+                                    <select name="select-bairro" id="bairro-exame"
+                                        onchange="onChangeDistrictNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <div id="items-container-exame">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-info pure-u-1">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="LHModalExameRtPcrUrgencia" class="LHmodal-content">
+            <span id="modalCloseExameRtpcrUrgencia" class="close-btn-modal">&times;</span>
+            <div id="LHmodal-form" class="LHmodal-body">
+                <div class="cards pure-g">
+                    <div class="card-form">
+                        <div class="card-header pure-u-1">
+                            <div class="card-title">
+                                <h1>Confira unidades para realização dos testes:</h1>
+                            </div>
+                            <div class="card-desc">
+                            </div>
+                        </div>
+
+                        <div class="form-container pure-u-1" id="form-filial">
+
+                            <div class="dropdown-card">
+                                <span class="text-dropwdown">Estado</span>
+                                <div class="button-div">
+                                    <select name="select-estado" id="estado-exame"
+                                        onchange="onChangeStateNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Cidade</span>
+                                <div class="button-div">
+                                    <select name="select-cidade" id="cidade-exame"
+                                        onchange="onChangeCityNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <span class="text-dropwdown">Bairro</span>
+                                <div class="button-div">
+                                    <select name="select-bairro" id="bairro-exame"
+                                        onchange="onChangeDistrictNovaExame(this)">
+                                    </select>
+                                </div>
+
+                                <div id="items-container-exame">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-info pure-u-1">
+                        <img
+                            src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/maisinfo.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="LHModalExameIggIgm" class="LHmodal-content">
+            <span id="modalCloseExameIggIgm" class="close-btn-modal">&times;</span>
             <div id="LHmodal-form" class="LHmodal-body">
                 <div class="cards pure-g">
                     <div class="card-form">
