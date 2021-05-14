@@ -1,0 +1,2817 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+    @import url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/fonte/fonts.css");
+
+    :root {
+        --color-orange-title: #ff9c16;
+        --color-lightblue: #00bcde;
+        --color-blue: #0a3383;
+        --color-white-gray: #E4E9F2;
+        --color-gray: #9e9e9e;
+        --color-gray-dark: #757575;
+        --color-background-dimgray: #696969;
+        --color-yale-blue: #1d3780;
+        --color-yale-blue-disabled: rgba(29, 55, 128, 0.20);
+        --color-st-patrick-blue: #243f8c;
+        --color-medium-turquoise: #4fc0e0;
+        --color-medium-turquoise-10: rgba(80, 190, 224, 0.3);
+        --color-acqua: #4BAC89;
+        --boxShadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12);
+    }
+
+    body {
+        background: var(--color-white-gray);
+        color: var(--color-yale-blue);
+        font-size: 18px;
+    }
+
+    /* RESET WORKSPACE */
+
+    .LHContent * {
+        font-family: Foco, "Open Sans", sans-serif;
+        box-sizing: border-box;
+        outline: none;
+        color: var(--color-yale-blue);
+    }
+
+    .LHContent {
+        /* padronização das medidas utilizadas */
+        --xxsSpace: 0.3em;
+        --xsSpace: 0.5em;
+        --smSpace: 0.8em;
+        --mdSpace: 1em;
+        --lgSpace: 1.5em;
+        --xlSpace: 2em;
+        --xxlSpace: 3.5em;
+        /* tamanhos para fontes (precisamos definir) */
+        --xxxsFontSize: 0.7em;
+        --xxsFontSize: 0.8em;
+        --xsFontSize: 1em;
+        --smFontSize: 1.17em;
+        --mdFontSize: 1.5em;
+        --lgFontSize: 2em;
+        --xlFontSize: 3em;
+        --pSize: var(--xsFontSize);
+        --h1Size: var(--lgFontSize);
+        --h2Size: var(--mdFontSize);
+        --h3Size: var(--smFontSize);
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: var(--mdSpace);
+    }
+
+    .LHContent select {
+        margin: var(--smSpace) 0;
+        padding: var(--xsSpace);
+        border: none;
+        border-radius: 8px;
+        font-size: var(--xsFontSize);
+        font-weight: 700;
+        color: var(--color-yale-blue);
+    }
+
+    main {
+        width: 100%;
+        padding-bottom: var(--xxlSpace);
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        font-size: var(--pSize);
+    }
+
+    h1 {
+        font-size: var(--h1Size);
+    }
+
+    h2 {
+        font-size: var(--h2Size);
+    }
+
+    h3 {
+        font-size: var(--h3Size);
+        margin-bottom: var(--smSpace);
+    }
+
+    .custom-breadcrumb {
+        text-align: left;
+    }
+
+    .custom-breadcrumb a {
+        font-size: var(--xsFontSize);
+        color: #828282;
+        letter-spacing: -0.02em;
+        display: inline-block;
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .custom-breadcrumb a::after {
+        content: "/";
+        padding: 0 3px;
+        color: #828282;
+    }
+
+    .custom-breadcrumb span {
+        display: block;
+        font-weight: 700;
+        font-size: var(--mdFontSize);
+        line-height: var(--smSpace);
+        color: #143c8d;
+        letter-spacing: -0.03em;
+    }
+
+    .sub-header-wrapper {
+        width: 100%;
+        max-width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+
+    /* Header que contém o Breadcrumb e o Botão Back */
+
+    .sub-header-crumback {
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: var(--mdSpace);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        z-index: 99999;
+    }
+
+    .sub-header-crumback .breadcrumb {
+        flex: 0 0 auto;
+    }
+
+    .sub-header-crumback .btn-back {
+        flex: 0 0 auto;
+        padding: 6px 41px 7px;
+        width: auto;
+        display: block;
+        font-weight: 700;
+        font-size: var(--smFontSize);
+        color: #143c8d;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: -0.03em;
+        border: 1px solid #143c8d;
+        border-radius: 18px;
+    }
+
+    .sub-header-crumback .btn-back:hover {
+        background: #143c8d;
+        color: #fff;
+    }
+
+    .main-banner {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-banner img {
+        width: 100%;
+    }
+
+    .main-banner+.scroll-menu-wrapper {
+        margin-top: 2px;
+    }
+
+    .flex-between {
+        justify-content: space-between;
+    }
+
+    /* Direciona para colunas e centraliza verticalmente */
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .section-banner .flex-column {
+        padding-right: 136px;
+    }
+
+    .section-banner .flex-column p {
+        padding-left: var(--xsSpace);
+    }
+
+    /* Cards e containers */
+
+    section {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #lower-section>header {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #lower-section header .logo-parceiro-md {
+        padding: var(--mdSpace);
+        width: 150px;
+        min-height: 150px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
+    }
+
+    #lower-section header .logo-parceiro-md img {
+        width: 100%;
+        height: auto;
+    }
+
+    #lower-section .inner-content {
+        padding-left: var(--mdSpace);
+        padding-right: var(--mdSpace);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* TELEMEDICINA -----------------------------------*/
+
+    .sub-header-telemedicina,
+    .sub-header-vacinas {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 73px;
+        align-items: center;
+    }
+
+    .sub-header-telemedicina h2,
+    .sub-header-vacinas h2 {
+        font-size: var(--lgFontSize);
+        text-align: center;
+        margin-bottom: var(--xsSpace);
+    }
+
+
+    .sub-header-telemedicina p,
+    .sub-header-vacinas p {
+        flex: 0.8;
+        text-align: center;
+        font-style: italic;
+        margin: unset;
+    }
+
+    .parceiro-detalhes-content .sub-header-telemedicina p {
+        width: 70%;
+    }
+
+    .orange-separator {
+        width: 60px;
+        height: 5px;
+        border-style: none;
+        border-radius: 8px;
+        background-color: var(--color-orange-title);
+        margin: var(--mdSpace) auto;
+    }
+
+    .sub-header-with-arrow {
+        flex-direction: row;
+        margin: var(--xxlSpace) 0;
+        padding: 0;
+    }
+
+    .sub-header-with-arrow h2 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .sub-header-with-arrow p {
+        text-align: left;
+        font-style: normal;
+    }
+
+    .sub-header-with-arrow h2:after {
+        content: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/right-arrow.svg');
+        color: white;
+        font-style: normal;
+        margin-left: var(--xsSpace);
+        margin-right: var(--xsSpace);
+        font-size: calc(var(--mdFontSize)*2);
+    }
+
+    .telemedicina-pacotes {
+        justify-content: center;
+        padding: 0 var(--mdSpace);
+        margin-top: var(--smSpace);
+        margin-bottom: 31px;
+    }
+
+    /*
+.telemedicina-pacotes>li:nth-child(2) {
+    margin: 0 var(--lgSpace);
+}
+*/
+
+    .telemedicina-pacotes>li {
+        flex: 0.22;
+        margin-left: var(--smSpace);
+        margin-right: var(--smSpace);
+    }
+
+    section#precos-avulsos {
+        margin-top: 82px;
+    }
+
+    p#desc-especialidade {
+        margin-top: 75px;
+        text-align: center;
+    }
+
+    /*Listas internas aos cards dos Pacotes, possuem bullets com padding customizado. */
+
+    .telemedicina-pacotes>.card ul {
+        font-size: var(--xxsFontSize);
+        list-style: none;
+        position: relative;
+    }
+
+    .telemedicina-pacotes>.card li {
+        padding: var(--smSpace) var(--lgSpace) var(--smSpace) var(--smSpace);
+        border-bottom: 1px solid var(--color-yale-blue-disabled);
+        position: relative;
+    }
+
+    .telemedicina-pacotes>.card li.telemedicina-li-disabled {
+        color: var(--color-yale-blue-disabled);
+    }
+
+    .telemedicina-pacotes>.card li::before {
+        content: '\2022';
+        position: absolute;
+        left: 0;
+    }
+
+    /* Cards brancos */
+    .card-tutorial,
+    .card-security,
+    .card-vacinas,
+    .card-header-detalhe,
+    .card-detalhe,
+    .card-header-calendario,
+    .card-calendario,
+    .card-faixa,
+    .card-seleciona-faixa,
+    .vacina-calendario {
+        background: white;
+        box-shadow: 0px 8px 16px rgba(24, 61, 142, 0.12);
+        border-radius: 12px;
+        margin: 24px 12.5px;
+    }
+
+    .produto-item {
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
+        max-width: 228px;
+
+        padding: 30px 20px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produto-item:first-of-type {
+        margin-left: 0;
+    }
+
+    .produto-item:last-of-type {
+        margin-right: 0;
+    }
+
+    .produto-item-foto img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 192px;
+    }
+
+    .produto-item-nome,
+    .produto-item-desc,
+    .aplicacao,
+    .vacina-item-price {
+        text-align: center;
+    }
+
+    .aplicacao {
+        margin: 0 auto;
+    }
+
+    .aplicacao img {
+        display: block;
+        margin: 19px auto 0;
+    }
+
+    .produto-item-nome,
+    .produto-item-desc {
+        width: 100%;
+    }
+
+    .produto-item-nome {
+        margin-top: var(--smSpace);
+    }
+
+    .produto-item-nome a {
+        text-decoration: none;
+        margin: 0 auto;
+        color: #143C8D;
+        font-family: Foco;
+        font-size: 18px;
+        letter-spacing: -0.53px;
+        line-height: 22px;
+        font-style: italic;
+        text-align: center;
+    }
+
+
+    .produto-item-desc span {
+        color: #666666;
+        font-family: Roboto;
+        font-size: 10px;
+        line-height: 16px;
+        text-align: left;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    span.detalheitem {
+        color: #666666;
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+    }
+
+    .produto-item-cidades {
+        margin: 5px 0;
+    }
+
+    .produto-item-cidades span {
+        font-size: 12px;
+    }
+
+    .span-obs-produto {
+        font-size: 10px;
+        color: #666666;
+        font-family: Roboto;
+        line-height: 16px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .span-obs-produto::before {
+        content: "*";
+    }
+
+    .aplicacao {
+        color: #F66715;
+        font-family: Foco;
+        font-size: 14px;
+        letter-spacing: -0.41px;
+        line-height: 16px;
+        margin-bottom: 18px;
+    }
+
+    .aplicacao span {
+        font-weight: bold;
+        color: #F66715;
+
+    }
+
+    .vacina-item-price .preco-old {
+        color: #143C8D;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        opacity: 0.6;
+        text-decoration-line: line-through;
+        text-decoration-style: solid;
+        text-decoration-color: #F66715;
+    }
+
+    .vacina-item-price .preco {
+        margin: 10px;
+        color: #143C8D;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .vacina-item-price .preco-old span {
+        font-size: 11px;
+        font-family: 'Roboto Light', sans-serif;
+        font-weight: lighter;
+    }
+
+    .vacina-item-price .preco span {
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+    }
+
+    .parceiro-logo {
+        margin-bottom: 50px;
+        max-width: 129px;
+        background-color: white;
+        border: 15px solid white;
+        border-radius: 30px;
+    }
+
+    .service-list {
+        margin-top: 46px;
+    }
+
+    .gallery-item {
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+        font-family: Foco, Open Sans, sans-serif;
+        font-weight: bold;
+        letter-spacing: -0.32px;
+        color: #013986;
+
+        margin-bottom: 50px;
+    }
+
+    .gallery-item img {
+        margin-bottom: 9px;
+    }
+
+    .more-info-button {
+        font-size: 24px;
+        font-style: italic;
+        font-weight: bold;
+        font-family: Foco, Open Sans, sans-serif;
+        color: #143C8D;
+        background-color: unset;
+        border: none;
+        margin: 0 10px;
+    }
+
+    .blue-separator {
+        color: #21B8DD;
+        width: 60px;
+        height: 2px;
+    }
+
+    .more-info-link {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .more-info-link a {
+        text-decoration: none;
+    }
+
+    .more-info-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    /* coloca "check" nos serviços que não estão desabilitados */
+
+    .telemedicina-pacotes>.card li:not(.telemedicina-li-disabled)::after {
+        content: url('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/telemedicina/check.png');
+        position: absolute;
+        right: 0;
+        top: 25%;
+    }
+
+    .telemedicina-pacotes-condicao {
+        text-align: center;
+        margin-top: var(--mdSpace);
+    }
+
+    .telemedicina-pacotes-condicao span {
+        display: block;
+        font-size: var(--smFontSize);
+        font-weight: 700;
+    }
+
+    .telemedicina-pacotes-condicao span em {
+        font-style: normal;
+        font-size: var(--mdFontSize);
+    }
+
+    .telemedicina-pacotes-desconto {
+        text-align: center;
+        font-size: calc(var(--xxsFontSize));
+        font-weight: 700;
+        font-style: italic;
+        text-transform: uppercase;
+        color: var(--color-medium-turquoise);
+        margin: var(--mdSpace) 0;
+    }
+
+    a.bt-telemedicina-pacotes-contratar {
+        margin: 0;
+        width: 100%;
+        text-transform: uppercase;
+        background-color: var(--color-acqua);
+    }
+
+
+
+    .parceiro-detalhes label {
+        text-transform: uppercase;
+        font-size: var(--xxsFontSize);
+        font-weight: 700;
+        color: var(--color-gray-dark);
+    }
+
+    .parceiro-content-especialidade {
+        margin: 0 auto;
+    }
+
+    .parceiro-content-plano-preco {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: var(--mdSpace);
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        max-width: 245px;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa,
+    .banner-vacinas {
+        position: relative;
+        margin-top: var(--xlSpace);
+        padding-bottom: var(--xlSpace);
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .parceiro-detalhe-sobre-a-empresa h2,
+    .banner-vacinas h2 {
+        font-size: var(--mdFontSize);
+        margin-bottom: var(--smSpace);
+        letter-spacing: -0.5;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa h3,
+    .banner-vacinas h3 {
+        letter-spacing: -0.5;
+        margin-top: var(--xlSpace);
+    }
+
+    .parceiro-detalhe-sobre-a-empresa p,
+    .banner-vacinas p {
+        margin-bottom: var(--xxlSpace);
+        line-height: var(--lgSpace);
+        font-style: italic;
+    }
+
+    .banner-vacinas h2 {
+        font-size: var(--lgFontSize);
+        margin-bottom: var(--smSpace);
+        letter-spacing: -0.5;
+    }
+
+    .banner-vacinas p {
+        margin-bottom: var(--mdSpace);
+        line-height: var(--lgSpace);
+        font-style: normal;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa div,
+    .banner-vacinas-content {
+        padding: var(--lgSpace) calc(var(--lgSpace));
+        background-image: radial-gradient(circle at left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+        width: 75%;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        margin-top: var(--xlSpace);
+        z-index: 1;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa>img,
+    .banner-vacinas img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 286px;
+        width: auto;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa ul {
+        justify-content: space-between;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa li {
+        text-align: center;
+        font-size: var(--xxxsFontSize);
+        flex: 0.2;
+    }
+
+    .parceiro-detalhe-sobre-a-empresa li p {
+        font-style: normal;
+    }
+
+    .parceiro-content-plano-preco span {
+        display: block;
+        font-size: var(--mdFontSize);
+    }
+
+    .parceiro-content-plano-preco p {
+        margin-bottom: var(--lgSpace);
+        font-size: var(--xsFontSize);
+    }
+
+    .parceiro-content-plano-preco a.button {
+        width: 100%;
+        background-color: var(--color-acqua);
+        font-style: normal;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .parceiro-content-plano-preco span+a.button {
+        margin-top: var(--mdSpace);
+    }
+
+    .telemedicina-selecione-parceiro {
+        /*margin-top: var(--xxlSpace);*/
+    }
+
+    .telemedicina-qual-servico {
+        margin: var(--xxlSpace) 0;
+    }
+
+    .telemedicina-selecione-parceiro h3,
+    .telemedicina-qual-servico h3 {
+        text-align: center;
+    }
+
+    /* --------------------------------------------------------------------*/
+
+    .card {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 12px;
+        box-shadow: var(--boxShadow);
+        color: var(--color-yale-blue);
+        padding: var(--mdSpace);
+        overflow: hidden;
+    }
+
+    .card-content {
+        padding-left: 65px;
+        padding-right: 65px;
+        align-self: center;
+    }
+
+    .product-list {
+        justify-content: center;
+    }
+
+    /* card especial que contém texto e um botão deslocado para fora */
+
+    .telemedicina-card-list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    .telemedicina-card-list li {
+        flex: 0.31;
+        position: relative;
+        padding: var(--lgSpace) var(--lgSpace);
+        overflow: visible;
+    }
+
+    .telemedicina-card-list li.card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: var(--boxShadow);
+        color: var(--color-yale-blue);
+    }
+
+    .telemedicina-card-list li .button {
+        position: absolute;
+        left: calc(50% - 75px);
+        bottom: -15px;
+        height: 50px;
+        width: 150px;
+    }
+
+    .telemedicina-card-list li p {
+        margin-top: var(--mdSpace);
+        margin-bottom: var(--lgSpace);
+        font-size: var(--xxsFontSize);
+    }
+
+    .telemedicina-card-deco img {
+        position: absolute;
+        height: calc(100% + var(--lgSpace));
+        right: 10%;
+        top: calc(var(--lgSpace) * -1);
+    }
+
+    /* special-card com opção de imagem no topo que sai para cima */
+
+    .outer-top-img {
+        margin-top: 37px;
+    }
+
+    .outer-top-img li {
+        padding-top: var(--xxlSpace);
+    }
+
+    .outer-top-img .telemedicina-thumb {
+        position: absolute;
+        left: calc(50% - 80px);
+        top: -40px;
+    }
+
+    .outer-top-img .telemedicina-card-deco img {
+        top: -64px;
+        right: 10%;
+    }
+
+    /* ----------------------------------------------- */
+
+    .pure-u-md-1-3.card {
+        max-width: 31%;
+    }
+
+    iframe#card-video {
+        width: 100%;
+        min-height: 486px;
+        border: none;
+    }
+
+    /* UI Elements */
+
+    .button {
+        /* Centraliza label no botão sem precisar de paddings diferentes acima e abaixo*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* ---------------- */
+        background-color: var(--color-orange-title);
+        color: white;
+        padding: 10px 20px;
+        font-weight: 700;
+        font-size: var(--pFontSize);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: -webkit-fit-content;
+        width: fit-content;
+        width: -moz-fit-content;
+        letter-spacing: 1px;
+    }
+
+    .section-banner .flex-column .button {
+        width: auto;
+    }
+
+    /* NAVEGAÇÃO */
+
+    .line-menu {
+        position: relative;
+        width: 100%;
+        min-width: -webkit-fit-content;
+        min-width: fit-content;
+        min-width: -moz-fit-content;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .line-menu a {
+        position: relative;
+        padding: var(--xsSpace) 0;
+        margin-bottom: var(--xsSpace);
+        border-bottom: 4px ridge transparent;
+        z-index: 1;
+        text-decoration: none;
+        transition: border-bottom 0.3s, color 0.4s;
+        font-weight: 700;
+        color: var(--color-yale-blue);
+        opacity: 0.4;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+    .line-menu a.active {
+        color: var(--color-orange-title);
+        opacity: 1;
+        border-bottom: 4px solid;
+    }
+
+    .line-menu a:not(:last-of-type) {
+        margin-right: var(--lgSpace);
+    }
+
+    .line-menu-telemedicina a:not(:last-of-type) {
+        margin-right: 82px;
+    }
+
+    .line-menu .guide-bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        height: 1px;
+        border-style: none;
+        background-color: var(--color-yale-blue);
+        opacity: 0.4;
+    }
+
+    p.text-disponibilidade-subtitle {
+        font-size: 14px;
+    }
+
+    /* Button Bar Qual Serviço*/
+
+    .button-bar-qual-servico {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-bar-qual-servico a.button {
+        transition: opacity 0.3s;
+        opacity: 0.5;
+        max-width: 31%;
+        text-transform: uppercase;
+    }
+
+    .button-bar-qual-servico a.active {
+        opacity: 1;
+    }
+
+    .button-bar-qual-servico a:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .button-bar-qual-servico a:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+
+    .button-bar-qual-servico a:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+
+    .button-bar-qual-servico a:not(:last-child) {
+        margin-right: 2px;
+    }
+
+    /* Menu Logo Parceiro */
+
+    .scroll-menu-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        display: none;
+    }
+
+    .scroll-menu {
+        width: 100%;
+    }
+
+    .logo-parceiro-bar {
+        display: flex;
+        align-self: stretch;
+        justify-content: space-between;
+    }
+
+    .logo-parceiro-bar a {
+        max-height: 50px;
+        min-width: 120px;
+        flex: 0.12;
+        border-radius: 80px;
+        opacity: 0.4;
+        transition: opacity 0.3s;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .logo-parceiro-bar .active {
+        opacity: 1;
+    }
+
+    .logo-parceiro-bar a img {
+        width: 80%;
+    }
+
+    /* TELEMEDICINA */
+
+    .telemedicina h3 {
+        text-align: center;
+    }
+
+    .banner-panvel-clinic {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: var(--xlSpace);
+        margin-bottom: var(--lgSpace);
+    }
+
+    .banner-panvel-clinic img {
+        max-width: 50%;
+    }
+
+    .banner-panvel-clinic p {
+        font-style: italic;
+        margin: 0;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .banner-panvel-clinic-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 28px;
+    }
+
+    .banner-panvel-clinic-button {
+        border-radius: 0 15px 0 15px;
+        width: auto;
+        align-self: stretch;
+        margin: var(--mdSpace) 0;
+        color: var(--color-yale-blue);
+        font-style: italic;
+        font-weight: 700;
+        font-size: 34px;
+        letter-spacing: -0.27px;
+    }
+
+    .header-parceiro-detalhes .logo-parceiro-md {
+        width: 100px;
+        height: auto;
+    }
+
+    /* VACINAS */
+
+    /*
+.banner-vacinas {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+    position: relative;
+    z-index: 2;
+    margin-top: var(--xlSpace);
+    margin-bottom: calc(var(--lgSpace)*2);
+}
+
+
+.banner-vacinas img {
+    max-height: 286px;
+    width: auto;
+    align-self: flex-start;
+}
+
+.banner-vacinas-content {
+    padding: var(--lgSpace) calc(var(--lgSpace) * 2);
+    background-image: radial-gradient(circle at left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1));
+    height: 286px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: calc(50% + 40px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.banner-vacinas-content h1 {
+    margin: 0 0 var(--mdSpace);
+}*/
+
+    .simplyBookContainer h2 {
+        margin: var(--xlSpace) 0 var(--xsSpace);
+    }
+
+    .simplyBookContainer iframe {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--boxShadow);
+        background-color: white;
+        height: 0;
+    }
+
+    .vacina-passos-list {
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+    }
+
+    ol li .icone-vacina-passos::before {
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom center;
+        width: 100px;
+        height: 60px;
+        margin: var(--mdSpace) auto;
+    }
+
+    ol li:nth-child(1) .icone-vacina-passos::before {
+        background-image: url(assets/icons/vacinas/Shape.svg);
+    }
+
+    ol li:nth-child(2) .icone-vacina-passos::before {
+        background-image: url(assets/icons/vacinas/shop.svg);
+    }
+
+    ol li:nth-child(3) .icone-vacina-passos::before {
+        background-image: url(assets/icons/vacinas/beneficios-2.png);
+    }
+
+    .banner-vacinas-deco {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background-image: url("assets/icons/Path.png");
+        background-size: cover;
+        align-self: stretch;
+        background-size: auto 100%;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .line-menu-vacinas {
+        margin: 0;
+    }
+
+    .line-menu-vacinas a {
+        margin-bottom: 0;
+        padding-top: calc(var(--xsSpace) + 4px);
+        color: var(--color-medium-turquoise);
+    }
+
+    .line-menu-vacinas>nav {
+        margin-top: 0;
+    }
+
+    .parceiro-detalhes-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-parceiro-detalhes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-parceiro-md-wrapper {
+        width: 192px;
+        height: 155px;
+        box-shadow: var(--boxShadow);
+        background-color: white;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-parceiro-md-wrapper+.scroll-menu-wrapper {
+        margin-top: var(--lgSpace);
+    }
+
+    #tab-content-wrapper {
+        margin-top: 70px;
+    }
+
+    /*------------------------*/
+
+    /* LISTS */
+
+    .list-3-flex-col {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin-top: var(--xlSpace);
+        text-align: center;
+        width: 100%;
+    }
+
+    .list-3-flex-col li {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 0.29;
+    }
+
+    .list-3-flex-col li.onde-vacinar-col {
+        flex: 0.50;
+    }
+
+    .list-3-flex-col h3 {
+        margin-top: var(--mdSpace);
+        margin-bottom: 0;
+    }
+
+    .list-3-flex-col h3+p {
+        margin-top: var(--mdSpace);
+    }
+
+    .list-3-flex-col-info-button {
+        color: white;
+        font-size: var(--xxsFontSize);
+        margin-top: var(--xlSpace);
+    }
+
+    /* accordion LIST */
+    .accordion-list {
+        text-align: left;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .accordion-item {
+        background-color: white;
+        padding-left: var(--lgSpace);
+        box-shadow: none;
+        transition: box-shadow 0.5s ease-in-out;
+    }
+
+    .accordion-item:not(:last-child) {
+        margin-bottom: var(--mdSpace);
+    }
+
+    .accordion-item h3 {
+        position: relative;
+        margin-bottom: 0;
+        font-size: 24px;
+        padding-right: var(--mdSpace);
+        cursor: pointer;
+    }
+
+    .accordion-item p {
+        height: 0;
+        opacity: 0;
+        margin-top: 0;
+        padding-right: var(--mdSpace);
+        margin-left: 52px;
+        margin-right: var(--xxlSpace);
+        transform-origin: top;
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+    }
+
+    .accordion-item.active {
+        box-shadow: 0 8px 16px 0 rgba(24, 61, 142, 0.12), 0 2px 4px 0 rgba(24, 61, 142, 0.12), 0 0 16px 0 rgba(24, 61, 142, 0.12);
+    }
+
+    .accordion-item.active p {
+        margin-top: 16px;
+        margin-bottom: unset;
+        height: max-content;
+        opacity: 1;
+    }
+
+
+    .accordion-item-header {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 52px;
+        margin-right: 141px;
+    }
+
+    .card.accordion-item {
+        padding: 33px 0;
+    }
+
+    /* seta do accordion */
+
+    .accordion-item-header::after {
+        content: ">";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 56px;
+        transform: rotate(90deg);
+        transition: transform 0.5s;
+        font-size: var(--mdFontSize);
+        font-style: normal;
+        color: var(--color-medium-turquoise);
+        background-color: var(--color-medium-turquoise-10);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accordion-item.active .accordion-item-header::after {
+        transform: rotate(-90deg);
+    }
+
+
+    /* Detalhes do item do accordion */
+
+    .accordion-item-title {
+        flex: 0.8;
+    }
+
+    .accordion-item-price {
+        flex: 0.2;
+    }
+
+    /* QUESTIONARIO */
+
+
+    .modal-questionario-demo {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .questionarioContent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    [id^="quest-wrapper-"] {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+        padding: var(--lgSpace) var(--mdSpace);
+        position: absolute;
+        top: 30%;
+        left: 100%;
+        opacity: 0;
+    }
+
+    [id^="quest-wrapper-"] button {
+        margin-bottom: var(--mdSpace);
+    }
+
+    [id^="quest-wrapper-"].active {
+        left: 0;
+        opacity: 1;
+        transition: left 1.5s ease-in-out, opacity 1.5s;
+    }
+
+    [id^="quest-wrapper-"].completed {
+        left: -100%;
+        opacity: 0;
+        transition: left 1.5s ease-in-out, opacity 0.5s;
+    }
+
+    [id^="quest-wrapper-"] h2 {
+        margin-bottom: var(--smSpace);
+        font-size: var(--lgFontSize);
+    }
+
+    [id^="quest-wrapper-"] h3 {
+        margin: 0;
+    }
+
+    [id^="quest-wrapper-"] button {
+        background-color: var(--color-medium-turquoise-10);
+        color: var(--color-medium-turquoise);
+        border: none;
+        outline: none;
+        font-size: var(--smFontSize);
+        padding: var(--xsSpace) var(--mdSpace);
+        min-width: 35%;
+        border-radius: 8px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: background-color 0.5s;
+        cursor: pointer;
+    }
+
+    [id^="quest-wrapper-"] button.active {
+        background-color: white;
+    }
+
+    [id^="quest-wrapper-"] button.questOption:first-of-type {
+        margin-right: var(--smSpace);
+    }
+
+    [id^="quest-wrapper-"] .note {
+        font-size: var(--smFontSize);
+        font-weight: 700;
+        font-style: italic;
+        color: var(--color-yale-blue);
+    }
+
+    [id^="quest-wrapper-"] .note+.recommended-exam {
+        margin-top: var(--mdSpace);
+    }
+
+    [id^="quest-wrapper-"] .recommended-exam {
+        font-size: var(--mdFontSize);
+        font-weight: 700;
+        font-style: italic;
+        color: var(--color-medium-turquoise);
+    }
+
+    [id^="quest-wrapper-"] .recommended-exam span {
+        display: block;
+        font-size: var(--smFontSize);
+        color: var(--color-yale-blue);
+        margin: var(--xsSpace) 0;
+    }
+
+    [id^="quest-wrapper-"] #restart-test-button {
+        margin-top: var(--lgSpace);
+        background: transparent;
+        border: 2px solid var(--color-yale-blue);
+        color: var(--color-yale-blue);
+    }
+
+    /* LOGOTIPOS */
+
+    /*
+<div class="logo-panvel-clinic">
+<img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.png" alt="">
+<p><span>Panvel<br>Clinic</span>Tudo para cuidar<br>da sua saúde.</p>
+</div>
+*/
+
+    .logo-panvel-clinic {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 10px;
+    }
+
+    .logo-panvel-clinic p {
+        margin: 0;
+        padding-top: 10px;
+        margin-left: 10px;
+    }
+
+    .logo-panvel-clinic span {
+        display: block;
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .logo-panvel-clinic img {
+        width: auto;
+        height: 70px;
+    }
+
+    /* Modal Content */
+
+    #LHModalOverlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        /* Hidden by default */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        /* Stay in place */
+        z-index: 9;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: hidden;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        -webkit-animation-name: fadeIn;
+        /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s
+    }
+
+    #LHModalContent {
+        width: 100%;
+        height: 100%;
+    }
+
+    #LHModal {
+        flex: 0.9;
+        margin: 2%;
+        height: 100%;
+        width: auto;
+        max-width: 753px;
+        padding: 0;
+        z-index: 0;
+        border: none;
+        border-radius: 10px;
+        background-color: #fefefe;
+        max-height: 80vh;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: var(--xxlSpace);
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+    }
+
+    /* ACESSIBILIDADE: modal title*/
+    #LHModalTitle {
+        position: absolute;
+        height: 1;
+        width: 1;
+        opacity: 0;
+    }
+
+    #LHModal iframe {
+        opacity: 1;
+        transition: all 1s 4s;
+        width: 100%;
+        height: 100%;
+        border-top: 1px dotted #009cff;
+    }
+
+    .LHmodal-form {
+        height: 100%;
+        max-width: 763px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #fefefe;
+        overflow: auto;
+        max-height: 80vh;
+    }
+
+    #LHmodal-form {
+        overflow: auto;
+        height: 100%;
+    }
+
+    iframe {
+        border: none;
+    }
+
+    /* The Close Button */
+
+    .close,
+    #btCloseModal {
+        position: absolute;
+        top: var(--xsSpace);
+        right: var(--xsSpace);
+        cursor: pointer;
+        z-index: 99;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--color-medium-turquoise-10);
+    }
+
+    #btCloseModal:before {
+        content: url(assets/icons/bt_close_modal.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    #btCloseModal:hover:before {
+        opacity: 0.5;
+    }
+
+    .close:hover,
+    .close:focus,
+    #btCloseModal:hover,
+    #btCloseModal:focus {
+        color: #000;
+        text-decoration: none;
+    }
+
+    #iframe-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-form .form-container {
+        margin-top: 25px;
+    }
+
+    .form-container .dropdown-card {
+        padding: 0 10px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .dropdown-card select {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 24px;
+        outline: none;
+        padding-left: 16px;
+        width: 100%;
+        height: 48px;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        border-radius: 4px;
+        background: #fafafa;
+        color: #757575;
+    }
+
+    .card-adress,
+    .card-nome {
+        font-family: Foco, Open Sans, sans-serif;
+        font-size: 16px;
+        color: rgba(158, 158, 158, 1);
+        letter-spacing: 0.01em;
+        margin-left: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-nome {
+        text-transform: uppercase;
+    }
+
+    .card-adress span,
+    .card-end span {
+        margin-bottom: 3px;
+    }
+
+    .card-adress span:first-child,
+    .card-end span:first-child {
+        margin-bottom: 5px;
+    }
+
+    .card-end {
+        margin-left: 12px;
+        padding-bottom: 17px;
+        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    #items-container {
+        overflow-y: auto;
+        max-height: 580px;
+        width: 100%;
+        border: 1px solid rgba(224, 224, 224, 1);
+        border-radius: 6px;
+        margin-bottom: 25px;
+    }
+
+    /* Banner com efeito de borrão */
+
+    .blur-banner {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 2px;
+        position: relative;
+        z-index: 2;
+        margin-top: 105px;
+        margin-bottom: calc(var(--lgSpace)*2);
+        height: 29em;
+    }
+
+    .blur-banner h1 {
+        margin: 0;
+    }
+
+    .blur-banner img {
+        max-height: 286px;
+        width: auto;
+        align-self: start;
+    }
+
+    .blur-banner img.banner {
+        width: 512px;
+        height: 342px;
+        border-radius: 10px;
+    }
+
+    .blur-banner-content-box {
+        padding: 45px 80px;
+        background-image: radial-gradient(circle at left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 1));
+        height: max-content;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        width: calc(72% + 40px);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        text-align: left;
+        font-size: 24px;
+        border-radius: 10px;
+    }
+
+    .blur-banner-deco {
+        width: 112px;
+        height: 100px;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background-image: url("https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/Path.png");
+        background-size: cover;
+        align-self: stretch;
+        background-size: auto 100%;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .blur-banner-content-box h1 {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .blur-banner-content-box p {
+        margin-bottom: 24px;
+    }
+
+    .blur-banner-content-box p.step {
+        font-size: 16px;
+    }
+
+    .blur-banner-content-box p.step img {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .blur-banner-content-box p.step img:last-of-type {
+        margin-bottom: 20px;
+
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media screen and (max-width: 768px) {
+        .blur-banner {
+            height: max-content;
+        }
+
+        .blur-banner-content-box {
+            width: 100%;
+            position: inherit;
+            padding: 20px 30px;
+        }
+
+        .blur-banner-deco {
+            position: inherit;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .LHContent {
+            padding: 15px 0;
+        }
+
+        .sub-header-crumback {
+            padding: 0 var(--mdSpace);
+        }
+
+        /* LISTS */
+        .list-3-flex-col {
+            flex-direction: column;
+        }
+
+        .list-3-flex-col li {
+            padding: 0 var(--mdSpace);
+        }
+
+        .list-3-flex-col li+li {
+            margin-top: var(--xlSpace);
+        }
+
+        .center {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* Coloca padding lateral apenas no que não for a*/
+        .inner-center {
+            padding: 0 15px;
+        }
+
+        .accordion-item h3::after {
+            right: -20px;
+        }
+
+        .accordion-item.active p {
+            max-height: 280px;
+            padding-right: var(--xsSpace);
+        }
+
+        .inner-sub-header {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        .inner-sub-header,
+        #lower-section .parceiro-content-plano-preco {
+            display: flex;
+            max-width: 100%;
+            justify-content: center;
+        }
+
+        .inner-sub-header h2 {
+            position: relative;
+            /* reduz a fonte em 20% */
+            font-size: calc(var(--lgFontSize));
+        }
+
+        .inner-sub-header h2:after {
+            position: absolute;
+            left: calc(50% - var(--smFontSize));
+            transform: rotate(90deg);
+            bottom: -30px;
+        }
+
+        .inner-sub-header p {
+            max-width: 100%;
+        }
+
+        .section-banner {
+            margin-top: var(--mdSpace);
+        }
+
+        /* RESPONSIVIDADE: TELEMEDICINA */
+        .banner-panvel-clinic {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-top: 0;
+            padding: 0 var(--smSpace);
+        }
+
+        .banner-panvel-clinic-content {
+            margin-right: 0;
+            margin-top: var(--lgSpace);
+            width: 100%;
+            align-items: center;
+        }
+
+        .banner-panvel-clinic p {
+            text-align: center;
+        }
+
+        .banner-panvel-clinic .banner {
+            max-width: 100%;
+        }
+
+        .sub-header-telemedicina {
+            flex-direction: column;
+            padding: 0 var(--mdSpace);
+            margin: var(--xlSpace) 0;
+        }
+
+        .sub-header-telemedicina p {
+            margin: 0;
+            max-width: 100%;
+            text-align: center;
+            margin: var(--mdSpace) 0;
+        }
+
+        .sub-header-telemedicina h2 {
+            flex-direction: column;
+        }
+
+        .sub-header-with-arrow h2:after {
+            transform: rotate(90deg);
+        }
+
+        .telemedicina-qual-servico {
+            padding: 0 var(--mdSpace);
+        }
+
+        .button-bar-qual-servico {
+            flex-direction: column;
+        }
+
+        .telemedicina-card-list {
+            flex-direction: column;
+            padding: 0 var(--mdSpace);
+        }
+
+        .telemedicina-card-list li.telemedicina-card-deco {
+            display: none;
+        }
+
+        .telemedicina-card-list li+li {
+            margin-top: var(--xlSpace);
+        }
+
+        .outer-top-img li:first-child {
+            margin-top: 40px;
+        }
+
+        .outer-top-img li+li {
+            margin-top: calc(var(--xxlSpace) + 40px);
+        }
+
+        .telemedicina-pacotes>li {
+            flex: auto;
+            margin: 0;
+        }
+
+        .telemedicina-pacotes>li:nth-child(2) {
+            margin: var(--lgSpace) 0;
+        }
+
+        .parceiro-detalhe-sobre-a-empresa div {
+            width: 100%;
+            margin-top: 160px;
+        }
+
+        .parceiro-detalhe-sobre-a-empresa>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .parceiro-detalhe-sobre-a-empresa li {
+            font-size: var(--xxsFontSize);
+            min-width: 48%;
+        }
+
+        /* RESPONSIVIDADE: VACINAS */
+        .banner-vacinas {
+            flex-direction: column;
+            margin-bottom: var(--smSpace);
+        }
+
+        .banner-vacinas .banner-vacinas-content {
+            position: relative;
+            top: -80px;
+            right: 0;
+            width: 100%;
+            height: auto;
+            margin-top: var(--smFontSize);
+            margin-bottom: -80px;
+            padding: var(--mdSpace);
+            align-items: center;
+        }
+
+        .banner-vacinas img {
+            width: 100%;
+            height: auto;
+        }
+
+        .parceiro-content-especialidade {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /*-------------------------------------------------*/
+        .pure-u-md-1-3.card {
+            max-width: none;
+        }
+
+        /* Detalhe do logo desaparece no mobile */
+        .pure-u-md-1-3.card-logo-deco-bg {
+            display: none;
+        }
+
+        .button-bar-qual-servico>* {
+            width: 100%;
+            border-radius: 8px !important;
+        }
+
+        .button-bar-qual-servico a+a {
+            margin-top: var(--smSpace);
+        }
+
+        .button-bar-qual-servico a.button {
+            max-width: 100%;
+        }
+
+        /* Menu com scroll horizontal */
+        .scroll-menu-wrapper div[class^="arrow-"] {
+            position: absolute;
+            -webkit-animation: arrowPulse 1s infinite;
+            animation: arrowPulse 1s infinite;
+            color: var(--color-medium-turquoise);
+            background-color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .scroll-menu-wrapper .arrow-left {
+            top: calc(50% - 10px);
+            left: 5px;
+            display: none;
+        }
+
+        .scroll-menu-wrapper .arrow-right {
+            top: calc(50% - 10px);
+            right: 5px;
+            display: flex;
+        }
+
+        @-webkit-keyframes arrowPulse {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes arrowPulse {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .scroll-menu {
+            overflow-x: hidden;
+        }
+
+        .scroll-menu nav {
+            width: 100%;
+            padding: 0 var(--xsSpace);
+        }
+
+        /*------------------------------------*/
+        .logo-parceiro-bar a:not(:last-of-type) {
+            margin-right: var(--xsSpace);
+        }
+
+        .logo-parceiro-bar a::after {
+            content: ".";
+            display: block;
+        }
+
+        .special-card {
+            margin-bottom: var(--lgSpace);
+        }
+
+        /* RESPONSIVIDADE: QUESTIONARIOS---------------------------*/
+        .questionario-modal-logo {
+            height: 80px;
+            width: auto;
+        }
+
+        [id^="quest-wrapper-"] {
+            padding: 0 var(--xsSpace);
+        }
+
+        [id^="quest-wrapper-"].active {
+            left: 0;
+            opacity: 1;
+            transition: left 1s ease-in-out, opacity 1s;
+        }
+
+        [id^="quest-wrapper-"].completed {
+            left: -100%;
+            opacity: 0;
+            transition: left 1s ease-in-out, opacity 0.5s;
+        }
+
+        [id^="quest-wrapper-"] button.questOption {
+            width: 90%;
+            margin: var(--xsSpace) 0;
+        }
+
+        [id^="quest-wrapper-"] button.questOption:first-of-type {
+            margin-right: 0;
+        }
+
+        /* ACCORDION -------------------------------- */
+        .accordion-list {
+            padding: 0 var(--mdSpace);
+        }
+
+        .accordion-item {
+            padding: var(--lgSpace) var(--xlSpace);
+        }
+
+        .accordion-item h3::after {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    /* Add Animation */
+
+    @-webkit-keyframes slideIn {
+        from {
+            bottom: -300px;
+            opacity: 0
+        }
+
+        to {
+            bottom: 0;
+            opacity: 1
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            bottom: -300px;
+            opacity: 0
+        }
+
+        to {
+            bottom: 0;
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+</style>
+<style>
+    .servico-item-btn {
+        color: white;
+        font-weight: bold;
+
+        background-color: rgba(75, 172, 137, 1);
+
+        border: none;
+        border-radius: 4px;
+
+        height: 36px;
+        min-width: 140px;
+    }
+
+    .parceiro-logo {
+        margin-bottom: unset;
+    }
+
+    @media screen and (max-width: 768px) {
+        .blur-banner-content-box {
+            top: -40px;
+        }
+
+        .blur-banner-content-box h1 {
+            font-size: 26px;
+        }
+
+        .blur-banner-content-box p {
+            font-size: 20px;
+        }
+
+        .blur-banner img {
+            align-self: center;
+        }
+
+        .accordion-item-header {
+            margin: 0 25px;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .accordion-item-header h3 {
+            margin: 15px;
+        }
+
+        #tab-content-wrapper {
+            margin-top: unset;
+        }
+    }
+
+    /* Alterar só depois de validar o conteúdo */
+    section.blur-banner {
+        display: none;
+    }
+</style>
+<script>
+    window.onload = () => {
+    /* Verifica se há algum menu responsivo com scroll horizontal na página e o(s) inicializa. */
+    const hasHorizontalScrollMenu = [...document.getElementsByClassName('scroll-menu-wrapper')].length > 0;
+
+    const hasProductList = [...document.getElementsByClassName('product-list')].length > 0;
+
+    const hasServicosList = [document.getElementById('tab-content-wrapper')];
+
+    if (hasHorizontalScrollMenu) {
+        initHorizontalScrollMenus();
+    }
+
+    if (hasServicosList[0] != null) {
+        initServicosList(document.getElementById('tab-content-wrapper'));
+    }
+
+    if (hasProductList) {
+        initProductList([...document.getElementsByClassName('product-list')][0]);
+    }
+
+};
+
+/* COMPORTAMENTO DAS MODAIS: CLICKHANDLERS */
+
+async function loadJSON(url) {
+    try {
+        const res = await fetch(url);
+        return await res.json();
+    } catch (e) {
+        throw new Error("Ops! Arquivo JSON não abre localmente.");
+    }
+}
+/* COMPORTAMENTO DOS BOTÕES E MENUS */
+
+const handleAnyButtonClick = (button) => {
+    // desativa todos os botões da barra de navegação
+    let buttonList = button.parentNode.getElementsByTagName('a');
+    [...buttonList].forEach(item => item.classList.remove("active"));
+    // ativa somente o clicado
+    button.classList.add("active");
+}
+
+const handleAccordionClick = (button) => {
+    if (button.classList.contains("active")) {
+        button.classList.remove("active");
+    } else {
+        // desativa todos os botões da barra de navegação
+        let accordionList = button.parentNode.parentNode.querySelectorAll('.accordion-item');
+        [...accordionList].forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+
+    }
+
+}
+
+const initHorizontalScrollMenus = () => {
+    /* captura todos os elementos que vc deseja que tenham scroll horizontal arrastável */
+    const slider_array = document.querySelectorAll('.scroll-menu');
+
+    /* Drag stuff */
+    let mouseDown = false;
+    let startX, scrollLeft;
+    let startDragging = function (e, slider) {
+        mouseDown = true;
+        //desktop or mobile
+        if (e.pageX) {
+            startX = e.pageX - slider.offsetLeft;
+        } else {
+            startX = e.changedTouches[0].pageX - slider.offsetLeft;
+        }
+        scrollLeft = slider.scrollLeft;
+    };
+
+    let stopDragging = function (event) {
+        mouseDown = false;
+    };
+
+    let mouseMoving = (e, slider) => {
+        e.preventDefault();
+        const arrow_wrapper = slider.parentNode;
+
+        if (!mouseDown) {
+            return;
+        }
+
+        let x = 0;
+        if (e.pageX) {
+            x = e.pageX - slider.offsetLeft;
+        } else {
+            x = e.changedTouches[0].pageX - slider.offsetLeft;
+        }
+
+        const scroll = x - startX;
+        slider.scrollLeft = scrollLeft - scroll;
+
+        if (slider.scrollLeft > 0) {
+            arrow_wrapper.querySelector(".arrow-left").style.display = "flex";
+        } else {
+            arrow_wrapper.querySelector(".arrow-left").style.display = "none";
+        }
+
+        if (slider.scrollLeft >= slider.scrollWidth - arrow_wrapper.scrollWidth) {
+            arrow_wrapper.querySelector(".arrow-right").style.display = "none";
+        } else {
+            arrow_wrapper.querySelector(".arrow-right").style.display = "flex";
+        }
+    }
+
+    // Add the event listeners
+    [...slider_array].forEach(slider => {
+        slider.addEventListener('mousemove', (e) => mouseMoving(e, slider));
+        slider.addEventListener('touchmove', (e) => mouseMoving(e, slider));
+        slider.addEventListener('mousedown', (e) => startDragging(e, slider));
+        slider.addEventListener('touchstart', (e) => startDragging(e, slider));
+        slider.addEventListener('mouseup', stopDragging);
+        slider.addEventListener('mouseleave', stopDragging);
+        slider.addEventListener('touchend', stopDragging);
+    })
+}
+
+const initServicosList = (servicosListContainers) => {
+
+    loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/servicos.JSON').then(data => {
+        handleServicosJSON(data);
+    })
+
+    const handleServicosJSON = (data) => {
+
+        const servicos = [...data.Serviços];
+
+        let servicosElement = ['<ul class="accordion-list">'];
+
+        servicosElement.push(servicos.map((item, i) => {
+            return `<li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">${item.Procedimento}</h3>
+                                <h3 class="accordion-item-price">${item.Preço}</h3>
+                                <a href="${item.URL}">
+                                <button class="servico-item-btn">Comprar</button>
+                                </a>
+                            </div>
+
+                            <p>${item.Descrição.replace(/^\w/, c => c.toUpperCase())}
+                            </p>
+                            ${ item.RS || item.SC ? '<p class="text-disponibilidade-subtitle">Disponível nas cidades: <br> RS: '+item.RS+'<br> SC: '+item.SC+'</p>' : ''}
+                        </li>`;
+        }).join(""));
+
+        servicosElement.push('</ul>');
+
+        [servicosListContainers].map(listContainer => listContainer.innerHTML = servicosElement.join(""));
+
+    }
+}
+
+const initProductList = (produtosListContainers) => {
+
+    loadJSON('combos.JSON').then(data => {
+        handleCombosJSON(data);
+    })
+
+    const handleCombosJSON = (data) => {
+
+        var combos;
+
+        produtosListContainers.classList.contains('preview') ? combos = [...data.Promocionais].slice(0,4) : combos = [...data.Promocionais];
+
+        let produtosElement = [];
+
+        produtosElement.push(combos.map((item, i) => {
+
+            var wrapper = document.createElement('div');
+            wrapper.classList.add('card-tutorial');
+            wrapper.classList.add('produto-item');
+            wrapper.classList.add('pure-u-1-2');
+            wrapper.classList.add('pure-u-md-1-4');
+
+            var divFoto = document.createElement('div');
+            divFoto.classList.add('produto-item-foto');
+
+            var imgProduto = document.createElement('img');
+            imgProduto.src = `https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/combos/${item.Imagem}`;
+
+            divFoto.appendChild(imgProduto);
+
+            var linkProduto = document.createElement('a');
+            linkProduto.href = item.URL;
+
+            linkProduto.appendChild(divFoto);
+
+            wrapper.appendChild(linkProduto);
+
+            var divNome = document.createElement('div');
+            divNome.classList.add('produto-item-nome');
+
+            var nomeProduto = document.createElement('a');
+            nomeProduto.href = item.URL;
+            nomeProduto.textContent = item.Procedimento;
+
+            divNome.appendChild(nomeProduto);
+
+            wrapper.appendChild(divNome);
+
+            if (item.hasOwnProperty('Item')) {
+                var divDesc = document.createElement('div');
+                divDesc.classList.add('produto-item-desc');
+
+                var descProduto = document.createElement('span');
+                descProduto.textContent = item.Item;
+
+                divDesc.appendChild(descProduto);
+
+                wrapper.appendChild(divDesc);
+            }
+
+            if (item.hasOwnProperty('Cidades')){
+                var divCidades = document.createElement('div');
+                divCidades.classList.add('produto-item-desc');
+                divCidades.classList.add('produto-item-cidades');
+
+                var cidadesProduto = document.createElement('span');
+                cidadesProduto.classList.add('detalheitem');
+                cidadesProduto.textContent = 'Disponível em: '+item.Cidades;
+
+                divCidades.appendChild(cidadesProduto);
+
+                wrapper.appendChild(divCidades);
+
+            }
+
+            //Retirada para usar a mesma formatação do preço para indicação de gratuidade
+            /* 
+            if (item.AplicGratuita == "Sim") {
+                var divAplic = document.createElement('div');
+                divAplic.classList.add('aplicacao');
+
+                var aplicIcon = document.createElement('img');
+                aplicIcon.src = 'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/icodelivery.png';
+
+                divAplic.appendChild(aplicIcon);
+
+                divAplic.appendChild(document.createTextNode('Aplicação Domiciliar'));
+
+                var spanGratuita = document.createElement('span');
+                spanGratuita.textContent = ' Gratuita';
+
+                divAplic.appendChild(spanGratuita);
+
+                wrapper.appendChild(divAplic);
+            }
+            */
+
+            if (item.hasOwnProperty('Preço')) {
+
+
+                var divPreco = document.createElement('div');
+                divPreco.classList.add('vacina-item-price');
+
+                if (item.hasOwnProperty('Promocional')) {
+                    var divPrecoOld = document.createElement('div');
+                    divPrecoOld.classList.add('preco-old');
+
+                    var precoOld = document.createElement('span');
+                    precoOld.textContent = '*R$' + item.Preço;
+
+                    divPrecoOld.appendChild(precoOld);
+
+                    divPreco.appendChild(divPrecoOld);
+
+                    var divPrecoPromo = document.createElement('div');
+                    divPrecoPromo.classList.add('preco');
+
+                    var precoPromo = document.createElement('span');
+                    precoPromo.textContent = 'R$';
+
+                    divPrecoPromo.appendChild(precoPromo);
+                    divPrecoPromo.appendChild(document.createTextNode(item.Promocional));
+
+                    divPreco.appendChild(divPrecoPromo);
+
+
+                } else {
+
+                    var divPrecoInterna = document.createElement('div');
+
+                    divPrecoInterna.classList.add('preco');
+
+                    //Caso tenha aplicação gratuita, não inserir o R$ mas usar o valor do campo
+                    if(item.Preço != 'Gratuita'){
+                        var spanPreco = document.createElement('span');
+                        spanPreco.textContent = '*R$';
+    
+                        divPrecoInterna.appendChild(spanPreco);
+                    }
+                    divPrecoInterna.appendChild(document.createTextNode(item.Preço));
+
+                    divPreco.appendChild(divPrecoInterna);
+                }
+
+                wrapper.appendChild(divPreco);
+            }
+
+
+            var divDescPreco = document.createElement('span');
+
+            divDescPreco.classList.add('detalheitem');
+
+            divDescPreco.textContent = item.hasOwnProperty('Cidades') ? item.Orientações : item.Descpreco;
+
+            //wrapper.appendChild(divDescPreco);
+
+            if(item.Obs) {
+                var spanObs = document.createElement('span');
+                spanObs.classList.add('span-obs-produto');
+
+                spanObs.textContent = item.Obs;
+
+                wrapper.appendChild(spanObs);
+            }
+
+            return wrapper.outerHTML;
+        }).join(""));
+
+        [produtosListContainers].map(listContainer => listContainer.innerHTML = produtosElement.join(""));
+
+
+    }
+}
+</script>
+<body class="LHContent telemedicina-wrapper">
+    <!-- Header que contém o Breadcrumb e o Botão Back -->
+    <header class="sub-header-crumback">
+        <div class="custom-breadcrumb">
+            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+            <span>Clinic</span>
+        </div>
+        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+    </header>
+
+    <main>
+        <div class="banner-panvel-clinic">
+            <div class="banner-panvel-clinic-content">
+                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_8.png" alt="Panvel Clinic" />
+                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Domiciliar</a>
+                <p>Cuidado e segurança para você e sua família.</p>
+            </div>
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/mascara.webp" class="banner" alt="" />
+        </div>
+
+        <div class="scroll-menu scroll-menu-wrapper">
+            <div class="arrow-left">&#60;</div>
+            <div class="scroll-menu">
+                <nav class="line-menu line-menu-telemedicina">
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar.do">Inicio</a>
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Combos Promocionais</a>
+                    <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-servicos.do">Serviços</a>
+
+                    <hr class=guide-bar />
+                </nav>
+            </div>
+            <div class="arrow-right">&#62;</div>
+        </div>
+
+        <header class="sub-header-telemedicina">
+            <h2>Nossos parceiros, cuidam da sua saúde de forma ágil e segura.</h2>
+            <p>O Atendimento Domiciliar Transul tem como objetivo acolher o paciente de maneira integral, oferecendo
+                toda a tecnologia, conforto, segurança e bem-estar em um atendimento rápido e ágil na porta de sua casa,
+                ajudando a desafogar o ambiente hospitalar e mantendo seus familiares no conforto do lar.</p>
+            <hr class="orange-separator">
+            <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
+        </header>
+
+        <section>
+            <section>
+                <div id="tab-content-wrapper">
+                    <ul class="accordion-list">
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Div escondida pelo CSS -->
+                <section class="blur-banner">
+                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/Mask_Group_34.jpg" class="banner" alt="Placeholder"
+                        title="Imagem ilustrativa" />
+                    <div class="blur-banner-content-box">
+                        <div class="blur-banner-deco"></div>
+                        <h1>Passo a passo para fazer o teste de covid-19</h1>
+                        <p>A compra do teste pelo Site ou App Panvel garante a você a realização do Teste
+                            Covid-19 IgG + IgM, que deverá ser feito presencialmente em um dos laboratórios
+                            do Grupo Exame.</p>
+                        <p class="step"><img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/cursor.svg">Após
+                            clicar no botão
+                            Comprar você deve se dirigir a sua cesta de compra, e definir uma loja para
+                            retirada.</p>
+                        <p class="step"><img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/store.svg"><b>Você
+                                pode retirar o
+                                seu cupom fiscal na loja escolhida ou acessar seu cupom fiscal sem sair de
+                                casa</b>, na seção Meus Pedidos do Site ou App Panvel, clicando em
+                            Visualizar Nota Fiscal.</p>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>

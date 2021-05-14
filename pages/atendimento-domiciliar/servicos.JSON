@@ -1,0 +1,234 @@
+{
+    "Serviços": [
+        {
+            "Item": "108257",
+            "Procedimento": "Banho No Leito",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$179,00",
+            "URL": "https://www.panvel.com/panvel/transul--banho-no-leito/p-108257",
+            "Descrição": " Higienização corporal a pacientes acamados e impossibilitados de se locomover"
+        },
+        {
+            "Item": "108258",
+            "Procedimento": "Banho De Aspersão",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$159,00",
+            "URL": "https://www.panvel.com/panvel/transul--banho-de-aspersao/p-108258",
+            "Descrição": "higiene corporal, de cuidado e conforto, banho em clientes ependentes realizado no chuveiro"
+        },
+        {
+            "Item": "108259",
+            "Procedimento": "Teste De Glicemia",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$149,00",
+            "URL": "https://www.panvel.com/panvel/transul--teste-de-glicemia/p-108259",
+            "Descrição": "Teste de Glicemia (Glicose)"
+        },
+        {
+            "Item": "108260",
+            "Procedimento": "Verific Respir/Pulso/Pres Sangu/Saturacao O2",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$189,00",
+            "URL": "https://www.panvel.com/panvel/transul-verific-respir-pulso-pres-sangu-saturacao-o2/p-108260",
+            "Descrição": "Verificação de sinais vitais: respiração,pulso e pres sanguínea"
+        },
+        {
+            "Item": "108261",
+            "Procedimento": "Verific Da Pressão Sanguínea",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$169,00",
+            "URL": "https://www.panvel.com/panvel/transul--verific-da-pressao-sanguinea/p-108261",
+            "Descrição": "acompanhar e avaliar os pacientes hipertensos quanto a eficácia terapêutica, monitorar prevalências populacionais e identificar fatores de risco associados à hipertensã"
+        },
+        {
+            "Item": "108262",
+            "Procedimento": "Aspiracao Do Trato Respiratorio",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$199,00",
+            "URL": "https://www.panvel.com/panvel/transul--aspiracao-do-trato-respiratorio/p-108262",
+            "Descrição": "Aspiração do trato respiratório com observação das características das secreções e ausculta"
+        },
+        {
+            "Item": "108263",
+            "Procedimento": "Cuidados Com A Traqueostomia",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$269,00",
+            "URL": "https://www.panvel.com/panvel/transul--cuidados-com-a-traqueostomia/p-108263",
+            "Descrição": "troca de curativo, cuidado com a pele, troca de cadarço e higiene cânula"
+        },
+        {
+            "Item": "108264",
+            "Procedimento": "Cuidado E Montagem Respirador Artificial",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$269,00",
+            "URL": "https://www.panvel.com/panvel/transul--cuidado-e-montagem-respirador-artificial/p-108264",
+            "Descrição": "Montagem e instrução para uso de ventilador modo BiPaP e CPAP"
+        },
+        {
+            "Item": "108265",
+            "Procedimento": "Cuidados Com A Nebulizacao",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$149,00",
+            "URL": "https://www.panvel.com/panvel/transul--cuidados-com-a-nebulizacao/p-108265",
+            "Descrição": "Administrar nebulização conforme prescrição médica"
+        },
+        {
+            "Item": "108268",
+            "Procedimento": "Remocao De Sonda Nasojejunal E Nasoenterica",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$199,00",
+            "URL": "https://www.panvel.com/panvel/transul--remocao-de-sonda-nasojejunal-e-nasoenterica/p-108268",
+            "Descrição": "Remoção da sonda nasoenteral "
+        },
+        {
+            "Item": "108269",
+            "Procedimento": "Instalacao, Controle Cuidado C/Nutric Parental",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$349,00",
+            "URL": "https://www.panvel.com/panvel/transul--instalacao-controle-cuidado-c-nutric-parental/p-108269",
+            "Descrição": "Consiste em iniciar a oferta da dieta parenteral em cateter permanente e orientações"
+        },
+        {
+            "Item": "108270",
+            "Procedimento": "Insercao De Sonda Nasogastrica E Lavado Gastrico",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$349,00",
+            "URL": "https://www.panvel.com/panvel/insercao-de-sonda-nasogastrica-e-lavado-gastrico/p-108270",
+            "Descrição": "A lavagem gástrica  ou irrigação gástrica, é o processo de limpeza do conteúdo estomacal."
+        },
+        {
+            "Item": "108271",
+            "Procedimento": "Insercao De Sonda Vesical De Aliviio",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$349,00",
+            "URL": "https://www.panvel.com/panvel/insercao-de-sonda-vesical-de-alivio--transul/p-108271",
+            "Descrição": "Inserção com uso de técnica asséptica de sonda vesical para coleta de exames ou para drenagem permanente."
+        },
+        {
+            "Item": "108272",
+            "Procedimento": "Instalacao E Troca Dispos Urinar Externos (Uropen)",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$169,00",
+            "URL": "https://www.panvel.com/panvel/instalacao-e-troca-de-dispositivos-urinarios-externos-uropen--transul/p-108272",
+            "Descrição": "Troca de dispositivos de coleta externos de coleta de diurese ( Uropen ) "
+        },
+        {
+            "Item": "108273",
+            "Procedimento": "Enteroclise (Lavagem Intestinal) Vr E Outros",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$279,00",
+            "URL": "https://www.panvel.com/panvel/enteroclise-lavagem-intestinal-vr-e-outros--transul/p-108273",
+            "Descrição": "Técnica utilizada para lavagem/esvaziamento intestinal baixo, com uso de sonda retal e medicação prescrita ."
+        },
+        {
+            "Item": "108274",
+            "Procedimento": "Troca De Colostomia E Jejunostomia",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$229,00",
+            "URL": "https://www.panvel.com/panvel/troca-de-colostomia-e-jejunostomia--transul/p-108274",
+            "Descrição": "Troca de bolsas de colostomia e/ou jejunostomia. Cuidados com a pele no ostoma."
+        },
+        {
+            "Item": "108275",
+            "Procedimento": "Troca De Curativo Limpo - Pequeno",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$169,00",
+            "URL": "https://www.panvel.com/panvel/troca-de-curativo-limpo--pequeno--transul/p-108275",
+            "Descrição": "Troca de curativos pequenos e com mínimo comprometimento de tecido. "
+        },
+        {
+            "Item": "108276",
+            "Procedimento": "Troca De Curativo Limpo - Grande",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$199,00",
+            "URL": "https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=108276",
+            "Descrição": "Troca de curativos maiores e com moderado comprometimento de tecido. "
+        },
+        {
+            "Item": "108277",
+            "Procedimento": "Troca De Curativo Infectado",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$269,00",
+            "URL": "https://www.panvel.com/panvel/troca-de-curativo-infectado--transul/p-108277",
+            "Descrição": "Curativo infectado (sujeito a avaliação primária do enfermeiro )"
+        },
+        {
+            "Item": "108278",
+            "Procedimento": "Cuidados Com Escaras De Decubito",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$349,00",
+            "URL": "https://www.panvel.com/panvel/cuidados-com-escaras-de-decubito--transul/p-108278",
+            "Descrição": "Curativo grande porte e com grande comprometimento tecidual (sujeito a avaliação primária do enfermeiro )"
+        },
+        {
+            "Item": "108279",
+            "Procedimento": "Retirada De Pontos",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$229,00",
+            "URL": "https://www.panvel.com/panvel/retirada-de-pontos--transul/p-108279",
+            "Descrição": "Retirada de pontos cirúrgicos com uso de técnica asséptica"
+        },
+        {
+            "Item": "108280",
+            "Procedimento": "Puncao Venosa/Medicamento Endovenoso",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$229,00",
+            "URL": "https://www.panvel.com/panvel/puncao-venosa-medicamento-endovenoso--transul/p-108280",
+            "Descrição": "Técnica realizada para adminitração de medicamentos e/ou soluções endovenosas conforme prescrição médica. "
+        },
+        {
+            "Item": "108281",
+            "Procedimento": "Consulta De Enfermagem",
+            "Orientações": "Após a compra, você deverá entrar em contato diretamente com a Transul Emergências Médicas, pelo telefone descrito no e-mail para agendar o atendimento.",
+            "RS": "Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado, Porto Alegre, Viamão",
+            "SC": "Balneário Camboriú, Itajaí, Itapema",
+            "Preço": " R$349,00",
+            "URL": "https://www.panvel.com/panvel/consulta-de-enfermagem--transul/p-108281",
+            "Descrição": "Consulta de Enfermagem (anamnese, exame físico, planejamento do cuidado e prescrição dos cuidados de enfermagem )"
+        }
+    ]
+}
