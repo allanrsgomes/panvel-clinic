@@ -129,12 +129,6 @@
         text-decoration: none;
     }
 
-    .custom-breadcrumb a::after {
-        content: "/";
-        padding: 0 3px;
-        color: #828282;
-    }
-
     .custom-breadcrumb span {
         display: block;
         font-weight: 700;
@@ -275,6 +269,7 @@
         flex-direction: column;
         padding-top: 73px;
         align-items: center;
+        z-index:1;
     }
 
     .sub-header-telemedicina h2,
@@ -2260,6 +2255,128 @@
         }
     }
 </style>
+<div class="LHContent telemedicina-wrapper">
+    <!-- Header que contém o Breadcrumb e o Botão Back -->
+    <header class="sub-header-crumback">
+        <div class="custom-breadcrumb">
+            <a href="/panvel/main.do">Página Inicial</a>
+            <a href="/panvel/panvelClinic.do">\ Clinic</a>
+            <span>Atendimento Domiciliar</span>
+        </div>
+        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+    </header>
+
+    <main>
+        <div class="banner-panvel-clinic">
+            <div class="banner-panvel-clinic-content">
+                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_8.png" alt="Panvel Clinic" />
+                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Domiciliar</a>
+                <p>Cuidado e segurança para você e sua família.</p>
+            </div>
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/mascara.png" class="banner" alt="" />
+        </div>
+
+        <div class="scroll-menu scroll-menu-wrapper">
+            <div class="arrow-left">&#60;</div>
+            <div class="scroll-menu">
+                <nav class="line-menu line-menu-telemedicina">
+                    <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar.do">Inicio</a>
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Combos Promocionais</a>
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Serviços</a>
+
+                    <hr class=guide-bar />
+                </nav>
+            </div>
+            <div class="arrow-right">&#62;</div>
+        </div>
+
+        <header class="sub-header-telemedicina">
+            <h2>Nossos parceiros cuidam da sua saúde de forma ágil e segura.</h2>
+            <p>O Atendimento Domiciliar Transul tem como objetivo acolher o paciente de maneira integral, oferecendo
+                toda a tecnologia, conforto, segurança e bem-estar em um atendimento rápido e ágil na porta de sua casa,
+                ajudando a desafogar o ambiente hospitalar e mantendo seus familiares no conforto do lar.</p>
+            <hr class="orange-separator">
+        </header>
+
+        <header class="sub-header-telemedicina parceiro-header">
+            <h2>Combos Promocionais</h2>
+            <p>Realizado em laboratórios de análises clínicas parceiros</p>
+            <hr class="orange-separator">
+            <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
+        </header>
+
+        <section class="product-list preview pure-g">
+
+        </section>
+        <section class="pure-g more-info-link">
+            <a href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">
+
+                <div class="more-info-wrapper pure-u-1">
+                    <hr class="blue-separator"> <button class="more-info-button">Ver mais</button>
+                    <hr class="blue-separator">
+                </div>
+            </a>
+
+        </section>
+
+        <section class="sub-header-telemedicina">
+            <h2>Confira alguns dos serviços realizados no atendimento domiciliar</h2>
+            <p>Realizado em laboratórios de análises clínicas parceiros</p>
+            <hr class="orange-separator">
+        </section>
+        <section class="service-list gallery">
+            <div class="pure-g flex-between">
+                <div class="pure-u-1-2 pure-u-md-1-3">
+                    <div class="gallery-item pure-g">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/user-md.png">
+                        <span class="pure-u-1">Consulta Médica</span>
+                    </div>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1-3">
+                    <div class="gallery-item pure-g">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/user-nurse.png">
+                        <span class="pure-u-1">Aconselhamento em Enfermagem</span>
+                    </div>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1-3">
+                    <div class="gallery-item pure-g">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/medkit.png">
+                        <span class="pure-u-1">Troca de Curativos</span>
+                    </div>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1-3">
+                    <div class="gallery-item pure-g">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/procedures.png">
+                        <span class="pure-u-1">Troca de Sondas</span>
+                    </div>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1-3">
+                    <div class="gallery-item pure-g">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/pills.png">
+                        <span class="pure-u-1">Administração de Medicamentos</span>
+                    </div>
+                </div>
+                <div class="pure-u-1-2 pure-u-md-1-3">
+                    <div class="gallery-item pure-g">
+                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/monitor-heart-rate.png">
+                        <span class="pure-u-1">Eletrocardiograma com Laudo</span>
+                    </div>
+                </div>
+            </div>
+            <section class="pure-g more-info-link">
+                <a href="https://www.panvel.com/panvel/atendimento-domiciliar-servicos.do">
+
+                    <div class="more-info-wrapper pure-u-1">
+                        <hr class="blue-separator"> <button class="more-info-button">Ver mais</button>
+                        <hr class="blue-separator">
+                    </div>
+                </a>
+
+            </section>
+        </section>
+    </main>
+</div>
+
 <script>
     window.onload = () => {
     /* Verifica se há algum menu responsivo com scroll horizontal na página e o(s) inicializa. */
@@ -2418,7 +2535,7 @@ const initServicosList = (servicosListContainers) => {
 
 const initProductList = (produtosListContainers) => {
 
-    loadJSON('combos.JSON').then(data => {
+    loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/combos.JSON').then(data => {
         handleCombosJSON(data);
     })
 
@@ -2590,123 +2707,3 @@ const initProductList = (produtosListContainers) => {
     }
 }
 </script>
-<body class="LHContent telemedicina-wrapper">
-    <!-- Header que contém o Breadcrumb e o Botão Back -->
-    <header class="sub-header-crumback">
-        <div class="custom-breadcrumb">
-            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
-            <span>Clinic</span>
-        </div>
-        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
-    </header>
-
-    <main>
-        <div class="banner-panvel-clinic">
-            <div class="banner-panvel-clinic-content">
-                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_8.png" alt="Panvel Clinic" />
-                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Domiciliar</a>
-                <p>Cuidado e segurança para você e sua família.</p>
-            </div>
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/mascara.webp" class="banner" alt="" />
-        </div>
-
-        <div class="scroll-menu scroll-menu-wrapper">
-            <div class="arrow-left">&#60;</div>
-            <div class="scroll-menu">
-                <nav class="line-menu line-menu-telemedicina">
-                    <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar.do">Inicio</a>
-                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Combos Promocionais</a>
-                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Serviços</a>
-
-                    <hr class=guide-bar />
-                </nav>
-            </div>
-            <div class="arrow-right">&#62;</div>
-        </div>
-
-        <header class="sub-header-telemedicina">
-            <h2>Nossos parceiros cuidam da sua saúde de forma ágil e segura.</h2>
-            <p>O Atendimento Domiciliar Transul tem como objetivo acolher o paciente de maneira integral, oferecendo
-                toda a tecnologia, conforto, segurança e bem-estar em um atendimento rápido e ágil na porta de sua casa,
-                ajudando a desafogar o ambiente hospitalar e mantendo seus familiares no conforto do lar.</p>
-            <hr class="orange-separator">
-        </header>
-
-        <header class="sub-header-telemedicina parceiro-header">
-            <h2>Combos Promocionais</h2>
-            <p>Realizado em laboratórios de análises clínicas parceiros</p>
-            <hr class="orange-separator">
-            <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
-        </header>
-
-        <section class="product-list preview pure-g">
-
-        </section>
-        <section class="pure-g more-info-link">
-            <a href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">
-
-                <div class="more-info-wrapper pure-u-1">
-                    <hr class="blue-separator"> <button class="more-info-button">Ver mais</button>
-                    <hr class="blue-separator">
-                </div>
-            </a>
-
-        </section>
-
-        <section class="sub-header-telemedicina">
-            <h2>Confira alguns dos serviços realizados no atendimento domiciliar</h2>
-            <p>Realizado em laboratórios de análises clínicas parceiros</p>
-            <hr class="orange-separator">
-        </section>
-        <section class="service-list gallery">
-            <div class="pure-g flex-between">
-                <div class="pure-u-1-2 pure-u-md-1-3">
-                    <div class="gallery-item pure-g">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/user-md.png">
-                        <span class="pure-u-1">Consulta Médica</span>
-                    </div>
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-3">
-                    <div class="gallery-item pure-g">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/user-nurse.png">
-                        <span class="pure-u-1">Aconselhamento em Enfermagem</span>
-                    </div>
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-3">
-                    <div class="gallery-item pure-g">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/medkit.png">
-                        <span class="pure-u-1">Troca de Curativos</span>
-                    </div>
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-3">
-                    <div class="gallery-item pure-g">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/procedures.png">
-                        <span class="pure-u-1">Troca de Sondas</span>
-                    </div>
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-3">
-                    <div class="gallery-item pure-g">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/pills.png">
-                        <span class="pure-u-1">Administração de Medicamentos</span>
-                    </div>
-                </div>
-                <div class="pure-u-1-2 pure-u-md-1-3">
-                    <div class="gallery-item pure-g">
-                        <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/monitor-heart-rate.png">
-                        <span class="pure-u-1">Eletrocardiograma com Laudo</span>
-                    </div>
-                </div>
-            </div>
-            <section class="pure-g more-info-link">
-                <a href="https://www.panvel.com/panvel/atendimento-domiciliar-servicos.do">
-
-                    <div class="more-info-wrapper pure-u-1">
-                        <hr class="blue-separator"> <button class="more-info-button">Ver mais</button>
-                        <hr class="blue-separator">
-                    </div>
-                </a>
-
-            </section>
-        </section>
-    </main>
-</body>

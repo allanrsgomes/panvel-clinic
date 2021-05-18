@@ -129,12 +129,6 @@
         text-decoration: none;
     }
 
-    .custom-breadcrumb a::after {
-        content: "/";
-        padding: 0 3px;
-        color: #828282;
-    }
-
     .custom-breadcrumb span {
         display: block;
         font-weight: 700;
@@ -275,6 +269,7 @@
         flex-direction: column;
         padding-top: 73px;
         align-items: center;
+        z-index: 1;
     }
 
     .sub-header-telemedicina h2,
@@ -2282,6 +2277,210 @@
         display: none;
     }
 </style>
+<div class="LHContent telemedicina-wrapper">
+    <!-- Header que contém o Breadcrumb e o Botão Back -->
+    <header class="sub-header-crumback">
+        <div class="custom-breadcrumb">
+            <a href="/panvel/main.do">Página Inicial</a>
+            <a href="/panvel/panvelClinic.do">\ Clinic</a>
+            <span>Atendimento Domiciliar</span>
+        </div>
+        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+    </header>
+
+    <main>
+        <div class="banner-panvel-clinic">
+            <div class="banner-panvel-clinic-content">
+                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_8.png" alt="Panvel Clinic" />
+                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Domiciliar</a>
+                <p>Cuidado e segurança para você e sua família.</p>
+            </div>
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/mascara.png" class="banner" alt="" />
+        </div>
+
+        <div class="scroll-menu scroll-menu-wrapper">
+            <div class="arrow-left">&#60;</div>
+            <div class="scroll-menu">
+                <nav class="line-menu line-menu-telemedicina">
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar.do">Inicio</a>
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Combos Promocionais</a>
+                    <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-servicos.do">Serviços</a>
+
+                    <hr class=guide-bar />
+                </nav>
+            </div>
+            <div class="arrow-right">&#62;</div>
+        </div>
+
+        <header class="sub-header-telemedicina">
+            <h2>Nossos parceiros, cuidam da sua saúde de forma ágil e segura.</h2>
+            <p>O Atendimento Domiciliar Transul tem como objetivo acolher o paciente de maneira integral, oferecendo
+                toda a tecnologia, conforto, segurança e bem-estar em um atendimento rápido e ágil na porta de sua casa,
+                ajudando a desafogar o ambiente hospitalar e mantendo seus familiares no conforto do lar.</p>
+            <hr class="orange-separator">
+            <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
+        </header>
+
+        <section>
+            <section>
+                <div id="tab-content-wrapper">
+                    <ul class="accordion-list">
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
+                            <div class="accordion-item-header">
+                                <h3 class="accordion-item-title">Banho no leito </h3>
+                                <h3 class="accordion-item-price">R$110,00</h3>
+                                <button class="servico-item-btn">Comprar</button>
+                            </div>
+
+                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
+                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
+                                no momento da coleta.
+                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
+                                OMS*
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Div escondida pelo CSS -->
+                <section class="blur-banner">
+                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/Mask_Group_34.jpg" class="banner" alt="Placeholder"
+                        title="Imagem ilustrativa" />
+                    <div class="blur-banner-content-box">
+                        <div class="blur-banner-deco"></div>
+                        <h1>Passo a passo para fazer o teste de covid-19</h1>
+                        <p>A compra do teste pelo Site ou App Panvel garante a você a realização do Teste
+                            Covid-19 IgG + IgM, que deverá ser feito presencialmente em um dos laboratórios
+                            do Grupo Exame.</p>
+                        <p class="step"><img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/cursor.svg">Após
+                            clicar no botão
+                            Comprar você deve se dirigir a sua cesta de compra, e definir uma loja para
+                            retirada.</p>
+                        <p class="step"><img
+                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/store.svg"><b>Você
+                                pode retirar o
+                                seu cupom fiscal na loja escolhida ou acessar seu cupom fiscal sem sair de
+                                casa</b>, na seção Meus Pedidos do Site ou App Panvel, clicando em
+                            Visualizar Nota Fiscal.</p>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+</div>
 <script>
     window.onload = () => {
     /* Verifica se há algum menu responsivo com scroll horizontal na página e o(s) inicializa. */
@@ -2612,206 +2811,3 @@ const initProductList = (produtosListContainers) => {
     }
 }
 </script>
-<body class="LHContent telemedicina-wrapper">
-    <!-- Header que contém o Breadcrumb e o Botão Back -->
-    <header class="sub-header-crumback">
-        <div class="custom-breadcrumb">
-            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
-            <span>Clinic</span>
-        </div>
-        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
-    </header>
-
-    <main>
-        <div class="banner-panvel-clinic">
-            <div class="banner-panvel-clinic-content">
-                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_8.png" alt="Panvel Clinic" />
-                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Domiciliar</a>
-                <p>Cuidado e segurança para você e sua família.</p>
-            </div>
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/mascara.webp" class="banner" alt="" />
-        </div>
-
-        <div class="scroll-menu scroll-menu-wrapper">
-            <div class="arrow-left">&#60;</div>
-            <div class="scroll-menu">
-                <nav class="line-menu line-menu-telemedicina">
-                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar.do">Inicio</a>
-                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Combos Promocionais</a>
-                    <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-servicos.do">Serviços</a>
-
-                    <hr class=guide-bar />
-                </nav>
-            </div>
-            <div class="arrow-right">&#62;</div>
-        </div>
-
-        <header class="sub-header-telemedicina">
-            <h2>Nossos parceiros, cuidam da sua saúde de forma ágil e segura.</h2>
-            <p>O Atendimento Domiciliar Transul tem como objetivo acolher o paciente de maneira integral, oferecendo
-                toda a tecnologia, conforto, segurança e bem-estar em um atendimento rápido e ágil na porta de sua casa,
-                ajudando a desafogar o ambiente hospitalar e mantendo seus familiares no conforto do lar.</p>
-            <hr class="orange-separator">
-            <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
-        </header>
-
-        <section>
-            <section>
-                <div id="tab-content-wrapper">
-                    <ul class="accordion-list">
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                        <li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">Banho no leito </h3>
-                                <h3 class="accordion-item-price">R$110,00</h3>
-                                <button class="servico-item-btn">Comprar</button>
-                            </div>
-
-                            <p>PCR (reação em cadeia da polimerase) é um teste que verifica a presença de material
-                                genético do vírus medindo a carga viral, ou seja, verifica se a pessoa está com o vírus
-                                no momento da coleta.
-                                <br> *Este teste é considerado o padrão ouro para o diagnóstico da COVID – 19 segundo a
-                                OMS*
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Div escondida pelo CSS -->
-                <section class="blur-banner">
-                    <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/Mask_Group_34.jpg" class="banner" alt="Placeholder"
-                        title="Imagem ilustrativa" />
-                    <div class="blur-banner-content-box">
-                        <div class="blur-banner-deco"></div>
-                        <h1>Passo a passo para fazer o teste de covid-19</h1>
-                        <p>A compra do teste pelo Site ou App Panvel garante a você a realização do Teste
-                            Covid-19 IgG + IgM, que deverá ser feito presencialmente em um dos laboratórios
-                            do Grupo Exame.</p>
-                        <p class="step"><img
-                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/cursor.svg">Após
-                            clicar no botão
-                            Comprar você deve se dirigir a sua cesta de compra, e definir uma loja para
-                            retirada.</p>
-                        <p class="step"><img
-                                src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/store.svg"><b>Você
-                                pode retirar o
-                                seu cupom fiscal na loja escolhida ou acessar seu cupom fiscal sem sair de
-                                casa</b>, na seção Meus Pedidos do Site ou App Panvel, clicando em
-                            Visualizar Nota Fiscal.</p>
-                    </div>
-                </section>
-            </section>
-        </section>
-    </main>
-</body>
