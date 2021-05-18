@@ -275,6 +275,7 @@
         flex-direction: column;
         padding-top: 73px;
         align-items: center;
+        z-index:1;
     }
 
     .sub-header-telemedicina h2,
@@ -2252,6 +2253,53 @@
         }
     }
 </style>
+<div class="LHContent telemedicina-wrapper">
+    <!-- Header que contém o Breadcrumb e o Botão Back -->
+    <header class="sub-header-crumback">
+        <div class="custom-breadcrumb">
+            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
+            <span>Clinic</span>
+        </div>
+        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
+    </header>
+
+    <main>
+        <div class="banner-panvel-clinic">
+            <div class="banner-panvel-clinic-content">
+                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_8.png" alt="Panvel Clinic" />
+                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Domiciliar</a>
+                <p>Cuidado e segurança para você e sua família.</p>
+            </div>
+            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/mascara.png" class="banner" alt="" />
+        </div>
+
+        <div class="scroll-menu scroll-menu-wrapper">
+            <div class="arrow-left">&#60;</div>
+            <div class="scroll-menu">
+                <nav class="line-menu line-menu-telemedicina">
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar.do">Inicio</a>
+                    <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Combos Promocionais</a>
+                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-servicos.do">Serviços</a>
+
+                    <hr class=guide-bar />
+                </nav>
+            </div>
+            <div class="arrow-right">&#62;</div>
+        </div>
+
+        <header class="sub-header-telemedicina parceiro-header">
+            <h2>Combos Promocionais</h2>
+            <p>Adquirindo o medicamento junto com a aplicação você ganha desconto*.</p>
+            <p>*Desconto aplicado no carrinho.</p>
+            <hr class="orange-separator">
+            <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
+        </header>
+
+        <section class="product-list pure-g">
+
+        </section>
+    </main>
+</div>
 <script>
     window.onload = () => {
     /* Verifica se há algum menu responsivo com scroll horizontal na página e o(s) inicializa. */
@@ -2582,50 +2630,3 @@ const initProductList = (produtosListContainers) => {
     }
 }
 </script>
-<body class="LHContent telemedicina-wrapper">
-    <!-- Header que contém o Breadcrumb e o Botão Back -->
-    <header class="sub-header-crumback">
-        <div class="custom-breadcrumb">
-            <a href="https://www.panvel.com/panvel/main.do">Página Inicial</a>
-            <span>Clinic</span>
-        </div>
-        <a class="btn-back" href="https://www.panvel.com/panvel/panvelClinic.do">Voltar</a>
-    </header>
-
-    <main>
-        <div class="banner-panvel-clinic">
-            <div class="banner-panvel-clinic-content">
-                <img id="banner-panvel-clinic-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/group_8.png" alt="Panvel Clinic" />
-                <a class="button banner-panvel-clinic-button" href="#tele-link">Atendimento Domiciliar</a>
-                <p>Cuidado e segurança para você e sua família.</p>
-            </div>
-            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/images/atendimento-domiciliar/mascara.png" class="banner" alt="" />
-        </div>
-
-        <div class="scroll-menu scroll-menu-wrapper">
-            <div class="arrow-left">&#60;</div>
-            <div class="scroll-menu">
-                <nav class="line-menu line-menu-telemedicina">
-                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar.do">Inicio</a>
-                    <a class="active" onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-promocionais.do">Combos Promocionais</a>
-                    <a onclick="handleAnyButtonClick(this);" href="https://www.panvel.com/panvel/atendimento-domiciliar-servicos.do">Serviços</a>
-
-                    <hr class=guide-bar />
-                </nav>
-            </div>
-            <div class="arrow-right">&#62;</div>
-        </div>
-
-        <header class="sub-header-telemedicina parceiro-header">
-            <h2>Combos Promocionais</h2>
-            <p>Adquirindo o medicamento junto com a aplicação você ganha desconto*.</p>
-            <p>*Desconto aplicado no carrinho.</p>
-            <hr class="orange-separator">
-            <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
-        </header>
-
-        <section class="product-list pure-g">
-
-        </section>
-    </main>
-</body>
