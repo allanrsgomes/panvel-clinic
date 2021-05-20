@@ -2604,7 +2604,7 @@ const initHorizontalScrollMenus = () => {
 
 const initServicosList = (servicosListContainers) => {
 
-    loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/servicos.JSON').then(data => {
+    loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/servicos1.JSON').then(data => {
         handleServicosJSON(data);
     })
 
@@ -2626,7 +2626,7 @@ const initServicosList = (servicosListContainers) => {
 
                             <p>${item.Descrição.replace(/^\w/, c => c.toUpperCase())}
                             </p>
-                            ${ item.RS || item.SC ? '<p class="text-disponibilidade-subtitle">Disponível nas cidades: <br> RS: '+item.RS+'<br> SC: '+item.SC+'</p>' : ''}
+                            ${ /* item.RS || item.SC */ false ? '<p class="text-disponibilidade-subtitle">Disponível nas cidades: <br> RS: '+item.RS+'<br> SC: '+item.SC+'</p>' : ''}
                         </li>`;
         }).join(""));
 
@@ -2639,7 +2639,7 @@ const initServicosList = (servicosListContainers) => {
 
 const initProductList = (produtosListContainers) => {
 
-    loadJSON('combos.JSON').then(data => {
+    loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/combos1.JSON').then(data => {
         handleCombosJSON(data);
     })
 
