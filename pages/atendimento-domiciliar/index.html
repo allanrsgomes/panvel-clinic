@@ -2498,41 +2498,6 @@ const initHorizontalScrollMenus = () => {
     })
 }
 
-const initServicosList = (servicosListContainers) => {
-
-    loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/servicos1.JSON').then(data => {
-        handleServicosJSON(data);
-    })
-
-    const handleServicosJSON = (data) => {
-
-        const servicos = [...data.Serviços];
-
-        let servicosElement = ['<ul class="accordion-list">'];
-
-        servicosElement.push(servicos.map((item, i) => {
-            return `<li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">${item.Procedimento}</h3>
-                                <h3 class="accordion-item-price">${item.Preço}</h3>
-                                <a href="${item.URL}">
-                                <button class="servico-item-btn">Comprar</button>
-                                </a>
-                            </div>
-
-                            <p>${item.Descrição.replace(/^\w/, c => c.toUpperCase())}
-                            </p>
-                            ${ /* item.RS || item.SC */ false ? '<p class="text-disponibilidade-subtitle">Disponível nas cidades: <br> RS: '+item.RS+'<br> SC: '+item.SC+'</p>' : ''}
-                        </li>`;
-        }).join(""));
-
-        servicosElement.push('</ul>');
-
-        [servicosListContainers].map(listContainer => listContainer.innerHTML = servicosElement.join(""));
-
-    }
-}
-
 const initProductList = (produtosListContainers) => {
 
     loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/combos1.JSON').then(data => {
@@ -2593,6 +2558,7 @@ const initProductList = (produtosListContainers) => {
                 wrapper.appendChild(divDesc);
             }
 
+            /*
             if (item.hasOwnProperty('Cidades')){
                 var divCidades = document.createElement('div');
                 divCidades.classList.add('produto-item-desc');
@@ -2607,6 +2573,7 @@ const initProductList = (produtosListContainers) => {
                 wrapper.appendChild(divCidades);
 
             }
+            */
 
             //Retirada para usar a mesma formatação do preço para indicação de gratuidade
             /* 
