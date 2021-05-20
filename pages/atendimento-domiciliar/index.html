@@ -2522,7 +2522,7 @@ const initServicosList = (servicosListContainers) => {
 
                             <p>${item.Descrição.replace(/^\w/, c => c.toUpperCase())}
                             </p>
-                            ${ item.RS || item.SC ? '<p class="text-disponibilidade-subtitle">Disponível nas cidades: <br> RS: '+item.RS+'<br> SC: '+item.SC+'</p>' : ''}
+                            ${ /* item.RS || item.SC */ false ? '<p class="text-disponibilidade-subtitle">Disponível nas cidades: <br> RS: '+item.RS+'<br> SC: '+item.SC+'</p>' : ''}
                         </li>`;
         }).join(""));
 
