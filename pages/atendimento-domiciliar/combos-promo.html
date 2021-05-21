@@ -2241,6 +2241,15 @@
         font-size: 20px;
     }
 
+    .card-tutorial:nth-child(4n){
+        margin-right: 0;
+    }
+
+    .card.info-cidades {
+        max-width: 989px;
+        font-weight: bold;
+    }
+
     @media screen and (max-width: 768px) {
         .sub-header-telemedicina {
             margin-bottom: var(--xsSpace);
@@ -2288,6 +2297,7 @@
             <p>*Desconto aplicado no carrinho.</p>
             <hr class="orange-separator">
             <img class="parceiro-logo" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/atendimento-domiciliar/transul-logo.png">
+            <div class="card info-cidades">  Disponível nas cidades: <br/> RS: Porto Alegre, Alvorada, Cachoeirinha, Canela, Canoas, Esteio, Gramado e Viamão. <br/> SC: Balneário Camboriú, Camboriú, Itajaí, Itapema. </div>
         </header>
 
         <section class="product-list pure-g">
@@ -2302,14 +2312,8 @@
 
     const hasProductList = [...document.getElementsByClassName('product-list')].length > 0;
 
-    const hasServicosList = [document.getElementById('tab-content-wrapper')];
-
     if (hasHorizontalScrollMenu) {
         initHorizontalScrollMenus();
-    }
-
-    if (hasServicosList[0] != null) {
-        initServicosList(document.getElementById('tab-content-wrapper'));
     }
 
     if (hasProductList) {
@@ -2414,41 +2418,6 @@ const initHorizontalScrollMenus = () => {
         slider.addEventListener('mouseleave', stopDragging);
         slider.addEventListener('touchend', stopDragging);
     })
-}
-
-const initServicosList = (servicosListContainers) => {
-
-    loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/atendimento-domiciliar/servicos1.JSON').then(data => {
-        handleServicosJSON(data);
-    })
-
-    const handleServicosJSON = (data) => {
-
-        const servicos = [...data.Serviços];
-
-        let servicosElement = ['<ul class="accordion-list">'];
-
-        servicosElement.push(servicos.map((item, i) => {
-            return `<li class="card accordion-item" onclick="handleAccordionClick(this);">
-                            <div class="accordion-item-header">
-                                <h3 class="accordion-item-title">${item.Procedimento}</h3>
-                                <h3 class="accordion-item-price">${item.Preço}</h3>
-                                <a href="${item.URL}">
-                                <button class="servico-item-btn">Comprar</button>
-                                </a>
-                            </div>
-
-                            <p>${item.Descrição.replace(/^\w/, c => c.toUpperCase())}
-                            </p>
-                            ${ /* item.RS || item.SC */ false ? '<p class="text-disponibilidade-subtitle">Disponível nas cidades: <br> RS: '+item.RS+'<br> SC: '+item.SC+'</p>' : ''}
-                        </li>`;
-        }).join(""));
-
-        servicosElement.push('</ul>');
-
-        [servicosListContainers].map(listContainer => listContainer.innerHTML = servicosElement.join(""));
-
-    }
 }
 
 const initProductList = (produtosListContainers) => {
