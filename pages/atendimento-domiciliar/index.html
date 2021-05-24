@@ -2384,14 +2384,8 @@
 
     const hasProductList = [...document.getElementsByClassName('product-list')].length > 0;
 
-    const hasServicosList = [document.getElementById('tab-content-wrapper')];
-
     if (hasHorizontalScrollMenu) {
         initHorizontalScrollMenus();
-    }
-
-    if (hasServicosList[0] != null) {
-        initServicosList(document.getElementById('tab-content-wrapper'));
     }
 
     if (hasProductList) {
