@@ -759,5 +759,18 @@ lojas = [
         "Úteis": "08:00 às 22:00",
         "Sábados": "08:00 às 22:00",
         "Feriados": "10:00 às 20:00"
+    },
+    {
+        "Filial": "552",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Avenida Nossa Senhora da Luz, nº 2.341",
+        "Bairro": "Jardim Social",
+        "Telefone": "41-3262-1447",
+        "WhatsApp": "41-992869148",
+        "Úteis": "07:00 às 22:00",
+        "Sábados": "07:00 às 22:00",
+        "Feriados": "09:00 às 21:00"
     }
 ]
