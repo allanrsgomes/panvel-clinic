@@ -772,5 +772,18 @@ lojas = [
         "Úteis": "07:00 às 22:00",
         "Sábados": "07:00 às 22:00",
         "Feriados": "09:00 às 21:00"
+    },
+    {
+        "Filial": "45",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Porto Alegre",
+        "Endereço": "Av. Protásio Alves, 723",
+        "Bairro": "Rio Branco",
+        "Telefone": "51-33317125",
+        "WhatsApp": "51-996921985",
+        "Úteis": "24h",
+        "Sábados": "24h",
+        "Feriados": "24h"
     }
 ]
