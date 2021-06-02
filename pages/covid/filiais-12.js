@@ -691,7 +691,7 @@ const dataPanvel = [
         "Filial": "30",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
-        "Cidade": "São Sebastião do caí",
+        "Cidade": "São Sebastião do Caí",
         "Endereço": "Avenida Egidio Michaelsen, 477",
         "Bairro": "Centro",
         "Telefone": "51-995638939"
@@ -2299,15 +2299,6 @@ const dataPanvel = [
         "Telefone": "44-35234524"
     },
     {
-        "Filial": "702",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Cidade": "Porto Alegre",
-        "Endereço": "Rua Anita Garibaldi, 2099 – Lj 02",
-        "Bairro": "Mont Serrat",
-        "Telefone": "51-995049688"
-    },
-    {
         "Filial": "703",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -2655,6 +2646,15 @@ const dataPanvel = [
         "Cidade": "Campo Bom",
         "Endereço": "Avenida Brasil, 2360",
         "Bairro": "Centro"
+    },
+    {
+        "Filial": "767",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Porto Alegre",
+        "Endereço": "Rua Pedro Ivo, nº844",
+        "Bairro": "Mont Serrat",
+        "Telefone": "51-999076338"
     },
     {
         "Filial": "800",
