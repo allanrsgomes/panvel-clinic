@@ -27,7 +27,7 @@
             color: var(--color-yale-blue);
             font-size: 18px;
         }
-        /* RESET WORKSPACE */
+        /* RESET WOR */
         
         .LHContent * {
             font-family: Foco, "Open Sans", sans-serif;
@@ -965,6 +965,10 @@
             flex-direction: column;
             align-items: center;
             margin: var(--xlSpace);
+        }
+
+        .vacina-como-agendar-list li.li-comprar {
+            justify-content: space-evenly;
         }
         
         .vacina-como-agendar-list li::before {
@@ -2304,11 +2308,7 @@
                         <a class="button btn-modal" href="#" aria-label="Saiba mais sobre os endereços e horários de vacinação.">Saiba
                             mais</a>
                     </li>
-                    <li class="pure-u-1 pure-u-md-1-4">
-                        <h3>Preço</h3>
-                        <p>
-                            <h2>R$ 84,00</h2>
-                        </p>
+                    <li class="pure-u-1 pure-u-md-1-4 li-comprar">
                         <a class="button btn-comprar" href="https://www.panvel.com/panvel/vacina-gripe-h1n1-tetravalente-fluarix-gsk/p-468540" aria-label="Comprar vacina da gripe.">Comprar</a>
                     </li>
                     <li class="pure-u-1 pure-u-md-1-4">
@@ -2766,7 +2766,7 @@
 
         }
 
-        return loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/filiais-gripe-12.JSON').then(data => {
+        return loadJSON('https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/filiais-gripe-10.JSON').then(data => {
             var dadosFiltrados = handleFiliaisJSON(data);
 
             LHevents(dadosFiltrados);
