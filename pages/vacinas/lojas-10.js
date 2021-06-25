@@ -785,5 +785,17 @@ lojas = [
         "Úteis": "24h",
         "Sábados": "24h",
         "Feriados": "24h"
+    },
+    {
+        "Filial": "759",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Livramento",
+        "Endereço": "Av. Presidente João Belchior Goulart, 841",
+        "Bairro": "Hidráulica",
+        "WhatsApp": "51-999060113",
+        "Úteis": "07:00 às 23:00",
+        "Sábados": "07:00 às 23:00",
+        "Feriados": "09:00 às 21:00"
     }
 ]
