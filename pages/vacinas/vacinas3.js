@@ -279,8 +279,6 @@ const vacinas = [
   }
 ];
 
-const queryString = window.location.search;
-
 function filtragemVacinas(obj, id) {
   if (id != null) {
     for ($i = 0; $i < obj.length; $i++) {
@@ -288,48 +286,4 @@ function filtragemVacinas(obj, id) {
     }
   }
   return true;
-}
-
-
-if (queryString !== "") {
-  const urlParams = new URLSearchParams(queryString);
-  const idSelect = urlParams.get('id');
-
-  const vacinasDiv = (vacinas.filter(
-    subVacinas => subVacinas.grupo.includes(parseInt(idSelect)))
-  ).map((item, i) => {
-    return `<div class="vacina-calendario">
-              <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
-              <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
-                Mais Informações
-              </a>
-              <button class="vacina-item-btn">Agendar vacina</button>
-            </div>`;
-
-  });
-
-  document.querySelector(".vacinas").innerHTML = vacinasDiv.join("");
-
-} else {
-  const vacinasDiv = vacinas.map((item, i) => {
-    return `<div class="vacina-calendario">
-            <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
-            <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
-              Mais Informações
-            </a>
-            <button class="vacina-item-btn">Agendar vacina</button>
-          </div>`;
-  });
-
-  document.querySelector(".vacinas").innerHTML = vacinasDiv.join("");
-
-  var btnVacinas = document.getElementsByClassName('vacina-item-btn');
-
-  for (let i = 0; i <= btnVacinas.length; i++) {
-    btnVacinas[i].onclick = function () {
-      modal.style.display = "block";
-      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-    }
-  }
-
 }

@@ -1908,7 +1908,8 @@
           <a href="/panvel/panvelClinic.do">\ Clinic</a>
           <span>Vacinas</span>
         </div>
-        <a class="btn-back" href="https://www.panvel.com/panvel/calendario-vacinal.do" onclick="history.back()">Voltar</a>
+        <a class="btn-back" href="https://www.panvel.com/panvel/calendario-vacinal.do"
+          onclick="history.back()">Voltar</a>
       </div>
 
       <!--<a href="calendario-detalhe.html">-->
@@ -2075,7 +2076,7 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas2.js"></script>
+  <script type="text/javascript" src="vacinas3.js"></script>
   <script>
     var slideIndex = 1;
     window.addEventListener('load', LHevents);
@@ -2123,8 +2124,55 @@
         }
       }
 
+      const queryString = window.location.search;
+
+
+      if (queryString !== "") {
+        const urlParams = new URLSearchParams(queryString);
+        const idSelect = urlParams.get('id');
+
+        const vacinasDiv = (vacinas.filter(
+          subVacinas => subVacinas.grupo.includes(parseInt(idSelect)))
+        ).map((item, i) => {
+          return `<div class="vacina-calendario">
+              <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
+              <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
+                Mais Informações
+              </a>
+              <button class="vacina-item-btn">Agendar vacina</button>
+            </div>`;
+
+        });
+
+        document.querySelector(".vacinas").innerHTML = vacinasDiv.join("");
+
+      } else {
+        const vacinasDiv = vacinas.map((item, i) => {
+          return `<div class="vacina-calendario">
+            <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
+            <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
+              Mais Informações
+            </a>
+            <button class="vacina-item-btn">Agendar vacina</button>
+          </div>`;
+        });
+
+        document.querySelector(".vacinas").innerHTML = vacinasDiv.join("");
+
+        var btnVacinas = document.getElementsByClassName('vacina-item-btn');
+
+        for (let i = 0; i <= btnVacinas.length; i++) {
+          btnVacinas[i].onclick = function () {
+            modal.style.display = "block";
+            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+          }
+        }
+
+      }
+
     }
   </script>
+  <!-- https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/ -->
   <script>
     let dropdown = document.querySelector(".dropdown");
 
