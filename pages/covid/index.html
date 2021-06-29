@@ -2030,696 +2030,6 @@
         }
     }
 </style>
-<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais-13.js"></script>
-<script>
-    window.addEventListener('load', LHevents);
-
-
-    var dadosExameSaliva, dadosExameAnticorpos, dadosIggIgm, dadosRtPcr, dadosRtPcrUrgencia;
-
-    function LHevents() {
-
-        initClinicModals();
-
-        let dadosPanvel = filtrarDadosPanvel(dataPanvel);
-        dadosPanvel = orderDataAlphabetically(dadosPanvel);
-
-        dadosExameSaliva = filtrarDadosPanvel(dataExameSaliva);
-        dadosExameSaliva = orderDataAlphabetically(dadosExameSaliva);
-
-        dadosExameAnticorpos = filtrarDadosPanvel(dataExameAnticorpos);
-        dadosExameAnticorpos = orderDataAlphabetically(dadosExameAnticorpos);
-
-        dadosIggIgm = filtrarDadosPanvel(dataIggIgm);
-        dadosIggIgm = orderDataAlphabetically(dadosIggIgm);
-
-        dadosRtPcr = filtrarDadosPanvel(filiaisRtPcr);
-        dadosRtPcr = orderDataAlphabetically(dadosRtPcr);
-
-        dadosRtPcrUrgencia = filtrarDadosPanvel(dataRtPcrUrgente);
-        dadosRtPcrUrgencia = orderDataAlphabetically(dadosRtPcrUrgencia);
-
-
-        // Get the modal
-        var modalAgendamento = document.getElementById("LHModalContainer");
-        var modalContainer = document.getElementById("LHModal");
-
-        var modalExame = document.getElementById("LHModalContainerExame");
-
-        var exameContainerSaliva = document.getElementById("LHModalExameSaliva");
-        var exameContainerAnticorpos = document.getElementById("LHModalExameAnticorpos");
-        var exameContainerRtPcr = document.getElementById("LHModalExameRtPcr");
-        var exameContainerRtPcrUrgencia = document.getElementById("LHModalExameRtPcrUrgencia");
-        var exameContainerIggIgm = document.getElementById("LHModalExameIggIgm");
-
-        var modalPanvel = document.getElementById("LHModalContainerPanvel");
-        var panvelContainer = document.getElementById("LHModalPanvel");
-
-        // Get the button that opens the modal
-        var btnAgendamento = document.getElementById("agendar-btn");
-
-        var btnExameSaliva = document.getElementsByClassName('exame-btn-saliva');
-        var btnExameAnticorpos = document.getElementsByClassName('exame-btn-anticorpos');
-        var btnExameRtPcr = document.getElementsByClassName('exame-btn-rtpcr');
-        var btnExameRtPcrUrgencia = document.getElementsByClassName('exame-btn-rtpcr-urgencia');
-        var btnExameIggIgm = document.getElementsByClassName('exame-btn-igg-igm');
-
-        var btnsPanvel = document.getElementsByClassName("panvel-btn");
-
-
-        // Get the <span> element that closes the modal
-        var btnModalAgendamento = document.getElementById('modalCloseAgendamento');
-
-        var btnModalExameSaliva = document.getElementById('modalCloseExameSaliva');
-        var btnModalExameAnticorpos = document.getElementById('modalCloseExameAnticorpos');
-        var btnModalExameRtPcr = document.getElementsByClassName('modalCloseExameRtpcr');
-        var btnModalExameRtPcrUrgencia = document.getElementsByClassName('modalCloseExameRtpcrUrgencia');
-        var btnModalExameIggIgm = document.getElementsByClassName('modalCloseExameIggIgm');
-
-        var btnModalPanvel = document.getElementById('modalClosePanvel');
-
-
-        // When the user clicks on <span> (x), close the modal
-        btnModalAgendamento.onclick = function () {
-            modalAgendamento.style.display = "none";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-
-        btnModalExameSaliva.onclick = function () {
-            modalExame.style.display = "none";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-
-        btnModalExameAnticorpos.onclick = function () {
-            modalExame.style.display = "none";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-
-        btnModalExameRtPcr = function () {
-            modalExame.style.display = "none";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-
-        btnModalExameRtPcrUrgencia = function () {
-            modalExame.style.display = "none";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-
-        btnModalExameIggIgm = function () {
-            modalExame.style.display = "none";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-
-        btnModalPanvel.onclick = function () {
-            modalPanvel.style.display = "none";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-
-
-        // When the user clicks the button, open the modal 
-        btnAgendamento.onclick = function () {
-            modalAgendamento.style.display = "block";
-            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-        }
-
-        for (let num = 0; num < btnExameAnticorpos.length; num++) {
-            btnExameAnticorpos[num].onclick = () => {
-                exameContainerAnticorpos.style.display = 'block';
-                exameContainerSaliva.style.display = 'none';
-                exameContainerRtPcr.style.display = 'none;'
-                exameContainerRtPcrUrgencia.style.display = 'none'
-                exameContainerIggIgm.style.display = 'none'
-                modalExame.style.display = 'block';
-                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-                createSelectionsNovaExame(exameContainerAnticorpos);
-            }
-        }
-
-        for (let num = 0; num < btnExameSaliva.length; num++) {
-            btnExameSaliva[num].onclick = () => {
-                exameContainerSaliva.style.display = 'block';
-                exameContainerAnticorpos.style.display = 'none';
-                exameContainerRtPcr.style.display = 'none'
-                exameContainerRtPcrUrgencia.style.display = 'none'
-                exameContainerIggIgm.style.display = 'none'
-                modalExame.style.display = 'block';
-                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-                createSelectionsNovaExame(exameContainerSaliva);
-            }
-        }
-
-        for (let num = 0; num < btnExameRtPcr.length; num++) {
-            btnExameRtPcr[num].onclick = () => {
-                exameContainerSaliva.style.display = 'none';
-                exameContainerAnticorpos.style.display = 'none';
-                exameContainerRtPcr.style.display = 'block';
-                exameContainerRtPcrUrgencia.style.display = 'none';
-                exameContainerIggIgm.style.display = 'none';
-                modalExame.style.display = 'block';
-                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-                createSelectionsNovaExame(exameContainerRtPcr);
-            }
-        }
-
-        for (let num = 0; num < btnExameRtPcrUrgencia.length; num++) {
-            btnExameRtPcrUrgencia[num].onclick = () => {
-                exameContainerSaliva.style.display = 'none';
-                exameContainerAnticorpos.style.display = 'none';
-                exameContainerRtPcr.style.display = 'none';
-                exameContainerRtPcrUrgencia.style.display = 'block';
-                exameContainerIggIgm.style.display = 'none';
-                modalExame.style.display = 'block';
-                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-                createSelectionsNovaExame(exameContainerRtPcrUrgencia);
-            }
-        }
-
-        for (let num = 0; num < btnExameIggIgm.length; num++) {
-            btnExameIggIgm[num].onclick = () => {
-                exameContainerSaliva.style.display = 'none';
-                exameContainerAnticorpos.style.display = 'none';
-                exameContainerRtPcr.style.display = 'none';
-                exameContainerRtPcrUrgencia.style.display = 'none';
-                exameContainerIggIgm.style.display = 'block';
-                modalExame.style.display = 'block';
-                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-                createSelectionsNovaExame(exameContainerIggIgm);
-            }
-        }
-
-        for (let num = 0; num < btnsPanvel.length; num++) {
-            btnsPanvel[num].onclick = function () {
-                modalPanvel.style.display = "block";
-                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-                createSelectionsNovaPanvel();
-            }
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.addEventListener('click', function (event) {
-            if (event.target == modalAgendamento || event.target == modalContainer) {
-                modalAgendamento.style.display = "none";
-                document.getElementsByTagName('body')[0].style.overflow = 'auto';
-            } else if (event.target == exameContainerSaliva || event.target == exameContainerAnticorpos || event
-                .target == modalExame || event.target == exameContainerIggIgm || event.target == exameContainerRtPcrUrgencia || event.target == exameContainerRtPcr) {
-                modalExame.style.display = "none";
-                document.getElementsByTagName('body')[0].style.overflow = 'auto';
-            } else if (event.target == modalPanvel || event.target == panvelContainer) {
-                modalPanvel.style.display = "none";
-                document.getElementsByTagName('body')[0].style.overflow = 'auto';
-            }
-        });
-
-    }
-
-    /* Detecta e inicializa as modais do Clinic. Verifique as opções de customização em "MODAL CUSTOMIZADA". */
-    const initClinicModals = () => {
-
-        /* Captura modal de acordo com a nomenclatura padrão. As modais da página serão carregadas nesta modal. */
-        const modalOverlay = document.getElementById('LHModalOverlay');
-
-        /* Verifica se há modal na página */
-        if (modalOverlay) {
-
-            /* VERIFICADORES: 
-            CARREGA OS DADOS DA SUA MODAL SOMENTE EM PÁGINAS EM QUE HOUVER CHAMADAS PARA ELA: */
-
-            /* Verifica se há um botão para um questionário JSON na página */
-            const hasJSONQuestionaire = [...document.getElementsByClassName('bt-abrir-assistVirtual')].length > 0;
-
-            /* EDITE: Adicione seus verificadores aqui */
-            const modalContent = document.getElementById('LHModalContent');
-            const btCloseModal = document.getElementById('btCloseModal');
-
-            /* Fecha modal caso ocorra clique fora de sua área */
-            btCloseModal.onclick = function () {
-                modalOverlay.style.display = "none";
-                document.getElementsByTagName('body')[0].style.overflow = 'auto';
-            }
-
-            /* Se há botões que abrem a modal do Questionário, ele inicializa a modal Questionário customizada.*/
-            if (hasJSONQuestionaire) {
-                console.log('hasJSONQuestionaire');
-                initModal(modalOverlay, modalContent, 'bt-abrir-assistVirtual', handleOpenAssistVirtual)
-            }
-
-            /* EDITE: Adicione sua "initModal" aqui */
-
-            //TODO Put focus back to button
-            const closeModal = () => {
-                modalOverlay.style.display = "none";
-                document.getElementsByTagName('body')[0].style.overflow = 'auto';
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.addEventListener('click', function (event) {
-                if (event.target == modalOverlay) {
-                    closeModal();
-                }
-            });
-
-            document.addEventListener('keyup', (event) => {
-                /* Fecha modal com tecla Esc */
-                if (event.code == 'Escape') {
-                    closeModal();
-                }
-            })
-        }
-
-
-    }
-
-    const initModal = (modal, modalContent, activatorClassName, clickHandler) => {
-        /* lista de botões com a classe especificada */
-        const activatorArray = [...document.getElementsByClassName(activatorClassName)];
-        activatorArray.map(btOpenModal => {
-            btOpenModal.addEventListener('click', () => clickHandler(modal, modalContent));
-        });
-    }
-
-    async function loadJSON(url) {
-        try {
-            const res = await fetch(url);
-            return await res.json();
-        } catch (e) {
-            throw new Error("Ops! Arquivo JSON não abre localmente.");
-        }
-    }
-
-    // Quando o usuário clica em um botão do tipo ".bt-abrir-assistVirtual", handleOpenAssistVirtual é invocada.
-    const handleOpenAssistVirtual = (modal, modalContent) => {
-        let questStart = {};
-        let questIndex = 0;
-        let stepCounter = 0;
-
-        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-
-        const modalHeader = document.getElementById('modalHeader');
-
-        const handleClick = (e, nextNode, wrapper) => {
-            updateQuestion(nextNode);
-            e.target.classList.add('active');
-            wrapper.classList.add('completed');
-            wrapper.classList.remove('active');
-
-            const movementCompleteListener = (e) => {
-                e.target.removeEventListener('transitionend', movementCompleteListener)
-                e.target.classList.remove('completed');
-                e.target.innerHTML = '';
-            }
-
-            wrapper.addEventListener('transitionend', movementCompleteListener)
-        }
-
-        const restartTest = (wrapper) => {
-            stepCounter = 0;
-            updateQuestion(questStart);
-            wrapper.classList.add('completed');
-            wrapper.classList.remove('active');
-            const movementCompleteListener = (e) => {
-                e.target.removeEventListener('transitionend', movementCompleteListener)
-                e.target.classList.remove('completed');
-                e.target.innerHTML = '';
-            }
-            wrapper.addEventListener('transitionend', movementCompleteListener)
-        }
-
-        const clearTest = () => {
-            let questWrappers = [document.getElementById('assistVirtual-wrapper-0'), document.getElementById(
-                'assistVirtual-wrapper-1')]
-            questWrappers.map(questWrapper => {
-                questWrapper.innerHTML = '';
-                questWrapper.classList.remove('completed');
-                questWrapper.classList.remove('active');
-            })
-        }
-
-        const resetTest = () => {
-            clearTest();
-            updateQuestion(questStart);
-        }
-
-        const handleAssistVirtualModal = data => {
-            //console.log(data.questionario);
-            questStart = data.questionario;
-            updateQuestion(questStart);
-        }
-
-        loadJSON(
-            'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/assistente-virtual-vacinas.JSON'
-        ).then(data => {
-            clearTest();
-            handleAssistVirtualModal(data);
-            modal.style.display = "flex";
-        })
-
-        const updateQuestion = node => {
-            const question = node.question;
-            const questionText = node.text;
-            const options = node.data;
-            const note = node.note;
-            const recommendedExam = node.recommendedExam;
-            const questContainer = document.getElementById('assistVirtual-wrapper-' + questIndex % 2);
-            console.log(questIndex);
-            if (stepCounter == 0) {
-                modalHeader.classList.remove('assistantStarted');
-            }
-
-            if (stepCounter == 1) {
-                modalHeader.classList.add('assistantStarted');
-            }
-
-            questContainer.innerHTML = '';
-
-            if (options && question) {
-                let nextNodeArray = [];
-                questContainer.innerHTML = '<h2 id="question">' + question + '</h2>';
-
-                if (questionText) {
-                    questContainer.innerHTML += '<p class="questionText">' + questionText + '</p>';
-                }
-
-                questContainer.innerHTML += '<hr class="blue-separator">';
-
-                let optionsWrapper = document.createElement('div');
-                optionsWrapper.classList.add('options');
-
-                options.map(option => {
-                    optionsWrapper.innerHTML +=
-                        '<button name="questOption" class="questOption buttonQuest">' +
-                        option.optionValue + '</button>';
-                    nextNodeArray.push(option);
-                });
-
-
-                questContainer.appendChild(optionsWrapper);
-
-                [...document.querySelectorAll('#assistVirtual-wrapper-' + questIndex % 2 + ' .questOption')].map
-                    ((element, index) => {
-                        element.onclick = (e) => handleClick(e, nextNodeArray[index], questContainer);
-                    })
-            } else {
-                if (recommendedExam) {
-                    questContainer.innerHTML += '<h3>Resultado:</h3><hr class="blue-separator"/>';
-                    if (recommendedExam.includes('Teste Rápido ANTÍGENO (Nasal)'))
-                        questContainer.innerHTML +=
-                            '<p>Baseado nas suas respostas indicamos a realização dos seguintes exames <br> para a verificação de proteínas virais, se esta ou não com o vírus no momento da coleta:</p>';
-                    else
-                        questContainer.innerHTML +=
-                            '<p>Baseado nas suas respostas e recomendações medicas,<br>indicamos a realização dos seguintes exames para a detecção do Covid-19:</p>';
-                    questContainer.innerHTML += '<div class="recommended-exam">' + recommendedExam + '</div>';
-                }
-                if (note) {
-                    questContainer.innerHTML += '<p class="note">' + note + '</p>';
-                }
-                if (note || recommendedExam) {
-                    questContainer.innerHTML +=
-                        '<div class="options"><button id="restart-test-button" class="questOption buttonQuest">Refazer o teste</button>' +
-                        /*<button class="questOption bt-agendar-vacina">Agendar exame</button>*/
-                        '</div>';
-                    document.getElementById('restart-test-button').onclick = (e) => restartTest(questContainer);
-                }
-            }
-
-            questContainer.classList.add('active');
-            questIndex++;
-            stepCounter++;
-        }
-    }
-</script>
-<script>
-    function onChangeStateNovaPanvel(sel) {
-        let citiesSelection = document.getElementById("cidade-panvel");
-        var L = citiesSelection.length;
-        for (i = L; i >= 0; i--) citiesSelection.remove(i);
-        let districtSelection = document.getElementById("bairro-panvel");
-        var L = districtSelection.length;
-        for (i = L; i >= 0; i--) districtSelection.remove(i);
-        let items, estate;
-        document.getElementById("items-container-panvel").textContent = "", getCitiesNovaPanvel(sel.value)
-    }
-
-    function onChangeCityNovaPanvel(sel) {
-        let districtSelection = document.getElementById("bairro-panvel");
-        var L = districtSelection.length;
-        for (i = L; i >= 0; i--) districtSelection.remove(i);
-        let items, city;
-        document.getElementById("items-container-panvel").textContent = "", getDistrictsNovaPanvel(sel)
-    }
-
-    function onChangeDistrictNovaPanvel(sel) {
-        let items, district;
-        districtSelection = document.getElementById("bairro-panvel"), document.getElementById("items-container-panvel")
-            .textContent = "", getAdressesNovaPanvel(sel)
-    }
-
-    function createSelectionsNovaPanvel() {
-        let estateSelection = document.getElementById("estado-panvel"),
-            citySelection, districtSelection, option;
-        var lastEstate;
-        estateSelection.length = 0, document.getElementById("cidade-panvel").length = 0, document.getElementById(
-            "bairro-panvel").length = 0;
-        for (let i = 0; i < dataPanvel.length; i++)
-            if (0 === i) lastEstate = dataPanvel[i].UF, option = document.createElement("option"), option.text =
-                dataPanvel[i].Estado, option.value = dataPanvel[i].UF, estateSelection.add(option);
-            else if (dataPanvel[i].UF !== lastEstate) {
-                let verifState = 1;
-                for (let j = 0; j < estateSelection.options.length; j++) dataPanvel[i].UF === estateSelection.options[j]
-                    .value && (verifState = 0);
-                0 !== verifState && (lastEstate = dataPanvel[i].UF, option = document.createElement("option"), option.text =
-                    dataPanvel[i].Estado, option.value = dataPanvel[i].UF, estateSelection.add(option))
-            }
-        getCitiesNovaPanvel(estateSelection[0].value)
-    }
-
-    function getCitiesNovaPanvel(sel) {
-        let estate = sel;
-        var lastCity;
-        citySelection = document.getElementById("cidade-panvel");
-        for (let i = 0; i < dataPanvel.length; i++)
-            if (dataPanvel[i].UF === sel)
-                if (0 === i) lastCity = dataPanvel[i].Cidade, cityOption = document.createElement("option"), cityOption
-                    .text = dataPanvel[i].Cidade, cityOption.value = `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`,
-                    cityOption.classList = "lista-cidades", citySelection.add(cityOption);
-                else if (dataPanvel[i].Cidade !== lastCity) {
-                    let verifCity = 1;
-                    for (let j = 0; j < citySelection.options.length; j++) dataPanvel[i].Cidade === citySelection.options[j]
-                        .innerHTML && (verifCity = 0);
-                    0 !== verifCity && (lastCity = dataPanvel[i].Cidade, cityOption = document.createElement("option"),
-                        cityOption.text = dataPanvel[i].Cidade, cityOption.value =
-                        `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`, cityOption.classList = "lista-cidades", citySelection
-                            .add(cityOption))
-                }
-        citySelection[0].selected = !0, getDistrictsNovaPanvel(citySelection[0])
-    }
-
-    function getDistrictsNovaPanvel(sel) {
-        var splits = sel.value.split("%", 2);
-        let estate = splits[0],
-            city = splits[1];
-        var lastDistrict;
-        districtSelection = document.getElementById("bairro-panvel");
-        for (let i = 0; i < dataPanvel.length; i++)
-            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city)
-                if (0 === i) lastDistrict = dataPanvel[i].Bairro, districtOption = document.createElement("option"),
-                    districtOption.text = dataPanvel[i].Bairro, districtOption.value =
-                    `${estate}%${city}%${dataPanvel[i].Bairro}`, districtOption.classList = "lista-bairros",
-                    districtSelection.add(districtOption);
-                else if (dataPanvel[i].Bairro !== lastDistrict) {
-                    let verifDistrict = 1;
-                    for (let j = 0; j < districtSelection.options.length; j++) dataPanvel[i].Bairro === districtSelection
-                        .options[j].innerText && (verifDistrict = 0);
-                    0 !== verifDistrict && (lastDistrict = dataPanvel[i].Bairro, districtOption = document.createElement(
-                        "option"), districtOption.text = dataPanvel[i].Bairro, districtOption.value =
-                        `${estate}%${city}%${dataPanvel[i].Bairro}`, districtOption.classList = "lista-bairros",
-                        districtSelection.add(districtOption))
-                }
-        districtSelection[0].selected = !0, getAdressesNovaPanvel(districtSelection[0])
-    }
-
-    function getAdressesNovaPanvel(sel) {
-        let items;
-        document.getElementById("items-container-panvel").textContent = "";
-        var splits = sel.value.split("%", 3);
-        let estate = splits[0],
-            city = splits[1],
-            district = splits[2];
-        for (let i = 0; i < dataPanvel.length; i++)
-            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city && dataPanvel[i].Bairro === district) {
-                itemsContainer = document.getElementById("items-container-panvel");
-                let items = document.createElement("div");
-                items.classList = "items";
-                let cardNome = document.createElement("div");
-                cardNome.className = "card-nome";
-                let nomeLabel = document.createElement("span");
-                nomeLabel.textContent = dataPanvel[i].Bairro, cardNome.appendChild(nomeLabel), items.appendChild(
-                    cardNome);
-                let cardAdress = document.createElement("div");
-                cardAdress.className = "card-adress";
-                let endereco = document.createElement("span");
-                endereco.textContent = dataPanvel[i].Endereço, cardAdress.appendChild(endereco), items.appendChild(
-                    cardAdress);
-                let cardEnd = document.createElement("div");
-                cardEnd.className = "card-end";
-                let cardTelefone = document.createElement("div");
-                cardTelefone.className = "card-adress";
-                let telefone = document.createElement("span");
-                telefone.textContent = (void 0 !== dataPanvel[i].WhatsApp ? dataPanvel[i].WhatsApp + " / " : "") + (
-                    void 0 !== dataPanvel[i].Telefone ? dataPanvel[i].Telefone : ""), cardTelefone.appendChild(
-                        telefone), items.appendChild(cardTelefone), items.appendChild(cardEnd), itemsContainer
-                            .appendChild(items)
-            }
-    }
-</script>
-<script>
-    function onChangeStateNovaExame(sel) {
-        let formSelected = sel.closest(".LHmodal-content").id,
-            dataExame;
-        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm)));
-        let citiesSelection = document.querySelector("#" + formSelected + " #cidade-exame");
-        var L = citiesSelection.length;
-        for (i = L; i >= 0; i--) citiesSelection.remove(i);
-        let districtSelection = document.querySelector("#" + formSelected + " #bairro-exame");
-        var L = districtSelection.length;
-        for (i = L; i >= 0; i--) districtSelection.remove(i);
-        let items, estate;
-        document.querySelector("#" + formSelected + " #items-container-exame").textContent = "", getCitiesNovaExame(sel
-            .value, formSelected, dataExame)
-    }
-
-    function onChangeCityNovaExame(sel) {
-        let formSelected = sel.closest(".LHmodal-content").id,
-            dataExame;
-        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm)));
-        let districtSelection = document.querySelector("#" + formSelected + " #bairro-exame");
-        var L = districtSelection.length;
-        for (i = L; i >= 0; i--) districtSelection.remove(i);
-        let items, city;
-        document.querySelector("#" + formSelected + " #items-container-exame").textContent = "", getDistrictsNovaExame(
-            sel, formSelected, dataExame)
-    }
-
-    function onChangeDistrictNovaExame(sel) {
-        let formSelected = sel.closest(".LHmodal-content").id,
-            dataExame, items, district;
-        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm))), dataExame =
-            filtrarDadosPanvel(dataExame), districtSelection = document.querySelector("#" + formSelected +
-                " #bairro-exame"), document.querySelector("#" + formSelected + " #items-container-exame").textContent =
-            "", getAdressesNovaExame(sel, formSelected, dataExame)
-    }
-
-    function createSelectionsNovaExame(div) {
-        let formSelected = div.id,
-        estateSelection = document.querySelector("#" + div.id + " #estado-exame"), citySelection, districtSelection, option;
-        var lastEstate;
-        estateSelection.length = 0;
-        document.querySelector("#" + div.id + " #cidade-exame").length = 0;
-        document.querySelector("#" + div.id + " #bairro-exame").length = 0;
-        
-        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm)));
-        
-        for (let endereço of dataExame)
-            if (lastEstate) {
-                if (endereço.UF !== lastEstate) {
-                    let verifState = 1;
-                    for (let j = 0; j < estateSelection.options.length; j++) endereço.UF === estateSelection.options[j]
-                        .value && (verifState = 0);
-                    0 !== verifState && (lastEstate = endereço.UF, option = document.createElement("option"), option
-                        .text = endereço.Estado, option.value = endereço.UF, estateSelection.add(option))
-                }
-            } else lastEstate = endereço.UF, option = document.createElement("option"), option.text = endereço.Estado,
-                option.value = endereço.UF, estateSelection.add(option);
-        getCitiesNovaExame(estateSelection[0].value, formSelected, dataExame)
-    }
-
-    function getCitiesNovaExame(sel, formSelected, dataExame) {
-        let citySelection = document.querySelector("#" + formSelected + " #cidade-exame"),
-            estate = sel;
-        var lastCity;
-        for (let endereço of dataExame)
-            if (endereço.UF === sel)
-                if (endereço.Unidade == dataExame[0].Unidade) lastCity = endereço.Cidade, cityOption = document
-                    .createElement("option"), cityOption.text = endereço.Cidade, cityOption.value =
-                    `${endereço.UF}%${endereço.Cidade}`, cityOption.classList = "lista-cidades", citySelection.add(
-                        cityOption);
-                else if (endereço.Cidade !== lastCity) {
-                    let verifCity = 1;
-                    for (let j = 0; j < citySelection.options.length; j++) endereço.Cidade === citySelection.options[j]
-                        .innerHTML && (verifCity = 0);
-                    0 !== verifCity && (lastCity = endereço.Cidade, cityOption = document.createElement("option"), cityOption
-                        .text = endereço.Cidade, cityOption.value = `${endereço.UF}%${endereço.Cidade}`, cityOption
-                            .classList = "lista-cidades", citySelection.add(cityOption))
-                }
-        citySelection[0].selected = !0, getDistrictsNovaExame(citySelection[0], formSelected, dataExame)
-    }
-
-    function getDistrictsNovaExame(sel, formSelected, dataExame) {
-        let districtSelection = document.querySelector("#" + formSelected + " #bairro-exame");
-        districtSelection.length = 0;
-        var splits = sel.value.split("%", 2);
-        let estate = splits[0],
-            city = splits[1];
-        var lastDistrict;
-        for (let endereço of dataExame)
-            if (endereço.UF === estate && endereço.Cidade === city)
-                if (endereço.Unidade == dataExame[0].Unidade) lastDistrict = endereço.Bairro, districtOption = document
-                    .createElement("option"), districtOption.text = endereço.Bairro, districtOption.value =
-                    `${estate}%${city}%${endereço.Bairro}`, districtOption.classList = "lista-bairros",
-                    districtSelection.add(districtOption);
-                else if (endereço.Bairro !== lastDistrict) {
-                    let verifDistrict = 1;
-                    for (let j = 0; j < districtSelection.options.length; j++) endereço.Bairro === districtSelection.options[j]
-                        .innerText && (verifDistrict = 0);
-                    0 !== verifDistrict && (lastDistrict = endereço.Bairro, districtOption = document.createElement("option"),
-                        districtOption.text = endereço.Bairro, districtOption.value =
-                        `${estate}%${city}%${endereço.Bairro}`, districtOption.classList = "lista-bairros",
-                        districtSelection.add(districtOption))
-                }
-        districtSelection[0].selected = !0, getAdressesNovaExame(districtSelection[0], formSelected, dataExame)
-    }
-
-    function getAdressesNovaExame(sel, formSelected, dataExame) {
-        let itemsContainer = document.querySelector("#" + formSelected + " #items-container-exame");
-        itemsContainer.textContent = "";
-        var splits = sel.value.split("%", 3);
-        let estate = splits[0],
-            city = splits[1],
-            district = splits[2];
-        for (let endereço of dataExame)
-            if (endereço.UF === estate && endereço.Cidade === city && endereço.Bairro === district) {
-                let items = document.createElement("div");
-                items.classList = "items";
-                let cardNome = document.createElement("div");
-                cardNome.className = "card-nome";
-                let nomeLabel = document.createElement("span");
-                nomeLabel.textContent = endereço.Bairro + " - Unidade " + endereço.Unidade, cardNome.appendChild(
-                    nomeLabel), items.appendChild(cardNome);
-                let cardAdress = document.createElement("div");
-                cardAdress.className = "card-adress";
-                let endereco = document.createElement("span");
-                endereco.textContent = endereço.Endereço, cardAdress.appendChild(endereco), items.appendChild(
-                    cardAdress);
-                let cardEnd = document.createElement("div");
-                cardEnd.className = "card-end";
-                let cardTelefone = document.createElement("div");
-                cardTelefone.className = "card-adress";
-                let telefone = document.createElement("span");
-                telefone.textContent = (void 0 !== endereço.WhatsApp ? endereço.WhatsApp + " / " : "") + (void 0 !==
-                    endereço.Telefone ? endereço.Telefone : ""), cardTelefone.appendChild(telefone), items
-                        .appendChild(cardTelefone);
-                let cardHorarios = document.createElement("div");
-                cardTelefone.className = "card-adress";
-                let horarios = document.createElement("span");
-                horarios.innerText = "Horário de Funcionamento: \n" + 'Segunda à sexta: ' + endereço.AtendimentoÚteis + '\n Sábados: ' + endereço.AtendimentoSábados +
-                "\n Horário de Coleta: \n" + 'Segunda à sexta: ' + endereço.ColetaÚteis + '\n Sábados: ' + endereço.ColetaSábados;
-                cardTelefone.appendChild(horarios); 
-                items.appendChild(cardHorarios); 
-                items.appendChild(cardEnd); 
-                itemsContainer.appendChild(items);
-            }
-    }
-</script>
-
 <body>
     <div class="center">
         <div class="sub-header">
@@ -2950,7 +2260,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 pure-u-md-1-2 teste-panvel" id="maior">
+            <div class="pure-u-1 pure-u-md-1-2 teste-panvel">
                 <div class="card-teste">
                     <div class="card-header">
                         <div class="card-thumbnail">
@@ -2991,6 +2301,47 @@
                     <div class="card-buttons">
                         <a
                             href="/panvel/teste-rapido-covid-pos-vacinal-e-infeccao-natural-avulso-ecodiagnostica/p-109300"><button
+                                class="button"> Comprar </button></a>
+                        <button class="button-modal panvel-btn"> Lojas onde realizar </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2 teste-panvel">
+                <div class="card-teste">
+                    <div class="card-header">
+                        <div class="card-thumbnail">
+                            <img src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/covid/thumb-panvel-covid-influenza.jpg"
+                                class="thumb-img-border">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-title">
+                                <h2>Teste rápido<br /> Covid-19 + Influenza (Gripe) </h2>
+                            </div>
+                            <div class="card-info-result">
+                                <div class="card-clock"><img
+                                        src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/stopwatch.svg">
+                                </div>
+                                <div class="more-info">
+                                    <span class="more-info">Resultado :
+                                        até 15 minutos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-desc">
+                        <div class="card-desc-texto">
+
+                            <p><b>O que é:</b> Detecta simultaneamente se o individuo possui os vírus SARS-Cov-2, Influenza A ou Influenza B utilizando uma única amostra.</p>
+                        </div>
+                        <div class="card-desc-texto">
+
+                            <p><b>Quando fazer:</b> Indicado para indivíduos com sintomas gripais. Entre o<b> 2º e 7º </b>dia de sintomas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a
+                            href="https://www.panvel.com/panvel/teste-rapido-covid-19-ag-%2B-influenza-ecodiagnostica/p-108156"><button
                                 class="button"> Comprar </button></a>
                         <button class="button-modal panvel-btn"> Lojas onde realizar </button>
                     </div>
@@ -3999,3 +3350,692 @@
         </div>
     </div>
 </body>
+<script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/filiais-13.js"></script>
+<script>
+    window.addEventListener('load', LHevents);
+
+
+    var dadosExameSaliva, dadosExameAnticorpos, dadosIggIgm, dadosRtPcr, dadosRtPcrUrgencia;
+
+    function LHevents() {
+
+        initClinicModals();
+
+        let dadosPanvel = filtrarDadosPanvel(dataPanvel);
+        dadosPanvel = orderDataAlphabetically(dadosPanvel);
+
+        dadosExameSaliva = filtrarDadosPanvel(dataExameSaliva);
+        dadosExameSaliva = orderDataAlphabetically(dadosExameSaliva);
+
+        dadosExameAnticorpos = filtrarDadosPanvel(dataExameAnticorpos);
+        dadosExameAnticorpos = orderDataAlphabetically(dadosExameAnticorpos);
+
+        dadosIggIgm = filtrarDadosPanvel(dataIggIgm);
+        dadosIggIgm = orderDataAlphabetically(dadosIggIgm);
+
+        dadosRtPcr = filtrarDadosPanvel(filiaisRtPcr);
+        dadosRtPcr = orderDataAlphabetically(dadosRtPcr);
+
+        dadosRtPcrUrgencia = filtrarDadosPanvel(dataRtPcrUrgente);
+        dadosRtPcrUrgencia = orderDataAlphabetically(dadosRtPcrUrgencia);
+
+
+        // Get the modal
+        var modalAgendamento = document.getElementById("LHModalContainer");
+        var modalContainer = document.getElementById("LHModal");
+
+        var modalExame = document.getElementById("LHModalContainerExame");
+
+        var exameContainerSaliva = document.getElementById("LHModalExameSaliva");
+        var exameContainerAnticorpos = document.getElementById("LHModalExameAnticorpos");
+        var exameContainerRtPcr = document.getElementById("LHModalExameRtPcr");
+        var exameContainerRtPcrUrgencia = document.getElementById("LHModalExameRtPcrUrgencia");
+        var exameContainerIggIgm = document.getElementById("LHModalExameIggIgm");
+
+        var modalPanvel = document.getElementById("LHModalContainerPanvel");
+        var panvelContainer = document.getElementById("LHModalPanvel");
+
+        // Get the button that opens the modal
+        var btnAgendamento = document.getElementById("agendar-btn");
+
+        var btnExameSaliva = document.getElementsByClassName('exame-btn-saliva');
+        var btnExameAnticorpos = document.getElementsByClassName('exame-btn-anticorpos');
+        var btnExameRtPcr = document.getElementsByClassName('exame-btn-rtpcr');
+        var btnExameRtPcrUrgencia = document.getElementsByClassName('exame-btn-rtpcr-urgencia');
+        var btnExameIggIgm = document.getElementsByClassName('exame-btn-igg-igm');
+
+        var btnsPanvel = document.getElementsByClassName("panvel-btn");
+
+
+        // Get the <span> element that closes the modal
+        var btnModalAgendamento = document.getElementById('modalCloseAgendamento');
+
+        var btnModalExameSaliva = document.getElementById('modalCloseExameSaliva');
+        var btnModalExameAnticorpos = document.getElementById('modalCloseExameAnticorpos');
+        var btnModalExameRtPcr = document.getElementsByClassName('modalCloseExameRtpcr');
+        var btnModalExameRtPcrUrgencia = document.getElementsByClassName('modalCloseExameRtpcrUrgencia');
+        var btnModalExameIggIgm = document.getElementsByClassName('modalCloseExameIggIgm');
+
+        var btnModalPanvel = document.getElementById('modalClosePanvel');
+
+
+        // When the user clicks on <span> (x), close the modal
+        btnModalAgendamento.onclick = function () {
+            modalAgendamento.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalExameSaliva.onclick = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalExameAnticorpos.onclick = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalExameRtPcr = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalExameRtPcrUrgencia = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalExameIggIgm = function () {
+            modalExame.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+        btnModalPanvel.onclick = function () {
+            modalPanvel.style.display = "none";
+            document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        }
+
+
+        // When the user clicks the button, open the modal 
+        btnAgendamento.onclick = function () {
+            modalAgendamento.style.display = "block";
+            document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+        }
+
+        for (let num = 0; num < btnExameAnticorpos.length; num++) {
+            btnExameAnticorpos[num].onclick = () => {
+                exameContainerAnticorpos.style.display = 'block';
+                exameContainerSaliva.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none;'
+                exameContainerRtPcrUrgencia.style.display = 'none'
+                exameContainerIggIgm.style.display = 'none'
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerAnticorpos);
+            }
+        }
+
+        for (let num = 0; num < btnExameSaliva.length; num++) {
+            btnExameSaliva[num].onclick = () => {
+                exameContainerSaliva.style.display = 'block';
+                exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none'
+                exameContainerRtPcrUrgencia.style.display = 'none'
+                exameContainerIggIgm.style.display = 'none'
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerSaliva);
+            }
+        }
+
+        for (let num = 0; num < btnExameRtPcr.length; num++) {
+            btnExameRtPcr[num].onclick = () => {
+                exameContainerSaliva.style.display = 'none';
+                exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'block';
+                exameContainerRtPcrUrgencia.style.display = 'none';
+                exameContainerIggIgm.style.display = 'none';
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerRtPcr);
+            }
+        }
+
+        for (let num = 0; num < btnExameRtPcrUrgencia.length; num++) {
+            btnExameRtPcrUrgencia[num].onclick = () => {
+                exameContainerSaliva.style.display = 'none';
+                exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none';
+                exameContainerRtPcrUrgencia.style.display = 'block';
+                exameContainerIggIgm.style.display = 'none';
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerRtPcrUrgencia);
+            }
+        }
+
+        for (let num = 0; num < btnExameIggIgm.length; num++) {
+            btnExameIggIgm[num].onclick = () => {
+                exameContainerSaliva.style.display = 'none';
+                exameContainerAnticorpos.style.display = 'none';
+                exameContainerRtPcr.style.display = 'none';
+                exameContainerRtPcrUrgencia.style.display = 'none';
+                exameContainerIggIgm.style.display = 'block';
+                modalExame.style.display = 'block';
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaExame(exameContainerIggIgm);
+            }
+        }
+
+        for (let num = 0; num < btnsPanvel.length; num++) {
+            btnsPanvel[num].onclick = function () {
+                modalPanvel.style.display = "block";
+                document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+                createSelectionsNovaPanvel();
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.addEventListener('click', function (event) {
+            if (event.target == modalAgendamento || event.target == modalContainer) {
+                modalAgendamento.style.display = "none";
+                document.getElementsByTagName('body')[0].style.overflow = 'auto';
+            } else if (event.target == exameContainerSaliva || event.target == exameContainerAnticorpos || event
+                .target == modalExame || event.target == exameContainerIggIgm || event.target == exameContainerRtPcrUrgencia || event.target == exameContainerRtPcr) {
+                modalExame.style.display = "none";
+                document.getElementsByTagName('body')[0].style.overflow = 'auto';
+            } else if (event.target == modalPanvel || event.target == panvelContainer) {
+                modalPanvel.style.display = "none";
+                document.getElementsByTagName('body')[0].style.overflow = 'auto';
+            }
+        });
+
+    }
+
+    /* Detecta e inicializa as modais do Clinic. Verifique as opções de customização em "MODAL CUSTOMIZADA". */
+    const initClinicModals = () => {
+
+        /* Captura modal de acordo com a nomenclatura padrão. As modais da página serão carregadas nesta modal. */
+        const modalOverlay = document.getElementById('LHModalOverlay');
+
+        /* Verifica se há modal na página */
+        if (modalOverlay) {
+
+            /* VERIFICADORES: 
+            CARREGA OS DADOS DA SUA MODAL SOMENTE EM PÁGINAS EM QUE HOUVER CHAMADAS PARA ELA: */
+
+            /* Verifica se há um botão para um questionário JSON na página */
+            const hasJSONQuestionaire = [...document.getElementsByClassName('bt-abrir-assistVirtual')].length > 0;
+
+            /* EDITE: Adicione seus verificadores aqui */
+            const modalContent = document.getElementById('LHModalContent');
+            const btCloseModal = document.getElementById('btCloseModal');
+
+            /* Fecha modal caso ocorra clique fora de sua área */
+            btCloseModal.onclick = function () {
+                modalOverlay.style.display = "none";
+                document.getElementsByTagName('body')[0].style.overflow = 'auto';
+            }
+
+            /* Se há botões que abrem a modal do Questionário, ele inicializa a modal Questionário customizada.*/
+            if (hasJSONQuestionaire) {
+                console.log('hasJSONQuestionaire');
+                initModal(modalOverlay, modalContent, 'bt-abrir-assistVirtual', handleOpenAssistVirtual)
+            }
+
+            /* EDITE: Adicione sua "initModal" aqui */
+
+            //TODO Put focus back to button
+            const closeModal = () => {
+                modalOverlay.style.display = "none";
+                document.getElementsByTagName('body')[0].style.overflow = 'auto';
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.addEventListener('click', function (event) {
+                if (event.target == modalOverlay) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keyup', (event) => {
+                /* Fecha modal com tecla Esc */
+                if (event.code == 'Escape') {
+                    closeModal();
+                }
+            })
+        }
+
+
+    }
+
+    const initModal = (modal, modalContent, activatorClassName, clickHandler) => {
+        /* lista de botões com a classe especificada */
+        const activatorArray = [...document.getElementsByClassName(activatorClassName)];
+        activatorArray.map(btOpenModal => {
+            btOpenModal.addEventListener('click', () => clickHandler(modal, modalContent));
+        });
+    }
+
+    async function loadJSON(url) {
+        try {
+            const res = await fetch(url);
+            return await res.json();
+        } catch (e) {
+            throw new Error("Ops! Arquivo JSON não abre localmente.");
+        }
+    }
+
+    // Quando o usuário clica em um botão do tipo ".bt-abrir-assistVirtual", handleOpenAssistVirtual é invocada.
+    const handleOpenAssistVirtual = (modal, modalContent) => {
+        let questStart = {};
+        let questIndex = 0;
+        let stepCounter = 0;
+
+        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+
+        const modalHeader = document.getElementById('modalHeader');
+
+        const handleClick = (e, nextNode, wrapper) => {
+            updateQuestion(nextNode);
+            e.target.classList.add('active');
+            wrapper.classList.add('completed');
+            wrapper.classList.remove('active');
+
+            const movementCompleteListener = (e) => {
+                e.target.removeEventListener('transitionend', movementCompleteListener)
+                e.target.classList.remove('completed');
+                e.target.innerHTML = '';
+            }
+
+            wrapper.addEventListener('transitionend', movementCompleteListener)
+        }
+
+        const restartTest = (wrapper) => {
+            stepCounter = 0;
+            updateQuestion(questStart);
+            wrapper.classList.add('completed');
+            wrapper.classList.remove('active');
+            const movementCompleteListener = (e) => {
+                e.target.removeEventListener('transitionend', movementCompleteListener)
+                e.target.classList.remove('completed');
+                e.target.innerHTML = '';
+            }
+            wrapper.addEventListener('transitionend', movementCompleteListener)
+        }
+
+        const clearTest = () => {
+            let questWrappers = [document.getElementById('assistVirtual-wrapper-0'), document.getElementById(
+                'assistVirtual-wrapper-1')]
+            questWrappers.map(questWrapper => {
+                questWrapper.innerHTML = '';
+                questWrapper.classList.remove('completed');
+                questWrapper.classList.remove('active');
+            })
+        }
+
+        const resetTest = () => {
+            clearTest();
+            updateQuestion(questStart);
+        }
+
+        const handleAssistVirtualModal = data => {
+            //console.log(data.questionario);
+            questStart = data.questionario;
+            updateQuestion(questStart);
+        }
+
+        loadJSON(
+            'https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/covid/assistente-virtual-vacinas-1.JSON'
+        ).then(data => {
+            clearTest();
+            handleAssistVirtualModal(data);
+            modal.style.display = "flex";
+        })
+
+        const updateQuestion = node => {
+            const question = node.question;
+            const questionText = node.text;
+            const options = node.data;
+            const note = node.note;
+            const recommendedExam = node.recommendedExam;
+            const questContainer = document.getElementById('assistVirtual-wrapper-' + questIndex % 2);
+            console.log(questIndex);
+            if (stepCounter == 0) {
+                modalHeader.classList.remove('assistantStarted');
+            }
+
+            if (stepCounter == 1) {
+                modalHeader.classList.add('assistantStarted');
+            }
+
+            questContainer.innerHTML = '';
+
+            if (options && question) {
+                let nextNodeArray = [];
+                questContainer.innerHTML = '<h2 id="question">' + question + '</h2>';
+
+                if (questionText) {
+                    questContainer.innerHTML += '<p class="questionText">' + questionText + '</p>';
+                }
+
+                questContainer.innerHTML += '<hr class="blue-separator">';
+
+                let optionsWrapper = document.createElement('div');
+                optionsWrapper.classList.add('options');
+
+                options.map(option => {
+                    optionsWrapper.innerHTML +=
+                        '<button name="questOption" class="questOption buttonQuest">' +
+                        option.optionValue + '</button>';
+                    nextNodeArray.push(option);
+                });
+
+
+                questContainer.appendChild(optionsWrapper);
+
+                [...document.querySelectorAll('#assistVirtual-wrapper-' + questIndex % 2 + ' .questOption')].map
+                    ((element, index) => {
+                        element.onclick = (e) => handleClick(e, nextNodeArray[index], questContainer);
+                    })
+            } else {
+                if (recommendedExam) {
+                    questContainer.innerHTML += '<h3>Resultado:</h3><hr class="blue-separator"/>';
+                    if (recommendedExam.includes('Teste Rápido ANTÍGENO (Nasal)'))
+                        questContainer.innerHTML +=
+                            '<p>Baseado nas suas respostas indicamos a realização dos seguintes exames <br> para a verificação de proteínas virais, se esta ou não com o vírus no momento da coleta:</p>';
+                    else
+                        questContainer.innerHTML +=
+                            '<p>Baseado nas suas respostas e recomendações medicas,<br>indicamos a realização dos seguintes exames para a detecção do Covid-19:</p>';
+                    questContainer.innerHTML += '<div class="recommended-exam">' + recommendedExam + '</div>';
+                }
+                if (note) {
+                    questContainer.innerHTML += '<p class="note">' + note + '</p>';
+                }
+                if (note || recommendedExam) {
+                    questContainer.innerHTML +=
+                        '<div class="options"><button id="restart-test-button" class="questOption buttonQuest">Refazer o teste</button>' +
+                        /*<button class="questOption bt-agendar-vacina">Agendar exame</button>*/
+                        '</div>';
+                    document.getElementById('restart-test-button').onclick = (e) => restartTest(questContainer);
+                }
+            }
+
+            questContainer.classList.add('active');
+            questIndex++;
+            stepCounter++;
+        }
+    }
+</script>
+<script>
+    function onChangeStateNovaPanvel(sel) {
+        let citiesSelection = document.getElementById("cidade-panvel");
+        var L = citiesSelection.length;
+        for (i = L; i >= 0; i--) citiesSelection.remove(i);
+        let districtSelection = document.getElementById("bairro-panvel");
+        var L = districtSelection.length;
+        for (i = L; i >= 0; i--) districtSelection.remove(i);
+        let items, estate;
+        document.getElementById("items-container-panvel").textContent = "", getCitiesNovaPanvel(sel.value)
+    }
+
+    function onChangeCityNovaPanvel(sel) {
+        let districtSelection = document.getElementById("bairro-panvel");
+        var L = districtSelection.length;
+        for (i = L; i >= 0; i--) districtSelection.remove(i);
+        let items, city;
+        document.getElementById("items-container-panvel").textContent = "", getDistrictsNovaPanvel(sel)
+    }
+
+    function onChangeDistrictNovaPanvel(sel) {
+        let items, district;
+        districtSelection = document.getElementById("bairro-panvel"), document.getElementById("items-container-panvel")
+            .textContent = "", getAdressesNovaPanvel(sel)
+    }
+
+    function createSelectionsNovaPanvel() {
+        let estateSelection = document.getElementById("estado-panvel"),
+            citySelection, districtSelection, option;
+        var lastEstate;
+        estateSelection.length = 0, document.getElementById("cidade-panvel").length = 0, document.getElementById(
+            "bairro-panvel").length = 0;
+        for (let i = 0; i < dataPanvel.length; i++)
+            if (0 === i) lastEstate = dataPanvel[i].UF, option = document.createElement("option"), option.text =
+                dataPanvel[i].Estado, option.value = dataPanvel[i].UF, estateSelection.add(option);
+            else if (dataPanvel[i].UF !== lastEstate) {
+                let verifState = 1;
+                for (let j = 0; j < estateSelection.options.length; j++) dataPanvel[i].UF === estateSelection.options[j]
+                    .value && (verifState = 0);
+                0 !== verifState && (lastEstate = dataPanvel[i].UF, option = document.createElement("option"), option.text =
+                    dataPanvel[i].Estado, option.value = dataPanvel[i].UF, estateSelection.add(option))
+            }
+        getCitiesNovaPanvel(estateSelection[0].value)
+    }
+
+    function getCitiesNovaPanvel(sel) {
+        let estate = sel;
+        var lastCity;
+        citySelection = document.getElementById("cidade-panvel");
+        for (let i = 0; i < dataPanvel.length; i++)
+            if (dataPanvel[i].UF === sel)
+                if (0 === i) lastCity = dataPanvel[i].Cidade, cityOption = document.createElement("option"), cityOption
+                    .text = dataPanvel[i].Cidade, cityOption.value = `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`,
+                    cityOption.classList = "lista-cidades", citySelection.add(cityOption);
+                else if (dataPanvel[i].Cidade !== lastCity) {
+                    let verifCity = 1;
+                    for (let j = 0; j < citySelection.options.length; j++) dataPanvel[i].Cidade === citySelection.options[j]
+                        .innerHTML && (verifCity = 0);
+                    0 !== verifCity && (lastCity = dataPanvel[i].Cidade, cityOption = document.createElement("option"),
+                        cityOption.text = dataPanvel[i].Cidade, cityOption.value =
+                        `${dataPanvel[i].UF}%${dataPanvel[i].Cidade}`, cityOption.classList = "lista-cidades", citySelection
+                            .add(cityOption))
+                }
+        citySelection[0].selected = !0, getDistrictsNovaPanvel(citySelection[0])
+    }
+
+    function getDistrictsNovaPanvel(sel) {
+        var splits = sel.value.split("%", 2);
+        let estate = splits[0],
+            city = splits[1];
+        var lastDistrict;
+        districtSelection = document.getElementById("bairro-panvel");
+        for (let i = 0; i < dataPanvel.length; i++)
+            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city)
+                if (0 === i) lastDistrict = dataPanvel[i].Bairro, districtOption = document.createElement("option"),
+                    districtOption.text = dataPanvel[i].Bairro, districtOption.value =
+                    `${estate}%${city}%${dataPanvel[i].Bairro}`, districtOption.classList = "lista-bairros",
+                    districtSelection.add(districtOption);
+                else if (dataPanvel[i].Bairro !== lastDistrict) {
+                    let verifDistrict = 1;
+                    for (let j = 0; j < districtSelection.options.length; j++) dataPanvel[i].Bairro === districtSelection
+                        .options[j].innerText && (verifDistrict = 0);
+                    0 !== verifDistrict && (lastDistrict = dataPanvel[i].Bairro, districtOption = document.createElement(
+                        "option"), districtOption.text = dataPanvel[i].Bairro, districtOption.value =
+                        `${estate}%${city}%${dataPanvel[i].Bairro}`, districtOption.classList = "lista-bairros",
+                        districtSelection.add(districtOption))
+                }
+        districtSelection[0].selected = !0, getAdressesNovaPanvel(districtSelection[0])
+    }
+
+    function getAdressesNovaPanvel(sel) {
+        let items;
+        document.getElementById("items-container-panvel").textContent = "";
+        var splits = sel.value.split("%", 3);
+        let estate = splits[0],
+            city = splits[1],
+            district = splits[2];
+        for (let i = 0; i < dataPanvel.length; i++)
+            if (dataPanvel[i].UF === estate && dataPanvel[i].Cidade === city && dataPanvel[i].Bairro === district) {
+                itemsContainer = document.getElementById("items-container-panvel");
+                let items = document.createElement("div");
+                items.classList = "items";
+                let cardNome = document.createElement("div");
+                cardNome.className = "card-nome";
+                let nomeLabel = document.createElement("span");
+                nomeLabel.textContent = dataPanvel[i].Bairro, cardNome.appendChild(nomeLabel), items.appendChild(
+                    cardNome);
+                let cardAdress = document.createElement("div");
+                cardAdress.className = "card-adress";
+                let endereco = document.createElement("span");
+                endereco.textContent = dataPanvel[i].Endereço, cardAdress.appendChild(endereco), items.appendChild(
+                    cardAdress);
+                let cardEnd = document.createElement("div");
+                cardEnd.className = "card-end";
+                let cardTelefone = document.createElement("div");
+                cardTelefone.className = "card-adress";
+                let telefone = document.createElement("span");
+                telefone.textContent = (void 0 !== dataPanvel[i].WhatsApp ? dataPanvel[i].WhatsApp + " / " : "") + (
+                    void 0 !== dataPanvel[i].Telefone ? dataPanvel[i].Telefone : ""), cardTelefone.appendChild(
+                        telefone), items.appendChild(cardTelefone), items.appendChild(cardEnd), itemsContainer
+                            .appendChild(items)
+            }
+    }
+</script>
+<script>
+    function onChangeStateNovaExame(sel) {
+        let formSelected = sel.closest(".LHmodal-content").id,
+            dataExame;
+        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm)));
+        let citiesSelection = document.querySelector("#" + formSelected + " #cidade-exame");
+        var L = citiesSelection.length;
+        for (i = L; i >= 0; i--) citiesSelection.remove(i);
+        let districtSelection = document.querySelector("#" + formSelected + " #bairro-exame");
+        var L = districtSelection.length;
+        for (i = L; i >= 0; i--) districtSelection.remove(i);
+        let items, estate;
+        document.querySelector("#" + formSelected + " #items-container-exame").textContent = "", getCitiesNovaExame(sel
+            .value, formSelected, dataExame)
+    }
+
+    function onChangeCityNovaExame(sel) {
+        let formSelected = sel.closest(".LHmodal-content").id,
+            dataExame;
+        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm)));
+        let districtSelection = document.querySelector("#" + formSelected + " #bairro-exame");
+        var L = districtSelection.length;
+        for (i = L; i >= 0; i--) districtSelection.remove(i);
+        let items, city;
+        document.querySelector("#" + formSelected + " #items-container-exame").textContent = "", getDistrictsNovaExame(
+            sel, formSelected, dataExame)
+    }
+
+    function onChangeDistrictNovaExame(sel) {
+        let formSelected = sel.closest(".LHmodal-content").id,
+            dataExame, items, district;
+        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm))), dataExame =
+            filtrarDadosPanvel(dataExame), districtSelection = document.querySelector("#" + formSelected +
+                " #bairro-exame"), document.querySelector("#" + formSelected + " #items-container-exame").textContent =
+            "", getAdressesNovaExame(sel, formSelected, dataExame)
+    }
+
+    function createSelectionsNovaExame(div) {
+        let formSelected = div.id,
+        estateSelection = document.querySelector("#" + div.id + " #estado-exame"), citySelection, districtSelection, option;
+        var lastEstate;
+        estateSelection.length = 0;
+        document.querySelector("#" + div.id + " #cidade-exame").length = 0;
+        document.querySelector("#" + div.id + " #bairro-exame").length = 0;
+        
+        dataExame = "LHModalExameSaliva" == formSelected ? dadosExameSaliva : ("LHModalExameAnticorpos" == formSelected ? dadosExameAnticorpos : ("LHModalExameRtPcr" == formSelected ? dadosRtPcr : ("LHModalExameRtPcrUrgencia" == formSelected ? dadosRtPcrUrgencia : dadosIggIgm)));
+        
+        for (let endereço of dataExame)
+            if (lastEstate) {
+                if (endereço.UF !== lastEstate) {
+                    let verifState = 1;
+                    for (let j = 0; j < estateSelection.options.length; j++) endereço.UF === estateSelection.options[j]
+                        .value && (verifState = 0);
+                    0 !== verifState && (lastEstate = endereço.UF, option = document.createElement("option"), option
+                        .text = endereço.Estado, option.value = endereço.UF, estateSelection.add(option))
+                }
+            } else lastEstate = endereço.UF, option = document.createElement("option"), option.text = endereço.Estado,
+                option.value = endereço.UF, estateSelection.add(option);
+        getCitiesNovaExame(estateSelection[0].value, formSelected, dataExame)
+    }
+
+    function getCitiesNovaExame(sel, formSelected, dataExame) {
+        let citySelection = document.querySelector("#" + formSelected + " #cidade-exame"),
+            estate = sel;
+        var lastCity;
+        for (let endereço of dataExame)
+            if (endereço.UF === sel)
+                if (endereço.Unidade == dataExame[0].Unidade) lastCity = endereço.Cidade, cityOption = document
+                    .createElement("option"), cityOption.text = endereço.Cidade, cityOption.value =
+                    `${endereço.UF}%${endereço.Cidade}`, cityOption.classList = "lista-cidades", citySelection.add(
+                        cityOption);
+                else if (endereço.Cidade !== lastCity) {
+                    let verifCity = 1;
+                    for (let j = 0; j < citySelection.options.length; j++) endereço.Cidade === citySelection.options[j]
+                        .innerHTML && (verifCity = 0);
+                    0 !== verifCity && (lastCity = endereço.Cidade, cityOption = document.createElement("option"), cityOption
+                        .text = endereço.Cidade, cityOption.value = `${endereço.UF}%${endereço.Cidade}`, cityOption
+                            .classList = "lista-cidades", citySelection.add(cityOption))
+                }
+        citySelection[0].selected = !0, getDistrictsNovaExame(citySelection[0], formSelected, dataExame)
+    }
+
+    function getDistrictsNovaExame(sel, formSelected, dataExame) {
+        let districtSelection = document.querySelector("#" + formSelected + " #bairro-exame");
+        districtSelection.length = 0;
+        var splits = sel.value.split("%", 2);
+        let estate = splits[0],
+            city = splits[1];
+        var lastDistrict;
+        for (let endereço of dataExame)
+            if (endereço.UF === estate && endereço.Cidade === city)
+                if (endereço.Unidade == dataExame[0].Unidade) lastDistrict = endereço.Bairro, districtOption = document
+                    .createElement("option"), districtOption.text = endereço.Bairro, districtOption.value =
+                    `${estate}%${city}%${endereço.Bairro}`, districtOption.classList = "lista-bairros",
+                    districtSelection.add(districtOption);
+                else if (endereço.Bairro !== lastDistrict) {
+                    let verifDistrict = 1;
+                    for (let j = 0; j < districtSelection.options.length; j++) endereço.Bairro === districtSelection.options[j]
+                        .innerText && (verifDistrict = 0);
+                    0 !== verifDistrict && (lastDistrict = endereço.Bairro, districtOption = document.createElement("option"),
+                        districtOption.text = endereço.Bairro, districtOption.value =
+                        `${estate}%${city}%${endereço.Bairro}`, districtOption.classList = "lista-bairros",
+                        districtSelection.add(districtOption))
+                }
+        districtSelection[0].selected = !0, getAdressesNovaExame(districtSelection[0], formSelected, dataExame)
+    }
+
+    function getAdressesNovaExame(sel, formSelected, dataExame) {
+        let itemsContainer = document.querySelector("#" + formSelected + " #items-container-exame");
+        itemsContainer.textContent = "";
+        var splits = sel.value.split("%", 3);
+        let estate = splits[0],
+            city = splits[1],
+            district = splits[2];
+        for (let endereço of dataExame)
+            if (endereço.UF === estate && endereço.Cidade === city && endereço.Bairro === district) {
+                let items = document.createElement("div");
+                items.classList = "items";
+                let cardNome = document.createElement("div");
+                cardNome.className = "card-nome";
+                let nomeLabel = document.createElement("span");
+                nomeLabel.textContent = endereço.Bairro + " - Unidade " + endereço.Unidade, cardNome.appendChild(
+                    nomeLabel), items.appendChild(cardNome);
+                let cardAdress = document.createElement("div");
+                cardAdress.className = "card-adress";
+                let endereco = document.createElement("span");
+                endereco.textContent = endereço.Endereço, cardAdress.appendChild(endereco), items.appendChild(
+                    cardAdress);
+                let cardEnd = document.createElement("div");
+                cardEnd.className = "card-end";
+                let cardTelefone = document.createElement("div");
+                cardTelefone.className = "card-adress";
+                let telefone = document.createElement("span");
+                telefone.textContent = (void 0 !== endereço.WhatsApp ? endereço.WhatsApp + " / " : "") + (void 0 !==
+                    endereço.Telefone ? endereço.Telefone : ""), cardTelefone.appendChild(telefone), items
+                        .appendChild(cardTelefone);
+                let cardHorarios = document.createElement("div");
+                cardTelefone.className = "card-adress";
+                let horarios = document.createElement("span");
+                horarios.innerText = "Horário de Funcionamento: \n" + 'Segunda à sexta: ' + endereço.AtendimentoÚteis + '\n Sábados: ' + endereço.AtendimentoSábados +
+                "\n Horário de Coleta: \n" + 'Segunda à sexta: ' + endereço.ColetaÚteis + '\n Sábados: ' + endereço.ColetaSábados;
+                cardTelefone.appendChild(horarios); 
+                items.appendChild(cardHorarios); 
+                items.appendChild(cardEnd); 
+                itemsContainer.appendChild(items);
+            }
+    }
+</script>

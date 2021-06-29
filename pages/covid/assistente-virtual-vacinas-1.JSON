@@ -13,7 +13,7 @@
                         "data": [
                             {
                                 "optionValue": "Há menos de 10 dias",
-                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034'>Teste Rápido ANTÍGENO (Nasal) <button class='button btn-teste-comprar'> Comprar </button> </a></p><p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572'>Teste Rápido ANTÍGENO (Oral) <button class='button btn-teste-comprar'> Comprar </button></a> </p>"
+                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034'>Teste Rápido ANTÍGENO (Nasal) <button class='button btn-teste-comprar'> Comprar </button> </a></p><p><a href='#'>Teste Rapido Covid-19 + Influenza (Gripe) <button class='button btn-teste-comprar'> Comprar </button></a> </p><p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572'>Teste Rápido ANTÍGENO (Oral) <button class='button btn-teste-comprar'> Comprar </button></a> </p>"
                             },
                             {
                                 "optionValue": "Há mais de 10 dias",
@@ -50,7 +50,7 @@
                                         "data": [
                                             {
                                                 "optionValue": "Há menos de 7 dias",
-                                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034'>Teste Rápido ANTÍGENO (Nasal) <button class='button btn-teste-comprar'> Comprar </button> </a> </p><p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572'>Teste Rápido ANTÍGENO (Oral) <button class='button btn-teste-comprar'> Comprar </button></a> </p>"
+                                                "recommendedExam": "<p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-antigeno-da-ecodiagnostica-avulso/p-110034'>Teste Rápido ANTÍGENO (Nasal) <button class='button btn-teste-comprar'> Comprar </button> </a> </p> <p><a href='#'>Teste Rapido Covid-19 + Influenza (Gripe) <button class='button btn-teste-comprar'> Comprar </button></a> </p> <p><a href='https://www.panvel.com/panvel/teste-rapido-covid-19-ag-oral-avulso-da-ecodiagnostica/p-109572'>Teste Rápido ANTÍGENO (Oral) <button class='button btn-teste-comprar'> Comprar </button></a> </p>"
                                             },
                                             {
                                                 "optionValue": "Há pelo menos de 14 dias da confirmação",
