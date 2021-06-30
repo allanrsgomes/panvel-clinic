@@ -1899,7 +1899,7 @@
   </style>
 </head>
 
-<body onload="LHevents()">
+<body>
   <div class="center-items">
     <div>
       <div class="sub-header">
@@ -1908,7 +1908,8 @@
           <a href="/panvel/panvelClinic.do">\ Clinic</a>
           <span>Vacinas</span>
         </div>
-        <a class="btn-back" href="https://www.panvel.com/panvel/calendario-vacinal.do" onclick="history.back()">Voltar</a>
+        <a class="btn-back" href="https://www.panvel.com/panvel/calendario-vacinal.do"
+          onclick="history.back()">Voltar</a>
       </div>
 
       <!--<a href="calendario-detalhe.html">-->
@@ -1990,7 +1991,7 @@
               <li><a href="?id=13#vacinas">9 anos</a></li>
             </ul>
           </div>
-          <div class="dropdown2 closed">
+          <div class="dropdown closed">
             <h4 class="icon">
               11 a 19 anos • Adolescente
               <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -2075,78 +2076,6 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas2.js"></script>
-  <script>
-    var slideIndex = 1;
-    window.addEventListener('load', LHevents);
-    function LHevents() {
-
-      // Get the modal
-      var modal = document.getElementById("LHModalContainer");
-
-      var modalImg = document.getElementById("imgModal");
-
-      var img = document.getElementById("imgExplicativaVacinas");
-
-      var modalPic = document.getElementById("modalImgVacinas");
-
-      img.onclick = function () {
-        modalImg.style.display = "block";
-
-        if (window.innerWidth < 480) {
-          modalPic.src = document.getElementById("imgExplicativaVacinasMob").srcset;
-        } else {
-          modalPic.src = this.src;
-        }
-      }
-
-      var btnCloseImg = document.getElementById('closeBtnImgVacinas');
-      btnCloseImg.onclick = function () {
-        modalImg.style.display = "none";
-      }
-
-      // Get the <span> element that closes the modal
-      var btnModalPanvel = document.getElementById('modalClosePanvel');
-
-      btnModalPanvel.onclick = function () {
-        modal.style.display = "none";
-        document.getElementsByTagName('body')[0].style.overflow = 'auto';
-      }
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-          document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        } else if (event.target == modalImg) {
-          modalImg.style.display = "none";
-        }
-      }
-
-    }
-  </script>
-  <script>
-    let dropdown = document.querySelector(".dropdown");
-
-    dropdown.addEventListener("click", (e) => {
-      if (dropdown.classList.contains("closed")) {
-        dropdown.classList.remove("closed");
-      } else {
-        dropdown.classList.add("closed");
-      }
-    });
-  </script>
-  <script>
-    let dropdown2 = document.querySelector(".dropdown2");
-
-    dropdown2.addEventListener("click", (e) => {
-      if (dropdown2.classList.contains("closed")) {
-        dropdown2.classList.remove("closed");
-      } else {
-        dropdown2.classList.add("closed");
-      }
-    });
-  </script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
@@ -2168,4 +2097,126 @@
     <span class="close" id="closeBtnImgVacinas">&times;</span>
     <img class="modal-content" id="modalImgVacinas">
   </div>
+  <script type="text/javascript"
+  src="https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/pages/vacinas/vacinas3.js"></script>
+<script>
+  var slideIndex = 1;
+  window.addEventListener('load', LHevents);
+  function LHevents() {
+
+    // Get the modal
+    var modal = document.getElementById("LHModalContainer");
+
+    var modalImg = document.getElementById("imgModal");
+
+    var img = document.getElementById("imgExplicativaVacinas");
+
+    var modalPic = document.getElementById("modalImgVacinas");
+
+    img.onclick = function () {
+      modalImg.style.display = "block";
+
+      if (window.innerWidth < 480) {
+        modalPic.src = document.getElementById("imgExplicativaVacinasMob").srcset;
+      } else {
+        modalPic.src = this.src;
+      }
+    }
+
+    var btnCloseImg = document.getElementById('closeBtnImgVacinas');
+    btnCloseImg.onclick = function () {
+      modalImg.style.display = "none";
+    }
+
+    // Get the <span> element that closes the modal
+    var btnModalPanvel = document.getElementById('modalClosePanvel');
+
+    btnModalPanvel.onclick = function () {
+      modal.style.display = "none";
+      document.getElementsByTagName('body')[0].style.overflow = 'auto';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';
+      } else if (event.target == modalImg) {
+        modalImg.style.display = "none";
+      }
+    }
+
+    let dropdown = document.querySelectorAll(".dropdown");
+
+    for (dropdownMenu of dropdown) {
+
+      dropdownMenu.addEventListener('click', (e) => {
+
+        if (e.target.parentElement.classList.contains("closed")) {
+          e.target.parentElement.classList.remove("closed");
+        } else {
+          e.target.parentElement.classList.add("closed");
+        }
+      })
+
+    }
+
+    const queryString = window.location.search;
+
+    if (queryString !== "") {
+      const urlParams = new URLSearchParams(queryString);
+      const idSelect = urlParams.get('id');
+
+      const vacinasDiv = (vacinas.filter(
+        subVacinas => subVacinas.grupo.includes(parseInt(idSelect)))
+      ).map((item, i) => {
+        return `<div class="vacina-calendario">
+            <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
+            <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
+              Mais Informações
+            </a>
+            <button class="vacina-item-btn">Agendar vacina</button>
+          </div>`;
+
+      });
+
+      document.querySelector(".vacinas").innerHTML = vacinasDiv.join("");
+
+      if (idSelect > 0 && idSelect <= 13) {
+
+        if (dropdown[0].classList.contains("closed"))
+          dropdown[0].classList.remove("closed");
+
+      }
+      else if (idSelect <= 15) {
+        if (dropdown[1].classList.contains("closed"))
+          dropdown[1].classList.remove("closed");
+      }
+
+    } else {
+      const vacinasDiv = vacinas.map((item, i) => {
+        return `<div class="vacina-calendario">
+          <a href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}"><h3>${item.nome}</h3></a>
+          <a class="vacina-item-link" href="https://www.panvel.com/panvel/vacina-detalhe.do?id=${item.id}">
+            Mais Informações
+          </a>
+          <button class="vacina-item-btn">Agendar vacina</button>
+        </div>`;
+      });
+
+      document.querySelector(".vacinas").innerHTML = vacinasDiv.join("");
+
+    }
+
+    var btnVacinas = document.getElementsByClassName('vacina-item-btn');
+
+    for (btn of btnVacinas) {
+      btn.onclick = function () {
+        modal.style.display = "block";
+        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+      }
+    }
+
+  }
+</script>
 </body>
