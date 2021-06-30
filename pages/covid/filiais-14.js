@@ -3285,7 +3285,7 @@ const dataIggIgm = [{
         "ColetaSábados": "07:00 às 11:30 e das 14:00 às 15:31"
     }
 ]
-
+/*
 const filiaisRtPcr = [{
         "Unidade": "BIG",
         "Estado": "Rio Grande do Sul",
@@ -3793,6 +3793,74 @@ const filiaisRtPcr = [{
         "ColetaÚteis": "07:00 às 11:30 e das 14:00 às 15:30",
         "ColetaSábados": "07:00 às 11:30 e das 14:00 às 15:31"
     }
+]
+*/
+
+const filiaisRtPcr = [{
+    "Unidade": "CACHOEIRINHA",
+    "Estado": "Rio Grande do Sul",
+    "UF": "RS",
+    "Cidade": "Cachoeirinha",
+    "Endereço": "Av. General Flores da Cunha, nº843 - Loja 01 e 02",
+    "Bairro": "Vila Veranópolis",
+    "CEP": "94.910-001",
+    "AtendimentoÚteis": "07:00 às 17:00",
+    "AtendimentoSábados": "08:00 às 12:00",
+    "ColetaÚteis": "07:00 às 15:30",
+    "ColetaSábados": "08:00 às 10:00"
+},
+{
+    "Unidade": "CANOAS CENTRO",
+    "Estado": "Rio Grande do Sul",
+    "UF": "RS",
+    "Cidade": "Canoas",
+    "Endereço": "R. Tiradentes, nº 316 - Loja 13",
+    "Bairro": "Centro",
+    "CEP": "92.010-260",
+    "AtendimentoÚteis": "07:00 às 17:00",
+    "AtendimentoSábados": "08:00 às 12:00",
+    "ColetaÚteis": "07:00 às 15:30",
+    "ColetaSábados": "08:00 às 10:00"
+},
+{
+    "Unidade": "ANTONELLO - FERREIRA VIANA",
+    "Estado": "Rio Grande do Sul",
+    "UF": "RS",
+    "Cidade": "Pelotas",
+    "Endereço": "Av. Ferreira Viana nº380",
+    "Bairro": "Areal",
+    "CEP": "96.085-000",
+    "AtendimentoÚteis": "07:00 às 18:00",
+    "AtendimentoSábados": "7:00 às 12:00",
+    "ColetaÚteis": "07:00 às 18:00",
+    "ColetaSábados": " 7:00 às 10:00"
+},
+{
+    "Unidade": "NILO PEÇANHA ",
+    "Estado": "Rio Grande do Sul",
+    "UF": "RS",
+    "Cidade": "Porto Alegre",
+    "Endereço": "Av. Nilo Peçanha , nº 2606 e 2610",
+    "Bairro": "Chácara das Pedras",
+    "CEP": "91.330-001",
+    "AtendimentoÚteis": "07:00 às 17:00",
+    "AtendimentoSábados": "08:00 às 12:00",
+    "ColetaÚteis": "07:00 às 16:30",
+    "ColetaSábados": "08:00 às 10:00"
+},
+{
+    "Unidade": "TREND ",
+    "Estado": "Rio Grande do Sul",
+    "UF": "RS",
+    "Cidade": "Porto Alegre",
+    "Endereço": "Av. Ipiranga, nº 50 - Loja 20",
+    "Bairro": "Praia de Belas",
+    "CEP": "90.160-090",
+    "AtendimentoÚteis": "07:00 às 17:00",
+    "AtendimentoSábados": "08:00 às 12:00",
+    "ColetaÚteis": "07:00 às 15:30",
+    "ColetaSábados": "08:00 às 10:00"
+}
 ]
 
 const dataRtPcrUrgente = [{
