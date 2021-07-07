@@ -1129,15 +1129,6 @@ const dataPanvel = [
         "Telefone": "51-997171571"
     },
     {
-        "Filial": "304",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Cidade": "Rio Grande",
-        "Endereço": "Rua Doutor Nascimento, 389, 391 e 399",
-        "Bairro": "Centro",
-        "Telefone": "51-998791508"
-    },
-    {
         "Filial": "306",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -1336,6 +1327,15 @@ const dataPanvel = [
         "Telefone": "51-996745378"
     },
     {
+        "Filial": "366",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Gramado",
+        "Endereço": "Av. das Hortênsias, 1929 - Loja 101",
+        "Bairro": "Centro",
+        "Telefone": "51-996021666"
+    },
+    {
         "Filial": "367",
         "Estado": "Rio Grande do Sul",
         "UF": "RS",
@@ -1343,15 +1343,6 @@ const dataPanvel = [
         "Endereço": "Avenida Ferreira Viana, nº 476",
         "Bairro": "Areal",
         "Telefone": "51-995845840"
-    },
-    {
-        "Filial": "368",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Cidade": "Tramandaí",
-        "Endereço": "Rua Rubem Berta, 1445",
-        "Bairro": "Centro",
-        "Telefone": "51-997409445"
     },
     {
         "Filial": "370",
@@ -1505,15 +1496,6 @@ const dataPanvel = [
         "Endereço": "Rua João Orestes de Araújo, nº 1.253",
         "Bairro": "Pinguirito",
         "Telefone": "48-991883926"
-    },
-    {
-        "Filial": "392",
-        "Estado": "Rio Grande do Sul",
-        "UF": "RS",
-        "Cidade": "Porto Alegre ",
-        "Endereço": "Avenida Panamericana, 670 ",
-        "Bairro": "Jardim Lindóia  ",
-        "Telefone": "51-998966053"
     },
     {
         "Filial": "393",
@@ -1759,6 +1741,15 @@ const dataPanvel = [
         "Telefone": "51-998429348"
     },
     {
+        "Filial": "477",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Pelotas",
+        "Endereço": "Avenida Adolfo Fetter, 3300, Lj 01",
+        "Bairro": "Laranjal",
+        "Telefone": "51-996853537"
+    },
+    {
         "Filial": "481",
         "Estado": "Santa Catarina",
         "UF": "SC",
@@ -1946,6 +1937,15 @@ const dataPanvel = [
         "Endereço": "Rua Benjamin Lins, 680 - Loja 01",
         "Bairro": "Batel",
         "Telefone": "41-992685207"
+    },
+    {
+        "Filial": "520",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Curitiba",
+        "Endereço": "Rua Holanda, 1150 ",
+        "Bairro": "Boa Vista",
+        "Telefone": "41-992691869"
     },
     {
         "Filial": "521",
@@ -2263,15 +2263,6 @@ const dataPanvel = [
         "Telefone": "41-991457599"
     },
     {
-        "Filial": "566",
-        "Estado": "Paraná",
-        "UF": "PR",
-        "Cidade": "Curitiba",
-        "Endereço": "Rua Professor Pedro Viriato Parigot de Souza, nº 600",
-        "Bairro": "Mossunguê",
-        "Telefone": "41-991797809"
-    },
-    {
         "Filial": "568",
         "Estado": "Paraná",
         "UF": "PR",
@@ -2333,6 +2324,15 @@ const dataPanvel = [
         "Endereço": "Avenida Bandeirantes, nº 327",
         "Bairro": "Vila Ipiranga",
         "Telefone": "41 - 99278-7687"
+    },
+    {
+        "Filial": "577",
+        "Estado": "Paraná",
+        "UF": "PR",
+        "Cidade": "Londrina",
+        "Endereço": "Rua Ibiporã, nº 253",
+        "Bairro": "Aurora",
+        "Telefone": "41-991060484"
     },
     {
         "Filial": "703",
@@ -2739,13 +2739,20 @@ const dataPanvel = [
         "Bairro": "Glória"
     },
     {
+        "Filial": "781",
+        "Estado": "Rio Grande do Sul",
+        "UF": "RS",
+        "Cidade": "Igrejinha",
+        "Endereço": "Rua Ernesto Dornelles, 456 ",
+        "Bairro": "Centro"
+    },
+    {
         "Filial": "800",
         "Estado": "São Paulo",
         "UF": "SP",
         "Cidade": "São Paulo",
         "Endereço": "Avenida Giovanni Gronchi, 5930 - Lojas 5 e 6 ",
-        "Bairro": "Vila Andrade",
-        "Telefone": "11-961959826"
+        "Bairro": "Vila Andrade"
     },
     {
         "Filial": "801",
@@ -2753,8 +2760,7 @@ const dataPanvel = [
         "UF": "SP",
         "Cidade": "São Paulo",
         "Endereço": "Avenida República do Líbano, nº 1.882",
-        "Bairro": "Ibirapuera",
-        "Telefone": "11-964178679"
+        "Bairro": "Ibirapuera"
     },
     {
         "Filial": "802",
@@ -2762,8 +2768,7 @@ const dataPanvel = [
         "UF": "SP",
         "Cidade": "São Paulo",
         "Endereço": "Avenida Europa, nº 352",
-        "Bairro": "Jardim Europa",
-        "Telefone": "11-964100451"
+        "Bairro": "Jardim Europa"
     },
     {
         "Filial": "803",
@@ -2771,8 +2776,7 @@ const dataPanvel = [
         "UF": "SP",
         "Cidade": "São Paulo",
         "Endereço": "Rua Doutor Homem de Melo, 494",
-        "Bairro": "Perdizes",
-        "Telefone": "11-964097248"
+        "Bairro": "Perdizes"
     }
 ]
 
