@@ -1644,6 +1644,8 @@
 
     .bt-abrir-assistVirtual {
         display: flex;
+        flex-direction: column;
+
         font-size: 45px;
         margin: 0 auto;
     }
@@ -1655,6 +1657,10 @@
         margin: unset;
         line-height: 0;
         margin-left: 10px;
+    }
+
+    .bt-abrir-assistVirtual p {
+        margin: unset;
     }
 
     @media screen and (max-width:600px) {
@@ -2098,8 +2104,13 @@
         </div>
 
         <div class="header-before">
-            <a class="buttonQuest bt-abrir-assistVirtual" href="javascript:;"> Preciso fazer o teste? <img
-                    src='https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/press.svg'>
+            <a class="buttonQuest bt-abrir-assistVirtual" href="javascript:;"> Preciso fazer o teste?
+            <p>
+                (Clique aqui)
+            </p>
+
+            <img src='https://cdn1.staticpanvel.com.br/cdn_service/landpages/page-clinic/assets/icons/covid/press.svg'>
+            
             </a>
         </div>
 
